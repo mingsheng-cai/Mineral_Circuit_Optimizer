@@ -12,11 +12,11 @@ This project is designed to optimize circuit configurations using genetic algori
 
 ## 📣 News
 
-[![new](https://github.com/RUCAIBox/RecBole/raw/master/asset/new.gif)](https://github.com/RUCAIBox/RecBole/blob/master/asset/new.gif)**24/05/2024**: Our answer for released challenges is available here: [Challenge Answer - Pentlandite](https://github.com/ese-msc-2023/acs-gerardium-rush-pentlandite/blob/main/docs/Challenge_Answer.ipynb)
+[![new](https://github.com/RUCAIBox/RecBole/raw/master/asset/new.gif)](https://github.com/RUCAIBox/RecBole/blob/master/asset/new.gif)**24/05/2024**: Our answer for released challenges is available here: [Challenge Answer - Pentlandite](https://github.com/stkovf/Mineral_Circuit_Optimizer/blob/main/docs/Challenge_Answer.ipynb)
 
 [![new](https://github.com/RUCAIBox/RecBole/raw/master/asset/new.gif)](https://github.com/RUCAIBox/RecBole/blob/master/asset/new.gif)**23/05/2024**: Our online API document is available here: [API Document - Pentlandite](https://acse-sc4623.github.io/pentlandite/)
 
-[![new](https://github.com/RUCAIBox/RecBole/raw/master/asset/new.gif)](https://github.com/RUCAIBox/RecBole/blob/master/asset/new.gif)**22/05/2024**: Our exploratory code is available here: [Investigation - Pentlandite](https://github.com/ese-msc-2023/acs-gerardium-rush-pentlandite/tree/main/investigate)
+[![new](https://github.com/RUCAIBox/RecBole/raw/master/asset/new.gif)](https://github.com/RUCAIBox/RecBole/blob/master/asset/new.gif)**22/05/2024**: Our exploratory code is available here: [Investigation - Pentlandite](https://github.com/stkovf/Mineral_Circuit_Optimizer/tree/main/investigate)
 
 ## 🔭 Overview
 
@@ -315,4 +315,4 @@ Contributions are welcome! Please follow these steps:
 
 ## 📜 License
 
-This project is licensed under the MIT License. See the [LICENSE.txt](https://github.com/ese-msc-2023/acs-gerardium-rush-pentlandite/blob/main/LICENSE.txt) file for more details.
+This project is licensed under the MIT License. See the [LICENSE.txt](https://github.com/stkovf/Mineral_Circuit_Optimizer/blob/main/LICENSE.txt) file for more details.
