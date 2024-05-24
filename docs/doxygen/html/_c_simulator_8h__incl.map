@@ -1,0 +1,17 @@
+<map id="include/CSimulator.h" name="include/CSimulator.h">
+<area shape="rect" id="Node000001" title="Defines the functions and structures for simulating and evaluating circuits in a circuit modeling fra..." alt="" coords="90,5,233,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,77,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,33,74,74,72,69,141,28"/>
+<area shape="rect" id="Node000003" href="$_c_circuit_8h.html" title="Defines the Circuit class for modeling and simulating a circuit system." alt="" coords="101,79,221,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="164,31,164,65,159,65,159,31"/>
+<area shape="rect" id="Node000008" href="$_parameter_8h.html" title="Defines the Algorithm_Parameters structure for configuring the parameters of a genetic algorithm." alt="" coords="245,79,365,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="186,28,271,70,268,75,183,33"/>
+<area shape="rect" id="Node000004" href="$_c_unit_8h.html" title="Defines the CUnit class for representing a unit within a circuit system." alt="" coords="84,152,151,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="156,106,134,142,129,139,152,103"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="175,152,233,177"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="171,103,192,139,188,142,166,106"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="39,225,108,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="112,179,90,215,85,212,108,176"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="132,225,191,251"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="127,176,149,212,145,215,122,179"/>
+</map>

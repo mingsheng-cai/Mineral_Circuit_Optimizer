@@ -1,0 +1,9 @@
+<map id="test_check_validity" name="test_check_validity">
+<area shape="rect" id="Node000001" title="Test function for checking the validity of circuit configurations." alt="" coords="5,31,139,56"/>
+<area shape="rect" id="Node000002" href="$class_circuit.html#a9272fae1173b964dc7441ab126500d61" title="Checks the validity of the circuit vector." alt="" coords="187,5,341,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,32,171,28,172,33,139,37"/>
+<area shape="rect" id="Node000003" href="$class_circuit.html#af15811c915105eef1a50bdf0469cf9db" title="Marks a unit in the circuit and recursively marks its connected units." alt="" coords="389,31,520,56"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="139,41,373,41,373,46,139,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="342,26,374,30,373,35,341,31"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="423,32,416,22,420,12,433,6,455,4,478,7,490,13,487,18,476,12,455,9,435,11,424,16,422,21,427,29"/>
+</map>

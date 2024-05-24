@@ -1,0 +1,14 @@
+<map id="elitism" name="elitism">
+<area shape="rect" id="Node000001" title="Apply elitism to preserve the best individuals in a new population." alt="" coords="439,80,499,106"/>
+<area shape="rect" id="Node000002" href="$_genetic___algorithm_8cpp.html#a4eb04506c5788c119795cd6e3e0c6479" title="Optimizes a solution using the genetic algorithm." alt="" coords="312,55,382,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="424,86,382,77,383,72,425,81"/>
+<area shape="rect" id="Node000006" href="$test__genetic__algorithm_8cpp.html#ac28cdfbad25ea03a35e43245fd5889af" title="Test the elitism operator." alt="" coords="303,104,391,130"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="424,104,393,111,391,105,423,99"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="154,5,204,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="296,56,203,28,205,23,298,50"/>
+<area shape="rect" id="Node000004" href="$test__genetic__algorithm_8cpp.html#af46ebdbd60f4751d345fda45173a5e35" title="Test the genetic algorithm for various cases." alt="" coords="103,55,255,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="297,70,255,70,255,65,297,65"/>
+<area shape="rect" id="Node000005" href="$test__genetic__algorithm_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main function to run all the tests." alt="" coords="5,80,55,106"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="88,86,56,91,55,86,87,81"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="288,115,55,97,55,92,288,110"/>
+</map>

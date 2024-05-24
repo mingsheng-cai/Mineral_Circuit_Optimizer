@@ -1,0 +1,195 @@
+\doxysection{Two\+Point\+Crossover Class Reference}
+\hypertarget{class_two_point_crossover}{}\label{class_two_point_crossover}\index{TwoPointCrossover@{TwoPointCrossover}}
+
+
+{\ttfamily \#include $<$Two\+Point\+Crossover.\+h$>$}
+
+
+
+Inheritance diagram for Two\+Point\+Crossover\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{class_two_point_crossover__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Two\+Point\+Crossover\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{class_two_point_crossover__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_two_point_crossover_a36c9e1350911b53889a2552ce263e274}{Two\+Point\+Crossover}} (const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&params)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_two_point_crossover}{Two\+Point\+Crossover} object with specified algorithm parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_two_point_crossover_aca6479ff625a5e60240f93816f930cc0}{set\+Parents}} (\mbox{\hyperlink{struct_individual}{Individual}} \&\mbox{\hyperlink{class_two_point_crossover_ab68e4ce33bc26d4d8cf1d495c4058cc3}{offspring}}, const \mbox{\hyperlink{struct_individual}{Individual}} \&\mbox{\hyperlink{class_two_point_crossover_a0e82af4be75f0cd7042b52bd0291a5a1}{parent1}}, const \mbox{\hyperlink{struct_individual}{Individual}} \&\mbox{\hyperlink{class_two_point_crossover_a91c3b6128734354548b85e03542e637f}{parent2}}) override
+\begin{DoxyCompactList}\small\item\em Sets the parents and offspring for the crossover operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_two_point_crossover_aa043bee063355557a634a21ad50e38d1}{set\+Population}} (const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&population, std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&selected)
+\begin{DoxyCompactList}\small\item\em Sets the population and selected vectors for the selection operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_two_point_crossover_a2e4ca8f491d0d0de16f4c9937815190a}{set\+Individual}} (\mbox{\hyperlink{struct_individual}{Individual}} \&individual)
+\begin{DoxyCompactList}\small\item\em Sets the individual for the operator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_two_point_crossover_ac597dda917e6bcad0c388c35b5ce7825}{apply}} (std\+::mt19937 \&generator) override
+\begin{DoxyCompactList}\small\item\em Performs the two-\/point crossover operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_operator}{Operator}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_operator_ac7cb92992e32c213091d3659ef596a46}{\texorpdfstring{$\sim$}{\string~}\+Operator}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_operator}{Operator} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_individual}{Individual}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_two_point_crossover_ab68e4ce33bc26d4d8cf1d495c4058cc3}{offspring}}
+\item 
+const \mbox{\hyperlink{struct_individual}{Individual}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_two_point_crossover_a0e82af4be75f0cd7042b52bd0291a5a1}{parent1}}
+\item 
+const \mbox{\hyperlink{struct_individual}{Individual}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_two_point_crossover_a91c3b6128734354548b85e03542e637f}{parent2}}
+\item 
+double \mbox{\hyperlink{class_two_point_crossover_a72067663ed41019141fef7ea5505d75c}{crossover\+Rate}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_two_point_crossover_a36c9e1350911b53889a2552ce263e274}\label{class_two_point_crossover_a36c9e1350911b53889a2552ce263e274} 
+\index{TwoPointCrossover@{TwoPointCrossover}!TwoPointCrossover@{TwoPointCrossover}}
+\index{TwoPointCrossover@{TwoPointCrossover}!TwoPointCrossover@{TwoPointCrossover}}
+\doxysubsubsection{\texorpdfstring{TwoPointCrossover()}{TwoPointCrossover()}}
+{\footnotesize\ttfamily Two\+Point\+Crossover\+::\+Two\+Point\+Crossover (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&}]{params }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_two_point_crossover}{Two\+Point\+Crossover} object with specified algorithm parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & The algorithm parameters including the crossover rate. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_two_point_crossover_ac597dda917e6bcad0c388c35b5ce7825}\label{class_two_point_crossover_ac597dda917e6bcad0c388c35b5ce7825} 
+\index{TwoPointCrossover@{TwoPointCrossover}!apply@{apply}}
+\index{apply@{apply}!TwoPointCrossover@{TwoPointCrossover}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily void Two\+Point\+Crossover\+::apply (\begin{DoxyParamCaption}\item[{std\+::mt19937 \&}]{generator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Performs the two-\/point crossover operation. 
+
+This method performs a two-\/point crossover on the two parent individuals to generate an offspring individual. Two crossover points are chosen randomly, and the genetic material from the two parents is combined to create the offspring.
+
+
+\begin{DoxyParams}{Parameters}
+{\em generator} & The random number generator used to determine the crossover points. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_acbd2e97e189d862aa139b3c334a18619}{Operator}}.
+
+\Hypertarget{class_two_point_crossover_a2e4ca8f491d0d0de16f4c9937815190a}\label{class_two_point_crossover_a2e4ca8f491d0d0de16f4c9937815190a} 
+\index{TwoPointCrossover@{TwoPointCrossover}!setIndividual@{setIndividual}}
+\index{setIndividual@{setIndividual}!TwoPointCrossover@{TwoPointCrossover}}
+\doxysubsubsection{\texorpdfstring{setIndividual()}{setIndividual()}}
+{\footnotesize\ttfamily void Two\+Point\+Crossover\+::set\+Individual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{individual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the individual for the operator. 
+
+This method is not used by the \doxylink{class_two_point_crossover}{Two\+Point\+Crossover} operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em individual} & The individual to be set. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_abf3bad24158495949ca770dc8aec6542}{Operator}}.
+
+\Hypertarget{class_two_point_crossover_aca6479ff625a5e60240f93816f930cc0}\label{class_two_point_crossover_aca6479ff625a5e60240f93816f930cc0} 
+\index{TwoPointCrossover@{TwoPointCrossover}!setParents@{setParents}}
+\index{setParents@{setParents}!TwoPointCrossover@{TwoPointCrossover}}
+\doxysubsubsection{\texorpdfstring{setParents()}{setParents()}}
+{\footnotesize\ttfamily void Two\+Point\+Crossover\+::set\+Parents (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{offspring,  }\item[{const \mbox{\hyperlink{struct_individual}{Individual}} \&}]{parent1,  }\item[{const \mbox{\hyperlink{struct_individual}{Individual}} \&}]{parent2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the parents and offspring for the crossover operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offspring} & The offspring individual to be generated. \\
+\hline
+{\em parent1} & The first parent individual. \\
+\hline
+{\em parent2} & The second parent individual. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_aa9e9e58811b56bf3a5c1ac9e0d034c64}{Operator}}.
+
+\Hypertarget{class_two_point_crossover_aa043bee063355557a634a21ad50e38d1}\label{class_two_point_crossover_aa043bee063355557a634a21ad50e38d1} 
+\index{TwoPointCrossover@{TwoPointCrossover}!setPopulation@{setPopulation}}
+\index{setPopulation@{setPopulation}!TwoPointCrossover@{TwoPointCrossover}}
+\doxysubsubsection{\texorpdfstring{setPopulation()}{setPopulation()}}
+{\footnotesize\ttfamily void Two\+Point\+Crossover\+::set\+Population (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&}]{population,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&}]{selected }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the population and selected vectors for the selection operation. 
+
+This method is not used by the \doxylink{class_two_point_crossover}{Two\+Point\+Crossover} operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em population} & The vector of individuals in the population. \\
+\hline
+{\em selected} & The vector of selected individuals. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_a6e3837c249df579d41f9b9287195c6e5}{Operator}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{class_two_point_crossover_a72067663ed41019141fef7ea5505d75c}\label{class_two_point_crossover_a72067663ed41019141fef7ea5505d75c} 
+\index{TwoPointCrossover@{TwoPointCrossover}!crossoverRate@{crossoverRate}}
+\index{crossoverRate@{crossoverRate}!TwoPointCrossover@{TwoPointCrossover}}
+\doxysubsubsection{\texorpdfstring{crossoverRate}{crossoverRate}}
+{\footnotesize\ttfamily double Two\+Point\+Crossover\+::crossover\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+The crossover rate used to determine if crossover should occur \Hypertarget{class_two_point_crossover_ab68e4ce33bc26d4d8cf1d495c4058cc3}\label{class_two_point_crossover_ab68e4ce33bc26d4d8cf1d495c4058cc3} 
+\index{TwoPointCrossover@{TwoPointCrossover}!offspring@{offspring}}
+\index{offspring@{offspring}!TwoPointCrossover@{TwoPointCrossover}}
+\doxysubsubsection{\texorpdfstring{offspring}{offspring}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_individual}{Individual}}\texorpdfstring{$\ast$}{*} Two\+Point\+Crossover\+::offspring\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the offspring individual \Hypertarget{class_two_point_crossover_a0e82af4be75f0cd7042b52bd0291a5a1}\label{class_two_point_crossover_a0e82af4be75f0cd7042b52bd0291a5a1} 
+\index{TwoPointCrossover@{TwoPointCrossover}!parent1@{parent1}}
+\index{parent1@{parent1}!TwoPointCrossover@{TwoPointCrossover}}
+\doxysubsubsection{\texorpdfstring{parent1}{parent1}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_individual}{Individual}}\texorpdfstring{$\ast$}{*} Two\+Point\+Crossover\+::parent1\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the first parent individual \Hypertarget{class_two_point_crossover_a91c3b6128734354548b85e03542e637f}\label{class_two_point_crossover_a91c3b6128734354548b85e03542e637f} 
+\index{TwoPointCrossover@{TwoPointCrossover}!parent2@{parent2}}
+\index{parent2@{parent2}!TwoPointCrossover@{TwoPointCrossover}}
+\doxysubsubsection{\texorpdfstring{parent2}{parent2}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_individual}{Individual}}\texorpdfstring{$\ast$}{*} Two\+Point\+Crossover\+::parent2\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the second parent individual 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/operators/\+Crossover/\mbox{\hyperlink{_two_point_crossover_8h}{Two\+Point\+Crossover.\+h}}\item 
+src/operators/\+Crossover/\mbox{\hyperlink{_two_point_crossover_8cpp}{Two\+Point\+Crossover.\+cpp}}\end{DoxyCompactItemize}

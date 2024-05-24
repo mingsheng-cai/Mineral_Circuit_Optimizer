@@ -1,0 +1,36 @@
+\doxysection{Guided\+Mutation.\+h}
+\hypertarget{_guided_mutation_8h_source}{}\label{_guided_mutation_8h_source}\index{include/operators/Mutation/GuidedMutation.h@{include/operators/Mutation/GuidedMutation.h}}
+\mbox{\hyperlink{_guided_mutation_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifndef\ GENETIC\_ALGORITHM\_GUIDEDMUTATION\_H}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ GENETIC\_ALGORITHM\_GUIDEDMUTATION\_H}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_operator_8h}{../Operator.h}}"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_individual_8h}{../../utils/Individual.h}}"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_parameter_8h}{../../utils/Parameter.h}}"{}}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_guided_mutation}{GuidedMutation}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_operator}{Operator}}\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{struct_individual}{Individual}}\ *\mbox{\hyperlink{class_guided_mutation_a5d0380671e26ed704a2ba253c1c300af}{individual}};\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_guided_mutation_a0f63e34c240ae08f6696e89d853a2113}{numUnits}};\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_guided_mutation_ac12a17939f1e4f18ca9fca07a5619ffa}{mutationRate}};\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_guided_mutation_a3812047ef3a11502a5be560d10e7cd65}{GuidedMutation}}(\textcolor{keywordtype}{int}\ vectorSize,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}\ \&params);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_guided_mutation_a70668e157c9108ffed05192d0325fc45}{setIndividual}}(\mbox{\hyperlink{struct_individual}{Individual}}\ \&\mbox{\hyperlink{class_guided_mutation_a5d0380671e26ed704a2ba253c1c300af}{individual}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_guided_mutation_a169e2d6fc2ba5166e140a4d14d079e9c}{setPopulation}}(\textcolor{keyword}{const}\ std::vector<Individual>\ \&population,\ std::vector<Individual>\ \&selected)\ \{\};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_guided_mutation_a61b09d1be0b01777d7f0cfeeab14ba42}{setParents}}(\mbox{\hyperlink{struct_individual}{Individual}}\ \&offspring,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&parent1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&parent2)\ \{\};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_guided_mutation_a76f146207c8ef6d54fdb23ddac4916b6}{apply}}(std::mt19937\ \&generator)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00085\ \};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//GENETIC\_ALGORITHM\_GUIDEDMUTATION\_H}}
+
+\end{DoxyCode}

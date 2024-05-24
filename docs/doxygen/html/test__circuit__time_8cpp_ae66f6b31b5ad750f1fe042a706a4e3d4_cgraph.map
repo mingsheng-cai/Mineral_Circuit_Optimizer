@@ -1,0 +1,17 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title="Main function to evaluate execution times of the Evaluate_Circuit function with different circuit vec..." alt="" coords="5,121,55,147"/>
+<area shape="rect" id="Node000002" href="$_c_simulator_8cpp.html#a43f70be396ec43b828ae6b5f62663006" title="Evaluates the performance of a circuit." alt="" coords="122,96,240,121"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,127,106,118,107,123,56,132"/>
+<area shape="rect" id="Node000008" href="$test__circuit__time_8cpp.html#a3de9fce01f4f124c8c77484d3051179c" title="Generates a circuit vector of a given size." alt="" coords="103,145,259,171"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="56,135,88,140,87,145,55,140"/>
+<area shape="rect" id="Node000003" href="$class_circuit.html#a0d347a4af7957954a800d356f8005458" title="Calculates the flows within the circuit." alt="" coords="339,5,458,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="213,93,306,55,323,49,325,54,308,60,215,98"/>
+<area shape="rect" id="Node000005" href="$class_circuit.html#abf23eff70d399e2866441bcb89c6c957" title="Checks if the circuit has converged based on a threshold value." alt="" coords="307,70,490,96"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="240,99,291,93,292,98,240,104"/>
+<area shape="rect" id="Node000006" href="$class_circuit.html#ab8552736bd7aa4ade158bf79014c2b18" title="Connects the units in the circuit based on the circuit vector." alt="" coords="335,120,462,145"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="240,112,320,121,319,126,240,117"/>
+<area shape="rect" id="Node000007" href="$class_circuit.html#a608d78c297a7e9eb0f39f9c7a8be7169" title="Initializes the feed rates for gerardium and waste." alt="" coords="342,169,456,210"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="231,119,260,130,308,155,328,163,326,168,306,160,258,135,229,124"/>
+<area shape="rect" id="Node000004" href="$class_circuit.html#a7e8f59d3f565f6975550e53bc8ec756e" title="Resets the new feeds in the circuit." alt="" coords="538,5,666,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="459,23,523,23,523,28,459,28"/>
+</map>

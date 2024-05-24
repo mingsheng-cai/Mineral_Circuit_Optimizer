@@ -1,0 +1,189 @@
+\doxysection{Gen\+Prog\+Mutation Class Reference}
+\hypertarget{class_gen_prog_mutation}{}\label{class_gen_prog_mutation}\index{GenProgMutation@{GenProgMutation}}
+
+
+{\ttfamily \#include $<$Gen\+Prog\+Mutation.\+h$>$}
+
+
+
+Inheritance diagram for Gen\+Prog\+Mutation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{class_gen_prog_mutation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Gen\+Prog\+Mutation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{class_gen_prog_mutation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gen_prog_mutation_aeb39007370ec4f67b5b36b0b439eccf7}{Gen\+Prog\+Mutation}} (int vector\+Size, const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&params)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_gen_prog_mutation}{Gen\+Prog\+Mutation} object with specified vector size and algorithm parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gen_prog_mutation_adae389a12b5c2c8e72a3ec8c2f140e26}{set\+Individual}} (\mbox{\hyperlink{struct_individual}{Individual}} \&\mbox{\hyperlink{class_gen_prog_mutation_a10431e91f31cd3c7568250044ab27796}{individual}}) override
+\begin{DoxyCompactList}\small\item\em Sets the individual to be mutated. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gen_prog_mutation_a80f6a79a96baf65fab86dc4eb345643c}{set\+Population}} (const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&population, std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&selected)
+\begin{DoxyCompactList}\small\item\em Sets the population and selected vectors for the mutation operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gen_prog_mutation_a418ba3d84550da1f0ca2d921d2e89176}{set\+Parents}} (\mbox{\hyperlink{struct_individual}{Individual}} \&offspring, const \mbox{\hyperlink{struct_individual}{Individual}} \&parent1, const \mbox{\hyperlink{struct_individual}{Individual}} \&parent2)
+\begin{DoxyCompactList}\small\item\em Sets the parents and offspring for the mutation operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gen_prog_mutation_a06d8740500d6f698626cd86c0e90d5f7}{apply}} (std\+::mt19937 \&generator)
+\begin{DoxyCompactList}\small\item\em Performs the mutation operation on the individual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_operator}{Operator}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_operator_ac7cb92992e32c213091d3659ef596a46}{\texorpdfstring{$\sim$}{\string~}\+Operator}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_operator}{Operator} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_individual}{Individual}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_gen_prog_mutation_a10431e91f31cd3c7568250044ab27796}{individual}}
+\item 
+int \mbox{\hyperlink{class_gen_prog_mutation_ae19fd2dde317d4137c1d58d74093dedb}{num\+Units}}
+\item 
+double \mbox{\hyperlink{class_gen_prog_mutation_a1b10d086af1236965cc47501d0f0bd49}{mutation\+Rate}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_gen_prog_mutation_aeb39007370ec4f67b5b36b0b439eccf7}\label{class_gen_prog_mutation_aeb39007370ec4f67b5b36b0b439eccf7} 
+\index{GenProgMutation@{GenProgMutation}!GenProgMutation@{GenProgMutation}}
+\index{GenProgMutation@{GenProgMutation}!GenProgMutation@{GenProgMutation}}
+\doxysubsubsection{\texorpdfstring{GenProgMutation()}{GenProgMutation()}}
+{\footnotesize\ttfamily Gen\+Prog\+Mutation\+::\+Gen\+Prog\+Mutation (\begin{DoxyParamCaption}\item[{int}]{vector\+Size,  }\item[{const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&}]{params }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_gen_prog_mutation}{Gen\+Prog\+Mutation} object with specified vector size and algorithm parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector\+Size} & The size of the vector representing the individual\textquotesingle{}s genetic material. \\
+\hline
+{\em params} & The algorithm parameters including the mutation rate. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_gen_prog_mutation_a06d8740500d6f698626cd86c0e90d5f7}\label{class_gen_prog_mutation_a06d8740500d6f698626cd86c0e90d5f7} 
+\index{GenProgMutation@{GenProgMutation}!apply@{apply}}
+\index{apply@{apply}!GenProgMutation@{GenProgMutation}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily void Gen\+Prog\+Mutation\+::apply (\begin{DoxyParamCaption}\item[{std\+::mt19937 \&}]{generator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Performs the mutation operation on the individual. 
+
+This method performs mutation on the individual\textquotesingle{}s genetic material based on the specified mutation rate. The mutation modifies the genes of the individual to introduce variations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em generator} & The random number generator used to determine if mutation should occur. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_acbd2e97e189d862aa139b3c334a18619}{Operator}}.
+
+\Hypertarget{class_gen_prog_mutation_adae389a12b5c2c8e72a3ec8c2f140e26}\label{class_gen_prog_mutation_adae389a12b5c2c8e72a3ec8c2f140e26} 
+\index{GenProgMutation@{GenProgMutation}!setIndividual@{setIndividual}}
+\index{setIndividual@{setIndividual}!GenProgMutation@{GenProgMutation}}
+\doxysubsubsection{\texorpdfstring{setIndividual()}{setIndividual()}}
+{\footnotesize\ttfamily void Gen\+Prog\+Mutation\+::set\+Individual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{individual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the individual to be mutated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em individual} & The individual to be mutated. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_abf3bad24158495949ca770dc8aec6542}{Operator}}.
+
+\Hypertarget{class_gen_prog_mutation_a418ba3d84550da1f0ca2d921d2e89176}\label{class_gen_prog_mutation_a418ba3d84550da1f0ca2d921d2e89176} 
+\index{GenProgMutation@{GenProgMutation}!setParents@{setParents}}
+\index{setParents@{setParents}!GenProgMutation@{GenProgMutation}}
+\doxysubsubsection{\texorpdfstring{setParents()}{setParents()}}
+{\footnotesize\ttfamily void Gen\+Prog\+Mutation\+::set\+Parents (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{offspring,  }\item[{const \mbox{\hyperlink{struct_individual}{Individual}} \&}]{parent1,  }\item[{const \mbox{\hyperlink{struct_individual}{Individual}} \&}]{parent2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the parents and offspring for the mutation operation. 
+
+This method is not used in the mutation operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em offspring} & The offspring individual to be generated. \\
+\hline
+{\em parent1} & The first parent individual. \\
+\hline
+{\em parent2} & The second parent individual. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_aa9e9e58811b56bf3a5c1ac9e0d034c64}{Operator}}.
+
+\Hypertarget{class_gen_prog_mutation_a80f6a79a96baf65fab86dc4eb345643c}\label{class_gen_prog_mutation_a80f6a79a96baf65fab86dc4eb345643c} 
+\index{GenProgMutation@{GenProgMutation}!setPopulation@{setPopulation}}
+\index{setPopulation@{setPopulation}!GenProgMutation@{GenProgMutation}}
+\doxysubsubsection{\texorpdfstring{setPopulation()}{setPopulation()}}
+{\footnotesize\ttfamily void Gen\+Prog\+Mutation\+::set\+Population (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&}]{population,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&}]{selected }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the population and selected vectors for the mutation operation. 
+
+This method is not used in the mutation operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em population} & The vector of individuals in the population. \\
+\hline
+{\em selected} & The vector of selected individuals. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_a6e3837c249df579d41f9b9287195c6e5}{Operator}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{class_gen_prog_mutation_a10431e91f31cd3c7568250044ab27796}\label{class_gen_prog_mutation_a10431e91f31cd3c7568250044ab27796} 
+\index{GenProgMutation@{GenProgMutation}!individual@{individual}}
+\index{individual@{individual}!GenProgMutation@{GenProgMutation}}
+\doxysubsubsection{\texorpdfstring{individual}{individual}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_individual}{Individual}}\texorpdfstring{$\ast$}{*} Gen\+Prog\+Mutation\+::individual\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the individual to be mutated \Hypertarget{class_gen_prog_mutation_a1b10d086af1236965cc47501d0f0bd49}\label{class_gen_prog_mutation_a1b10d086af1236965cc47501d0f0bd49} 
+\index{GenProgMutation@{GenProgMutation}!mutationRate@{mutationRate}}
+\index{mutationRate@{mutationRate}!GenProgMutation@{GenProgMutation}}
+\doxysubsubsection{\texorpdfstring{mutationRate}{mutationRate}}
+{\footnotesize\ttfamily double Gen\+Prog\+Mutation\+::mutation\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+The mutation rate used to determine if mutation should occur \Hypertarget{class_gen_prog_mutation_ae19fd2dde317d4137c1d58d74093dedb}\label{class_gen_prog_mutation_ae19fd2dde317d4137c1d58d74093dedb} 
+\index{GenProgMutation@{GenProgMutation}!numUnits@{numUnits}}
+\index{numUnits@{numUnits}!GenProgMutation@{GenProgMutation}}
+\doxysubsubsection{\texorpdfstring{numUnits}{numUnits}}
+{\footnotesize\ttfamily int Gen\+Prog\+Mutation\+::num\+Units\hspace{0.3cm}{\ttfamily [private]}}
+
+Represents the number of units or types of operations/nodes 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/operators/\+Mutation/\mbox{\hyperlink{_gen_prog_mutation_8h}{Gen\+Prog\+Mutation.\+h}}\item 
+src/operators/\+Mutation/\mbox{\hyperlink{_gen_prog_mutation_8cpp}{Gen\+Prog\+Mutation.\+cpp}}\end{DoxyCompactItemize}

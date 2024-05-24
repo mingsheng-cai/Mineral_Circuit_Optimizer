@@ -1,0 +1,167 @@
+\doxysection{Algorithm\+\_\+\+Parameters Struct Reference}
+\hypertarget{struct_algorithm___parameters}{}\label{struct_algorithm___parameters}\index{Algorithm\_Parameters@{Algorithm\_Parameters}}
+
+
+Configures the parameters of a genetic algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Parameter.\+h$>$}
+
+
+
+Collaboration diagram for Algorithm\+\_\+\+Parameters\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{struct_algorithm___parameters__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_algorithm___parameters_ac66010989128761b1abd4f3f04990820}{Algorithm\+\_\+\+Parameters}} (int gens, int pop\+Size, std\+::string \mbox{\hyperlink{struct_algorithm___parameters_ab96437bbdf8bd5d751aca0310493167a}{selection}}, int tour\+Size, std\+::string \mbox{\hyperlink{struct_algorithm___parameters_a79ad1bb44254f8d868b7220cfecd15d9}{crossover}}, double cross\+Rate, std\+::string \mbox{\hyperlink{struct_algorithm___parameters_acdd1af9092797c3d59dea3df2bd40972}{mutation}}, double mut\+Rate, double elite\+Perc, double \mbox{\hyperlink{struct_algorithm___parameters_a7fd17e7c04be389d37263929555753a7}{initial\+Temp}}, double \mbox{\hyperlink{struct_algorithm___parameters_ae9d9072256c994f4d2967bd6f595f052}{deltT}}, double \mbox{\hyperlink{struct_algorithm___parameters_af98b00d55cd8b4069abf44ceaaf49df2}{random\+Seed}})
+\begin{DoxyCompactList}\small\item\em Constructor to initialize the parameters with custom values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_algorithm___parameters_aad2e23bc029a6ef62f72d514a4587b4f}{max\+Generations}} = 1000
+\item 
+int \mbox{\hyperlink{struct_algorithm___parameters_a6c1e71841f823da64251aeaa32765cdf}{population\+Size}} = 100
+\item 
+std\+::string \mbox{\hyperlink{struct_algorithm___parameters_ab96437bbdf8bd5d751aca0310493167a}{selection}} = "{}Nary\+Tournament\+Selection"{}
+\item 
+int \mbox{\hyperlink{struct_algorithm___parameters_a48a27db83c70d71f5b09cbd146163f9a}{tournament\+Size}} = 3
+\item 
+std\+::string \mbox{\hyperlink{struct_algorithm___parameters_a79ad1bb44254f8d868b7220cfecd15d9}{crossover}} = "{}Two\+Point\+Crossover"{}
+\item 
+double \mbox{\hyperlink{struct_algorithm___parameters_aecc0856284ebe6d78465a310df2d83fa}{crossover\+Rate}} = 0.\+8
+\item 
+std\+::string \mbox{\hyperlink{struct_algorithm___parameters_acdd1af9092797c3d59dea3df2bd40972}{mutation}} = "{}Guided\+Mutation"{}
+\item 
+double \mbox{\hyperlink{struct_algorithm___parameters_a1b55ffb2a249f735c360f787645eab50}{mutation\+Rate}} = 0.\+1
+\item 
+double \mbox{\hyperlink{struct_algorithm___parameters_a07ef05a69505b5cb20087716294bd693}{elite\+Percentage}} = 0.\+2
+\item 
+double \mbox{\hyperlink{struct_algorithm___parameters_a7fd17e7c04be389d37263929555753a7}{initial\+Temp}} = 1000.\+0
+\item 
+double \mbox{\hyperlink{struct_algorithm___parameters_ae9d9072256c994f4d2967bd6f595f052}{deltT}} = 1.\+0
+\item 
+unsigned int \mbox{\hyperlink{struct_algorithm___parameters_af98b00d55cd8b4069abf44ceaaf49df2}{random\+Seed}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Configures the parameters of a genetic algorithm. 
+
+The \doxylink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters} structure contains various parameters used to configure the behavior of a genetic algorithm, including the number of generations, population size, tournament size, crossover rate, mutation rate, elite percentage, and random seed. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_algorithm___parameters_ac66010989128761b1abd4f3f04990820}\label{struct_algorithm___parameters_ac66010989128761b1abd4f3f04990820} 
+\index{Algorithm\_Parameters@{Algorithm\_Parameters}!Algorithm\_Parameters@{Algorithm\_Parameters}}
+\index{Algorithm\_Parameters@{Algorithm\_Parameters}!Algorithm\_Parameters@{Algorithm\_Parameters}}
+\doxysubsubsection{\texorpdfstring{Algorithm\_Parameters()}{Algorithm\_Parameters()}}
+{\footnotesize\ttfamily Algorithm\+\_\+\+Parameters\+::\+Algorithm\+\_\+\+Parameters (\begin{DoxyParamCaption}\item[{int}]{gens,  }\item[{int}]{pop\+Size,  }\item[{std\+::string}]{selection,  }\item[{int}]{tour\+Size,  }\item[{std\+::string}]{crossover,  }\item[{double}]{cross\+Rate,  }\item[{std\+::string}]{mutation,  }\item[{double}]{mut\+Rate,  }\item[{double}]{elite\+Perc,  }\item[{double}]{initial\+Temp,  }\item[{double}]{deltT,  }\item[{double}]{random\+Seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor to initialize the parameters with custom values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gens} & Maximum number of generations. \\
+\hline
+{\em pop\+Size} & Size of the population. \\
+\hline
+{\em tour\+Size} & Number of individuals to select in each tournament. \\
+\hline
+{\em cross\+Rate} & Rate at which crossover occurs. \\
+\hline
+{\em mut\+Rate} & Rate at which mutation occurs. \\
+\hline
+{\em elite\+Perc} & Percentage of elite individuals to keep in the next generation. \\
+\hline
+{\em seed} & Random seed, 0 means using current time. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{struct_algorithm___parameters_a79ad1bb44254f8d868b7220cfecd15d9}\label{struct_algorithm___parameters_a79ad1bb44254f8d868b7220cfecd15d9} 
+\index{Algorithm\_Parameters@{Algorithm\_Parameters}!crossover@{crossover}}
+\index{crossover@{crossover}!Algorithm\_Parameters@{Algorithm\_Parameters}}
+\doxysubsubsection{\texorpdfstring{crossover}{crossover}}
+{\footnotesize\ttfamily std\+::string Algorithm\+\_\+\+Parameters\+::crossover = "{}Two\+Point\+Crossover"{}}
+
+Crossover method \Hypertarget{struct_algorithm___parameters_aecc0856284ebe6d78465a310df2d83fa}\label{struct_algorithm___parameters_aecc0856284ebe6d78465a310df2d83fa} 
+\index{Algorithm\_Parameters@{Algorithm\_Parameters}!crossoverRate@{crossoverRate}}
+\index{crossoverRate@{crossoverRate}!Algorithm\_Parameters@{Algorithm\_Parameters}}
+\doxysubsubsection{\texorpdfstring{crossoverRate}{crossoverRate}}
+{\footnotesize\ttfamily double Algorithm\+\_\+\+Parameters\+::crossover\+Rate = 0.\+8}
+
+Rate at which crossover occurs \Hypertarget{struct_algorithm___parameters_ae9d9072256c994f4d2967bd6f595f052}\label{struct_algorithm___parameters_ae9d9072256c994f4d2967bd6f595f052} 
+\index{Algorithm\_Parameters@{Algorithm\_Parameters}!deltT@{deltT}}
+\index{deltT@{deltT}!Algorithm\_Parameters@{Algorithm\_Parameters}}
+\doxysubsubsection{\texorpdfstring{deltT}{deltT}}
+{\footnotesize\ttfamily double Algorithm\+\_\+\+Parameters\+::deltT = 1.\+0}
+
+The temperature decrement of Simulated Annealing algorithm \Hypertarget{struct_algorithm___parameters_a07ef05a69505b5cb20087716294bd693}\label{struct_algorithm___parameters_a07ef05a69505b5cb20087716294bd693} 
+\index{Algorithm\_Parameters@{Algorithm\_Parameters}!elitePercentage@{elitePercentage}}
+\index{elitePercentage@{elitePercentage}!Algorithm\_Parameters@{Algorithm\_Parameters}}
+\doxysubsubsection{\texorpdfstring{elitePercentage}{elitePercentage}}
+{\footnotesize\ttfamily double Algorithm\+\_\+\+Parameters\+::elite\+Percentage = 0.\+2}
+
+Percentage of elite individuals to keep in the next generation \Hypertarget{struct_algorithm___parameters_a7fd17e7c04be389d37263929555753a7}\label{struct_algorithm___parameters_a7fd17e7c04be389d37263929555753a7} 
+\index{Algorithm\_Parameters@{Algorithm\_Parameters}!initialTemp@{initialTemp}}
+\index{initialTemp@{initialTemp}!Algorithm\_Parameters@{Algorithm\_Parameters}}
+\doxysubsubsection{\texorpdfstring{initialTemp}{initialTemp}}
+{\footnotesize\ttfamily double Algorithm\+\_\+\+Parameters\+::initial\+Temp = 1000.\+0}
+
+Initial temperature of Simulated Annealing algorithm \Hypertarget{struct_algorithm___parameters_aad2e23bc029a6ef62f72d514a4587b4f}\label{struct_algorithm___parameters_aad2e23bc029a6ef62f72d514a4587b4f} 
+\index{Algorithm\_Parameters@{Algorithm\_Parameters}!maxGenerations@{maxGenerations}}
+\index{maxGenerations@{maxGenerations}!Algorithm\_Parameters@{Algorithm\_Parameters}}
+\doxysubsubsection{\texorpdfstring{maxGenerations}{maxGenerations}}
+{\footnotesize\ttfamily int Algorithm\+\_\+\+Parameters\+::max\+Generations = 1000}
+
+Maximum number of generations \Hypertarget{struct_algorithm___parameters_acdd1af9092797c3d59dea3df2bd40972}\label{struct_algorithm___parameters_acdd1af9092797c3d59dea3df2bd40972} 
+\index{Algorithm\_Parameters@{Algorithm\_Parameters}!mutation@{mutation}}
+\index{mutation@{mutation}!Algorithm\_Parameters@{Algorithm\_Parameters}}
+\doxysubsubsection{\texorpdfstring{mutation}{mutation}}
+{\footnotesize\ttfamily std\+::string Algorithm\+\_\+\+Parameters\+::mutation = "{}Guided\+Mutation"{}}
+
+Mutation method \Hypertarget{struct_algorithm___parameters_a1b55ffb2a249f735c360f787645eab50}\label{struct_algorithm___parameters_a1b55ffb2a249f735c360f787645eab50} 
+\index{Algorithm\_Parameters@{Algorithm\_Parameters}!mutationRate@{mutationRate}}
+\index{mutationRate@{mutationRate}!Algorithm\_Parameters@{Algorithm\_Parameters}}
+\doxysubsubsection{\texorpdfstring{mutationRate}{mutationRate}}
+{\footnotesize\ttfamily double Algorithm\+\_\+\+Parameters\+::mutation\+Rate = 0.\+1}
+
+Rate at which mutation occurs \Hypertarget{struct_algorithm___parameters_a6c1e71841f823da64251aeaa32765cdf}\label{struct_algorithm___parameters_a6c1e71841f823da64251aeaa32765cdf} 
+\index{Algorithm\_Parameters@{Algorithm\_Parameters}!populationSize@{populationSize}}
+\index{populationSize@{populationSize}!Algorithm\_Parameters@{Algorithm\_Parameters}}
+\doxysubsubsection{\texorpdfstring{populationSize}{populationSize}}
+{\footnotesize\ttfamily int Algorithm\+\_\+\+Parameters\+::population\+Size = 100}
+
+Size of the population \Hypertarget{struct_algorithm___parameters_af98b00d55cd8b4069abf44ceaaf49df2}\label{struct_algorithm___parameters_af98b00d55cd8b4069abf44ceaaf49df2} 
+\index{Algorithm\_Parameters@{Algorithm\_Parameters}!randomSeed@{randomSeed}}
+\index{randomSeed@{randomSeed}!Algorithm\_Parameters@{Algorithm\_Parameters}}
+\doxysubsubsection{\texorpdfstring{randomSeed}{randomSeed}}
+{\footnotesize\ttfamily unsigned int Algorithm\+\_\+\+Parameters\+::random\+Seed = 0}
+
+Random seed, 0 means using current time \Hypertarget{struct_algorithm___parameters_ab96437bbdf8bd5d751aca0310493167a}\label{struct_algorithm___parameters_ab96437bbdf8bd5d751aca0310493167a} 
+\index{Algorithm\_Parameters@{Algorithm\_Parameters}!selection@{selection}}
+\index{selection@{selection}!Algorithm\_Parameters@{Algorithm\_Parameters}}
+\doxysubsubsection{\texorpdfstring{selection}{selection}}
+{\footnotesize\ttfamily std\+::string Algorithm\+\_\+\+Parameters\+::selection = "{}Nary\+Tournament\+Selection"{}}
+
+Selection method \Hypertarget{struct_algorithm___parameters_a48a27db83c70d71f5b09cbd146163f9a}\label{struct_algorithm___parameters_a48a27db83c70d71f5b09cbd146163f9a} 
+\index{Algorithm\_Parameters@{Algorithm\_Parameters}!tournamentSize@{tournamentSize}}
+\index{tournamentSize@{tournamentSize}!Algorithm\_Parameters@{Algorithm\_Parameters}}
+\doxysubsubsection{\texorpdfstring{tournamentSize}{tournamentSize}}
+{\footnotesize\ttfamily int Algorithm\+\_\+\+Parameters\+::tournament\+Size = 3}
+
+Number of individuals to select in each tournament 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/utils/\mbox{\hyperlink{_parameter_8h}{Parameter.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,32 @@
+\doxysection{Operator.\+h}
+\hypertarget{_operator_8h_source}{}\label{_operator_8h_source}\index{include/operators/Operator.h@{include/operators/Operator.h}}
+\mbox{\hyperlink{_operator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\ \#ifndef\ GENETIC\_ALGORITHM\_OPERATOR\_H}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ GENETIC\_ALGORITHM\_OPERATOR\_H}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_individual_8h}{../utils/Individual.h}}"{}}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_parameter_8h}{../utils/Parameter.h}}"{}}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_operator}{Operator}}\ \{}
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_operator_ac7cb92992e32c213091d3659ef596a46}{\string~Operator}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operator_acbd2e97e189d862aa139b3c334a18619}{apply}}(std::mt19937\ \&generator)\ =\ 0;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operator_a6e3837c249df579d41f9b9287195c6e5}{setPopulation}}(\textcolor{keyword}{const}\ std::vector<Individual>\ \&population,\ std::vector<Individual>\ \&selected)\ =\ 0;}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operator_abf3bad24158495949ca770dc8aec6542}{setIndividual}}(\mbox{\hyperlink{struct_individual}{Individual}}\ \&individual)\ =\ 0;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operator_aa9e9e58811b56bf3a5c1ac9e0d034c64}{setParents}}(\mbox{\hyperlink{struct_individual}{Individual}}\ \&offspring,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&parent1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&parent2)\ =\ 0;}
+\DoxyCodeLine{00095\ \};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//GENETIC\_ALGORITHM\_OPERATOR\_H}}
+
+\end{DoxyCode}

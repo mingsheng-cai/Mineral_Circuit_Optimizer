@@ -1,0 +1,36 @@
+\doxysection{Uniform\+Crossover.\+h}
+\hypertarget{_uniform_crossover_8h_source}{}\label{_uniform_crossover_8h_source}\index{include/operators/Crossover/UniformCrossover.h@{include/operators/Crossover/UniformCrossover.h}}
+\mbox{\hyperlink{_uniform_crossover_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ GENETIC\_ALGORITHM\_UNIFORMCROSSOVER\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ GENETIC\_ALGORITHM\_UNIFORMCROSSOVER\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_operator_8h}{../Operator.h}}"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_individual_8h}{../../utils/Individual.h}}"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_parameter_8h}{../../utils/Parameter.h}}"{}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_uniform_crossover}{UniformCrossover}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_operator}{Operator}}\ \{}
+\DoxyCodeLine{00035\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{struct_individual}{Individual}}\ *\mbox{\hyperlink{class_uniform_crossover_ac4d94f44e8fcdb69475de0c2f10da372}{offspring}};\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ *\mbox{\hyperlink{class_uniform_crossover_aebc71ae2562a6f9c396da9650f17ca58}{parent1}};\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ *\mbox{\hyperlink{class_uniform_crossover_ab1f1c26025cefbecf0d67df45df5bff7}{parent2}};\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_uniform_crossover_a94d85e8b8d9524b523a714df886ffa7c}{crossoverRate}};\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_uniform_crossover_a578f0a31f27f5e61b38b319d39eba023}{UniformCrossover}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}\ \&params);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_uniform_crossover_a0cbf8ed306d32ef6434c86798dde52d8}{setParents}}(\mbox{\hyperlink{struct_individual}{Individual}}\ \&\mbox{\hyperlink{class_uniform_crossover_ac4d94f44e8fcdb69475de0c2f10da372}{offspring}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&\mbox{\hyperlink{class_uniform_crossover_aebc71ae2562a6f9c396da9650f17ca58}{parent1}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&\mbox{\hyperlink{class_uniform_crossover_ab1f1c26025cefbecf0d67df45df5bff7}{parent2}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_uniform_crossover_af3103101b8cc0560c898cff8d63bdb0b}{setPopulation}}(\textcolor{keyword}{const}\ std::vector<Individual>\ \&population,\ std::vector<Individual>\ \&selected)\ \{\};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_uniform_crossover_acf0be196297597e658ee8c3b0173acb4}{setIndividual}}(\mbox{\hyperlink{struct_individual}{Individual}}\ \&individual)\ \{\};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_uniform_crossover_ae82c9124d1896980e1cbdb1c8aa17130}{apply}}(std::mt19937\ \&generator)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00086\ \};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//GENETIC\_ALGORITHM\_UNIFORMCROSSOVER\_H}}
+
+\end{DoxyCode}

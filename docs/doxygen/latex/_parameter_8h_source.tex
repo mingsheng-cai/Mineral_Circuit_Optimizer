@@ -1,0 +1,40 @@
+\doxysection{Parameter.\+h}
+\hypertarget{_parameter_8h_source}{}\label{_parameter_8h_source}\index{include/utils/Parameter.h@{include/utils/Parameter.h}}
+\mbox{\hyperlink{_parameter_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ GENETIC\_ALGORITHM\_PARAMETER\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ GENETIC\_ALGORITHM\_PARAMETER\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_algorithm___parameters_aad2e23bc029a6ef62f72d514a4587b4f}{maxGenerations}}\ =\ 1000;\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_algorithm___parameters_a6c1e71841f823da64251aeaa32765cdf}{populationSize}}\ =\ 100;\ }
+\DoxyCodeLine{00041\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_algorithm___parameters_ab96437bbdf8bd5d751aca0310493167a}{selection}}\ =\ \textcolor{stringliteral}{"{}NaryTournamentSelection"{}};\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_algorithm___parameters_a48a27db83c70d71f5b09cbd146163f9a}{tournamentSize}}\ =\ 3;\ }
+\DoxyCodeLine{00043\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_algorithm___parameters_a79ad1bb44254f8d868b7220cfecd15d9}{crossover}}\ =\ \textcolor{stringliteral}{"{}TwoPointCrossover"{}};\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_algorithm___parameters_aecc0856284ebe6d78465a310df2d83fa}{crossoverRate}}\ =\ 0.8;\ }
+\DoxyCodeLine{00045\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_algorithm___parameters_acdd1af9092797c3d59dea3df2bd40972}{mutation}}\ =\ \textcolor{stringliteral}{"{}GuidedMutation"{}};\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_algorithm___parameters_a1b55ffb2a249f735c360f787645eab50}{mutationRate}}\ =\ 0.1;\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_algorithm___parameters_a07ef05a69505b5cb20087716294bd693}{elitePercentage}}\ =\ 0.2;\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_algorithm___parameters_a7fd17e7c04be389d37263929555753a7}{initialTemp}}\ =\ 1000.0;\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_algorithm___parameters_ae9d9072256c994f4d2967bd6f595f052}{deltT}}\ =\ 1.0;\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_algorithm___parameters_af98b00d55cd8b4069abf44ceaaf49df2}{randomSeed}}\ =\ 0;\ }
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{struct_algorithm___parameters_ac66010989128761b1abd4f3f04990820}{Algorithm\_Parameters}}(\textcolor{keywordtype}{int}\ gens,\ \textcolor{keywordtype}{int}\ popSize,\ std::string\ \mbox{\hyperlink{struct_algorithm___parameters_ab96437bbdf8bd5d751aca0310493167a}{selection}},\ \textcolor{keywordtype}{int}\ tourSize,}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{struct_algorithm___parameters_a79ad1bb44254f8d868b7220cfecd15d9}{crossover}},\ \textcolor{keywordtype}{double}\ crossRate,\ std::string\ \mbox{\hyperlink{struct_algorithm___parameters_acdd1af9092797c3d59dea3df2bd40972}{mutation}},\ \textcolor{keywordtype}{double}\ mutRate,}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ elitePerc,\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_algorithm___parameters_a7fd17e7c04be389d37263929555753a7}{initialTemp}},\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_algorithm___parameters_ae9d9072256c994f4d2967bd6f595f052}{deltT}},\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_algorithm___parameters_af98b00d55cd8b4069abf44ceaaf49df2}{randomSeed}})}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_algorithm___parameters_aad2e23bc029a6ef62f72d514a4587b4f}{maxGenerations}}(gens),\ \mbox{\hyperlink{struct_algorithm___parameters_a6c1e71841f823da64251aeaa32765cdf}{populationSize}}(popSize),\ \mbox{\hyperlink{struct_algorithm___parameters_ab96437bbdf8bd5d751aca0310493167a}{selection}}(\mbox{\hyperlink{struct_algorithm___parameters_ab96437bbdf8bd5d751aca0310493167a}{selection}}),\ \mbox{\hyperlink{struct_algorithm___parameters_a48a27db83c70d71f5b09cbd146163f9a}{tournamentSize}}(tourSize),}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_algorithm___parameters_a79ad1bb44254f8d868b7220cfecd15d9}{crossover}}(\mbox{\hyperlink{struct_algorithm___parameters_a79ad1bb44254f8d868b7220cfecd15d9}{crossover}}),\ \mbox{\hyperlink{struct_algorithm___parameters_aecc0856284ebe6d78465a310df2d83fa}{crossoverRate}}(crossRate),\ \mbox{\hyperlink{struct_algorithm___parameters_acdd1af9092797c3d59dea3df2bd40972}{mutation}}(\mbox{\hyperlink{struct_algorithm___parameters_acdd1af9092797c3d59dea3df2bd40972}{mutation}}),\ \mbox{\hyperlink{struct_algorithm___parameters_a1b55ffb2a249f735c360f787645eab50}{mutationRate}}(mutRate),}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_algorithm___parameters_a07ef05a69505b5cb20087716294bd693}{elitePercentage}}(elitePerc),\ \mbox{\hyperlink{struct_algorithm___parameters_a7fd17e7c04be389d37263929555753a7}{initialTemp}}(\mbox{\hyperlink{struct_algorithm___parameters_a7fd17e7c04be389d37263929555753a7}{initialTemp}}),\ \mbox{\hyperlink{struct_algorithm___parameters_ae9d9072256c994f4d2967bd6f595f052}{deltT}}(\mbox{\hyperlink{struct_algorithm___parameters_ae9d9072256c994f4d2967bd6f595f052}{deltT}}),\ \mbox{\hyperlink{struct_algorithm___parameters_af98b00d55cd8b4069abf44ceaaf49df2}{randomSeed}}(\mbox{\hyperlink{struct_algorithm___parameters_af98b00d55cd8b4069abf44ceaaf49df2}{randomSeed}})\ \{\}}
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_circuit_parameters}{CircuitParameters}}\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_circuit_parameters_a1f21a605c44c72091fb2ee13bcbbc6be}{tolerance}}\ =\ 1e-\/6;\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_circuit_parameters_a8a8af1cd7cc477be34f19d4c74dc1343}{maxIterations}}\ =\ 1000;\ }
+\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{struct_circuit_parameters_acc8354476cb14948704f171764eae5f2}{CircuitParameters}}(\textcolor{keywordtype}{double}\ tol,\ \textcolor{keywordtype}{int}\ maxIter)\ :\ \mbox{\hyperlink{struct_circuit_parameters_a1f21a605c44c72091fb2ee13bcbbc6be}{tolerance}}(tol),\ \mbox{\hyperlink{struct_circuit_parameters_a8a8af1cd7cc477be34f19d4c74dc1343}{maxIterations}}(maxIter)\ \{\}}
+\DoxyCodeLine{00090\ \};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//GENETIC\_ALGORITHM\_PARAMETER\_H}}
+
+\end{DoxyCode}

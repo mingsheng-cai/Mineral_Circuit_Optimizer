@@ -1,0 +1,148 @@
+\doxysection{tqdm\+::range\texorpdfstring{$<$}{<} Int\+Type \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classtqdm_1_1range}{}\label{classtqdm_1_1range}\index{tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}}
+
+
+A range of integers represented by iterators.  
+
+
+
+
+{\ttfamily \#include $<$tqdm.\+hpp$>$}
+
+
+
+Collaboration diagram for tqdm\+::range\texorpdfstring{$<$}{<} Int\+Type \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classtqdm_1_1range__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtqdm_1_1range_ac1e36bf8fd968d883c62e3e2005a741a}{iterator}} = \mbox{\hyperlink{classtqdm_1_1int__iterator}{int\+\_\+iterator}}$<$Int\+Type$>$
+\item 
+using \mbox{\hyperlink{classtqdm_1_1range_a3983520c855f295e93845ece63dc88ac}{const\+\_\+iterator}} = \mbox{\hyperlink{classtqdm_1_1range_ac1e36bf8fd968d883c62e3e2005a741a}{iterator}}
+\item 
+using \mbox{\hyperlink{classtqdm_1_1range_a01c54db4158eacade2fb9fd156b8c122}{value\+\_\+type}} = Int\+Type
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtqdm_1_1range_aa7076f0b78fcf560605ae6612c917cd4}{range}} (Int\+Type first, Int\+Type last)
+\item 
+\mbox{\hyperlink{classtqdm_1_1range_aa59121185c62c9536852776370b1f07e}{range}} (Int\+Type last)
+\item 
+\mbox{\hyperlink{classtqdm_1_1range_ac1e36bf8fd968d883c62e3e2005a741a}{iterator}} \mbox{\hyperlink{classtqdm_1_1range_acf99b42d9b50ccd8560ce7a40dd4490b}{begin}} () const
+\item 
+\mbox{\hyperlink{classtqdm_1_1range_ac1e36bf8fd968d883c62e3e2005a741a}{iterator}} \mbox{\hyperlink{classtqdm_1_1range_aedeb77dd923056109481ba00de931822}{end}} () const
+\item 
+\mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}} \mbox{\hyperlink{classtqdm_1_1range_a11ec5455492e03ec077b66eb8e3d37ee}{size}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtqdm_1_1range_ac1e36bf8fd968d883c62e3e2005a741a}{iterator}} \mbox{\hyperlink{classtqdm_1_1range_adb86b3d54dc0c02b4290be402810e04c}{first\+\_\+}}
+\item 
+\mbox{\hyperlink{classtqdm_1_1range_ac1e36bf8fd968d883c62e3e2005a741a}{iterator}} \mbox{\hyperlink{classtqdm_1_1range_a69cd60733c7c70febda6bd2d59842408}{last\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Int\+Type$>$\newline
+class tqdm\+::range$<$ Int\+Type $>$}
+A range of integers represented by iterators. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Int\+Type} & The type of the integer. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classtqdm_1_1range_a3983520c855f295e93845ece63dc88ac}\label{classtqdm_1_1range_a3983520c855f295e93845ece63dc88ac} 
+\index{tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}!const\_iterator@{const\_iterator}}
+\index{const\_iterator@{const\_iterator}!tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{const\_iterator}{const\_iterator}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+using \mbox{\hyperlink{classtqdm_1_1range}{tqdm\+::range}}$<$ Int\+Type $>$\+::const\+\_\+iterator = \mbox{\hyperlink{classtqdm_1_1range_ac1e36bf8fd968d883c62e3e2005a741a}{iterator}}}
+
+\Hypertarget{classtqdm_1_1range_ac1e36bf8fd968d883c62e3e2005a741a}\label{classtqdm_1_1range_ac1e36bf8fd968d883c62e3e2005a741a} 
+\index{tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}!iterator@{iterator}}
+\index{iterator@{iterator}!tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+using \mbox{\hyperlink{classtqdm_1_1range}{tqdm\+::range}}$<$ Int\+Type $>$\+::iterator = \mbox{\hyperlink{classtqdm_1_1int__iterator}{int\+\_\+iterator}}$<$Int\+Type$>$}
+
+\Hypertarget{classtqdm_1_1range_a01c54db4158eacade2fb9fd156b8c122}\label{classtqdm_1_1range_a01c54db4158eacade2fb9fd156b8c122} 
+\index{tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+using \mbox{\hyperlink{classtqdm_1_1range}{tqdm\+::range}}$<$ Int\+Type $>$\+::value\+\_\+type = Int\+Type}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtqdm_1_1range_aa7076f0b78fcf560605ae6612c917cd4}\label{classtqdm_1_1range_aa7076f0b78fcf560605ae6612c917cd4} 
+\index{tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}!range@{range}}
+\index{range@{range}!tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{range()}{range()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+\mbox{\hyperlink{classtqdm_1_1range}{tqdm\+::range}}$<$ Int\+Type $>$\+::range (\begin{DoxyParamCaption}\item[{Int\+Type}]{first,  }\item[{Int\+Type}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classtqdm_1_1range_aa59121185c62c9536852776370b1f07e}\label{classtqdm_1_1range_aa59121185c62c9536852776370b1f07e} 
+\index{tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}!range@{range}}
+\index{range@{range}!tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{range()}{range()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+\mbox{\hyperlink{classtqdm_1_1range}{tqdm\+::range}}$<$ Int\+Type $>$\+::range (\begin{DoxyParamCaption}\item[{Int\+Type}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtqdm_1_1range_acf99b42d9b50ccd8560ce7a40dd4490b}\label{classtqdm_1_1range_acf99b42d9b50ccd8560ce7a40dd4490b} 
+\index{tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}!begin@{begin}}
+\index{begin@{begin}!tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+\mbox{\hyperlink{classtqdm_1_1range_ac1e36bf8fd968d883c62e3e2005a741a}{iterator}} \mbox{\hyperlink{classtqdm_1_1range}{tqdm\+::range}}$<$ Int\+Type $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classtqdm_1_1range_aedeb77dd923056109481ba00de931822}\label{classtqdm_1_1range_aedeb77dd923056109481ba00de931822} 
+\index{tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}!end@{end}}
+\index{end@{end}!tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+\mbox{\hyperlink{classtqdm_1_1range_ac1e36bf8fd968d883c62e3e2005a741a}{iterator}} \mbox{\hyperlink{classtqdm_1_1range}{tqdm\+::range}}$<$ Int\+Type $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classtqdm_1_1range_a11ec5455492e03ec077b66eb8e3d37ee}\label{classtqdm_1_1range_a11ec5455492e03ec077b66eb8e3d37ee} 
+\index{tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}!size@{size}}
+\index{size@{size}!tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+\mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}} \mbox{\hyperlink{classtqdm_1_1range}{tqdm\+::range}}$<$ Int\+Type $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classtqdm_1_1range_adb86b3d54dc0c02b4290be402810e04c}\label{classtqdm_1_1range_adb86b3d54dc0c02b4290be402810e04c} 
+\index{tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}!first\_@{first\_}}
+\index{first\_@{first\_}!tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{first\_}{first\_}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+\mbox{\hyperlink{classtqdm_1_1range_ac1e36bf8fd968d883c62e3e2005a741a}{iterator}} \mbox{\hyperlink{classtqdm_1_1range}{tqdm\+::range}}$<$ Int\+Type $>$\+::first\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtqdm_1_1range_a69cd60733c7c70febda6bd2d59842408}\label{classtqdm_1_1range_a69cd60733c7c70febda6bd2d59842408} 
+\index{tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}!last\_@{last\_}}
+\index{last\_@{last\_}!tqdm::range$<$ IntType $>$@{tqdm::range$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{last\_}{last\_}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+\mbox{\hyperlink{classtqdm_1_1range_ac1e36bf8fd968d883c62e3e2005a741a}{iterator}} \mbox{\hyperlink{classtqdm_1_1range}{tqdm\+::range}}$<$ Int\+Type $>$\+::last\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/utils/\mbox{\hyperlink{tqdm_8hpp}{tqdm.\+hpp}}\end{DoxyCompactItemize}

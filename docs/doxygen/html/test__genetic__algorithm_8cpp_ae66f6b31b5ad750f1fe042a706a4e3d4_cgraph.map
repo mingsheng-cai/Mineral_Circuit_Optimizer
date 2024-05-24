@@ -1,0 +1,88 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title="Main function to run all the tests." alt="" coords="5,532,55,557"/>
+<area shape="rect" id="Node000002" href="$test__genetic__algorithm_8cpp.html#ac28cdfbad25ea03a35e43245fd5889af" title="Test the elitism operator." alt="" coords="323,533,411,559"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,542,307,543,307,548,55,547"/>
+<area shape="rect" id="Node000009" href="$test__genetic__algorithm_8cpp.html#af46ebdbd60f4751d345fda45173a5e35" title="Test the genetic algorithm for various cases." alt="" coords="103,457,255,483"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="54,530,136,488,139,492,56,535"/>
+<area shape="rect" id="Node000023" href="$test__genetic__algorithm_8cpp.html#a382524e57d4fa70caa694dfa24fe9ddb" title="Test the initialization of the population." alt="" coords="316,582,417,608"/>
+<area shape="poly" id="edge28_Node000001_Node000023" title=" " alt="" coords="55,545,301,583,300,588,54,551"/>
+<area shape="rect" id="Node000024" href="$test__genetic__algorithm_8cpp.html#aad32ea7f325c0e2e53e9dcb9e6063998" title="Test the elitism operator." alt="" coords="127,789,231,815"/>
+<area shape="poly" id="edge32_Node000001_Node000024" title=" " alt="" coords="41,556,165,774,160,777,37,559"/>
+<area shape="rect" id="Node000034" href="$test__genetic__algorithm_8cpp.html#a5738502be5c47789308faafd36639a99" title="Test the simulated annealing operator." alt="" coords="333,333,401,359"/>
+<area shape="poly" id="edge48_Node000001_Node000034" title=" " alt="" coords="35,530,60,487,79,463,101,442,155,409,212,383,268,364,317,352,318,357,270,370,214,388,157,413,104,446,83,467,65,490,40,532"/>
+<area shape="rect" id="Node000003" href="$class_circuit.html#a9272fae1173b964dc7441ab126500d61" title="Checks the validity of the circuit vector." alt="" coords="498,632,652,657"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="411,557,432,567,447,581,456,594,465,606,480,618,489,623,486,627,477,623,461,610,452,597,443,584,429,572,409,561"/>
+<area shape="rect" id="Node000005" href="$_genetic___algorithm_8cpp.html#a67d1d9548b0f13a3e42eb769e4a3da02" title="Apply elitism to preserve the best individuals in a new population." alt="" coords="545,484,605,509"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="410,533,530,504,531,509,412,538"/>
+<area shape="rect" id="Node000006" href="$_genetic___algorithm_8cpp.html#aed0dc0d7a485d04965c9810ca2217222" title="Initializes the population for the genetic algorithm." alt="" coords="510,533,640,559"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="411,543,495,543,495,548,411,548"/>
+<area shape="rect" id="Node000007" href="$_genetic___algorithm_8cpp.html#a5758e13cc14bb5f332da692d118ca98a" title="Initializes the random seed based on algorithm parameters." alt="" coords="501,582,649,608"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="412,553,504,575,502,581,410,559"/>
+<area shape="rect" id="Node000008" href="$test__genetic__algorithm_8cpp.html#a859955e6439a661195d141ca90dd7fe6" title="Test function for the genetic algorithm." alt="" coords="527,434,623,460"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="409,530,429,519,443,507,452,494,461,481,477,469,511,455,513,460,480,473,465,485,456,497,447,510,432,524,411,535"/>
+<area shape="rect" id="Node000004" href="$class_circuit.html#af15811c915105eef1a50bdf0469cf9db" title="Marks a unit in the circuit and recursively marks its connected units." alt="" coords="729,632,860,657"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="653,642,713,642,713,647,653,647"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="758,633,751,623,755,613,770,607,794,605,821,608,835,614,832,619,820,613,794,610,771,612,759,617,756,622,762,629"/>
+<area shape="poly" id="edge12_Node000009_Node000003" title=" " alt="" coords="189,482,205,512,230,550,263,588,304,618,347,635,393,646,439,650,482,651,482,656,439,656,392,651,346,640,302,623,260,592,226,553,200,514,184,484"/>
+<area shape="poly" id="edge26_Node000009_Node000008" title=" " alt="" coords="255,463,511,448,512,453,256,468"/>
+<area shape="rect" id="Node000010" href="$test__genetic__algorithm_8cpp.html#a49737531e93285c975b8d270ebff4f2a" title="Function to check if two arrays are equal." alt="" coords="520,1041,630,1067"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="186,482,198,533,222,608,258,694,280,736,305,775,337,808,369,827,401,847,417,862,433,882,444,902,450,922,453,959,458,993,466,1010,480,1026,506,1042,504,1047,477,1030,461,1012,453,995,447,960,444,923,439,905,428,884,413,865,397,851,366,831,334,812,301,778,275,738,253,696,217,610,193,535,180,484"/>
+<area shape="rect" id="Node000011" href="$test__genetic__algorithm_8cpp.html#ac39433efe4b9aa8c9d9e68d0071e5b37" title="Function to check the validity of a circuit vector." alt="" coords="521,234,629,260"/>
+<area shape="poly" id="edge11_Node000009_Node000011" title=" " alt="" coords="185,455,228,390,262,351,302,318,352,292,405,273,458,259,505,251,506,256,459,265,407,278,354,297,304,323,265,355,232,393,189,458"/>
+<area shape="rect" id="Node000012" href="$_c_simulator_8cpp.html#a43f70be396ec43b828ae6b5f62663006" title="Evaluates the performance of a circuit." alt="" coords="308,120,425,145"/>
+<area shape="poly" id="edge13_Node000009_Node000012" title=" " alt="" coords="185,455,348,158,353,160,190,458"/>
+<area shape="rect" id="Node000018" href="$_genetic___algorithm_8cpp.html#a4eb04506c5788c119795cd6e3e0c6479" title="Optimizes a solution using the genetic algorithm." alt="" coords="332,484,402,509"/>
+<area shape="poly" id="edge19_Node000009_Node000018" title=" " alt="" coords="256,478,317,487,316,492,255,483"/>
+<area shape="rect" id="Node000022" href="$test__genetic__algorithm_8cpp.html#af4f9e42ca909fa978f26061602cbb37a" title="Test function for the genetic algorithm with a long vector." alt="" coords="303,382,430,408"/>
+<area shape="poly" id="edge27_Node000009_Node000022" title=" " alt="" coords="212,454,317,412,319,417,214,459"/>
+<area shape="rect" id="Node000013" href="$class_circuit.html#a0d347a4af7957954a800d356f8005458" title="Calculates the flows within the circuit." alt="" coords="515,5,635,46"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="383,117,425,87,477,55,500,45,502,50,480,60,428,91,386,121"/>
+<area shape="rect" id="Node000015" href="$class_circuit.html#abf23eff70d399e2866441bcb89c6c957" title="Checks if the circuit has converged based on a threshold value." alt="" coords="483,70,667,96"/>
+<area shape="poly" id="edge16_Node000012_Node000015" title=" " alt="" coords="424,116,502,97,503,103,425,121"/>
+<area shape="rect" id="Node000016" href="$class_circuit.html#ab8552736bd7aa4ade158bf79014c2b18" title="Connects the units in the circuit based on the circuit vector." alt="" coords="511,120,639,145"/>
+<area shape="poly" id="edge17_Node000012_Node000016" title=" " alt="" coords="426,130,496,130,496,135,426,135"/>
+<area shape="rect" id="Node000017" href="$class_circuit.html#a608d78c297a7e9eb0f39f9c7a8be7169" title="Initializes the feed rates for gerardium and waste." alt="" coords="518,169,632,210"/>
+<area shape="poly" id="edge18_Node000012_Node000017" title=" " alt="" coords="417,143,504,167,502,172,416,148"/>
+<area shape="rect" id="Node000014" href="$class_circuit.html#a7e8f59d3f565f6975550e53bc8ec756e" title="Resets the new feeds in the circuit." alt="" coords="731,5,858,46"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="635,23,715,23,715,28,635,28"/>
+<area shape="poly" id="edge22_Node000018_Node000005" title=" " alt="" coords="402,494,530,494,530,499,402,499"/>
+<area shape="poly" id="edge23_Node000018_Node000006" title=" " alt="" coords="403,502,504,526,502,531,402,507"/>
+<area shape="poly" id="edge24_Node000018_Node000007" title=" " alt="" coords="404,504,432,518,447,532,456,545,465,557,480,569,489,573,486,578,477,573,461,561,452,548,443,535,429,523,401,509"/>
+<area shape="rect" id="Node000019" href="$_genetic___algorithm_8cpp.html#a51da111672cefadb49ebda7a804df121" title="Applies simulated annealing technique to decide whether to accept an offspring in a genetic algorithm..." alt="" coords="491,336,659,361"/>
+<area shape="poly" id="edge20_Node000018_Node000019" title=" " alt="" coords="377,481,432,417,477,370,486,365,488,370,480,374,435,421,381,485"/>
+<area shape="rect" id="Node000021" href="$namespacetqdm.html#ae79090218343178f452acf2c771a03e2" title="Create a tqdm progress bar for a range of integers." alt="" coords="528,385,622,411"/>
+<area shape="poly" id="edge25_Node000018_Node000021" title=" " alt="" coords="382,481,424,450,477,419,512,407,514,412,479,424,427,454,385,485"/>
+<area shape="rect" id="Node000020" href="$_genetic___algorithm_8cpp.html#ae1ecff79583da4244ddf97b989270a61" title="Calculate the acceptance probability for a new state in Simulated Annealing." alt="" coords="720,310,869,336"/>
+<area shape="poly" id="edge21_Node000019_Node000020" title=" " alt="" coords="659,336,704,331,705,336,659,341"/>
+<area shape="poly" id="edge29_Node000023_Node000003" title=" " alt="" coords="418,604,503,625,502,630,417,610"/>
+<area shape="poly" id="edge30_Node000023_Node000006" title=" " alt="" coords="417,580,502,560,503,565,418,586"/>
+<area shape="poly" id="edge31_Node000023_Node000007" title=" " alt="" coords="418,592,486,592,486,598,418,598"/>
+<area shape="rect" id="Node000025" href="$test__genetic__algorithm_8cpp.html#adc66cbdbfd05d01007caad16142eaea8" title="Test the crossover operators." alt="" coords="313,896,420,921"/>
+<area shape="poly" id="edge33_Node000024_Node000025" title=" " alt="" coords="205,813,330,885,327,890,202,817"/>
+<area shape="rect" id="Node000026" href="$test__genetic__algorithm_8cpp.html#a02a5a1f3e4ecb614dfbffb1ab2e0f119" title="Test the mutation operators." alt="" coords="317,1021,417,1047"/>
+<area shape="poly" id="edge35_Node000024_Node000026" title=" " alt="" coords="193,813,348,1008,344,1011,189,817"/>
+<area shape="rect" id="Node000027" href="$test__genetic__algorithm_8cpp.html#a7d083e7b24bc15218036d9c374fb68e7" title="Test the selection operators." alt="" coords="316,738,418,764"/>
+<area shape="poly" id="edge37_Node000024_Node000027" title=" " alt="" coords="229,786,301,766,303,771,230,791"/>
+<area shape="poly" id="edge34_Node000025_Node000010" title=" " alt="" coords="379,920,418,972,447,1001,480,1026,506,1038,504,1043,477,1031,443,1005,414,976,374,923"/>
+<area shape="poly" id="edge36_Node000026_Node000010" title=" " alt="" coords="418,1036,505,1044,504,1050,417,1041"/>
+<area shape="poly" id="edge41_Node000027_Node000003" title=" " alt="" coords="380,736,421,701,477,666,491,660,493,665,480,671,425,705,383,740"/>
+<area shape="poly" id="edge42_Node000027_Node000006" title=" " alt="" coords="372,737,419,647,449,599,477,568,495,557,497,562,480,572,454,602,424,649,377,739"/>
+<area shape="poly" id="edge43_Node000027_Node000007" title=" " alt="" coords="373,736,412,678,442,645,477,617,486,612,488,616,480,621,445,649,416,682,377,739"/>
+<area shape="poly" id="edge47_Node000027_Node000008" title=" " alt="" coords="373,736,398,685,428,619,439,576,442,539,451,504,461,487,477,469,493,458,511,451,513,456,495,463,480,473,465,490,455,506,448,540,444,577,433,621,403,688,378,739"/>
+<area shape="rect" id="Node000028" href="$class_nary_tournament_selection.html#a7c588fa2ec3a54b37e334478c6b5e9f4" title="Performs the n&#45;ary tournament selection operation." alt="" coords="489,976,661,1017"/>
+<area shape="poly" id="edge38_Node000027_Node000028" title=" " alt="" coords="392,762,413,779,433,800,445,823,451,845,453,886,457,924,465,943,480,963,482,964,478,968,476,966,461,946,452,926,448,886,445,846,440,825,428,803,410,783,389,766"/>
+<area shape="rect" id="Node000029" href="$class_rank_selection.html#aa8033bf819af99dd43eb480bf8ec59f8" title="Performs the rank&#45;based selection operation." alt="" coords="502,681,648,707"/>
+<area shape="poly" id="edge39_Node000027_Node000029" title=" " alt="" coords="413,735,478,716,507,708,508,714,479,722,414,740"/>
+<area shape="rect" id="Node000030" href="$class_roulette_wheel_selection.html#af66f0a7d6d42799af270f97b3dfc6097" title="Performs the roulette wheel selection operation." alt="" coords="494,731,656,771"/>
+<area shape="poly" id="edge40_Node000027_Node000030" title=" " alt="" coords="418,748,479,748,479,754,418,754"/>
+<area shape="rect" id="Node000031" href="$class_roulette_wheel_selection.html#af3212772f535cf5f2b02019989858914" title="Sets the population and selected vectors for the selection operation." alt="" coords="494,796,656,837"/>
+<area shape="poly" id="edge44_Node000027_Node000031" title=" " alt="" coords="411,762,494,788,492,793,409,767"/>
+<area shape="rect" id="Node000032" href="$class_nary_tournament_selection.html#a08883c4d9265806fd690b5bac3611281" title="Sets the population and selected vectors for the selection operation." alt="" coords="489,861,661,902"/>
+<area shape="poly" id="edge45_Node000027_Node000032" title=" " alt="" coords="387,762,432,800,455,825,480,846,490,852,488,857,477,851,451,828,428,804,384,766"/>
+<area shape="rect" id="Node000033" href="$class_rank_selection.html#a2c3aa0a7bd7fa9c948faf0e4e02ca041" title="Sets the population and selected vectors for the selection operation." alt="" coords="478,926,672,952"/>
+<area shape="poly" id="edge46_Node000027_Node000033" title=" " alt="" coords="391,762,412,779,433,800,448,832,454,860,461,886,468,899,480,912,485,916,482,920,477,916,464,902,456,888,449,861,443,833,428,803,409,783,388,766"/>
+<area shape="poly" id="edge52_Node000034_Node000008" title=" " alt="" coords="402,353,432,367,447,382,456,395,465,408,480,421,513,435,511,440,477,425,461,412,452,398,443,385,429,372,400,358"/>
+<area shape="poly" id="edge51_Node000034_Node000011" title=" " alt="" coords="386,330,427,304,477,277,511,263,513,268,479,281,430,308,389,335"/>
+<area shape="poly" id="edge50_Node000034_Node000019" title=" " alt="" coords="401,343,476,344,476,350,401,349"/>
+<area shape="poly" id="edge49_Node000034_Node000020" title=" " alt="" coords="401,334,478,320,596,314,704,316,704,321,596,320,479,326,402,340"/>
+</map>

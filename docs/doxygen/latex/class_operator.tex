@@ -1,0 +1,149 @@
+\doxysection{Operator Class Reference}
+\hypertarget{class_operator}{}\label{class_operator}\index{Operator@{Operator}}
+
+
+Abstract base class for genetic algorithm operators.  
+
+
+
+
+{\ttfamily \#include $<$Operator.\+h$>$}
+
+
+
+Inheritance diagram for Operator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_operator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Operator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{class_operator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_operator_ac7cb92992e32c213091d3659ef596a46}{\texorpdfstring{$\sim$}{\string~}\+Operator}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_operator}{Operator} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_operator_acbd2e97e189d862aa139b3c334a18619}{apply}} (std\+::mt19937 \&generator)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to apply the operator. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_operator_a6e3837c249df579d41f9b9287195c6e5}{set\+Population}} (const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&population, std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&selected)=0
+\begin{DoxyCompactList}\small\item\em Sets the population and selected individuals for the operator. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_operator_abf3bad24158495949ca770dc8aec6542}{set\+Individual}} (\mbox{\hyperlink{struct_individual}{Individual}} \&individual)=0
+\begin{DoxyCompactList}\small\item\em Sets the individual for the operator. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_operator_aa9e9e58811b56bf3a5c1ac9e0d034c64}{set\+Parents}} (\mbox{\hyperlink{struct_individual}{Individual}} \&offspring, const \mbox{\hyperlink{struct_individual}{Individual}} \&parent1, const \mbox{\hyperlink{struct_individual}{Individual}} \&parent2)=0
+\begin{DoxyCompactList}\small\item\em Sets the parents for the operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for genetic algorithm operators. 
+
+The \doxylink{class_operator}{Operator} class provides an abstract interface for genetic algorithm operators. It defines a pure virtual function {\ttfamily \doxylink{class_operator_acbd2e97e189d862aa139b3c334a18619}{apply()}}, which must be implemented by derived classes. This class serves as a base for various types of genetic algorithm operators, such as selection, crossover, and mutation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_operator_ac7cb92992e32c213091d3659ef596a46}\label{class_operator_ac7cb92992e32c213091d3659ef596a46} 
+\index{Operator@{Operator}!````~Operator@{\texorpdfstring{$\sim$}{\string~}Operator}}
+\index{````~Operator@{\texorpdfstring{$\sim$}{\string~}Operator}!Operator@{Operator}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Operator()}{\string~Operator()}}
+{\footnotesize\ttfamily virtual Operator\+::\texorpdfstring{$\sim$}{\string~}\+Operator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for the \doxylink{class_operator}{Operator} class. 
+
+The virtual destructor ensures that derived class destructors are called correctly when an object is deleted through a base class pointer. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_operator_acbd2e97e189d862aa139b3c334a18619}\label{class_operator_acbd2e97e189d862aa139b3c334a18619} 
+\index{Operator@{Operator}!apply@{apply}}
+\index{apply@{apply}!Operator@{Operator}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily virtual void Operator\+::apply (\begin{DoxyParamCaption}\item[{std\+::mt19937 \&}]{generator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to apply the operator. 
+
+This function must be implemented by derived classes to perform the specific operation of the genetic algorithm operator. 
+
+Implemented in \mbox{\hyperlink{class_gen_prog_mutation_a06d8740500d6f698626cd86c0e90d5f7}{Gen\+Prog\+Mutation}}, \mbox{\hyperlink{class_pure_single_point_crossover_acbec767cd00efc3d33e1a9dbb5c25b73}{Pure\+Single\+Point\+Crossover}}, \mbox{\hyperlink{class_two_point_crossover_ac597dda917e6bcad0c388c35b5ce7825}{Two\+Point\+Crossover}}, \mbox{\hyperlink{class_uniform_crossover_ae82c9124d1896980e1cbdb1c8aa17130}{Uniform\+Crossover}}, \mbox{\hyperlink{class_guided_mutation_a76f146207c8ef6d54fdb23ddac4916b6}{Guided\+Mutation}}, \mbox{\hyperlink{class_nary_tournament_selection_a7c588fa2ec3a54b37e334478c6b5e9f4}{Nary\+Tournament\+Selection}}, \mbox{\hyperlink{class_rank_selection_aa8033bf819af99dd43eb480bf8ec59f8}{Rank\+Selection}}, and \mbox{\hyperlink{class_roulette_wheel_selection_af66f0a7d6d42799af270f97b3dfc6097}{Roulette\+Wheel\+Selection}}.
+
+\Hypertarget{class_operator_abf3bad24158495949ca770dc8aec6542}\label{class_operator_abf3bad24158495949ca770dc8aec6542} 
+\index{Operator@{Operator}!setIndividual@{setIndividual}}
+\index{setIndividual@{setIndividual}!Operator@{Operator}}
+\doxysubsubsection{\texorpdfstring{setIndividual()}{setIndividual()}}
+{\footnotesize\ttfamily virtual void Operator\+::set\+Individual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{individual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the individual for the operator. 
+
+This function sets the individual for the operator. It is used to provide the operator with the necessary data to perform its operation on a single individual.
+
+
+\begin{DoxyParams}{Parameters}
+{\em individual} & The individual to operate on. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_pure_single_point_crossover_aad9fd81891c551c18c6b4b12fe9e5442}{Pure\+Single\+Point\+Crossover}}, \mbox{\hyperlink{class_two_point_crossover_a2e4ca8f491d0d0de16f4c9937815190a}{Two\+Point\+Crossover}}, \mbox{\hyperlink{class_uniform_crossover_acf0be196297597e658ee8c3b0173acb4}{Uniform\+Crossover}}, \mbox{\hyperlink{class_nary_tournament_selection_acd33bea2f781445cc897a4419c74f700}{Nary\+Tournament\+Selection}}, \mbox{\hyperlink{class_rank_selection_ae3d454ece1706b38daccf56ffa2aa78b}{Rank\+Selection}}, \mbox{\hyperlink{class_roulette_wheel_selection_a489297b0c11be0b622868ec0776684f8}{Roulette\+Wheel\+Selection}}, \mbox{\hyperlink{class_gen_prog_mutation_adae389a12b5c2c8e72a3ec8c2f140e26}{Gen\+Prog\+Mutation}}, and \mbox{\hyperlink{class_guided_mutation_a70668e157c9108ffed05192d0325fc45}{Guided\+Mutation}}.
+
+\Hypertarget{class_operator_aa9e9e58811b56bf3a5c1ac9e0d034c64}\label{class_operator_aa9e9e58811b56bf3a5c1ac9e0d034c64} 
+\index{Operator@{Operator}!setParents@{setParents}}
+\index{setParents@{setParents}!Operator@{Operator}}
+\doxysubsubsection{\texorpdfstring{setParents()}{setParents()}}
+{\footnotesize\ttfamily virtual void Operator\+::set\+Parents (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{offspring,  }\item[{const \mbox{\hyperlink{struct_individual}{Individual}} \&}]{parent1,  }\item[{const \mbox{\hyperlink{struct_individual}{Individual}} \&}]{parent2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the parents for the operator. 
+
+This function sets the parents for the operator. It is used to provide the operator with the necessary data to perform its operation on two parent individuals.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent1} & The first parent individual. \\
+\hline
+{\em parent2} & The second parent individual. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_gen_prog_mutation_a418ba3d84550da1f0ca2d921d2e89176}{Gen\+Prog\+Mutation}}, \mbox{\hyperlink{class_guided_mutation_a61b09d1be0b01777d7f0cfeeab14ba42}{Guided\+Mutation}}, \mbox{\hyperlink{class_nary_tournament_selection_a9b5694977e8adeffb9d698a5f3f75cbb}{Nary\+Tournament\+Selection}}, \mbox{\hyperlink{class_rank_selection_af2b5bd337ae8f077731b2a302ad93186}{Rank\+Selection}}, \mbox{\hyperlink{class_roulette_wheel_selection_abee04b12deed33954ab3917ccaeb0a1e}{Roulette\+Wheel\+Selection}}, \mbox{\hyperlink{class_pure_single_point_crossover_a21e908fdf945d8d5f1822edcd3b869d5}{Pure\+Single\+Point\+Crossover}}, \mbox{\hyperlink{class_two_point_crossover_aca6479ff625a5e60240f93816f930cc0}{Two\+Point\+Crossover}}, and \mbox{\hyperlink{class_uniform_crossover_a0cbf8ed306d32ef6434c86798dde52d8}{Uniform\+Crossover}}.
+
+\Hypertarget{class_operator_a6e3837c249df579d41f9b9287195c6e5}\label{class_operator_a6e3837c249df579d41f9b9287195c6e5} 
+\index{Operator@{Operator}!setPopulation@{setPopulation}}
+\index{setPopulation@{setPopulation}!Operator@{Operator}}
+\doxysubsubsection{\texorpdfstring{setPopulation()}{setPopulation()}}
+{\footnotesize\ttfamily virtual void Operator\+::set\+Population (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&}]{population,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&}]{selected }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the population and selected individuals for the operator. 
+
+This function sets the population and selected individuals for the operator. It is used to provide the operator with the necessary data to perform its operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em population} & The population of individuals to operate on. \\
+\hline
+{\em selected} & The selected individuals to store the results of the operation. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_pure_single_point_crossover_a2a7f26c00219f4d39fce5007dbfbe70d}{Pure\+Single\+Point\+Crossover}}, \mbox{\hyperlink{class_two_point_crossover_aa043bee063355557a634a21ad50e38d1}{Two\+Point\+Crossover}}, \mbox{\hyperlink{class_uniform_crossover_af3103101b8cc0560c898cff8d63bdb0b}{Uniform\+Crossover}}, \mbox{\hyperlink{class_gen_prog_mutation_a80f6a79a96baf65fab86dc4eb345643c}{Gen\+Prog\+Mutation}}, \mbox{\hyperlink{class_guided_mutation_a169e2d6fc2ba5166e140a4d14d079e9c}{Guided\+Mutation}}, \mbox{\hyperlink{class_roulette_wheel_selection_af3212772f535cf5f2b02019989858914}{Roulette\+Wheel\+Selection}}, \mbox{\hyperlink{class_nary_tournament_selection_a08883c4d9265806fd690b5bac3611281}{Nary\+Tournament\+Selection}}, and \mbox{\hyperlink{class_rank_selection_a2c3aa0a7bd7fa9c948faf0e4e02ca041}{Rank\+Selection}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/operators/\mbox{\hyperlink{_operator_8h}{Operator.\+h}}\end{DoxyCompactItemize}

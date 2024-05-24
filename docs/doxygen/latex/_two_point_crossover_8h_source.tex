@@ -1,0 +1,36 @@
+\doxysection{Two\+Point\+Crossover.\+h}
+\hypertarget{_two_point_crossover_8h_source}{}\label{_two_point_crossover_8h_source}\index{include/operators/Crossover/TwoPointCrossover.h@{include/operators/Crossover/TwoPointCrossover.h}}
+\mbox{\hyperlink{_two_point_crossover_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ GENETIC\_ALGORITHM\_TWOPOINTCROSSOVER\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ GENETIC\_ALGORITHM\_TWOPOINTCROSSOVER\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_operator_8h}{../Operator.h}}"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_individual_8h}{../../utils/Individual.h}}"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_parameter_8h}{../../utils/Parameter.h}}"{}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_two_point_crossover}{TwoPointCrossover}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_operator}{Operator}}\ \{}
+\DoxyCodeLine{00035\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{struct_individual}{Individual}}\ *\mbox{\hyperlink{class_two_point_crossover_ab68e4ce33bc26d4d8cf1d495c4058cc3}{offspring}};\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ *\mbox{\hyperlink{class_two_point_crossover_a0e82af4be75f0cd7042b52bd0291a5a1}{parent1}};\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ *\mbox{\hyperlink{class_two_point_crossover_a91c3b6128734354548b85e03542e637f}{parent2}};\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_two_point_crossover_a72067663ed41019141fef7ea5505d75c}{crossoverRate}};\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_two_point_crossover_a36c9e1350911b53889a2552ce263e274}{TwoPointCrossover}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}\ \&params);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_two_point_crossover_aca6479ff625a5e60240f93816f930cc0}{setParents}}(\mbox{\hyperlink{struct_individual}{Individual}}\ \&\mbox{\hyperlink{class_two_point_crossover_ab68e4ce33bc26d4d8cf1d495c4058cc3}{offspring}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&\mbox{\hyperlink{class_two_point_crossover_a0e82af4be75f0cd7042b52bd0291a5a1}{parent1}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&\mbox{\hyperlink{class_two_point_crossover_a91c3b6128734354548b85e03542e637f}{parent2}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_two_point_crossover_aa043bee063355557a634a21ad50e38d1}{setPopulation}}(\textcolor{keyword}{const}\ std::vector<Individual>\ \&population,\ std::vector<Individual>\ \&selected)\ \{\};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_two_point_crossover_a2e4ca8f491d0d0de16f4c9937815190a}{setIndividual}}(\mbox{\hyperlink{struct_individual}{Individual}}\ \&individual)\ \{\};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_two_point_crossover_ac597dda917e6bcad0c388c35b5ce7825}{apply}}(std::mt19937\ \&generator)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00086\ \};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//GENETIC\_ALGORITHM\_TWOPOINTCROSSOVER\_H}}
+
+\end{DoxyCode}

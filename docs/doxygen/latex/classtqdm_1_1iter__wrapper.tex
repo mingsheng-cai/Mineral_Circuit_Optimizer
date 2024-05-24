@@ -1,0 +1,187 @@
+\doxysection{tqdm\+::iter\+\_\+wrapper\texorpdfstring{$<$}{<} Forward\+Iter, Parent \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classtqdm_1_1iter__wrapper}{}\label{classtqdm_1_1iter__wrapper}\index{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}}
+
+
+A wrapper class for iterators to update the progress bar.  
+
+
+
+
+{\ttfamily \#include $<$tqdm.\+hpp$>$}
+
+
+
+Collaboration diagram for tqdm\+::iter\+\_\+wrapper\texorpdfstring{$<$}{<} Forward\+Iter, Parent \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classtqdm_1_1iter__wrapper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtqdm_1_1iter__wrapper_abc9355a81648af048ca0a7ea3a1643b9}{iterator\+\_\+category}} = typename Forward\+Iter\+::iterator\+\_\+category
+\item 
+using \mbox{\hyperlink{classtqdm_1_1iter__wrapper_a68e0314f46fd746f30e6ce5078e30e3b}{value\+\_\+type}} = typename Forward\+Iter\+::value\+\_\+type
+\item 
+using \mbox{\hyperlink{classtqdm_1_1iter__wrapper_aa339c4710b2e411dccec7d9ec6820886}{difference\+\_\+type}} = typename Forward\+Iter\+::difference\+\_\+type
+\item 
+using \mbox{\hyperlink{classtqdm_1_1iter__wrapper_a752f051c5d02cf2a3d7de9754946462d}{pointer}} = typename Forward\+Iter\+::pointer
+\item 
+using \mbox{\hyperlink{classtqdm_1_1iter__wrapper_acf4b703f9a337363b56f670a57e79290}{reference}} = typename Forward\+Iter\+::reference
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtqdm_1_1iter__wrapper_af239ed70f759ae767252ccba2a3e3daf}{iter\+\_\+wrapper}} (Forward\+Iter it, \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} \texorpdfstring{$\ast$}{*}parent)
+\item 
+auto \mbox{\hyperlink{classtqdm_1_1iter__wrapper_aa81d2fb5dbcbaef9eef358da81fc1b1f}{operator\texorpdfstring{$\ast$}{*}}} ()
+\item 
+void \mbox{\hyperlink{classtqdm_1_1iter__wrapper_a81a8fdc9d377a28437aafdb87266e8dc}{operator++}} ()
+\item 
+{\footnotesize template$<$class Other $>$ }\\bool \mbox{\hyperlink{classtqdm_1_1iter__wrapper_a376478130e71e8be10a230ef9efa5b2f}{operator!=}} (const Other \&other) const
+\item 
+bool \mbox{\hyperlink{classtqdm_1_1iter__wrapper_ab7b8c29da191ece518c400d3cbc3964e}{operator!=}} (const \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{iter\+\_\+wrapper}} \&other) const
+\item 
+const Forward\+Iter \& \mbox{\hyperlink{classtqdm_1_1iter__wrapper_a87b30d32442855d88e44d4facf69cd1d}{get}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+friend \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}}
+\item 
+Forward\+Iter \mbox{\hyperlink{classtqdm_1_1iter__wrapper_ab5631f9bbdd8320ac228035850a10d50}{current\+\_\+}}
+\item 
+\mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classtqdm_1_1iter__wrapper_a37ce45141fa4596940c6127dc10b6197}{parent\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Forward\+Iter, class \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}}$>$\newline
+class tqdm\+::iter\+\_\+wrapper$<$ Forward\+Iter, Parent $>$}
+A wrapper class for iterators to update the progress bar. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Forward\+Iter} & The type of the underlying iterator. \\
+\hline
+{\em Parent} & The type of the parent progress bar. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classtqdm_1_1iter__wrapper_aa339c4710b2e411dccec7d9ec6820886}\label{classtqdm_1_1iter__wrapper_aa339c4710b2e411dccec7d9ec6820886} 
+\index{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}!difference\_type@{difference\_type}}
+\index{difference\_type@{difference\_type}!tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}}
+\doxysubsubsection{\texorpdfstring{difference\_type}{difference\_type}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$ \\
+using \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{tqdm\+::iter\+\_\+wrapper}}$<$ Forward\+Iter, \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$\+::difference\+\_\+type = typename Forward\+Iter\+::difference\+\_\+type}
+
+\Hypertarget{classtqdm_1_1iter__wrapper_abc9355a81648af048ca0a7ea3a1643b9}\label{classtqdm_1_1iter__wrapper_abc9355a81648af048ca0a7ea3a1643b9} 
+\index{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}!iterator\_category@{iterator\_category}}
+\index{iterator\_category@{iterator\_category}!tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}}
+\doxysubsubsection{\texorpdfstring{iterator\_category}{iterator\_category}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$ \\
+using \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{tqdm\+::iter\+\_\+wrapper}}$<$ Forward\+Iter, \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$\+::iterator\+\_\+category = typename Forward\+Iter\+::iterator\+\_\+category}
+
+\Hypertarget{classtqdm_1_1iter__wrapper_a752f051c5d02cf2a3d7de9754946462d}\label{classtqdm_1_1iter__wrapper_a752f051c5d02cf2a3d7de9754946462d} 
+\index{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}!pointer@{pointer}}
+\index{pointer@{pointer}!tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$ \\
+using \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{tqdm\+::iter\+\_\+wrapper}}$<$ Forward\+Iter, \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$\+::pointer = typename Forward\+Iter\+::pointer}
+
+\Hypertarget{classtqdm_1_1iter__wrapper_acf4b703f9a337363b56f670a57e79290}\label{classtqdm_1_1iter__wrapper_acf4b703f9a337363b56f670a57e79290} 
+\index{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}!reference@{reference}}
+\index{reference@{reference}!tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$ \\
+using \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{tqdm\+::iter\+\_\+wrapper}}$<$ Forward\+Iter, \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$\+::reference = typename Forward\+Iter\+::reference}
+
+\Hypertarget{classtqdm_1_1iter__wrapper_a68e0314f46fd746f30e6ce5078e30e3b}\label{classtqdm_1_1iter__wrapper_a68e0314f46fd746f30e6ce5078e30e3b} 
+\index{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$ \\
+using \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{tqdm\+::iter\+\_\+wrapper}}$<$ Forward\+Iter, \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$\+::value\+\_\+type = typename Forward\+Iter\+::value\+\_\+type}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtqdm_1_1iter__wrapper_af239ed70f759ae767252ccba2a3e3daf}\label{classtqdm_1_1iter__wrapper_af239ed70f759ae767252ccba2a3e3daf} 
+\index{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}!iter\_wrapper@{iter\_wrapper}}
+\index{iter\_wrapper@{iter\_wrapper}!tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}}
+\doxysubsubsection{\texorpdfstring{iter\_wrapper()}{iter\_wrapper()}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$ \\
+\mbox{\hyperlink{classtqdm_1_1iter__wrapper}{tqdm\+::iter\+\_\+wrapper}}$<$ Forward\+Iter, \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$\+::iter\+\_\+wrapper (\begin{DoxyParamCaption}\item[{Forward\+Iter}]{it,  }\item[{\mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} \texorpdfstring{$\ast$}{*}}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtqdm_1_1iter__wrapper_a87b30d32442855d88e44d4facf69cd1d}\label{classtqdm_1_1iter__wrapper_a87b30d32442855d88e44d4facf69cd1d} 
+\index{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}!get@{get}}
+\index{get@{get}!tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$ \\
+const Forward\+Iter \& \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{tqdm\+::iter\+\_\+wrapper}}$<$ Forward\+Iter, \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classtqdm_1_1iter__wrapper_ab7b8c29da191ece518c400d3cbc3964e}\label{classtqdm_1_1iter__wrapper_ab7b8c29da191ece518c400d3cbc3964e} 
+\index{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$ \\
+bool \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{tqdm\+::iter\+\_\+wrapper}}$<$ Forward\+Iter, \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{iter\+\_\+wrapper}}$<$ Forward\+Iter, \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classtqdm_1_1iter__wrapper_a376478130e71e8be10a230ef9efa5b2f}\label{classtqdm_1_1iter__wrapper_a376478130e71e8be10a230ef9efa5b2f} 
+\index{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$ \\
+template$<$class Other $>$ \\
+bool \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{tqdm\+::iter\+\_\+wrapper}}$<$ Forward\+Iter, \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const Other \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classtqdm_1_1iter__wrapper_aa81d2fb5dbcbaef9eef358da81fc1b1f}\label{classtqdm_1_1iter__wrapper_aa81d2fb5dbcbaef9eef358da81fc1b1f} 
+\index{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$ \\
+auto \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{tqdm\+::iter\+\_\+wrapper}}$<$ Forward\+Iter, \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classtqdm_1_1iter__wrapper_a81a8fdc9d377a28437aafdb87266e8dc}\label{classtqdm_1_1iter__wrapper_a81a8fdc9d377a28437aafdb87266e8dc} 
+\index{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$ \\
+void \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{tqdm\+::iter\+\_\+wrapper}}$<$ Forward\+Iter, \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classtqdm_1_1iter__wrapper_ab5631f9bbdd8320ac228035850a10d50}\label{classtqdm_1_1iter__wrapper_ab5631f9bbdd8320ac228035850a10d50} 
+\index{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}!current\_@{current\_}}
+\index{current\_@{current\_}!tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}}
+\doxysubsubsection{\texorpdfstring{current\_}{current\_}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$ \\
+Forward\+Iter \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{tqdm\+::iter\+\_\+wrapper}}$<$ Forward\+Iter, \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$\+::current\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}\label{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665} 
+\index{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}!Parent@{Parent}}
+\index{Parent@{Parent}!tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}}
+\doxysubsubsection{\texorpdfstring{Parent}{Parent}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class Parent $>$ \\
+friend \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{tqdm\+::iter\+\_\+wrapper}}$<$ Forward\+Iter, Parent $>$\+::\+Parent\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtqdm_1_1iter__wrapper_a37ce45141fa4596940c6127dc10b6197}\label{classtqdm_1_1iter__wrapper_a37ce45141fa4596940c6127dc10b6197} 
+\index{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}!parent\_@{parent\_}}
+\index{parent\_@{parent\_}!tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$@{tqdm::iter\_wrapper$<$ ForwardIter, Parent $>$}}
+\doxysubsubsection{\texorpdfstring{parent\_}{parent\_}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$ \\
+\mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{tqdm\+::iter\+\_\+wrapper}}$<$ Forward\+Iter, \mbox{\hyperlink{classtqdm_1_1iter__wrapper_adf9c214c1ae0187f99732a34972c5665}{Parent}} $>$\+::parent\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/utils/\mbox{\hyperlink{tqdm_8hpp}{tqdm.\+hpp}}\end{DoxyCompactItemize}

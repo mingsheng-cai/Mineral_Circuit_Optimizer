@@ -1,0 +1,15 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title="Main function to run the test cases for evaluating circuit configurations." alt="" coords="5,96,55,121"/>
+<area shape="rect" id="Node000002" href="$_c_simulator_8cpp.html#a43f70be396ec43b828ae6b5f62663006" title="Evaluates the performance of a circuit." alt="" coords="103,96,220,121"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,106,87,106,87,111,55,111"/>
+<area shape="rect" id="Node000003" href="$class_circuit.html#a0d347a4af7957954a800d356f8005458" title="Calculates the flows within the circuit." alt="" coords="300,5,419,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="187,93,267,55,285,48,287,53,269,60,189,97"/>
+<area shape="rect" id="Node000005" href="$class_circuit.html#abf23eff70d399e2866441bcb89c6c957" title="Checks if the circuit has converged based on a threshold value." alt="" coords="268,70,451,96"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="220,98,252,94,253,99,221,104"/>
+<area shape="rect" id="Node000006" href="$class_circuit.html#ab8552736bd7aa4ade158bf79014c2b18" title="Connects the units in the circuit based on the circuit vector." alt="" coords="296,120,423,145"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="221,113,281,120,280,125,220,118"/>
+<area shape="rect" id="Node000007" href="$class_circuit.html#a608d78c297a7e9eb0f39f9c7a8be7169" title="Initializes the feed rates for gerardium and waste." alt="" coords="303,169,417,210"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="190,119,269,155,289,163,287,168,267,160,188,124"/>
+<area shape="rect" id="Node000004" href="$class_circuit.html#a7e8f59d3f565f6975550e53bc8ec756e" title="Resets the new feeds in the circuit." alt="" coords="499,5,627,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="420,23,484,23,484,28,420,28"/>
+</map>

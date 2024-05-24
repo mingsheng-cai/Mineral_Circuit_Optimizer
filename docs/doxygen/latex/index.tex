@@ -1,0 +1,343 @@
+\chapter{GERARDIUM RUSH -\/ MINERAL CIRCUIT OPTIMIZER}
+\hypertarget{index}{}\label{index}\index{GERARDIUM RUSH -\/ MINERAL CIRCUIT OPTIMIZER@{GERARDIUM RUSH -\/ MINERAL CIRCUIT OPTIMIZER}}
+\label{index_md__r_e_a_d_m_e}%
+\Hypertarget{index_md__r_e_a_d_m_e}%
+ 
+
+ 
+
+\href{https://github.com/ese-msc-2023/acs-gerardium-rush-pentlandite}{\texttt{ }} \href{https://cmake.org/}{\texttt{ }} \href{https://gcc.gnu.org/}{\texttt{ }} \href{https://gcc.gnu.org/projects/cxx-status.html}{\texttt{ }} \href{https://www.openmp.org/}{\texttt{ }} \href{https://www.python.org/}{\texttt{ }} \href{https://graphviz.org/}{\texttt{ }} \href{https://matplotlib.org/}{\texttt{ }} \href{https://pandas.pydata.org/}{\texttt{ }}
+
+\DoxyHorRuler{0}
+
+
+This is an implementation for the {\bfseries{ACS -\/ Gerardium Rush}} project delivered by group {\bfseries{Pentlandite}}.
+
+This project is designed to optimize circuit configurations using genetic algorithms to enhance the recovery of valuable materials in separation technologies. The goal is to create an efficient and effective tool for optimizing circuits in minerals processing, particularly for the recovery of "{}gerardium"{}. This project combines the power of genetic algorithms with mass balance simulations to find the optimal circuit configuration.\hypertarget{index_autotoc_md113}{}\doxysubsection{\texorpdfstring{🔭 Overview}{🔭 Overview}}\label{index_autotoc_md113}
+The project is organized into several key components, each with specific responsibilities\+:
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{\doxylink{class_circuit}{Circuit} Simulation (\doxylink{_c_simulator_8cpp}{CSimulator.\+cpp})}}\+:
+
+
+\begin{DoxyItemize}
+\item Core simulation logic for evaluating circuit performance
+\item Simulates the mass balance for given circuit configurations.
+\item Utilizes classes like {\ttfamily CCircuit} and {\ttfamily \doxylink{class_c_unit}{CUnit}} to represent and manage circuit units and their interactions.
+\end{DoxyItemize}
+\item {\bfseries{Genetic Algorithm (\doxylink{_genetic___algorithm_8cpp}{Genetic\+\_\+\+Algorithm.\+cpp})}}\+:
+
+
+\begin{DoxyItemize}
+\item Implements the genetic algorithm for optimizing circuit configurations.
+\item Includes various operators for selection, crossover, and mutation.
+\item Parallel processing enabled using Open\+MP for efficient computation.
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md114}{}\doxysubsection{\texorpdfstring{✨ Features}{✨ Features}}\label{index_autotoc_md114}
+
+\begin{DoxyItemize}
+\item {\bfseries{Genetic Algorithm Optimization}}\+: Efficiently explore numerous circuit configurations using genetic algorithms to find the most effective setups.
+\item {\bfseries{Mass Balance Simulation}}\+: Simulate the mass balance for each circuit to ensure accurate recovery and grade calculations, ensuring the reliability of the proposed solutions.
+\item {\bfseries{Parallel Processing}}\+: Leverage Open\+MP for faster computations and simulations, enhancing performance and reducing computation time.
+\item {\bfseries{Comprehensive Unit Tests}}\+: Ensure the correctness of the circuit simulator and genetic algorithm through extensive unit tests, providing a robust and reliable tool.
+\item {\bfseries{Visualization Tools}}\+: Utilize Python scripts and Jupyter notebooks for post-\/processing and visualizing the results, helping to analyze and interpret the outcomes effectively.
+\item {\bfseries{Documentation}}\+: Detailed API documentation and project reports to facilitate understanding and usage, making it easier for users to get started and for developers to extend the project.
+\end{DoxyItemize}\hypertarget{index_autotoc_md115}{}\doxysubsection{\texorpdfstring{📋 Requirements}{📋 Requirements}}\label{index_autotoc_md115}
+The project uses CMake for building and requires several tools and libraries. Below are the required tools and libraries\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Tool/\+Library   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Purpose   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Version    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Tool/\+Library   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Purpose   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Version    }\\\cline{1-3}
+\endhead
+{\bfseries{CMake}}   &For managing the build process   &3.\+10 or higher    \\\cline{1-3}
+{\bfseries{GCC and G++}}   &For compiling the code   &13.\+0 or higher    \\\cline{1-3}
+{\bfseries{Open\+MP}}   &For parallel processing   &4.\+5 or higher    \\\cline{1-3}
+{\bfseries{Python}}   &For post-\/processing and visualization   &3.\+10 or higher    \\\cline{1-3}
+{\bfseries{Graphviz}}   &For generating diagrams   &2.\+50.\+0 or higher    \\\cline{1-3}
+{\bfseries{Matplotlib}}   &For plotting and visualizing data   &3.\+8.\+2 or higher    \\\cline{1-3}
+{\bfseries{Pandas}}   &For data manipulation and analysis   &2.\+1.\+3 or higher   \\\cline{1-3}
+\end{longtabu}
+
+
+To install these requirements on a Debian-\/based system, you can use the following commands\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ sudo\ apt\ update}
+\DoxyCodeLine{\$\ sudo\ apt\ install\ cmake\ gcc\ g++\ libomp-\/dev\ python3\ python3-\/pip\ graphviz}
+\DoxyCodeLine{\$\ pip3\ install\ matplotlib\ pandas}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md116}{}\doxysubsection{\texorpdfstring{🛠️ Installation}{🛠️ Installation}}\label{index_autotoc_md116}
+To build the project, you need to have CMake and GCC installed on your system.
+
+
+\begin{DoxyEnumerate}
+\item Clone the repository\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ git\ clone\ https://github.com/yourusername/circuit-\/optimizer.git}
+
+\end{DoxyCode}
+
+\item Create a build directory and navigate to it\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ mkdir\ build}
+\DoxyCodeLine{\$\ cd\ build}
+
+\end{DoxyCode}
+
+\item Configure the project using CMake\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ cmake\ ..\ -\/DCMAKE\_C\_COMPILER=gcc\ -\/DCMAKE\_CXX\_COMPILER=g++}
+
+\end{DoxyCode}
+
+\item Build the project\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ cmake\ -\/-\/build\ .}
+
+\end{DoxyCode}
+
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md117}{}\doxysubsection{\texorpdfstring{🚀 Usage}{🚀 Usage}}\label{index_autotoc_md117}
+{\bfseries{Run Executable}}
+
+To run the \doxylink{class_circuit}{Circuit} Optimizer, execute the following commands from the {\ttfamily build} directory\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ export\ OMP\_NUM\_THREADS=10}
+\DoxyCodeLine{\$\ ./bin/Circuit\_Optimizer}
+
+\end{DoxyCode}
+
+
+{\bfseries{Run Tests}}
+
+The project includes a set of unit tests to verify the functionality of the circuit simulator and the genetic algorithm. The tests are located in the {\ttfamily tests} directory.
+
+To run the tests, use the following command\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ ctest\ -\/-\/output-\/on-\/failure}
+
+\end{DoxyCode}
+
+
+{\bfseries{Run Visualization}}
+
+To run the visualization tool, use the following command\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ python3\ ../post\_process/visualize.py\ <vector>\ <performance>\ <recovery>\ <grade>}
+
+\end{DoxyCode}
+
+
+{\bfseries{Run Scripts (Recommended)}}
+
+Alternatively, you can use the provided shell scripts\+:
+
+
+\begin{DoxyItemize}
+\item To run the optimizer, go to the root directory and run the following command\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ ./scripts/run.sh}
+
+\end{DoxyCode}
+
+\item To run the tests, go to the root directory and run the following command\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ ./scripts/run\_test.sh}
+
+\end{DoxyCode}
+
+\end{DoxyItemize}
+
+You can modify the {\ttfamily OMP\+\_\+\+NUM\+\_\+\+THREADS} in corresponding shell scripts.\hypertarget{index_autotoc_md118}{}\doxysubsection{\texorpdfstring{🕹️ Parameter Setting}{🕹️ Parameter Setting}}\label{index_autotoc_md118}
+In {\ttfamily \doxylink{main_8cpp}{src/main.\+cpp}}, you can set the Genetic Algorithm parameters and \doxylink{class_circuit}{Circuit} Simulator parameters. Here is an example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ generations\ =\ 1000;}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ populationSize\ =\ 100;}
+\DoxyCodeLine{std::string\ selection\ =\ \textcolor{stringliteral}{"{}NaryTournamentSelection"{}};}
+\DoxyCodeLine{\textcolor{comment}{//\ std::string\ selection\ =\ "{}RankSelection"{};}}
+\DoxyCodeLine{\textcolor{comment}{//\ std::string\ selection\ =\ "{}RouletteWheelSelection"{};}}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ tournamentSize\ =\ 5;}
+\DoxyCodeLine{std::string\ crossover\ =\ \textcolor{stringliteral}{"{}TwoPointCrossover"{}};}
+\DoxyCodeLine{\textcolor{comment}{//\ std::string\ crossover\ =\ "{}UniformCrossover"{};}}
+\DoxyCodeLine{\textcolor{comment}{//\ std::string\ crossover\ =\ "{}PureSinglePointCrossover"{};}}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ crossRate\ =\ 0.8;}
+\DoxyCodeLine{std::string\ mutation\ =\ \textcolor{stringliteral}{"{}GuidedMutation"{}};}
+\DoxyCodeLine{\textcolor{comment}{//\ std::string\ mutation\ =\ "{}GenProgMutation"{};}}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ mutationRate\ =\ 0.1;}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ eliteRate\ =\ 0.2;}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ initialTemp\ =\ 1000.0;}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ deltT\ =\ 0.85;}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ randomSeed\ =\ 0;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ tolerance\ =\ 1e-\/6;}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ maxIteration\ =\ 1000;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}\ ga\_params(generations,\ populationSize,\ selection,\ tournamentSize,\ crossover,\ crossRate,\ mutation,\ mutationRate,\ eliteRate,\ initialTemp,\ deltT,\ randomSeed);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{struct_circuit_parameters}{CircuitParameters}}\ c\_params(tolerance,\ maxIteration);}
+
+\end{DoxyCode}
+
+
+{\bfseries{Genetic Algorithm Operators}}
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Selection}}\+:
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{class_nary_tournament_selection}{Nary\+Tournament\+Selection}}\+: Selects the best individuals based on tournament competition.
+\item {\ttfamily \doxylink{class_rank_selection}{Rank\+Selection}}\+: Selects individuals based on their rank within the population.
+\item {\ttfamily \doxylink{class_roulette_wheel_selection}{Roulette\+Wheel\+Selection}}\+: Selects individuals based on their fitness proportionally.
+\end{DoxyItemize}
+\item {\bfseries{Crossover}}\+:
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{class_two_point_crossover}{Two\+Point\+Crossover}}\+: Combines genes from two parents at two crossover points.
+\item {\ttfamily \doxylink{class_uniform_crossover}{Uniform\+Crossover}}\+: Combines genes from two parents based on a uniform distribution.
+\item {\ttfamily \doxylink{class_pure_single_point_crossover}{Pure\+Single\+Point\+Crossover}}\+: Combines genes from two parents at a single crossover point.
+\end{DoxyItemize}
+\item {\bfseries{Mutation}}\+:
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{class_guided_mutation}{Guided\+Mutation}}\+: Performs guided mutation based on specific rules or heuristics.
+\item {\ttfamily \doxylink{class_gen_prog_mutation}{Gen\+Prog\+Mutation}}\+: Performs genetic programming mutation by changing operations and parameters.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{index_autotoc_md119}{}\doxysubsection{\texorpdfstring{📁 Project Structure}{📁 Project Structure}}\label{index_autotoc_md119}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.}
+\DoxyCodeLine{├──\ CMakeLists.txt\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Main\ CMake\ configuration\ file\ for\ the\ entire\ project}
+\DoxyCodeLine{├──\ Doxygen.config\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Configuration\ file\ for\ generating\ documentation\ with\ Doxygen}
+\DoxyCodeLine{├──\ LICENSE.txt\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ License\ information\ for\ the\ project}
+\DoxyCodeLine{├──\ README.md\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Project's\ readme\ file\ with\ instructions\ and\ documentation}
+\DoxyCodeLine{├──\ build\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Build\ directory\ containing\ compiled\ binaries\ and\ test\ executables}
+\DoxyCodeLine{│\ \ \ ├──\ bin\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Directory\ for\ main\ binary\ executables}
+\DoxyCodeLine{│\ \ \ │\ \ \ └──\ Circuit\_Optimizer\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Main\ executable\ for\ the\ Circuit\ Optimizer\ project}
+\DoxyCodeLine{│\ \ \ └──\ tests\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Directory\ for\ test\ executables\ and\ related\ files}
+\DoxyCodeLine{│\ \ \ \ \ \ \ ├──\ bin\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Binaries\ for\ the\ tests}
+\DoxyCodeLine{│\ \ \ \ \ \ \ │\ \ \ ├──\ test\_circuit\_simulator\ \ \ \ \ \ \ \ \ \#\ Test\ executable\ for\ circuit\ simulator}
+\DoxyCodeLine{│\ \ \ \ \ \ \ │\ \ \ ├──\ test\_genetic\_algorithm\ \ \ \ \ \ \ \ \ \#\ Test\ executable\ for\ genetic\ algorithm}
+\DoxyCodeLine{│\ \ \ \ \ \ \ │\ \ \ └──\ test\_validity\_checker\ \ \ \ \ \ \ \ \ \ \#\ Test\ executable\ for\ validity\ checker}
+\DoxyCodeLine{│\ \ \ \ \ \ \ └──\ ...\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Other\ test-\/related\ files}
+\DoxyCodeLine{├──\ circuit\_diagrams\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Directory\ for\ circuit\ diagrams}
+\DoxyCodeLine{│\ \ \ └──\ circuit.png\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Example\ circuit\ diagram\ image}
+\DoxyCodeLine{├──\ docs\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Documentation\ files}
+\DoxyCodeLine{│\ \ \ ├──\ API\_Document.pdf\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ API\ documentation\ in\ PDF\ format}
+\DoxyCodeLine{│\ \ \ ├──\ CCircuit\_Document\_Analysis.md\ \ \ \ \ \ \ \ \ \ \#\ Markdown\ document\ with\ circuit\ design\ analysis}
+\DoxyCodeLine{│\ \ \ ├──\ CCircuit\_Document\_Analysis.pdf\ \ \ \ \ \ \ \ \ \#\ PDF\ document\ with\ circuit\ design\ analysis}
+\DoxyCodeLine{│\ \ \ ├──\ CSimulator\_Document\_and\_Analysis.md\ \ \ \ \#\ Markdown\ document\ with\ simulator\ performance\ analysis}
+\DoxyCodeLine{│\ \ \ ├──\ CSimulator\_Document\_and\_Analysis.pdf\ \ \ \#\ PDF\ document\ with\ simulator\ performance\ analysis}
+\DoxyCodeLine{│\ \ \ ├──\ GeneticAlgorithm\_Design\_Document.md\ \ \ \ \#\ Markdown\ document\ with\ algorithm\ design\ illstration}
+\DoxyCodeLine{│\ \ \ ├──\ GeneticAlgorithm\_Design\_Document.pdf\ \ \ \#\ PDF\ document\ with\ algorithm\ design\ illstration}
+\DoxyCodeLine{│\ \ \ ├──\ GeneticAlgorithm\_Params\_Analysis.md\ \ \ \ \#\ Markdown\ document\ with\ algorithm\ \&\ circuit\ params\ analysis}
+\DoxyCodeLine{│\ \ \ ├──\ GeneticAlgorithm\_Params\_Analysis.pdf\ \ \ \#\ Markdown\ document\ with\ algorithm\ \&\ circuit\ params\ analysis}
+\DoxyCodeLine{│\ \ \ ├──\ Problem\_Statement.pdf\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Project\ problem\ statement}
+\DoxyCodeLine{│\ \ \ └──\ doxygen\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Directory\ for\ Doxygen-\/generated\ documentation\ files}
+\DoxyCodeLine{├──\ include\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Header\ files\ for\ the\ project}
+\DoxyCodeLine{│\ \ \ ├──\ CSimulator.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Header\ for\ the\ circuit\ simulator}
+\DoxyCodeLine{│\ \ \ ├──\ Genetic\_Algorithm.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Header\ for\ the\ genetic\ algorithm}
+\DoxyCodeLine{│\ \ \ ├──\ circuit\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Directory\ for\ circuit-\/related\ headers}
+\DoxyCodeLine{│\ \ \ │\ \ \ ├──\ CCircuit.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Header\ for\ the\ circuit\ class}
+\DoxyCodeLine{│\ \ \ │\ \ \ └──\ CUnit.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Header\ for\ the\ unit\ class}
+\DoxyCodeLine{│\ \ \ ├──\ operators\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Directory\ for\ operator-\/related\ headers}
+\DoxyCodeLine{│\ \ \ │\ \ \ ├──\ Crossover\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Crossover\ operator\ headers}
+\DoxyCodeLine{│\ \ \ │\ \ \ │\ \ \ ├──\ PureSinglePointCrossover.h\ \ \ \ \ \#\ Header\ for\ pure\ single\ point\ crossover}
+\DoxyCodeLine{│\ \ \ │\ \ \ │\ \ \ ├──\ TwoPointCrossover.h\ \ \ \ \ \ \ \ \ \ \ \ \#\ Header\ for\ two-\/point\ crossover}
+\DoxyCodeLine{│\ \ \ │\ \ \ │\ \ \ └──\ UniformCrossover.h\ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Header\ for\ uniform\ crossover}
+\DoxyCodeLine{│\ \ \ │\ \ \ ├──\ Mutation\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Mutation\ operator\ headers}
+\DoxyCodeLine{│\ \ \ │\ \ \ │\ \ \ ├──\ GenProgMutation.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Header\ for\ genetic\ programming\ mutation}
+\DoxyCodeLine{│\ \ \ │\ \ \ │\ \ \ └──\ GuidedMutation.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Header\ for\ guided\ mutation}
+\DoxyCodeLine{│\ \ \ │\ \ \ └──\ Selection\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Selection\ operator\ headers}
+\DoxyCodeLine{│\ \ \ │\ \ \ \ \ \ \ ├──\ NaryTournamentSelection.h\ \ \ \ \ \ \#\ Header\ for\ N-\/ary\ tournament\ selection}
+\DoxyCodeLine{│\ \ \ │\ \ \ \ \ \ \ ├──\ RankSelection.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Header\ for\ rank\ selection}
+\DoxyCodeLine{│\ \ \ │\ \ \ \ \ \ \ └──\ RouletteWheelSelection.h\ \ \ \ \ \ \ \#\ Header\ for\ roulette\ wheel\ selection}
+\DoxyCodeLine{│\ \ \ └──\ utils\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Utility\ headers}
+\DoxyCodeLine{│\ \ \ \ \ \ \ ├──\ Helper.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Header\ for\ helper\ functions}
+\DoxyCodeLine{│\ \ \ \ \ \ \ ├──\ Individual.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Header\ for\ individual\ class}
+\DoxyCodeLine{│\ \ \ \ \ \ \ ├──\ Parameter.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Header\ for\ parameter\ handling}
+\DoxyCodeLine{│\ \ \ \ \ \ \ └──\ tqdm.hpp\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Header\ for\ progress\ bar\ utility}
+\DoxyCodeLine{├──\ investigate\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Directory\ for\ investigation\ scripts\ and\ logs}
+\DoxyCodeLine{│\ \ \ ├──\ CCircuit.cpp\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Circuit\ source\ file\ for\ investigation}
+\DoxyCodeLine{│\ \ \ ├──\ evaluate\_circuit.ipynb\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Jupyter\ notebook\ for\ evaluating\ circuits}
+\DoxyCodeLine{│\ \ \ ├──\ evaluate\_circuit\_time.ipynb\ \ \ \ \ \ \ \ \ \ \ \ \#\ Jupyter\ notebook\ for\ evaluating\ circuit\ times}
+\DoxyCodeLine{│\ \ \ ├──\ execution\_times.txt\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Log\ file\ for\ execution\ times}
+\DoxyCodeLine{│\ \ \ └──\ timings\_thread.log\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Log\ file\ for\ thread\ timings}
+\DoxyCodeLine{├──\ log\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Directory\ for\ log\ files}
+\DoxyCodeLine{│\ \ \ └──\ 2024-\/05-\/23\_21-\/28-\/04\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Log\ directory\ with\ timestamp}
+\DoxyCodeLine{│\ \ \ \ \ \ \ └──\ circuit\_info.log\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Log\ file\ for\ circuit\ information}
+\DoxyCodeLine{├──\ post\_process\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Directory\ for\ post-\/processing\ scripts}
+\DoxyCodeLine{│\ \ \ ├──\ visualize.ipynb\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Jupyter\ notebook\ for\ visualization}
+\DoxyCodeLine{│\ \ \ └──\ visualize.py\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Python\ script\ for\ visualization}
+\DoxyCodeLine{├──\ scripts\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Shell\ scripts\ for\ running\ the\ project}
+\DoxyCodeLine{│\ \ \ ├──\ run.sh\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Script\ to\ run\ the\ main\ optimizer}
+\DoxyCodeLine{│\ \ \ └──\ run\_test.sh\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Script\ to\ run\ the\ tests}
+\DoxyCodeLine{├──\ src\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Source\ code\ for\ the\ project}
+\DoxyCodeLine{│\ \ \ ├──\ CMakeLists.txt\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ CMake\ configuration\ file\ for\ source\ code}
+\DoxyCodeLine{│\ \ \ ├──\ CSimulator.cpp\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Source\ file\ for\ the\ circuit\ simulator}
+\DoxyCodeLine{│\ \ \ ├──\ Genetic\_Algorithm.cpp\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Source\ file\ for\ the\ genetic\ algorithm}
+\DoxyCodeLine{│\ \ \ ├──\ circuit\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Directory\ for\ circuit-\/related\ source\ files}
+\DoxyCodeLine{│\ \ \ │\ \ \ ├──\ CCircuit.cpp\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Source\ file\ for\ the\ circuit\ class}
+\DoxyCodeLine{│\ \ \ │\ \ \ └──\ CUnit.cpp\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Source\ file\ for\ the\ unit\ class}
+\DoxyCodeLine{│\ \ \ ├──\ main.cpp\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Main\ source\ file\ for\ the\ project}
+\DoxyCodeLine{│\ \ \ ├──\ operators\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Directory\ for\ operator-\/related\ source\ files}
+\DoxyCodeLine{│\ \ \ │\ \ \ ├──\ Crossover\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Crossover\ operator\ source\ files}
+\DoxyCodeLine{│\ \ \ │\ \ \ │\ \ \ ├──\ PureSinglePointCrossover.cpp\ \ \ \#\ Source\ file\ for\ pure\ single\ point\ crossover}
+\DoxyCodeLine{│\ \ \ │\ \ \ │\ \ \ ├──\ TwoPointCrossover.cpp\ \ \ \ \ \ \ \ \ \ \#\ Source\ file\ for\ two-\/point\ crossover}
+\DoxyCodeLine{│\ \ \ │\ \ \ │\ \ \ └──\ UniformCrossover.cpp\ \ \ \ \ \ \ \ \ \ \ \#\ Source\ file\ for\ uniform\ crossover}
+\DoxyCodeLine{│\ \ \ │\ \ \ ├──\ Mutation\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Mutation\ operator\ source\ files}
+\DoxyCodeLine{│\ \ \ │\ \ \ │\ \ \ ├──\ GenProgMutation.cpp\ \ \ \ \ \ \ \ \ \ \ \ \#\ Source\ file\ for\ genetic\ programming\ mutation}
+\DoxyCodeLine{│\ \ \ │\ \ \ │\ \ \ └──\ GuidedMutation.cpp\ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Source\ file\ for\ guided\ mutation}
+\DoxyCodeLine{│\ \ \ │\ \ \ └──\ Selection\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Selection\ operator\ source\ files}
+\DoxyCodeLine{│\ \ \ │\ \ \ \ \ \ \ ├──\ NaryTournamentSelection.cpp\ \ \ \ \#\ Source\ file\ for\ N-\/ary\ tournament\ selection}
+\DoxyCodeLine{│\ \ \ │\ \ \ \ \ \ \ ├──\ RankSelection.cpp\ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Source\ file\ for\ rank\ selection}
+\DoxyCodeLine{│\ \ \ │\ \ \ \ \ \ \ └──\ RouletteWheelSelection.cpp\ \ \ \ \ \#\ Source\ file\ for\ roulette\ wheel\ selection}
+\DoxyCodeLine{│\ \ \ └──\ utils\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Utility\ source\ files}
+\DoxyCodeLine{│\ \ \ \ \ \ \ └──\ Helper.cpp\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Source\ file\ for\ helper\ functions}
+\DoxyCodeLine{└──\ tests\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Test\ files}
+\DoxyCodeLine{\ \ \ \ ├──\ CMakeLists.txt\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ CMake\ configuration\ file\ for\ tests}
+\DoxyCodeLine{\ \ \ \ ├──\ test\_circuit\_simulator.cpp\ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Test\ file\ for\ circuit\ simulator}
+\DoxyCodeLine{\ \ \ \ ├──\ test\_circuit\_time.cpp\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Test\ file\ for\ circuit\ timing}
+\DoxyCodeLine{\ \ \ \ ├──\ test\_genetic\_algorithm.cpp\ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Test\ file\ for\ genetic\ algorithm}
+\DoxyCodeLine{\ \ \ \ └──\ test\_validity\_checker.cpp\ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Test\ file\ for\ validity\ checker}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md120}{}\doxysubsection{\texorpdfstring{🤝 Contributing}{🤝 Contributing}}\label{index_autotoc_md120}
+Contributions are welcome! Please follow these steps\+:
+
+
+\begin{DoxyEnumerate}
+\item Fork the repository.
+\item Create a new branch ({\ttfamily git checkout -\/b feature-\/branch}).
+\item Make your changes.
+\item Commit your changes (`git commit -\/m \textquotesingle{}Add new feature'{\ttfamily ).}
+\item {\ttfamily Push to the branch (}git push origin feature-\/branch\`{}).
+\item Create a new Pull Request.
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md121}{}\doxysubsection{\texorpdfstring{📜 License}{📜 License}}\label{index_autotoc_md121}
+This project is licensed under the MIT License. See the \href{https://github.com/ese-msc-2023/acs-gerardium-rush-pentlandite/blob/main/LICENSE.txt}{\texttt{ LICENSE.\+txt}} file for more details. 

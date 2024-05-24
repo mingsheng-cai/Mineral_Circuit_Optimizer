@@ -1,0 +1,5 @@
+<map id="tqdm::Chronometer::peek" name="tqdm::Chronometer::peek">
+<area shape="rect" id="Node000001" title="Get the elapsed time without resetting the chronometer." alt="" coords="5,5,176,31"/>
+<area shape="rect" id="Node000002" href="$namespacetqdm.html#acb71ab3d3baf5c7814a297ee0829160c" title="Calculate the elapsed seconds between two time points." alt="" coords="224,5,384,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,15,210,15,210,21,176,21"/>
+</map>

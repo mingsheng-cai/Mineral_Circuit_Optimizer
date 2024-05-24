@@ -1,0 +1,36 @@
+\doxysection{Gen\+Prog\+Mutation.\+h}
+\hypertarget{_gen_prog_mutation_8h_source}{}\label{_gen_prog_mutation_8h_source}\index{include/operators/Mutation/GenProgMutation.h@{include/operators/Mutation/GenProgMutation.h}}
+\mbox{\hyperlink{_gen_prog_mutation_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifndef\ GENETIC\_ALGORITHM\_GENPROGMUTATION\_H}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ GENETIC\_ALGORITHM\_GENPROGMUTATION\_H}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_operator_8h}{../Operator.h}}"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_individual_8h}{../../utils/Individual.h}}"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_parameter_8h}{../../utils/Parameter.h}}"{}}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_gen_prog_mutation}{GenProgMutation}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_operator}{Operator}}\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_gen_prog_mutation_aeb39007370ec4f67b5b36b0b439eccf7}{GenProgMutation}}(\textcolor{keywordtype}{int}\ vectorSize,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}\ \&params);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gen_prog_mutation_adae389a12b5c2c8e72a3ec8c2f140e26}{setIndividual}}(\mbox{\hyperlink{struct_individual}{Individual}}\ \&\mbox{\hyperlink{class_gen_prog_mutation_a10431e91f31cd3c7568250044ab27796}{individual}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gen_prog_mutation_a80f6a79a96baf65fab86dc4eb345643c}{setPopulation}}(\textcolor{keyword}{const}\ std::vector<Individual>\ \&population,\ std::vector<Individual>\ \&selected)\ \{\};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gen_prog_mutation_a418ba3d84550da1f0ca2d921d2e89176}{setParents}}(\mbox{\hyperlink{struct_individual}{Individual}}\ \&offspring,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&parent1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&parent2)\ \{\};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gen_prog_mutation_a06d8740500d6f698626cd86c0e90d5f7}{apply}}(std::mt19937\ \&generator);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{struct_individual}{Individual}}\ *\mbox{\hyperlink{class_gen_prog_mutation_a10431e91f31cd3c7568250044ab27796}{individual}};\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_gen_prog_mutation_ae19fd2dde317d4137c1d58d74093dedb}{numUnits}};\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_gen_prog_mutation_a1b10d086af1236965cc47501d0f0bd49}{mutationRate}};\ }
+\DoxyCodeLine{00085\ \};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GENPROG\_MUTATION\_H}}
+
+\end{DoxyCode}

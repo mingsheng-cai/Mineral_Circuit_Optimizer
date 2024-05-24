@@ -1,0 +1,436 @@
+\doxysection{tqdm Namespace Reference}
+\hypertarget{namespacetqdm}{}\label{namespacetqdm}\index{tqdm@{tqdm}}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtqdm_1_1_chronometer}{Chronometer}}
+\begin{DoxyCompactList}\small\item\em A simple chronometer to measure elapsed time. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtqdm_1_1int__iterator}{int\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em A random access iterator for integers. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{iter\+\_\+wrapper}}
+\begin{DoxyCompactList}\small\item\em A wrapper class for iterators to update the progress bar. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtqdm_1_1progress__bar}{progress\+\_\+bar}}
+\begin{DoxyCompactList}\small\item\em A class representing a progress bar. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtqdm_1_1range}{range}}
+\begin{DoxyCompactList}\small\item\em A range of integers represented by iterators. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtqdm_1_1timer}{timer}}
+\begin{DoxyCompactList}\small\item\em A timer that can be used to create a timing iterator. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtqdm_1_1timing__iterator}{timing\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em A forward iterator that returns the elapsed time. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtqdm_1_1timing__iterator__end__sentinel}{timing\+\_\+iterator\+\_\+end\+\_\+sentinel}}
+\begin{DoxyCompactList}\small\item\em An end sentinel for timing iterators. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+\_\+for\+\_\+lvalues}}
+\begin{DoxyCompactList}\small\item\em A class for progress bars that iterate over lvalues. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtqdm_1_1tqdm__for__rvalues}{tqdm\+\_\+for\+\_\+rvalues}}
+\begin{DoxyCompactList}\small\item\em A class for progress bars that iterate over rvalues. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtqdm_1_1tqdm__timer}{tqdm\+\_\+timer}}
+\begin{DoxyCompactList}\small\item\em A progress bar for a timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}} = std\+::ptrdiff\+\_\+t
+\item 
+using \mbox{\hyperlink{namespacetqdm_af3fe83efa1c7be0cf85d9e873686192d}{time\+\_\+point\+\_\+t}} = std\+::chrono\+::time\+\_\+point$<$std\+::chrono\+::steady\+\_\+clock$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{namespacetqdm_acb71ab3d3baf5c7814a297ee0829160c}{elapsed\+\_\+seconds}} (\mbox{\hyperlink{namespacetqdm_af3fe83efa1c7be0cf85d9e873686192d}{time\+\_\+point\+\_\+t}} from, \mbox{\hyperlink{namespacetqdm_af3fe83efa1c7be0cf85d9e873686192d}{time\+\_\+point\+\_\+t}} to)
+\begin{DoxyCompactList}\small\item\em Calculate the elapsed seconds between two time points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetqdm_ad425996301c00a1d86e94e9a109b7df1}{clamp}} (double \&x, double a, double b)
+\begin{DoxyCompactList}\small\item\em Clamp a value between two bounds. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacetqdm_aff002c6d06f0b224b9386f32ba72ee8c}{get\+\_\+terminal\+\_\+width}} ()
+\begin{DoxyCompactList}\small\item\em Get the width of the terminal window. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Container $>$ }\\\mbox{\hyperlink{namespacetqdm_a4c06ad3babe594a82da35b2f7a41db2c}{tqdm\+\_\+for\+\_\+lvalues}} (Container \&) -\/$>$ tqdm\+\_\+for\+\_\+lvalues$<$ typename Container\+::iterator $>$
+\item 
+{\footnotesize template$<$class Container $>$ }\\\mbox{\hyperlink{namespacetqdm_ab993272a64996286d3890371b0209eaa}{tqdm\+\_\+for\+\_\+lvalues}} (const Container \&) -\/$>$ tqdm\+\_\+for\+\_\+lvalues$<$ typename Container\+::const\+\_\+iterator $>$
+\item 
+{\footnotesize template$<$class Container $>$ }\\\mbox{\hyperlink{namespacetqdm_a52953021dd300418a8c1623fb80292aa}{tqdm\+\_\+for\+\_\+rvalues}} (Container \&\&) -\/$>$ tqdm\+\_\+for\+\_\+rvalues$<$ Container $>$
+\item 
+{\footnotesize template$<$class Forward\+Iter $>$ }\\auto \mbox{\hyperlink{namespacetqdm_a221729e892594c8cbe7fbec1a1fc5666}{tqdm}} (const Forward\+Iter \&first, const Forward\+Iter \&last)
+\begin{DoxyCompactList}\small\item\em Create a tqdm progress bar for a range of iterators. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Forward\+Iter $>$ }\\auto \mbox{\hyperlink{namespacetqdm_afbbcd37c8aaea409db392eb56cd48aad}{tqdm}} (const Forward\+Iter \&first, const Forward\+Iter \&last, \mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}} total)
+\begin{DoxyCompactList}\small\item\em Create a tqdm progress bar for a range of iterators with a specified total size. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Container $>$ }\\auto \mbox{\hyperlink{namespacetqdm_a61ef260fe0030cf9582be888971be9d9}{tqdm}} (const Container \&C)
+\begin{DoxyCompactList}\small\item\em Create a tqdm progress bar for a container. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Container $>$ }\\auto \mbox{\hyperlink{namespacetqdm_a7591489ef2ce37f2cf3a448cc0b619ba}{tqdm}} (Container \&C)
+\begin{DoxyCompactList}\small\item\em Create a tqdm progress bar for a container. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Container $>$ }\\auto \mbox{\hyperlink{namespacetqdm_a8d4a3b1a3f835245926bb9448cb8fa1b}{tqdm}} (Container \&\&C)
+\begin{DoxyCompactList}\small\item\em Create a tqdm progress bar for a container (rvalue reference). \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Int\+Type $>$ }\\auto \mbox{\hyperlink{namespacetqdm_ae79090218343178f452acf2c771a03e2}{trange}} (Int\+Type first, Int\+Type last)
+\begin{DoxyCompactList}\small\item\em Create a tqdm progress bar for a range of integers. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Int\+Type $>$ }\\auto \mbox{\hyperlink{namespacetqdm_a600224b896fbe117ba8cc64bf6ffed27}{trange}} (Int\+Type last)
+\begin{DoxyCompactList}\small\item\em Create a tqdm progress bar for a range of integers. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{namespacetqdm_addb6e8cb1538647367dfe9393dc6c5a1}{tqdm}} (\mbox{\hyperlink{structtqdm_1_1timer}{timer}} t)
+\begin{DoxyCompactList}\small\item\em Create a tqdm progress bar for a timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}\label{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7} 
+\index{tqdm@{tqdm}!index@{index}}
+\index{index@{index}!tqdm@{tqdm}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{tqdm\+::index}} = std\+::ptrdiff\+\_\+t}
+
+\Hypertarget{namespacetqdm_af3fe83efa1c7be0cf85d9e873686192d}\label{namespacetqdm_af3fe83efa1c7be0cf85d9e873686192d} 
+\index{tqdm@{tqdm}!time\_point\_t@{time\_point\_t}}
+\index{time\_point\_t@{time\_point\_t}!tqdm@{tqdm}}
+\doxysubsubsection{\texorpdfstring{time\_point\_t}{time\_point\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetqdm_af3fe83efa1c7be0cf85d9e873686192d}{tqdm\+::time\+\_\+point\+\_\+t}} = std\+::chrono\+::time\+\_\+point$<$std\+::chrono\+::steady\+\_\+clock$>$}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacetqdm_ad425996301c00a1d86e94e9a109b7df1}\label{namespacetqdm_ad425996301c00a1d86e94e9a109b7df1} 
+\index{tqdm@{tqdm}!clamp@{clamp}}
+\index{clamp@{clamp}!tqdm@{tqdm}}
+\doxysubsubsection{\texorpdfstring{clamp()}{clamp()}}
+{\footnotesize\ttfamily void tqdm\+::clamp (\begin{DoxyParamCaption}\item[{double \&}]{x,  }\item[{double}]{a,  }\item[{double}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clamp a value between two bounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The value to clamp. \\
+\hline
+{\em a} & The lower bound. \\
+\hline
+{\em b} & The upper bound. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetqdm_ad425996301c00a1d86e94e9a109b7df1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacetqdm_acb71ab3d3baf5c7814a297ee0829160c}\label{namespacetqdm_acb71ab3d3baf5c7814a297ee0829160c} 
+\index{tqdm@{tqdm}!elapsed\_seconds@{elapsed\_seconds}}
+\index{elapsed\_seconds@{elapsed\_seconds}!tqdm@{tqdm}}
+\doxysubsubsection{\texorpdfstring{elapsed\_seconds()}{elapsed\_seconds()}}
+{\footnotesize\ttfamily double tqdm\+::elapsed\+\_\+seconds (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacetqdm_af3fe83efa1c7be0cf85d9e873686192d}{time\+\_\+point\+\_\+t}}}]{from,  }\item[{\mbox{\hyperlink{namespacetqdm_af3fe83efa1c7be0cf85d9e873686192d}{time\+\_\+point\+\_\+t}}}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculate the elapsed seconds between two time points. 
+
+This function calculates the elapsed time in seconds between two time points.
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The starting time point. \\
+\hline
+{\em to} & The ending time point. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The elapsed time in seconds. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetqdm_acb71ab3d3baf5c7814a297ee0829160c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacetqdm_aff002c6d06f0b224b9386f32ba72ee8c}\label{namespacetqdm_aff002c6d06f0b224b9386f32ba72ee8c} 
+\index{tqdm@{tqdm}!get\_terminal\_width@{get\_terminal\_width}}
+\index{get\_terminal\_width@{get\_terminal\_width}!tqdm@{tqdm}}
+\doxysubsubsection{\texorpdfstring{get\_terminal\_width()}{get\_terminal\_width()}}
+{\footnotesize\ttfamily int tqdm\+::get\+\_\+terminal\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the width of the terminal window. 
+
+\begin{DoxyReturn}{Returns}
+The width of the terminal window in columns. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetqdm_aff002c6d06f0b224b9386f32ba72ee8c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacetqdm_a61ef260fe0030cf9582be888971be9d9}\label{namespacetqdm_a61ef260fe0030cf9582be888971be9d9} 
+\index{tqdm@{tqdm}!tqdm@{tqdm}}
+\index{tqdm@{tqdm}!tqdm@{tqdm}}
+\doxysubsubsection{\texorpdfstring{tqdm()}{tqdm()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily template$<$class Container $>$ \\
+auto tqdm\+::tqdm (\begin{DoxyParamCaption}\item[{const Container \&}]{C }\end{DoxyParamCaption})}
+
+
+
+Create a tqdm progress bar for a container. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Container} & The type of the container. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em C} & The container. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tqdm progress bar. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{namespacetqdm_a61ef260fe0030cf9582be888971be9d9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacetqdm_a221729e892594c8cbe7fbec1a1fc5666}\label{namespacetqdm_a221729e892594c8cbe7fbec1a1fc5666} 
+\index{tqdm@{tqdm}!tqdm@{tqdm}}
+\index{tqdm@{tqdm}!tqdm@{tqdm}}
+\doxysubsubsection{\texorpdfstring{tqdm()}{tqdm()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter $>$ \\
+auto tqdm\+::tqdm (\begin{DoxyParamCaption}\item[{const Forward\+Iter \&}]{first,  }\item[{const Forward\+Iter \&}]{last }\end{DoxyParamCaption})}
+
+
+
+Create a tqdm progress bar for a range of iterators. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Forward\+Iter} & The type of the forward iterator. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em first} & The beginning of the range. \\
+\hline
+{\em last} & The end of the range. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tqdm progress bar. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{namespacetqdm_a221729e892594c8cbe7fbec1a1fc5666_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacetqdm_afbbcd37c8aaea409db392eb56cd48aad}\label{namespacetqdm_afbbcd37c8aaea409db392eb56cd48aad} 
+\index{tqdm@{tqdm}!tqdm@{tqdm}}
+\index{tqdm@{tqdm}!tqdm@{tqdm}}
+\doxysubsubsection{\texorpdfstring{tqdm()}{tqdm()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter $>$ \\
+auto tqdm\+::tqdm (\begin{DoxyParamCaption}\item[{const Forward\+Iter \&}]{first,  }\item[{const Forward\+Iter \&}]{last,  }\item[{\mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}}}]{total }\end{DoxyParamCaption})}
+
+
+
+Create a tqdm progress bar for a range of iterators with a specified total size. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Forward\+Iter} & The type of the forward iterator. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em first} & The beginning of the range. \\
+\hline
+{\em last} & The end of the range. \\
+\hline
+{\em total} & The total size of the range. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tqdm progress bar. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{namespacetqdm_afbbcd37c8aaea409db392eb56cd48aad_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacetqdm_a8d4a3b1a3f835245926bb9448cb8fa1b}\label{namespacetqdm_a8d4a3b1a3f835245926bb9448cb8fa1b} 
+\index{tqdm@{tqdm}!tqdm@{tqdm}}
+\index{tqdm@{tqdm}!tqdm@{tqdm}}
+\doxysubsubsection{\texorpdfstring{tqdm()}{tqdm()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily template$<$class Container $>$ \\
+auto tqdm\+::tqdm (\begin{DoxyParamCaption}\item[{Container \&\&}]{C }\end{DoxyParamCaption})}
+
+
+
+Create a tqdm progress bar for a container (rvalue reference). 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Container} & The type of the container. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em C} & The container. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tqdm progress bar. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{namespacetqdm_a8d4a3b1a3f835245926bb9448cb8fa1b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacetqdm_a7591489ef2ce37f2cf3a448cc0b619ba}\label{namespacetqdm_a7591489ef2ce37f2cf3a448cc0b619ba} 
+\index{tqdm@{tqdm}!tqdm@{tqdm}}
+\index{tqdm@{tqdm}!tqdm@{tqdm}}
+\doxysubsubsection{\texorpdfstring{tqdm()}{tqdm()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily template$<$class Container $>$ \\
+auto tqdm\+::tqdm (\begin{DoxyParamCaption}\item[{Container \&}]{C }\end{DoxyParamCaption})}
+
+
+
+Create a tqdm progress bar for a container. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Container} & The type of the container. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em C} & The container. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tqdm progress bar. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{namespacetqdm_a7591489ef2ce37f2cf3a448cc0b619ba_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacetqdm_addb6e8cb1538647367dfe9393dc6c5a1}\label{namespacetqdm_addb6e8cb1538647367dfe9393dc6c5a1} 
+\index{tqdm@{tqdm}!tqdm@{tqdm}}
+\index{tqdm@{tqdm}!tqdm@{tqdm}}
+\doxysubsubsection{\texorpdfstring{tqdm()}{tqdm()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily auto tqdm\+::tqdm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtqdm_1_1timer}{timer}}}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a tqdm progress bar for a timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The timer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tqdm progress bar. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{namespacetqdm_addb6e8cb1538647367dfe9393dc6c5a1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacetqdm_ab993272a64996286d3890371b0209eaa}\label{namespacetqdm_ab993272a64996286d3890371b0209eaa} 
+\index{tqdm@{tqdm}!tqdm\_for\_lvalues@{tqdm\_for\_lvalues}}
+\index{tqdm\_for\_lvalues@{tqdm\_for\_lvalues}!tqdm@{tqdm}}
+\doxysubsubsection{\texorpdfstring{tqdm\_for\_lvalues()}{tqdm\_for\_lvalues()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Container $>$ \\
+tqdm\+::tqdm\+\_\+for\+\_\+lvalues (\begin{DoxyParamCaption}\item[{const Container \&}]{ }\end{DoxyParamCaption}) -\/$>$  tqdm\+\_\+for\+\_\+lvalues$<$ typename Container\+::const\+\_\+iterator $>$}
+
+\Hypertarget{namespacetqdm_a4c06ad3babe594a82da35b2f7a41db2c}\label{namespacetqdm_a4c06ad3babe594a82da35b2f7a41db2c} 
+\index{tqdm@{tqdm}!tqdm\_for\_lvalues@{tqdm\_for\_lvalues}}
+\index{tqdm\_for\_lvalues@{tqdm\_for\_lvalues}!tqdm@{tqdm}}
+\doxysubsubsection{\texorpdfstring{tqdm\_for\_lvalues()}{tqdm\_for\_lvalues()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Container $>$ \\
+tqdm\+::tqdm\+\_\+for\+\_\+lvalues (\begin{DoxyParamCaption}\item[{Container \&}]{ }\end{DoxyParamCaption}) -\/$>$  tqdm\+\_\+for\+\_\+lvalues$<$ typename Container\+::iterator $>$}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{namespacetqdm_a4c06ad3babe594a82da35b2f7a41db2c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacetqdm_a52953021dd300418a8c1623fb80292aa}\label{namespacetqdm_a52953021dd300418a8c1623fb80292aa} 
+\index{tqdm@{tqdm}!tqdm\_for\_rvalues@{tqdm\_for\_rvalues}}
+\index{tqdm\_for\_rvalues@{tqdm\_for\_rvalues}!tqdm@{tqdm}}
+\doxysubsubsection{\texorpdfstring{tqdm\_for\_rvalues()}{tqdm\_for\_rvalues()}}
+{\footnotesize\ttfamily template$<$class Container $>$ \\
+tqdm\+::tqdm\+\_\+for\+\_\+rvalues (\begin{DoxyParamCaption}\item[{Container \&\&}]{ }\end{DoxyParamCaption}) -\/$>$  tqdm\+\_\+for\+\_\+rvalues$<$ Container $>$}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{namespacetqdm_a52953021dd300418a8c1623fb80292aa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacetqdm_ae79090218343178f452acf2c771a03e2}\label{namespacetqdm_ae79090218343178f452acf2c771a03e2} 
+\index{tqdm@{tqdm}!trange@{trange}}
+\index{trange@{trange}!tqdm@{tqdm}}
+\doxysubsubsection{\texorpdfstring{trange()}{trange()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+auto tqdm\+::trange (\begin{DoxyParamCaption}\item[{Int\+Type}]{first,  }\item[{Int\+Type}]{last }\end{DoxyParamCaption})}
+
+
+
+Create a tqdm progress bar for a range of integers. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Int\+Type} & The type of the integer. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em first} & The first integer. \\
+\hline
+{\em last} & The last integer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tqdm progress bar. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetqdm_ae79090218343178f452acf2c771a03e2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacetqdm_a600224b896fbe117ba8cc64bf6ffed27}\label{namespacetqdm_a600224b896fbe117ba8cc64bf6ffed27} 
+\index{tqdm@{tqdm}!trange@{trange}}
+\index{trange@{trange}!tqdm@{tqdm}}
+\doxysubsubsection{\texorpdfstring{trange()}{trange()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+auto tqdm\+::trange (\begin{DoxyParamCaption}\item[{Int\+Type}]{last }\end{DoxyParamCaption})}
+
+
+
+Create a tqdm progress bar for a range of integers. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Int\+Type} & The type of the integer. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em last} & The last integer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tqdm progress bar. 
+\end{DoxyReturn}

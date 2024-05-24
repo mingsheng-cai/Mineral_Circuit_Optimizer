@@ -1,0 +1,19 @@
+<map id="tests/test_validity_checker.cpp" name="tests/test_validity_checker.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="143,5,268,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,77,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,48,79,90,76,85,165,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="102,93,167,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="190,47,156,85,152,81,186,44"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="220,167,279,192"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="213,45,233,118,244,153,239,154,228,119,208,46"/>
+<area shape="rect" id="Node000005" href="$_c_unit_8h.html" title="Defines the CUnit class for representing a unit within a circuit system." alt="" coords="324,167,431,192"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="269,32,298,40,328,52,355,69,377,92,384,106,387,122,386,153,381,153,382,123,379,108,372,95,351,73,325,56,296,45,268,37"/>
+<area shape="rect" id="Node000008" href="$_c_circuit_8h.html" title="Defines the Circuit class for modeling and simulating a circuit system." alt="" coords="243,93,363,119"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="231,43,279,82,276,87,227,48"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="299,240,368,265"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="372,194,350,230,345,227,368,191"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="392,240,451,265"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="387,191,409,227,405,230,382,194"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="296,121,268,157,264,154,292,117"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="316,117,357,155,353,159,313,121"/>
+</map>

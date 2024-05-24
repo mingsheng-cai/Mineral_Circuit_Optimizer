@@ -1,0 +1,77 @@
+\doxysection{tests/test\+\_\+validity\+\_\+checker.cpp File Reference}
+\hypertarget{test__validity__checker_8cpp}{}\label{test__validity__checker_8cpp}\index{tests/test\_validity\_checker.cpp@{tests/test\_validity\_checker.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include "{}circuit/\+CUnit.\+h"{}}\newline
+{\ttfamily \#include "{}circuit/\+CCircuit.\+h"{}}\newline
+Include dependency graph for test\+\_\+validity\+\_\+checker.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__validity__checker_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{test__validity__checker_8cpp_a4e4c39a9e9b74de93f2d6adcf8dc9400}{test\+\_\+check\+\_\+validity}} ()
+\begin{DoxyCompactList}\small\item\em Test function for checking the validity of circuit configurations. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{test__validity__checker_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Main function to run the circuit validity tests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{test__validity__checker_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{test__validity__checker_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+\index{test\_validity\_checker.cpp@{test\_validity\_checker.cpp}!main@{main}}
+\index{main@{main}!test\_validity\_checker.cpp@{test\_validity\_checker.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Main function to run the circuit validity tests. 
+
+This function runs the test\+\_\+check\+\_\+validity function which includes various test cases for checking the validity of circuit configurations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of command line arguments \\
+\hline
+{\em argv} & Array of command line arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Exit status of the program 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__validity__checker_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__validity__checker_8cpp_a4e4c39a9e9b74de93f2d6adcf8dc9400}\label{test__validity__checker_8cpp_a4e4c39a9e9b74de93f2d6adcf8dc9400} 
+\index{test\_validity\_checker.cpp@{test\_validity\_checker.cpp}!test\_check\_validity@{test\_check\_validity}}
+\index{test\_check\_validity@{test\_check\_validity}!test\_validity\_checker.cpp@{test\_validity\_checker.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_check\_validity()}{test\_check\_validity()}}
+{\footnotesize\ttfamily void test\+\_\+check\+\_\+validity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Test function for checking the validity of circuit configurations. 
+
+This function runs various test cases to ensure that the circuit validity checks in the CCircuit class are functioning correctly. It includes tests for valid circuits, circuits with incorrect vector sizes, self-\/recycling circuits, negative feed/destination IDs, and other invalid circuit configurations. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__validity__checker_8cpp_a4e4c39a9e9b74de93f2d6adcf8dc9400_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{test__validity__checker_8cpp_a4e4c39a9e9b74de93f2d6adcf8dc9400_icgraph}
+\end{center}
+\end{figure}

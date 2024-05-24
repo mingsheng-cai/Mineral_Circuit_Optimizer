@@ -1,0 +1,5 @@
+<map id="Circuit::calculate_flows" name="Circuit::calculate_flows">
+<area shape="rect" id="Node000001" title="Calculates the flows within the circuit." alt="" coords="5,5,125,45"/>
+<area shape="rect" id="Node000002" href="$class_circuit.html#a7e8f59d3f565f6975550e53bc8ec756e" title="Resets the new feeds in the circuit." alt="" coords="173,5,301,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,23,160,23,160,28,125,28"/>
+</map>

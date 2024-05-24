@@ -1,0 +1,93 @@
+\doxysection{include/utils/tqdm.hpp File Reference}
+\hypertarget{tqdm_8hpp}{}\label{tqdm_8hpp}\index{include/utils/tqdm.hpp@{include/utils/tqdm.hpp}}
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$sys/ioctl.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for tqdm.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tqdm_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tqdm_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtqdm_1_1_chronometer}{tqdm\+::\+Chronometer}}
+\begin{DoxyCompactList}\small\item\em A simple chronometer to measure elapsed time. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtqdm_1_1progress__bar}{tqdm\+::progress\+\_\+bar}}
+\begin{DoxyCompactList}\small\item\em A class representing a progress bar. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{tqdm\+::iter\+\_\+wrapper$<$ Forward\+Iter, Parent $>$}}
+\begin{DoxyCompactList}\small\item\em A wrapper class for iterators to update the progress bar. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues$<$ Forward\+Iter, End\+Iter $>$}}
+\begin{DoxyCompactList}\small\item\em A class for progress bars that iterate over lvalues. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtqdm_1_1tqdm__for__rvalues}{tqdm\+::tqdm\+\_\+for\+\_\+rvalues$<$ Container $>$}}
+\begin{DoxyCompactList}\small\item\em A class for progress bars that iterate over rvalues. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtqdm_1_1int__iterator}{tqdm\+::int\+\_\+iterator$<$ Int\+Type $>$}}
+\begin{DoxyCompactList}\small\item\em A random access iterator for integers. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtqdm_1_1range}{tqdm\+::range$<$ Int\+Type $>$}}
+\begin{DoxyCompactList}\small\item\em A range of integers represented by iterators. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtqdm_1_1timing__iterator__end__sentinel}{tqdm\+::timing\+\_\+iterator\+\_\+end\+\_\+sentinel}}
+\begin{DoxyCompactList}\small\item\em An end sentinel for timing iterators. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtqdm_1_1timing__iterator}{tqdm\+::timing\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em A forward iterator that returns the elapsed time. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtqdm_1_1timer}{tqdm\+::timer}}
+\begin{DoxyCompactList}\small\item\em A timer that can be used to create a timing iterator. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtqdm_1_1tqdm__timer}{tqdm\+::tqdm\+\_\+timer}}
+\begin{DoxyCompactList}\small\item\em A progress bar for a timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacetqdm}{tqdm}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{tqdm\+::index}} = std\+::ptrdiff\+\_\+t
+\item 
+using \mbox{\hyperlink{namespacetqdm_af3fe83efa1c7be0cf85d9e873686192d}{tqdm\+::time\+\_\+point\+\_\+t}} = std\+::chrono\+::time\+\_\+point$<$std\+::chrono\+::steady\+\_\+clock$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{namespacetqdm_acb71ab3d3baf5c7814a297ee0829160c}{tqdm\+::elapsed\+\_\+seconds}} (\mbox{\hyperlink{namespacetqdm_af3fe83efa1c7be0cf85d9e873686192d}{time\+\_\+point\+\_\+t}} from, \mbox{\hyperlink{namespacetqdm_af3fe83efa1c7be0cf85d9e873686192d}{time\+\_\+point\+\_\+t}} to)
+\begin{DoxyCompactList}\small\item\em Calculate the elapsed seconds between two time points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetqdm_ad425996301c00a1d86e94e9a109b7df1}{tqdm\+::clamp}} (double \&x, double a, double b)
+\begin{DoxyCompactList}\small\item\em Clamp a value between two bounds. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacetqdm_aff002c6d06f0b224b9386f32ba72ee8c}{tqdm\+::get\+\_\+terminal\+\_\+width}} ()
+\begin{DoxyCompactList}\small\item\em Get the width of the terminal window. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Container $>$ }\\\mbox{\hyperlink{namespacetqdm_a4c06ad3babe594a82da35b2f7a41db2c}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}} (Container \&) -\/$>$ tqdm\+\_\+for\+\_\+lvalues$<$ typename Container\+::iterator $>$
+\item 
+{\footnotesize template$<$class Container $>$ }\\\mbox{\hyperlink{namespacetqdm_ab993272a64996286d3890371b0209eaa}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}} (const Container \&) -\/$>$ tqdm\+\_\+for\+\_\+lvalues$<$ typename Container\+::const\+\_\+iterator $>$
+\item 
+{\footnotesize template$<$class Container $>$ }\\\mbox{\hyperlink{namespacetqdm_a52953021dd300418a8c1623fb80292aa}{tqdm\+::tqdm\+\_\+for\+\_\+rvalues}} (Container \&\&) -\/$>$ tqdm\+\_\+for\+\_\+rvalues$<$ Container $>$
+\item 
+{\footnotesize template$<$class Forward\+Iter $>$ }\\auto \mbox{\hyperlink{namespacetqdm_a221729e892594c8cbe7fbec1a1fc5666}{tqdm\+::tqdm}} (const Forward\+Iter \&first, const Forward\+Iter \&last)
+\begin{DoxyCompactList}\small\item\em Create a tqdm progress bar for a range of iterators. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Forward\+Iter $>$ }\\auto \mbox{\hyperlink{namespacetqdm_afbbcd37c8aaea409db392eb56cd48aad}{tqdm\+::tqdm}} (const Forward\+Iter \&first, const Forward\+Iter \&last, \mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}} total)
+\begin{DoxyCompactList}\small\item\em Create a tqdm progress bar for a range of iterators with a specified total size. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Container $>$ }\\auto \mbox{\hyperlink{namespacetqdm_a61ef260fe0030cf9582be888971be9d9}{tqdm\+::tqdm}} (const Container \&C)
+\begin{DoxyCompactList}\small\item\em Create a tqdm progress bar for a container. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Container $>$ }\\auto \mbox{\hyperlink{namespacetqdm_a7591489ef2ce37f2cf3a448cc0b619ba}{tqdm\+::tqdm}} (Container \&C)
+\begin{DoxyCompactList}\small\item\em Create a tqdm progress bar for a container. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Container $>$ }\\auto \mbox{\hyperlink{namespacetqdm_a8d4a3b1a3f835245926bb9448cb8fa1b}{tqdm\+::tqdm}} (Container \&\&C)
+\begin{DoxyCompactList}\small\item\em Create a tqdm progress bar for a container (rvalue reference). \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Int\+Type $>$ }\\auto \mbox{\hyperlink{namespacetqdm_ae79090218343178f452acf2c771a03e2}{tqdm\+::trange}} (Int\+Type first, Int\+Type last)
+\begin{DoxyCompactList}\small\item\em Create a tqdm progress bar for a range of integers. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Int\+Type $>$ }\\auto \mbox{\hyperlink{namespacetqdm_a600224b896fbe117ba8cc64bf6ffed27}{tqdm\+::trange}} (Int\+Type last)
+\begin{DoxyCompactList}\small\item\em Create a tqdm progress bar for a range of integers. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{namespacetqdm_addb6e8cb1538647367dfe9393dc6c5a1}{tqdm\+::tqdm}} (\mbox{\hyperlink{structtqdm_1_1timer}{timer}} t)
+\begin{DoxyCompactList}\small\item\em Create a tqdm progress bar for a timer. \end{DoxyCompactList}\end{DoxyCompactItemize}

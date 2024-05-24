@@ -1,0 +1,9 @@
+<map id="tqdm::progress_bar::set_prefix" name="tqdm::progress_bar::set_prefix">
+<area shape="rect" id="Node000001" title="Set the prefix string for the progress bar." alt="" coords="419,37,553,77"/>
+<area shape="rect" id="Node000002" href="$classtqdm_1_1tqdm__for__lvalues.html#a83dcb38e0213764ce446866593bf386a" title=" " alt="" coords="212,5,371,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="405,47,370,41,371,36,406,41"/>
+<area shape="rect" id="Node000004" href="$classtqdm_1_1tqdm__timer.html#a807c92f0b2921b1ee92987c1079d9a7d" title=" " alt="" coords="216,69,367,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="405,73,367,80,366,74,405,68"/>
+<area shape="rect" id="Node000003" href="$classtqdm_1_1tqdm__for__rvalues.html#aa5bc59b3170e70a645836c89dc6f4213" title=" " alt="" coords="5,5,164,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="198,28,164,28,164,23,198,23"/>
+</map>

@@ -1,0 +1,195 @@
+\doxysection{Pure\+Single\+Point\+Crossover Class Reference}
+\hypertarget{class_pure_single_point_crossover}{}\label{class_pure_single_point_crossover}\index{PureSinglePointCrossover@{PureSinglePointCrossover}}
+
+
+{\ttfamily \#include $<$Pure\+Single\+Point\+Crossover.\+h$>$}
+
+
+
+Inheritance diagram for Pure\+Single\+Point\+Crossover\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{class_pure_single_point_crossover__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Pure\+Single\+Point\+Crossover\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{class_pure_single_point_crossover__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pure_single_point_crossover_af3934f5ad08824e2490826e963a987b5}{Pure\+Single\+Point\+Crossover}} (const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&params)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_pure_single_point_crossover}{Pure\+Single\+Point\+Crossover} object with specified algorithm parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pure_single_point_crossover_a21e908fdf945d8d5f1822edcd3b869d5}{set\+Parents}} (\mbox{\hyperlink{struct_individual}{Individual}} \&\mbox{\hyperlink{class_pure_single_point_crossover_a643292727286bad89d3eccca08973d76}{offspring}}, const \mbox{\hyperlink{struct_individual}{Individual}} \&\mbox{\hyperlink{class_pure_single_point_crossover_ae31015a2b6f164fa9c39f9857fed52ad}{parent1}}, const \mbox{\hyperlink{struct_individual}{Individual}} \&\mbox{\hyperlink{class_pure_single_point_crossover_a833f4889d065b577e5f86c7fd4cb6965}{parent2}}) override
+\begin{DoxyCompactList}\small\item\em Sets the parents and offspring for the crossover operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pure_single_point_crossover_a2a7f26c00219f4d39fce5007dbfbe70d}{set\+Population}} (const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&population, std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&selected)
+\begin{DoxyCompactList}\small\item\em Sets the population and selected vectors for the selection operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pure_single_point_crossover_aad9fd81891c551c18c6b4b12fe9e5442}{set\+Individual}} (\mbox{\hyperlink{struct_individual}{Individual}} \&individual)
+\begin{DoxyCompactList}\small\item\em Sets the individual for the selection operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pure_single_point_crossover_acbec767cd00efc3d33e1a9dbb5c25b73}{apply}} (std\+::mt19937 \&generator) override
+\begin{DoxyCompactList}\small\item\em Performs the single-\/point crossover operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_operator}{Operator}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_operator_ac7cb92992e32c213091d3659ef596a46}{\texorpdfstring{$\sim$}{\string~}\+Operator}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_operator}{Operator} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_individual}{Individual}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_pure_single_point_crossover_a643292727286bad89d3eccca08973d76}{offspring}}
+\item 
+const \mbox{\hyperlink{struct_individual}{Individual}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_pure_single_point_crossover_ae31015a2b6f164fa9c39f9857fed52ad}{parent1}}
+\item 
+const \mbox{\hyperlink{struct_individual}{Individual}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_pure_single_point_crossover_a833f4889d065b577e5f86c7fd4cb6965}{parent2}}
+\item 
+double \mbox{\hyperlink{class_pure_single_point_crossover_a6f2a20e31c57f2f86907898dab0ad409}{crossover\+Rate}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_pure_single_point_crossover_af3934f5ad08824e2490826e963a987b5}\label{class_pure_single_point_crossover_af3934f5ad08824e2490826e963a987b5} 
+\index{PureSinglePointCrossover@{PureSinglePointCrossover}!PureSinglePointCrossover@{PureSinglePointCrossover}}
+\index{PureSinglePointCrossover@{PureSinglePointCrossover}!PureSinglePointCrossover@{PureSinglePointCrossover}}
+\doxysubsubsection{\texorpdfstring{PureSinglePointCrossover()}{PureSinglePointCrossover()}}
+{\footnotesize\ttfamily Pure\+Single\+Point\+Crossover\+::\+Pure\+Single\+Point\+Crossover (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&}]{params }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_pure_single_point_crossover}{Pure\+Single\+Point\+Crossover} object with specified algorithm parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & The algorithm parameters including the crossover rate. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pure_single_point_crossover_acbec767cd00efc3d33e1a9dbb5c25b73}\label{class_pure_single_point_crossover_acbec767cd00efc3d33e1a9dbb5c25b73} 
+\index{PureSinglePointCrossover@{PureSinglePointCrossover}!apply@{apply}}
+\index{apply@{apply}!PureSinglePointCrossover@{PureSinglePointCrossover}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily void Pure\+Single\+Point\+Crossover\+::apply (\begin{DoxyParamCaption}\item[{std\+::mt19937 \&}]{generator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Performs the single-\/point crossover operation. 
+
+This method performs a single-\/point crossover on the two parent individuals to generate an offspring individual. The crossover point is chosen randomly, and the genetic material from the two parents is combined to create the offspring.
+
+
+\begin{DoxyParams}{Parameters}
+{\em generator} & The random number generator used to determine the crossover point. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_acbd2e97e189d862aa139b3c334a18619}{Operator}}.
+
+\Hypertarget{class_pure_single_point_crossover_aad9fd81891c551c18c6b4b12fe9e5442}\label{class_pure_single_point_crossover_aad9fd81891c551c18c6b4b12fe9e5442} 
+\index{PureSinglePointCrossover@{PureSinglePointCrossover}!setIndividual@{setIndividual}}
+\index{setIndividual@{setIndividual}!PureSinglePointCrossover@{PureSinglePointCrossover}}
+\doxysubsubsection{\texorpdfstring{setIndividual()}{setIndividual()}}
+{\footnotesize\ttfamily void Pure\+Single\+Point\+Crossover\+::set\+Individual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{individual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the individual for the selection operation. 
+
+This method is not used in the \doxylink{class_pure_single_point_crossover}{Pure\+Single\+Point\+Crossover} class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em individual} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_abf3bad24158495949ca770dc8aec6542}{Operator}}.
+
+\Hypertarget{class_pure_single_point_crossover_a21e908fdf945d8d5f1822edcd3b869d5}\label{class_pure_single_point_crossover_a21e908fdf945d8d5f1822edcd3b869d5} 
+\index{PureSinglePointCrossover@{PureSinglePointCrossover}!setParents@{setParents}}
+\index{setParents@{setParents}!PureSinglePointCrossover@{PureSinglePointCrossover}}
+\doxysubsubsection{\texorpdfstring{setParents()}{setParents()}}
+{\footnotesize\ttfamily void Pure\+Single\+Point\+Crossover\+::set\+Parents (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{offspring,  }\item[{const \mbox{\hyperlink{struct_individual}{Individual}} \&}]{parent1,  }\item[{const \mbox{\hyperlink{struct_individual}{Individual}} \&}]{parent2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the parents and offspring for the crossover operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offspring} & The offspring individual to be generated. \\
+\hline
+{\em parent1} & The first parent individual. \\
+\hline
+{\em parent2} & The second parent individual. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_aa9e9e58811b56bf3a5c1ac9e0d034c64}{Operator}}.
+
+\Hypertarget{class_pure_single_point_crossover_a2a7f26c00219f4d39fce5007dbfbe70d}\label{class_pure_single_point_crossover_a2a7f26c00219f4d39fce5007dbfbe70d} 
+\index{PureSinglePointCrossover@{PureSinglePointCrossover}!setPopulation@{setPopulation}}
+\index{setPopulation@{setPopulation}!PureSinglePointCrossover@{PureSinglePointCrossover}}
+\doxysubsubsection{\texorpdfstring{setPopulation()}{setPopulation()}}
+{\footnotesize\ttfamily void Pure\+Single\+Point\+Crossover\+::set\+Population (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&}]{population,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&}]{selected }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the population and selected vectors for the selection operation. 
+
+This method is not used in the \doxylink{class_pure_single_point_crossover}{Pure\+Single\+Point\+Crossover} class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em population} & \\
+\hline
+{\em selected} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_a6e3837c249df579d41f9b9287195c6e5}{Operator}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{class_pure_single_point_crossover_a6f2a20e31c57f2f86907898dab0ad409}\label{class_pure_single_point_crossover_a6f2a20e31c57f2f86907898dab0ad409} 
+\index{PureSinglePointCrossover@{PureSinglePointCrossover}!crossoverRate@{crossoverRate}}
+\index{crossoverRate@{crossoverRate}!PureSinglePointCrossover@{PureSinglePointCrossover}}
+\doxysubsubsection{\texorpdfstring{crossoverRate}{crossoverRate}}
+{\footnotesize\ttfamily double Pure\+Single\+Point\+Crossover\+::crossover\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+The crossover rate used to determine if crossover should occur \Hypertarget{class_pure_single_point_crossover_a643292727286bad89d3eccca08973d76}\label{class_pure_single_point_crossover_a643292727286bad89d3eccca08973d76} 
+\index{PureSinglePointCrossover@{PureSinglePointCrossover}!offspring@{offspring}}
+\index{offspring@{offspring}!PureSinglePointCrossover@{PureSinglePointCrossover}}
+\doxysubsubsection{\texorpdfstring{offspring}{offspring}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_individual}{Individual}}\texorpdfstring{$\ast$}{*} Pure\+Single\+Point\+Crossover\+::offspring\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the offspring individual \Hypertarget{class_pure_single_point_crossover_ae31015a2b6f164fa9c39f9857fed52ad}\label{class_pure_single_point_crossover_ae31015a2b6f164fa9c39f9857fed52ad} 
+\index{PureSinglePointCrossover@{PureSinglePointCrossover}!parent1@{parent1}}
+\index{parent1@{parent1}!PureSinglePointCrossover@{PureSinglePointCrossover}}
+\doxysubsubsection{\texorpdfstring{parent1}{parent1}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_individual}{Individual}}\texorpdfstring{$\ast$}{*} Pure\+Single\+Point\+Crossover\+::parent1\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the first parent individual \Hypertarget{class_pure_single_point_crossover_a833f4889d065b577e5f86c7fd4cb6965}\label{class_pure_single_point_crossover_a833f4889d065b577e5f86c7fd4cb6965} 
+\index{PureSinglePointCrossover@{PureSinglePointCrossover}!parent2@{parent2}}
+\index{parent2@{parent2}!PureSinglePointCrossover@{PureSinglePointCrossover}}
+\doxysubsubsection{\texorpdfstring{parent2}{parent2}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_individual}{Individual}}\texorpdfstring{$\ast$}{*} Pure\+Single\+Point\+Crossover\+::parent2\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the second parent individual 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/operators/\+Crossover/\mbox{\hyperlink{_pure_single_point_crossover_8h}{Pure\+Single\+Point\+Crossover.\+h}}\item 
+src/operators/\+Crossover/\mbox{\hyperlink{_pure_single_point_crossover_8cpp}{Pure\+Single\+Point\+Crossover.\+cpp}}\end{DoxyCompactItemize}

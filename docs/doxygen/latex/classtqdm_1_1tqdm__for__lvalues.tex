@@ -1,0 +1,449 @@
+\doxysection{tqdm\+::tqdm\+\_\+for\+\_\+lvalues\texorpdfstring{$<$}{<} Forward\+Iter, End\+Iter \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classtqdm_1_1tqdm__for__lvalues}{}\label{classtqdm_1_1tqdm__for__lvalues}\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+
+
+A class for progress bars that iterate over lvalues.  
+
+
+
+
+{\ttfamily \#include $<$tqdm.\+hpp$>$}
+
+
+
+Collaboration diagram for tqdm\+::tqdm\+\_\+for\+\_\+lvalues\texorpdfstring{$<$}{<} Forward\+Iter, End\+Iter \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classtqdm_1_1tqdm__for__lvalues__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a863e2c1796d59dd1d46b01898a3dc4bc}{this\+\_\+t}} = \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+\_\+for\+\_\+lvalues}}$<$Forward\+Iter, End\+Iter$>$
+\item 
+using \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a02a9c2f7c57ab7e4b8233f644ab79ec8}{iterator}} = \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{iter\+\_\+wrapper}}$<$Forward\+Iter, \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a863e2c1796d59dd1d46b01898a3dc4bc}{this\+\_\+t}}$>$
+\item 
+using \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a5badbe2167dde20672cf86dd3ffb9cf8}{value\+\_\+type}} = typename Forward\+Iter\+::value\+\_\+type
+\item 
+using \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a93ea7d6ae24e5ee6df42c4426de657c7}{size\+\_\+type}} = \mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}}
+\item 
+using \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a098bdfdf0d0e11239a6df1fa35289202}{difference\+\_\+type}} = \mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a8edb4a74cdfe9eb9e33f7461691ea80d}{tqdm\+\_\+for\+\_\+lvalues}} (Forward\+Iter \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_ae0f49b9803e51489992c64bc31379b1e}{begin}}, End\+Iter \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a64102875f6b44b35caf35d593243194b}{end}})
+\item 
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_ac378eeebca73c5cb2c8739d5977aba9b}{tqdm\+\_\+for\+\_\+lvalues}} (Forward\+Iter \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_ae0f49b9803e51489992c64bc31379b1e}{begin}}, End\+Iter \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a64102875f6b44b35caf35d593243194b}{end}}, \mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}} total)
+\item 
+{\footnotesize template$<$class Container $>$ }\\\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a7be1f8ff4cf36ebcce440c60e20c23c8}{tqdm\+\_\+for\+\_\+lvalues}} (Container \&C)
+\item 
+{\footnotesize template$<$class Container $>$ }\\\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a6bb9d3f062a6ba1a8e6b3c297864273f}{tqdm\+\_\+for\+\_\+lvalues}} (const Container \&C)
+\item 
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a4f71664d44fc666c0ddf8bf2dd7cec5b}{tqdm\+\_\+for\+\_\+lvalues}} (const \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+\_\+for\+\_\+lvalues}} \&)=delete
+\item 
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a47e7c9e0d216da1e0f45a40405703986}{tqdm\+\_\+for\+\_\+lvalues}} (\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+\_\+for\+\_\+lvalues}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+\_\+for\+\_\+lvalues}} \& \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a98dc93ffe71a92001b4a0a6e9108beca}{operator=}} (\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+\_\+for\+\_\+lvalues}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+\_\+for\+\_\+lvalues}} \& \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a358f8c7b05a2850a13d2c950de513234}{operator=}} (const \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+\_\+for\+\_\+lvalues}} \&)=delete
+\item 
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a0360667806b2bd1cd61d5bdde6937b02}{\texorpdfstring{$\sim$}{\string~}tqdm\+\_\+for\+\_\+lvalues}} ()=default
+\item 
+{\footnotesize template$<$class Container $>$ }\\\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_af21c4516fcd320dd0eac7c9014ad0388}{tqdm\+\_\+for\+\_\+lvalues}} (Container \&\&)=delete
+\item 
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a02a9c2f7c57ab7e4b8233f644ab79ec8}{iterator}} \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_ae0f49b9803e51489992c64bc31379b1e}{begin}} ()
+\item 
+End\+Iter \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a64102875f6b44b35caf35d593243194b}{end}} () const
+\item 
+void \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a4a32afd7e15b860922cc2e0d844a4891}{update}} ()
+\item 
+void \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a7abe2c2aee6caf82a4b43a1b5df5cd67}{set\+\_\+ostream}} (std\+::ostream \&os)
+\item 
+void \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a83dcb38e0213764ce446866593bf386a}{set\+\_\+prefix}} (std\+::string s)
+\item 
+void \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_ac7b570ec96de0393c9e1c285fa387387}{set\+\_\+bar\+\_\+size}} (int size)
+\item 
+void \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_af80d5489611049aaf8887d9cec7e251a}{set\+\_\+min\+\_\+update\+\_\+time}} (double time)
+\item 
+{\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+\_\+for\+\_\+lvalues}} \& \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a83f14d569f760ddd86e8f85049f9fa8a}{operator$<$$<$}} (const T \&t)
+\item 
+void \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a84897ba1a51be1b17d040fcc609eb9fc}{manually\+\_\+set\+\_\+progress}} (double to)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_adcf91186da5e6beb292834a44e9e17b4}{calc\+\_\+progress}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a02a9c2f7c57ab7e4b8233f644ab79ec8}{iterator}} \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a178136e2c475b6447b19ddcb3ad0d769}{first\+\_\+}}
+\item 
+End\+Iter \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_ab2690276cb1acaf08c55c22795443dd2}{last\+\_\+}}
+\item 
+\mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}} \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a249968df7c7c4b5e662377423e1655b1}{num\+\_\+iters\+\_\+}} \{0\}
+\item 
+\mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}} \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_acdffb6e55c2ce82dfdac78a783799cfd}{iters\+\_\+done\+\_\+}} \{0\}
+\item 
+\mbox{\hyperlink{classtqdm_1_1progress__bar}{progress\+\_\+bar}} \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_aacb9e257b7989169b1f6042abd2aa802}{bar\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Forward\+Iter, class End\+Iter = Forward\+Iter$>$\newline
+class tqdm\+::tqdm\+\_\+for\+\_\+lvalues$<$ Forward\+Iter, End\+Iter $>$}
+A class for progress bars that iterate over lvalues. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Forward\+Iter} & The type of the forward iterator. \\
+\hline
+{\em End\+Iter} & The type of the end iterator. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a098bdfdf0d0e11239a6df1fa35289202}\label{classtqdm_1_1tqdm__for__lvalues_a098bdfdf0d0e11239a6df1fa35289202} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!difference\_type@{difference\_type}}
+\index{difference\_type@{difference\_type}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{difference\_type}{difference\_type}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+using \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::difference\+\_\+type = \mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}}}
+
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a02a9c2f7c57ab7e4b8233f644ab79ec8}\label{classtqdm_1_1tqdm__for__lvalues_a02a9c2f7c57ab7e4b8233f644ab79ec8} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!iterator@{iterator}}
+\index{iterator@{iterator}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+using \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::iterator = \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{iter\+\_\+wrapper}}$<$Forward\+Iter, \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a863e2c1796d59dd1d46b01898a3dc4bc}{this\+\_\+t}}$>$}
+
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a93ea7d6ae24e5ee6df42c4426de657c7}\label{classtqdm_1_1tqdm__for__lvalues_a93ea7d6ae24e5ee6df42c4426de657c7} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!size\_type@{size\_type}}
+\index{size\_type@{size\_type}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{size\_type}{size\_type}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+using \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::size\+\_\+type = \mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}}}
+
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a863e2c1796d59dd1d46b01898a3dc4bc}\label{classtqdm_1_1tqdm__for__lvalues_a863e2c1796d59dd1d46b01898a3dc4bc} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!this\_t@{this\_t}}
+\index{this\_t@{this\_t}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{this\_t}{this\_t}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+using \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::this\+\_\+t = \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+\_\+for\+\_\+lvalues}}$<$Forward\+Iter, End\+Iter$>$}
+
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a5badbe2167dde20672cf86dd3ffb9cf8}\label{classtqdm_1_1tqdm__for__lvalues_a5badbe2167dde20672cf86dd3ffb9cf8} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+using \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::value\+\_\+type = typename Forward\+Iter\+::value\+\_\+type}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a8edb4a74cdfe9eb9e33f7461691ea80d}\label{classtqdm_1_1tqdm__for__lvalues_a8edb4a74cdfe9eb9e33f7461691ea80d} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!tqdm\_for\_lvalues@{tqdm\_for\_lvalues}}
+\index{tqdm\_for\_lvalues@{tqdm\_for\_lvalues}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{tqdm\_for\_lvalues()}{tqdm\_for\_lvalues()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::tqdm\+\_\+for\+\_\+lvalues (\begin{DoxyParamCaption}\item[{Forward\+Iter}]{begin,  }\item[{End\+Iter}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_ac378eeebca73c5cb2c8739d5977aba9b}\label{classtqdm_1_1tqdm__for__lvalues_ac378eeebca73c5cb2c8739d5977aba9b} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!tqdm\_for\_lvalues@{tqdm\_for\_lvalues}}
+\index{tqdm\_for\_lvalues@{tqdm\_for\_lvalues}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{tqdm\_for\_lvalues()}{tqdm\_for\_lvalues()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::tqdm\+\_\+for\+\_\+lvalues (\begin{DoxyParamCaption}\item[{Forward\+Iter}]{begin,  }\item[{End\+Iter}]{end,  }\item[{\mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}}}]{total }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a7be1f8ff4cf36ebcce440c60e20c23c8}\label{classtqdm_1_1tqdm__for__lvalues_a7be1f8ff4cf36ebcce440c60e20c23c8} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!tqdm\_for\_lvalues@{tqdm\_for\_lvalues}}
+\index{tqdm\_for\_lvalues@{tqdm\_for\_lvalues}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{tqdm\_for\_lvalues()}{tqdm\_for\_lvalues()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+template$<$class Container $>$ \\
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::tqdm\+\_\+for\+\_\+lvalues (\begin{DoxyParamCaption}\item[{Container \&}]{C }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a6bb9d3f062a6ba1a8e6b3c297864273f}\label{classtqdm_1_1tqdm__for__lvalues_a6bb9d3f062a6ba1a8e6b3c297864273f} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!tqdm\_for\_lvalues@{tqdm\_for\_lvalues}}
+\index{tqdm\_for\_lvalues@{tqdm\_for\_lvalues}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{tqdm\_for\_lvalues()}{tqdm\_for\_lvalues()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+template$<$class Container $>$ \\
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::tqdm\+\_\+for\+\_\+lvalues (\begin{DoxyParamCaption}\item[{const Container \&}]{C }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a4f71664d44fc666c0ddf8bf2dd7cec5b}\label{classtqdm_1_1tqdm__for__lvalues_a4f71664d44fc666c0ddf8bf2dd7cec5b} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!tqdm\_for\_lvalues@{tqdm\_for\_lvalues}}
+\index{tqdm\_for\_lvalues@{tqdm\_for\_lvalues}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{tqdm\_for\_lvalues()}{tqdm\_for\_lvalues()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::tqdm\+\_\+for\+\_\+lvalues (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a47e7c9e0d216da1e0f45a40405703986}\label{classtqdm_1_1tqdm__for__lvalues_a47e7c9e0d216da1e0f45a40405703986} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!tqdm\_for\_lvalues@{tqdm\_for\_lvalues}}
+\index{tqdm\_for\_lvalues@{tqdm\_for\_lvalues}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{tqdm\_for\_lvalues()}{tqdm\_for\_lvalues()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::tqdm\+\_\+for\+\_\+lvalues (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$ \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a0360667806b2bd1cd61d5bdde6937b02}\label{classtqdm_1_1tqdm__for__lvalues_a0360667806b2bd1cd61d5bdde6937b02} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!````~tqdm\_for\_lvalues@{\texorpdfstring{$\sim$}{\string~}tqdm\_for\_lvalues}}
+\index{````~tqdm\_for\_lvalues@{\texorpdfstring{$\sim$}{\string~}tqdm\_for\_lvalues}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}tqdm\_for\_lvalues()}{\string~tqdm\_for\_lvalues()}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+\_\+for\+\_\+lvalues}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_af21c4516fcd320dd0eac7c9014ad0388}\label{classtqdm_1_1tqdm__for__lvalues_af21c4516fcd320dd0eac7c9014ad0388} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!tqdm\_for\_lvalues@{tqdm\_for\_lvalues}}
+\index{tqdm\_for\_lvalues@{tqdm\_for\_lvalues}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{tqdm\_for\_lvalues()}{tqdm\_for\_lvalues()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+template$<$class Container $>$ \\
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::tqdm\+\_\+for\+\_\+lvalues (\begin{DoxyParamCaption}\item[{Container \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_ae0f49b9803e51489992c64bc31379b1e}\label{classtqdm_1_1tqdm__for__lvalues_ae0f49b9803e51489992c64bc31379b1e} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!begin@{begin}}
+\index{begin@{begin}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a02a9c2f7c57ab7e4b8233f644ab79ec8}{iterator}} \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1tqdm__for__lvalues_ae0f49b9803e51489992c64bc31379b1e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1tqdm__for__lvalues_ae0f49b9803e51489992c64bc31379b1e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_adcf91186da5e6beb292834a44e9e17b4}\label{classtqdm_1_1tqdm__for__lvalues_adcf91186da5e6beb292834a44e9e17b4} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!calc\_progress@{calc\_progress}}
+\index{calc\_progress@{calc\_progress}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{calc\_progress()}{calc\_progress()}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+double \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::calc\+\_\+progress (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1tqdm__for__lvalues_adcf91186da5e6beb292834a44e9e17b4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a64102875f6b44b35caf35d593243194b}\label{classtqdm_1_1tqdm__for__lvalues_a64102875f6b44b35caf35d593243194b} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!end@{end}}
+\index{end@{end}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+End\+Iter \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1tqdm__for__lvalues_a64102875f6b44b35caf35d593243194b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a84897ba1a51be1b17d040fcc609eb9fc}\label{classtqdm_1_1tqdm__for__lvalues_a84897ba1a51be1b17d040fcc609eb9fc} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!manually\_set\_progress@{manually\_set\_progress}}
+\index{manually\_set\_progress@{manually\_set\_progress}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{manually\_set\_progress()}{manually\_set\_progress()}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+void \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::manually\+\_\+set\+\_\+progress (\begin{DoxyParamCaption}\item[{double}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{classtqdm_1_1tqdm__for__lvalues_a84897ba1a51be1b17d040fcc609eb9fc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1tqdm__for__lvalues_a84897ba1a51be1b17d040fcc609eb9fc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a83f14d569f760ddd86e8f85049f9fa8a}\label{classtqdm_1_1tqdm__for__lvalues_a83f14d569f760ddd86e8f85049f9fa8a} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+template$<$class T $>$ \\
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+\_\+for\+\_\+lvalues}} \& \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{const T \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a358f8c7b05a2850a13d2c950de513234}\label{classtqdm_1_1tqdm__for__lvalues_a358f8c7b05a2850a13d2c950de513234} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+\_\+for\+\_\+lvalues}} \& \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a98dc93ffe71a92001b4a0a6e9108beca}\label{classtqdm_1_1tqdm__for__lvalues_a98dc93ffe71a92001b4a0a6e9108beca} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+\_\+for\+\_\+lvalues}} \& \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$ \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_ac7b570ec96de0393c9e1c285fa387387}\label{classtqdm_1_1tqdm__for__lvalues_ac7b570ec96de0393c9e1c285fa387387} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!set\_bar\_size@{set\_bar\_size}}
+\index{set\_bar\_size@{set\_bar\_size}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{set\_bar\_size()}{set\_bar\_size()}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+void \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::set\+\_\+bar\+\_\+size (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classtqdm_1_1tqdm__for__lvalues_ac7b570ec96de0393c9e1c285fa387387_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1tqdm__for__lvalues_ac7b570ec96de0393c9e1c285fa387387_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_af80d5489611049aaf8887d9cec7e251a}\label{classtqdm_1_1tqdm__for__lvalues_af80d5489611049aaf8887d9cec7e251a} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!set\_min\_update\_time@{set\_min\_update\_time}}
+\index{set\_min\_update\_time@{set\_min\_update\_time}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{set\_min\_update\_time()}{set\_min\_update\_time()}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+void \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::set\+\_\+min\+\_\+update\+\_\+time (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1tqdm__for__lvalues_af80d5489611049aaf8887d9cec7e251a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1tqdm__for__lvalues_af80d5489611049aaf8887d9cec7e251a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a7abe2c2aee6caf82a4b43a1b5df5cd67}\label{classtqdm_1_1tqdm__for__lvalues_a7abe2c2aee6caf82a4b43a1b5df5cd67} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!set\_ostream@{set\_ostream}}
+\index{set\_ostream@{set\_ostream}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{set\_ostream()}{set\_ostream()}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+void \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::set\+\_\+ostream (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classtqdm_1_1tqdm__for__lvalues_a7abe2c2aee6caf82a4b43a1b5df5cd67_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1tqdm__for__lvalues_a7abe2c2aee6caf82a4b43a1b5df5cd67_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a83dcb38e0213764ce446866593bf386a}\label{classtqdm_1_1tqdm__for__lvalues_a83dcb38e0213764ce446866593bf386a} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!set\_prefix@{set\_prefix}}
+\index{set\_prefix@{set\_prefix}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{set\_prefix()}{set\_prefix()}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+void \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::set\+\_\+prefix (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classtqdm_1_1tqdm__for__lvalues_a83dcb38e0213764ce446866593bf386a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1tqdm__for__lvalues_a83dcb38e0213764ce446866593bf386a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a4a32afd7e15b860922cc2e0d844a4891}\label{classtqdm_1_1tqdm__for__lvalues_a4a32afd7e15b860922cc2e0d844a4891} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!update@{update}}
+\index{update@{update}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+void \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1tqdm__for__lvalues_a4a32afd7e15b860922cc2e0d844a4891_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1tqdm__for__lvalues_a4a32afd7e15b860922cc2e0d844a4891_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_aacb9e257b7989169b1f6042abd2aa802}\label{classtqdm_1_1tqdm__for__lvalues_aacb9e257b7989169b1f6042abd2aa802} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!bar\_@{bar\_}}
+\index{bar\_@{bar\_}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{bar\_}{bar\_}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+\mbox{\hyperlink{classtqdm_1_1progress__bar}{progress\+\_\+bar}} \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::bar\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a178136e2c475b6447b19ddcb3ad0d769}\label{classtqdm_1_1tqdm__for__lvalues_a178136e2c475b6447b19ddcb3ad0d769} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!first\_@{first\_}}
+\index{first\_@{first\_}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{first\_}{first\_}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+\mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues_a02a9c2f7c57ab7e4b8233f644ab79ec8}{iterator}} \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::first\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_acdffb6e55c2ce82dfdac78a783799cfd}\label{classtqdm_1_1tqdm__for__lvalues_acdffb6e55c2ce82dfdac78a783799cfd} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!iters\_done\_@{iters\_done\_}}
+\index{iters\_done\_@{iters\_done\_}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{iters\_done\_}{iters\_done\_}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+\mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}} \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::iters\+\_\+done\+\_\+ \{0\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_ab2690276cb1acaf08c55c22795443dd2}\label{classtqdm_1_1tqdm__for__lvalues_ab2690276cb1acaf08c55c22795443dd2} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!last\_@{last\_}}
+\index{last\_@{last\_}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{last\_}{last\_}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+End\+Iter \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::last\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtqdm_1_1tqdm__for__lvalues_a249968df7c7c4b5e662377423e1655b1}\label{classtqdm_1_1tqdm__for__lvalues_a249968df7c7c4b5e662377423e1655b1} 
+\index{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}!num\_iters\_@{num\_iters\_}}
+\index{num\_iters\_@{num\_iters\_}!tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$@{tqdm::tqdm\_for\_lvalues$<$ ForwardIter, EndIter $>$}}
+\doxysubsubsection{\texorpdfstring{num\_iters\_}{num\_iters\_}}
+{\footnotesize\ttfamily template$<$class Forward\+Iter , class End\+Iter  = Forward\+Iter$>$ \\
+\mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}} \mbox{\hyperlink{classtqdm_1_1tqdm__for__lvalues}{tqdm\+::tqdm\+\_\+for\+\_\+lvalues}}$<$ Forward\+Iter, End\+Iter $>$\+::num\+\_\+iters\+\_\+ \{0\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/utils/\mbox{\hyperlink{tqdm_8hpp}{tqdm.\+hpp}}\end{DoxyCompactItemize}

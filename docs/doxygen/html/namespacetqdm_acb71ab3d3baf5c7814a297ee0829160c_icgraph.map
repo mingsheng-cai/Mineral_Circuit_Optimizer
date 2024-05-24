@@ -1,0 +1,38 @@
+<map id="tqdm::elapsed_seconds" name="tqdm::elapsed_seconds">
+<area shape="rect" id="Node000001" title="Calculate the elapsed seconds between two time points." alt="" coords="1051,233,1211,258"/>
+<area shape="rect" id="Node000002" href="$classtqdm_1_1_chronometer.html#a3cd84955c8098f6f3f6cd72fb433c66d" title="Get the elapsed time without resetting the chronometer." alt="" coords="832,137,1003,162"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1088,230,946,165,948,160,1090,225"/>
+<area shape="rect" id="Node000012" href="$classtqdm_1_1_chronometer.html#a1f68eafb14871440564c4d014e9c90aa" title="Reset the chronometer and return the elapsed time since the last reset." alt="" coords="846,290,989,330"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="1075,265,986,292,984,287,1074,260"/>
+<area shape="rect" id="Node000003" href="$classtqdm_1_1progress__bar.html#aafe648e44846685b6f7ddaf7f7ec52b9" title="Display the progress bar." alt="" coords="645,226,780,266"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="879,171,785,216,760,228,757,223,783,211,877,166"/>
+<area shape="rect" id="Node000008" href="$classtqdm_1_1progress__bar.html#a0bde629d01d431dffb91bdf2cbd8213d" title="Get the elapsed time since the progress bar started." alt="" coords="445,23,579,63"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="898,127,851,72,819,45,783,24,730,11,675,9,622,15,575,26,574,20,621,10,675,4,731,5,785,19,822,40,855,68,902,124"/>
+<area shape="rect" id="Node000009" href="$classtqdm_1_1timing__iterator.html#a1ffe57342898139117a4f36fba6a4617" title=" " alt="" coords="642,98,783,138"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="822,137,783,131,784,126,823,132"/>
+<area shape="rect" id="Node000010" href="$classtqdm_1_1timing__iterator.html#a5488621ccda437ec204fc56c5ea722df" title=" " alt="" coords="642,162,783,202"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="823,167,784,173,783,168,822,162"/>
+<area shape="rect" id="Node000011" href="$classtqdm_1_1progress__bar.html#a54bda48bb8615a17c35eecf33bc89469" title="Get the time since the last refresh." alt="" coords="643,34,783,74"/>
+<area shape="poly" id="edge11_Node000002_Node000011" title=" " alt="" coords="877,133,783,88,757,76,760,71,785,83,879,129"/>
+<area shape="rect" id="Node000004" href="$classtqdm_1_1progress__bar.html#af8b3092725145e504a10fbf842745a9f" title="Update the progress bar with the current progress." alt="" coords="445,179,579,219"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="631,229,579,217,580,212,632,224"/>
+<area shape="rect" id="Node000005" href="$classtqdm_1_1tqdm__for__lvalues.html#a4a32afd7e15b860922cc2e0d844a4891" title=" " alt="" coords="218,179,377,219"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="430,202,377,202,377,196,430,196"/>
+<area shape="rect" id="Node000007" href="$classtqdm_1_1tqdm__timer.html#a281536e3ab236203645d6325008ed585" title=" " alt="" coords="212,126,383,152"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="431,179,343,154,344,149,432,174"/>
+<area shape="rect" id="Node000006" href="$classtqdm_1_1tqdm__for__rvalues.html#ab5aca29b58e2966ae3355b6fa54f580b" title=" " alt="" coords="5,179,164,219"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="204,202,164,202,164,196,204,196"/>
+<area shape="poly" id="edge8_Node000008_Node000007" title=" " alt="" coords="455,71,328,129,326,124,453,66"/>
+<area shape="poly" id="edge12_Node000011_Node000004" title=" " alt="" coords="652,82,643,88,581,136,534,181,530,177,578,131,640,83,649,78"/>
+<area shape="rect" id="Node000013" href="$classtqdm_1_1progress__bar.html#ad82b0101c903aec45beb4181d42b7cdb" title="Reset the refresh timer." alt="" coords="641,290,784,330"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="832,312,784,312,784,307,832,307"/>
+<area shape="rect" id="Node000014" href="$classtqdm_1_1progress__bar.html#aa8fce8071fc5272edc318f09f2220432" title="Restart the progress bar." alt="" coords="645,354,780,394"/>
+<area shape="poly" id="edge16_Node000012_Node000014" title=" " alt="" coords="840,336,778,356,776,351,839,331"/>
+<area shape="poly" id="edge15_Node000013_Node000004" title=" " alt="" coords="652,286,640,280,542,221,545,217,643,275,654,281"/>
+<area shape="rect" id="Node000015" href="$classtqdm_1_1tqdm__for__lvalues.html#ae0f49b9803e51489992c64bc31379b1e" title=" " alt="" coords="433,324,591,364"/>
+<area shape="poly" id="edge17_Node000014_Node000015" title=" " alt="" coords="631,364,591,358,592,353,632,359"/>
+<area shape="rect" id="Node000017" href="$classtqdm_1_1tqdm__timer.html#a3c88ea5d0db28c692d8a8f3164b16155" title=" " alt="" coords="431,389,593,414"/>
+<area shape="poly" id="edge19_Node000014_Node000017" title=" " alt="" coords="632,388,594,393,593,388,631,382"/>
+<area shape="rect" id="Node000016" href="$classtqdm_1_1tqdm__for__rvalues.html#aa9a4f7b95639a18fb00e77d82f3790b3" title=" " alt="" coords="218,324,377,364"/>
+<area shape="poly" id="edge18_Node000015_Node000016" title=" " alt="" coords="419,347,377,347,377,342,419,342"/>
+</map>

@@ -1,0 +1,187 @@
+\doxysection{Guided\+Mutation Class Reference}
+\hypertarget{class_guided_mutation}{}\label{class_guided_mutation}\index{GuidedMutation@{GuidedMutation}}
+
+
+{\ttfamily \#include $<$Guided\+Mutation.\+h$>$}
+
+
+
+Inheritance diagram for Guided\+Mutation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{class_guided_mutation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Guided\+Mutation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{class_guided_mutation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guided_mutation_a3812047ef3a11502a5be560d10e7cd65}{Guided\+Mutation}} (int vector\+Size, const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&params)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_guided_mutation}{Guided\+Mutation} object with specified vector size and algorithm parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_guided_mutation_a70668e157c9108ffed05192d0325fc45}{set\+Individual}} (\mbox{\hyperlink{struct_individual}{Individual}} \&\mbox{\hyperlink{class_guided_mutation_a5d0380671e26ed704a2ba253c1c300af}{individual}}) override
+\begin{DoxyCompactList}\small\item\em Sets the individual to be mutated. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_guided_mutation_a169e2d6fc2ba5166e140a4d14d079e9c}{set\+Population}} (const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&population, std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&selected)
+\begin{DoxyCompactList}\small\item\em Performs the guided mutation operation on the individual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_guided_mutation_a61b09d1be0b01777d7f0cfeeab14ba42}{set\+Parents}} (\mbox{\hyperlink{struct_individual}{Individual}} \&offspring, const \mbox{\hyperlink{struct_individual}{Individual}} \&parent1, const \mbox{\hyperlink{struct_individual}{Individual}} \&parent2)
+\begin{DoxyCompactList}\small\item\em Sets the parents and offspring for the crossover operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_guided_mutation_a76f146207c8ef6d54fdb23ddac4916b6}{apply}} (std\+::mt19937 \&generator) override
+\begin{DoxyCompactList}\small\item\em Performs the guided mutation operation on the individual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_operator}{Operator}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_operator_ac7cb92992e32c213091d3659ef596a46}{\texorpdfstring{$\sim$}{\string~}\+Operator}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_operator}{Operator} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_individual}{Individual}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_guided_mutation_a5d0380671e26ed704a2ba253c1c300af}{individual}}
+\item 
+int \mbox{\hyperlink{class_guided_mutation_a0f63e34c240ae08f6696e89d853a2113}{num\+Units}}
+\item 
+double \mbox{\hyperlink{class_guided_mutation_ac12a17939f1e4f18ca9fca07a5619ffa}{mutation\+Rate}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_guided_mutation_a3812047ef3a11502a5be560d10e7cd65}\label{class_guided_mutation_a3812047ef3a11502a5be560d10e7cd65} 
+\index{GuidedMutation@{GuidedMutation}!GuidedMutation@{GuidedMutation}}
+\index{GuidedMutation@{GuidedMutation}!GuidedMutation@{GuidedMutation}}
+\doxysubsubsection{\texorpdfstring{GuidedMutation()}{GuidedMutation()}}
+{\footnotesize\ttfamily Guided\+Mutation\+::\+Guided\+Mutation (\begin{DoxyParamCaption}\item[{int}]{vector\+Size,  }\item[{const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&}]{params }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_guided_mutation}{Guided\+Mutation} object with specified vector size and algorithm parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector\+Size} & The size of the vector representing the individual\textquotesingle{}s genetic material. \\
+\hline
+{\em params} & The algorithm parameters including the mutation rate. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_guided_mutation_a76f146207c8ef6d54fdb23ddac4916b6}\label{class_guided_mutation_a76f146207c8ef6d54fdb23ddac4916b6} 
+\index{GuidedMutation@{GuidedMutation}!apply@{apply}}
+\index{apply@{apply}!GuidedMutation@{GuidedMutation}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily void Guided\+Mutation\+::apply (\begin{DoxyParamCaption}\item[{std\+::mt19937 \&}]{generator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Performs the guided mutation operation on the individual. 
+
+This method performs mutation on the individual\textquotesingle{}s genetic material based on the specified mutation rate. The mutation modifies the genes of the individual to introduce variations according to specific rules or heuristics.
+
+
+\begin{DoxyParams}{Parameters}
+{\em generator} & The random number generator used to determine if mutation should occur. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_acbd2e97e189d862aa139b3c334a18619}{Operator}}.
+
+\Hypertarget{class_guided_mutation_a70668e157c9108ffed05192d0325fc45}\label{class_guided_mutation_a70668e157c9108ffed05192d0325fc45} 
+\index{GuidedMutation@{GuidedMutation}!setIndividual@{setIndividual}}
+\index{setIndividual@{setIndividual}!GuidedMutation@{GuidedMutation}}
+\doxysubsubsection{\texorpdfstring{setIndividual()}{setIndividual()}}
+{\footnotesize\ttfamily void Guided\+Mutation\+::set\+Individual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{individual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the individual to be mutated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em individual} & The individual to be mutated. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_abf3bad24158495949ca770dc8aec6542}{Operator}}.
+
+\Hypertarget{class_guided_mutation_a61b09d1be0b01777d7f0cfeeab14ba42}\label{class_guided_mutation_a61b09d1be0b01777d7f0cfeeab14ba42} 
+\index{GuidedMutation@{GuidedMutation}!setParents@{setParents}}
+\index{setParents@{setParents}!GuidedMutation@{GuidedMutation}}
+\doxysubsubsection{\texorpdfstring{setParents()}{setParents()}}
+{\footnotesize\ttfamily void Guided\+Mutation\+::set\+Parents (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{offspring,  }\item[{const \mbox{\hyperlink{struct_individual}{Individual}} \&}]{parent1,  }\item[{const \mbox{\hyperlink{struct_individual}{Individual}} \&}]{parent2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the parents and offspring for the crossover operation. 
+
+This method is not used by the \doxylink{class_guided_mutation}{Guided\+Mutation} operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em offspring} & The offspring individual to be generated. \\
+\hline
+{\em parent1} & The first parent individual. \\
+\hline
+{\em parent2} & The second parent individual. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_aa9e9e58811b56bf3a5c1ac9e0d034c64}{Operator}}.
+
+\Hypertarget{class_guided_mutation_a169e2d6fc2ba5166e140a4d14d079e9c}\label{class_guided_mutation_a169e2d6fc2ba5166e140a4d14d079e9c} 
+\index{GuidedMutation@{GuidedMutation}!setPopulation@{setPopulation}}
+\index{setPopulation@{setPopulation}!GuidedMutation@{GuidedMutation}}
+\doxysubsubsection{\texorpdfstring{setPopulation()}{setPopulation()}}
+{\footnotesize\ttfamily void Guided\+Mutation\+::set\+Population (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&}]{population,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&}]{selected }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Performs the guided mutation operation on the individual. 
+
+This method performs mutation on the individual\textquotesingle{}s genetic material based on the specified mutation rate. The mutation modifies the genes of the individual to introduce variations according to specific rules or heuristics.
+
+
+\begin{DoxyParams}{Parameters}
+{\em generator} & The random number generator used to determine if mutation should occur. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_a6e3837c249df579d41f9b9287195c6e5}{Operator}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{class_guided_mutation_a5d0380671e26ed704a2ba253c1c300af}\label{class_guided_mutation_a5d0380671e26ed704a2ba253c1c300af} 
+\index{GuidedMutation@{GuidedMutation}!individual@{individual}}
+\index{individual@{individual}!GuidedMutation@{GuidedMutation}}
+\doxysubsubsection{\texorpdfstring{individual}{individual}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_individual}{Individual}}\texorpdfstring{$\ast$}{*} Guided\+Mutation\+::individual\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the individual to be mutated \Hypertarget{class_guided_mutation_ac12a17939f1e4f18ca9fca07a5619ffa}\label{class_guided_mutation_ac12a17939f1e4f18ca9fca07a5619ffa} 
+\index{GuidedMutation@{GuidedMutation}!mutationRate@{mutationRate}}
+\index{mutationRate@{mutationRate}!GuidedMutation@{GuidedMutation}}
+\doxysubsubsection{\texorpdfstring{mutationRate}{mutationRate}}
+{\footnotesize\ttfamily double Guided\+Mutation\+::mutation\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+The mutation rate used to determine if mutation should occur \Hypertarget{class_guided_mutation_a0f63e34c240ae08f6696e89d853a2113}\label{class_guided_mutation_a0f63e34c240ae08f6696e89d853a2113} 
+\index{GuidedMutation@{GuidedMutation}!numUnits@{numUnits}}
+\index{numUnits@{numUnits}!GuidedMutation@{GuidedMutation}}
+\doxysubsubsection{\texorpdfstring{numUnits}{numUnits}}
+{\footnotesize\ttfamily int Guided\+Mutation\+::num\+Units\hspace{0.3cm}{\ttfamily [private]}}
+
+Represents the number of units or types of operations/nodes 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/operators/\+Mutation/\mbox{\hyperlink{_guided_mutation_8h}{Guided\+Mutation.\+h}}\item 
+src/operators/\+Mutation/\mbox{\hyperlink{_guided_mutation_8cpp}{Guided\+Mutation.\+cpp}}\end{DoxyCompactItemize}

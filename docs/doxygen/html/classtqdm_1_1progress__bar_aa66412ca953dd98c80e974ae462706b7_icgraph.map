@@ -1,0 +1,9 @@
+<map id="tqdm::progress_bar::set_ostream" name="tqdm::progress_bar::set_ostream">
+<area shape="rect" id="Node000001" title="Set the output stream for the progress bar." alt="" coords="419,37,553,77"/>
+<area shape="rect" id="Node000002" href="$classtqdm_1_1tqdm__for__lvalues.html#a7abe2c2aee6caf82a4b43a1b5df5cd67" title=" " alt="" coords="212,5,371,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="405,47,370,41,371,36,406,41"/>
+<area shape="rect" id="Node000004" href="$classtqdm_1_1tqdm__timer.html#a88b486cf4c258200c7de996e754ab5fc" title=" " alt="" coords="216,69,367,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="405,73,367,80,366,74,405,68"/>
+<area shape="rect" id="Node000003" href="$classtqdm_1_1tqdm__for__rvalues.html#abe0a827d38add21855d93253b4bade2a" title=" " alt="" coords="5,5,164,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="198,28,164,28,164,23,198,23"/>
+</map>

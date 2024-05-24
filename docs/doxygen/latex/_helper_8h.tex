@@ -1,0 +1,130 @@
+\doxysection{include/utils/\+Helper.h File Reference}
+\hypertarget{_helper_8h}{}\label{_helper_8h}\index{include/utils/Helper.h@{include/utils/Helper.h}}
+
+
+Header file containing helper functions for logging and time retrieval.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for Helper.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{_helper_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{_helper_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_helper_8h_a8ef1df6bb6c101b2db0352c4cc7f5f82}{HELPER\+\_\+H}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{_helper_8h_aecc3cfd60dd63a042dcb4e4120810980}{get\+\_\+current\+\_\+time\+\_\+str}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current time as a formatted string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_helper_8h_a382070e78334a1fc51308a1fed19407b}{log\+\_\+results}} (const std\+::vector$<$ int $>$ \&vector, double elapsed\+\_\+time, double \mbox{\hyperlink{_c_simulator_8h_af2b6068090c9710bd7914cfdbf2cdbd1}{performance}}, double \mbox{\hyperlink{_c_simulator_8h_ad821279bb28c56cb9612eedd11e7013f}{recovery}}, double \mbox{\hyperlink{_c_simulator_8h_acbc4bfb123e20b7ef36ed74b7fee6fa3}{grade}})
+\begin{DoxyCompactList}\small\item\em Logs the results of the genetic algorithm optimization to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file containing helper functions for logging and time retrieval. 
+
+This header file declares functions for retrieving the current time as a string and logging the results of a genetic algorithm optimization process. The logging function saves performance metrics and the final configuration of the optimized circuit to a log file.
+
+\begin{DoxyDate}{Date}
+Created on May 23, 2024
+\end{DoxyDate}
+\begin{DoxyAuthor}{Authors}
+ACS Gerardium Rush -\/ Pentlandite\+:
+\begin{DoxyItemize}
+\item Alex N Njeumi
+\item Geyu Ji
+\item Melissa Y S Sim
+\item Mingsheng Cai
+\item Peifeng Tan
+\item Yongwen Chen
+\item Zihan Li 
+\end{DoxyItemize}
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_helper_8h_a8ef1df6bb6c101b2db0352c4cc7f5f82}\label{_helper_8h_a8ef1df6bb6c101b2db0352c4cc7f5f82} 
+\index{Helper.h@{Helper.h}!HELPER\_H@{HELPER\_H}}
+\index{HELPER\_H@{HELPER\_H}!Helper.h@{Helper.h}}
+\doxysubsubsection{\texorpdfstring{HELPER\_H}{HELPER\_H}}
+{\footnotesize\ttfamily \#define HELPER\+\_\+H}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_helper_8h_aecc3cfd60dd63a042dcb4e4120810980}\label{_helper_8h_aecc3cfd60dd63a042dcb4e4120810980} 
+\index{Helper.h@{Helper.h}!get\_current\_time\_str@{get\_current\_time\_str}}
+\index{get\_current\_time\_str@{get\_current\_time\_str}!Helper.h@{Helper.h}}
+\doxysubsubsection{\texorpdfstring{get\_current\_time\_str()}{get\_current\_time\_str()}}
+{\footnotesize\ttfamily std\+::string get\+\_\+current\+\_\+time\+\_\+str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the current time as a formatted string. 
+
+This function returns the current time formatted as "{}\+YYYY-\/\+MM-\/\+DD\+\_\+\+HH-\/\+MM-\/\+SS"{}.
+
+\begin{DoxyReturn}{Returns}
+A string representing the current time. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_helper_8h_aecc3cfd60dd63a042dcb4e4120810980_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_helper_8h_a382070e78334a1fc51308a1fed19407b}\label{_helper_8h_a382070e78334a1fc51308a1fed19407b} 
+\index{Helper.h@{Helper.h}!log\_results@{log\_results}}
+\index{log\_results@{log\_results}!Helper.h@{Helper.h}}
+\doxysubsubsection{\texorpdfstring{log\_results()}{log\_results()}}
+{\footnotesize\ttfamily void log\+\_\+results (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{vector,  }\item[{double}]{elapsed\+\_\+time,  }\item[{double}]{performance,  }\item[{double}]{recovery,  }\item[{double}]{grade }\end{DoxyParamCaption})}
+
+
+
+Logs the results of the genetic algorithm optimization to a file. 
+
+This function creates a new log folder with the current timestamp, and saves the performance metrics, recovery, grade, and the final configuration of the optimized circuit to a log file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector} & The final configuration vector of the optimized circuit. \\
+\hline
+{\em elapsed\+\_\+time} & The time taken to complete the optimization process, in seconds. \\
+\hline
+{\em performance} & The performance metric of the optimized circuit. \\
+\hline
+{\em recovery} & The recovery metric of the optimized circuit. \\
+\hline
+{\em grade} & The grade metric of the optimized circuit. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{_helper_8h_a382070e78334a1fc51308a1fed19407b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{_helper_8h_a382070e78334a1fc51308a1fed19407b_icgraph}
+\end{center}
+\end{figure}

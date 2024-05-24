@@ -1,0 +1,5 @@
+<map id="tqdm::timing_iterator" name="tqdm::timing_iterator">
+<area shape="rect" id="Node000001" title="A forward iterator that returns the elapsed time." alt="" coords="5,193,139,299"/>
+<area shape="rect" id="Node000002" href="$classtqdm_1_1_chronometer.html" title="A simple chronometer to measure elapsed time." alt="" coords="9,5,135,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,131,75,177,69,177,69,131"/>
+</map>

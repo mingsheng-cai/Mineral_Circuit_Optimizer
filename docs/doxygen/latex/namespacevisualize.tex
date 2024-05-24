@@ -1,0 +1,415 @@
+\doxysection{visualize Namespace Reference}
+\hypertarget{namespacevisualize}{}\label{namespacevisualize}\index{visualize@{visualize}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacevisualize_af862d3a2b31910d885a011c389701bb0}{parse\+\_\+list}} (string)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacevisualize_a12a65ff75204c5d75ad74bfa7c4c5e65}{parser}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a1c7e9fd975414c5d56b84d61ee2a3561}{type}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a20571a175ebd934626b747aa1594f2fd}{args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespacevisualize_ae018a24c6fccb114ee6882dfd1bb9d43}{x}} = args.\+vector
+\item 
+\mbox{\hyperlink{namespacevisualize_aa86df8672fe9177a0b0600ee7ed3de22}{p}} = args.\+perf
+\item 
+\mbox{\hyperlink{namespacevisualize_a2d7f8bf7b0ae27d950b404c5133cb167}{r}} = args.\+recovery
+\item 
+\mbox{\hyperlink{namespacevisualize_a425e67b74747f84a92ab77909dc642f3}{g}} = args.\+grade
+\item 
+\mbox{\hyperlink{namespacevisualize_a0115fdde427114526dcb4e17f570d093}{graph}} = graphviz.\+Digraph()
+\item 
+\mbox{\hyperlink{namespacevisualize_a7d982cddfa087596fe6b4f46f91759d8}{rankdir}}
+\item 
+\mbox{\hyperlink{namespacevisualize_ad3efec2598d5e48cc931ffb67796a253}{nodesep}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a1d1b799caba6593d9f7417dfc7619b19}{ranksep}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a71ea88fb1c912ca1a2f5941cbbe0f26f}{splines}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a67602da1d1239b81b29b72bbb69a2675}{overlap}}
+\item 
+\mbox{\hyperlink{namespacevisualize_aa02c740a731cff7ac27ada560cf897c5}{dpi}}
+\item 
+str \mbox{\hyperlink{namespacevisualize_aee1e39388580885c1b0e0b6af0698f2a}{feed\+\_\+node}} = \textquotesingle{}Feed\textquotesingle{}
+\item 
+str \mbox{\hyperlink{namespacevisualize_ab2e849eb9b92f824b4ab78a36771a889}{concentrate}} = \textquotesingle{}Concentrate\textquotesingle{}
+\item 
+str \mbox{\hyperlink{namespacevisualize_af067a547fc36f09ef38b736a4945d94c}{tailings}} = \textquotesingle{}Tailings\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespacevisualize_af8fa92281769ae4c6226d4baa6c8f364}{shape}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a20019a076db497f8bd44527aae75a85c}{color}} = 1 else \textquotesingle{}red\textquotesingle{}
+\item 
+tuple \mbox{\hyperlink{namespacevisualize_a8e16d95ea80d456680b1141eaa625dd3}{num\+\_\+nodes}} = (len(\mbox{\hyperlink{namespacevisualize_ae018a24c6fccb114ee6882dfd1bb9d43}{x}}) -\/ 1) // 3
+\item 
+str \mbox{\hyperlink{namespacevisualize_a69a53e5dbaa266a7aa00f697fcd22e31}{from\+\_\+node}} = f\textquotesingle{}Unit \{i // 3\}\textquotesingle{}
+\item 
+tuple \mbox{\hyperlink{namespacevisualize_a5a23e892831622b880e56db8ed030b70}{to\+\_\+node}} = (\mbox{\hyperlink{namespacevisualize_a8e16d95ea80d456680b1141eaa625dd3}{num\+\_\+nodes}} + 1) else f\textquotesingle{}Unit \{\mbox{\hyperlink{namespacevisualize_ae018a24c6fccb114ee6882dfd1bb9d43}{x}}\mbox{[}i + 1\mbox{]}\}\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespacevisualize_a0bec885bfce2665bc3310ff2c5cf24be}{cleanup}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a1c097668a7037baf096ec7f71e9b2494}{True}}
+\item 
+\mbox{\hyperlink{namespacevisualize_ab7264641fcf6af3d5feb9863ea780f59}{format}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a8567e02ad8e3f9dd5bbdb909a46497ae}{view}}
+\item 
+dict \mbox{\hyperlink{namespacevisualize_a808114a62ee0aec805f987c2a4e3f5ba}{legend\+\_\+labels}}
+\item 
+list \mbox{\hyperlink{namespacevisualize_a4d4ab89ee78587953c6a95e985da1022}{legend\+\_\+handles}}
+\item 
+list \mbox{\hyperlink{namespacevisualize_a276cab5d3c1cabe1209542df4bfeb941}{columns}} = \mbox{[}\textquotesingle{}Feed\textquotesingle{}\mbox{]} + \mbox{[}f\textquotesingle{}Unit \{i\}\textquotesingle{} for i in range(0, \mbox{\hyperlink{namespacevisualize_a8e16d95ea80d456680b1141eaa625dd3}{num\+\_\+nodes}})\mbox{]}
+\item 
+list \mbox{\hyperlink{namespacevisualize_a3f1d8fb9647deea269bcb3501d26315f}{reshaped\+\_\+list}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a9636a33861fbd5fd3d9f752dbc0ab962}{df}} = pd.\+Data\+Frame(\mbox{\hyperlink{namespacevisualize_a3f1d8fb9647deea269bcb3501d26315f}{reshaped\+\_\+list}}).transpose()
+\item 
+\mbox{\hyperlink{namespacevisualize_a0f62596fb5d3577bc08d8fc7ca1e04b1}{figsize}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a29048b756c78417446da7b9efc27953e}{handles}}
+\item 
+\mbox{\hyperlink{namespacevisualize_abed74af476e19b5657e24d04c1a538b4}{labels}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a3ab22acf61d45290cc5d3adf7b451841}{loc}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a5901a3219421e6d7e54de00f6246a830}{bbox\+\_\+to\+\_\+anchor}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a16caaba66b8d97b8628cedaa2d603d17}{fontsize}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a224c0d9e49b65967b4d7025c1bb0e4f5}{cell\+Text}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a802c37ba407c5cba7e9582621d22ae29}{values}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a7b6e9463c4c50e313aeefd4bde22736e}{col\+Labels}}
+\item 
+\mbox{\hyperlink{namespacevisualize_ae8f4d7e48b250047d68bc10c0e17608b}{cell\+Loc}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a241a8bba8c6c652b78973b7f85605992}{bbox}}
+\item 
+\mbox{\hyperlink{namespacevisualize_aa1f26f6e07b3028b392bd688e8238548}{ha}}
+\item 
+\mbox{\hyperlink{namespacevisualize_af764f1594b78a8dc26213d7c7bb31949}{va}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a88f56f161bad9d70553706df67f8e839}{transform}}
+\item 
+\mbox{\hyperlink{namespacevisualize_ac5f6b6d0a956586aec0564da8e2746c2}{bbox\+\_\+inches}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacevisualize_af862d3a2b31910d885a011c389701bb0}\label{namespacevisualize_af862d3a2b31910d885a011c389701bb0} 
+\index{visualize@{visualize}!parse\_list@{parse\_list}}
+\index{parse\_list@{parse\_list}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{parse\_list()}{parse\_list()}}
+{\footnotesize\ttfamily visualize.\+parse\+\_\+list (\begin{DoxyParamCaption}\item[{}]{string }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacevisualize_a20571a175ebd934626b747aa1594f2fd}\label{namespacevisualize_a20571a175ebd934626b747aa1594f2fd} 
+\index{visualize@{visualize}!args@{args}}
+\index{args@{args}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily visualize.\+args = parser.\+parse\+\_\+args()}
+
+\Hypertarget{namespacevisualize_a241a8bba8c6c652b78973b7f85605992}\label{namespacevisualize_a241a8bba8c6c652b78973b7f85605992} 
+\index{visualize@{visualize}!bbox@{bbox}}
+\index{bbox@{bbox}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{bbox}{bbox}}
+{\footnotesize\ttfamily visualize.\+bbox}
+
+\Hypertarget{namespacevisualize_ac5f6b6d0a956586aec0564da8e2746c2}\label{namespacevisualize_ac5f6b6d0a956586aec0564da8e2746c2} 
+\index{visualize@{visualize}!bbox\_inches@{bbox\_inches}}
+\index{bbox\_inches@{bbox\_inches}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{bbox\_inches}{bbox\_inches}}
+{\footnotesize\ttfamily visualize.\+bbox\+\_\+inches}
+
+\Hypertarget{namespacevisualize_a5901a3219421e6d7e54de00f6246a830}\label{namespacevisualize_a5901a3219421e6d7e54de00f6246a830} 
+\index{visualize@{visualize}!bbox\_to\_anchor@{bbox\_to\_anchor}}
+\index{bbox\_to\_anchor@{bbox\_to\_anchor}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{bbox\_to\_anchor}{bbox\_to\_anchor}}
+{\footnotesize\ttfamily visualize.\+bbox\+\_\+to\+\_\+anchor}
+
+\Hypertarget{namespacevisualize_ae8f4d7e48b250047d68bc10c0e17608b}\label{namespacevisualize_ae8f4d7e48b250047d68bc10c0e17608b} 
+\index{visualize@{visualize}!cellLoc@{cellLoc}}
+\index{cellLoc@{cellLoc}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{cellLoc}{cellLoc}}
+{\footnotesize\ttfamily visualize.\+cell\+Loc}
+
+\Hypertarget{namespacevisualize_a224c0d9e49b65967b4d7025c1bb0e4f5}\label{namespacevisualize_a224c0d9e49b65967b4d7025c1bb0e4f5} 
+\index{visualize@{visualize}!cellText@{cellText}}
+\index{cellText@{cellText}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{cellText}{cellText}}
+{\footnotesize\ttfamily visualize.\+cell\+Text}
+
+\Hypertarget{namespacevisualize_a0bec885bfce2665bc3310ff2c5cf24be}\label{namespacevisualize_a0bec885bfce2665bc3310ff2c5cf24be} 
+\index{visualize@{visualize}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{cleanup}{cleanup}}
+{\footnotesize\ttfamily visualize.\+cleanup}
+
+\Hypertarget{namespacevisualize_a7b6e9463c4c50e313aeefd4bde22736e}\label{namespacevisualize_a7b6e9463c4c50e313aeefd4bde22736e} 
+\index{visualize@{visualize}!colLabels@{colLabels}}
+\index{colLabels@{colLabels}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{colLabels}{colLabels}}
+{\footnotesize\ttfamily visualize.\+col\+Labels}
+
+\Hypertarget{namespacevisualize_a20019a076db497f8bd44527aae75a85c}\label{namespacevisualize_a20019a076db497f8bd44527aae75a85c} 
+\index{visualize@{visualize}!color@{color}}
+\index{color@{color}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily str visualize.\+color = 1 else \textquotesingle{}red\textquotesingle{}}
+
+\Hypertarget{namespacevisualize_a276cab5d3c1cabe1209542df4bfeb941}\label{namespacevisualize_a276cab5d3c1cabe1209542df4bfeb941} 
+\index{visualize@{visualize}!columns@{columns}}
+\index{columns@{columns}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{columns}{columns}}
+{\footnotesize\ttfamily visualize.\+columns = \mbox{[}\textquotesingle{}Feed\textquotesingle{}\mbox{]} + \mbox{[}f\textquotesingle{}Unit \{i\}\textquotesingle{} for i in range(0, \mbox{\hyperlink{namespacevisualize_a8e16d95ea80d456680b1141eaa625dd3}{num\+\_\+nodes}})\mbox{]}}
+
+\Hypertarget{namespacevisualize_ab2e849eb9b92f824b4ab78a36771a889}\label{namespacevisualize_ab2e849eb9b92f824b4ab78a36771a889} 
+\index{visualize@{visualize}!concentrate@{concentrate}}
+\index{concentrate@{concentrate}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{concentrate}{concentrate}}
+{\footnotesize\ttfamily visualize.\+concentrate = \textquotesingle{}Concentrate\textquotesingle{}}
+
+\Hypertarget{namespacevisualize_a9636a33861fbd5fd3d9f752dbc0ab962}\label{namespacevisualize_a9636a33861fbd5fd3d9f752dbc0ab962} 
+\index{visualize@{visualize}!df@{df}}
+\index{df@{df}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{df}{df}}
+{\footnotesize\ttfamily visualize.\+df = pd.\+Data\+Frame(\mbox{\hyperlink{namespacevisualize_a3f1d8fb9647deea269bcb3501d26315f}{reshaped\+\_\+list}}).transpose()}
+
+\Hypertarget{namespacevisualize_aa02c740a731cff7ac27ada560cf897c5}\label{namespacevisualize_aa02c740a731cff7ac27ada560cf897c5} 
+\index{visualize@{visualize}!dpi@{dpi}}
+\index{dpi@{dpi}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{dpi}{dpi}}
+{\footnotesize\ttfamily visualize.\+dpi}
+
+\Hypertarget{namespacevisualize_aee1e39388580885c1b0e0b6af0698f2a}\label{namespacevisualize_aee1e39388580885c1b0e0b6af0698f2a} 
+\index{visualize@{visualize}!feed\_node@{feed\_node}}
+\index{feed\_node@{feed\_node}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{feed\_node}{feed\_node}}
+{\footnotesize\ttfamily visualize.\+feed\+\_\+node = \textquotesingle{}Feed\textquotesingle{}}
+
+\Hypertarget{namespacevisualize_a0f62596fb5d3577bc08d8fc7ca1e04b1}\label{namespacevisualize_a0f62596fb5d3577bc08d8fc7ca1e04b1} 
+\index{visualize@{visualize}!figsize@{figsize}}
+\index{figsize@{figsize}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{figsize}{figsize}}
+{\footnotesize\ttfamily visualize.\+figsize}
+
+\Hypertarget{namespacevisualize_a16caaba66b8d97b8628cedaa2d603d17}\label{namespacevisualize_a16caaba66b8d97b8628cedaa2d603d17} 
+\index{visualize@{visualize}!fontsize@{fontsize}}
+\index{fontsize@{fontsize}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{fontsize}{fontsize}}
+{\footnotesize\ttfamily visualize.\+fontsize}
+
+\Hypertarget{namespacevisualize_ab7264641fcf6af3d5feb9863ea780f59}\label{namespacevisualize_ab7264641fcf6af3d5feb9863ea780f59} 
+\index{visualize@{visualize}!format@{format}}
+\index{format@{format}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily visualize.\+format}
+
+\Hypertarget{namespacevisualize_a69a53e5dbaa266a7aa00f697fcd22e31}\label{namespacevisualize_a69a53e5dbaa266a7aa00f697fcd22e31} 
+\index{visualize@{visualize}!from\_node@{from\_node}}
+\index{from\_node@{from\_node}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{from\_node}{from\_node}}
+{\footnotesize\ttfamily visualize.\+from\+\_\+node = f\textquotesingle{}Unit \{i // 3\}\textquotesingle{}}
+
+\Hypertarget{namespacevisualize_a425e67b74747f84a92ab77909dc642f3}\label{namespacevisualize_a425e67b74747f84a92ab77909dc642f3} 
+\index{visualize@{visualize}!g@{g}}
+\index{g@{g}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily visualize.\+g = args.\+grade}
+
+\Hypertarget{namespacevisualize_a0115fdde427114526dcb4e17f570d093}\label{namespacevisualize_a0115fdde427114526dcb4e17f570d093} 
+\index{visualize@{visualize}!graph@{graph}}
+\index{graph@{graph}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{graph}{graph}}
+{\footnotesize\ttfamily visualize.\+graph = graphviz.\+Digraph()}
+
+\Hypertarget{namespacevisualize_aa1f26f6e07b3028b392bd688e8238548}\label{namespacevisualize_aa1f26f6e07b3028b392bd688e8238548} 
+\index{visualize@{visualize}!ha@{ha}}
+\index{ha@{ha}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{ha}{ha}}
+{\footnotesize\ttfamily visualize.\+ha}
+
+\Hypertarget{namespacevisualize_a29048b756c78417446da7b9efc27953e}\label{namespacevisualize_a29048b756c78417446da7b9efc27953e} 
+\index{visualize@{visualize}!handles@{handles}}
+\index{handles@{handles}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{handles}{handles}}
+{\footnotesize\ttfamily visualize.\+handles}
+
+\Hypertarget{namespacevisualize_abed74af476e19b5657e24d04c1a538b4}\label{namespacevisualize_abed74af476e19b5657e24d04c1a538b4} 
+\index{visualize@{visualize}!labels@{labels}}
+\index{labels@{labels}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{labels}{labels}}
+{\footnotesize\ttfamily visualize.\+labels}
+
+\Hypertarget{namespacevisualize_a4d4ab89ee78587953c6a95e985da1022}\label{namespacevisualize_a4d4ab89ee78587953c6a95e985da1022} 
+\index{visualize@{visualize}!legend\_handles@{legend\_handles}}
+\index{legend\_handles@{legend\_handles}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{legend\_handles}{legend\_handles}}
+{\footnotesize\ttfamily visualize.\+legend\+\_\+handles}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ [plt.Line2D([0],\ [0],\ marker=\textcolor{stringliteral}{'o'},\ color=\textcolor{stringliteral}{'w'},\ markersize=5,}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ markerfacecolor=color,\ label=label)}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ label,\ color\ \textcolor{keywordflow}{in}\ legend\_labels.items()]}
+
+\end{DoxyCode}
+\Hypertarget{namespacevisualize_a808114a62ee0aec805f987c2a4e3f5ba}\label{namespacevisualize_a808114a62ee0aec805f987c2a4e3f5ba} 
+\index{visualize@{visualize}!legend\_labels@{legend\_labels}}
+\index{legend\_labels@{legend\_labels}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{legend\_labels}{legend\_labels}}
+{\footnotesize\ttfamily dict visualize.\+legend\+\_\+labels}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \{\textcolor{stringliteral}{'Concentrate'}:\ \textcolor{stringliteral}{'blue'},\ \textcolor{stringliteral}{'Intermediate'}:\ \textcolor{stringliteral}{'purple'},}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Tailings'}:\ \textcolor{stringliteral}{'red'}\}}
+
+\end{DoxyCode}
+\Hypertarget{namespacevisualize_a3ab22acf61d45290cc5d3adf7b451841}\label{namespacevisualize_a3ab22acf61d45290cc5d3adf7b451841} 
+\index{visualize@{visualize}!loc@{loc}}
+\index{loc@{loc}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{loc}{loc}}
+{\footnotesize\ttfamily visualize.\+loc}
+
+\Hypertarget{namespacevisualize_ad3efec2598d5e48cc931ffb67796a253}\label{namespacevisualize_ad3efec2598d5e48cc931ffb67796a253} 
+\index{visualize@{visualize}!nodesep@{nodesep}}
+\index{nodesep@{nodesep}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{nodesep}{nodesep}}
+{\footnotesize\ttfamily visualize.\+nodesep}
+
+\Hypertarget{namespacevisualize_a8e16d95ea80d456680b1141eaa625dd3}\label{namespacevisualize_a8e16d95ea80d456680b1141eaa625dd3} 
+\index{visualize@{visualize}!num\_nodes@{num\_nodes}}
+\index{num\_nodes@{num\_nodes}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{num\_nodes}{num\_nodes}}
+{\footnotesize\ttfamily tuple visualize.\+num\+\_\+nodes = (len(\mbox{\hyperlink{namespacevisualize_ae018a24c6fccb114ee6882dfd1bb9d43}{x}}) -\/ 1) // 3}
+
+\Hypertarget{namespacevisualize_a67602da1d1239b81b29b72bbb69a2675}\label{namespacevisualize_a67602da1d1239b81b29b72bbb69a2675} 
+\index{visualize@{visualize}!overlap@{overlap}}
+\index{overlap@{overlap}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{overlap}{overlap}}
+{\footnotesize\ttfamily visualize.\+overlap}
+
+\Hypertarget{namespacevisualize_aa86df8672fe9177a0b0600ee7ed3de22}\label{namespacevisualize_aa86df8672fe9177a0b0600ee7ed3de22} 
+\index{visualize@{visualize}!p@{p}}
+\index{p@{p}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily visualize.\+p = args.\+perf}
+
+\Hypertarget{namespacevisualize_a12a65ff75204c5d75ad74bfa7c4c5e65}\label{namespacevisualize_a12a65ff75204c5d75ad74bfa7c4c5e65} 
+\index{visualize@{visualize}!parser@{parser}}
+\index{parser@{parser}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily visualize.\+parser}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ argparse.ArgumentParser(description=\textcolor{stringliteral}{'Command\ line\ arguments\ for\ \(\backslash\)}}
+\DoxyCodeLine{00002\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ visualizing\ the\ circuit\ diagram.'})}
+
+\end{DoxyCode}
+\Hypertarget{namespacevisualize_a2d7f8bf7b0ae27d950b404c5133cb167}\label{namespacevisualize_a2d7f8bf7b0ae27d950b404c5133cb167} 
+\index{visualize@{visualize}!r@{r}}
+\index{r@{r}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily visualize.\+r = args.\+recovery}
+
+\Hypertarget{namespacevisualize_a7d982cddfa087596fe6b4f46f91759d8}\label{namespacevisualize_a7d982cddfa087596fe6b4f46f91759d8} 
+\index{visualize@{visualize}!rankdir@{rankdir}}
+\index{rankdir@{rankdir}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{rankdir}{rankdir}}
+{\footnotesize\ttfamily visualize.\+rankdir}
+
+\Hypertarget{namespacevisualize_a1d1b799caba6593d9f7417dfc7619b19}\label{namespacevisualize_a1d1b799caba6593d9f7417dfc7619b19} 
+\index{visualize@{visualize}!ranksep@{ranksep}}
+\index{ranksep@{ranksep}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{ranksep}{ranksep}}
+{\footnotesize\ttfamily visualize.\+ranksep}
+
+\Hypertarget{namespacevisualize_a3f1d8fb9647deea269bcb3501d26315f}\label{namespacevisualize_a3f1d8fb9647deea269bcb3501d26315f} 
+\index{visualize@{visualize}!reshaped\_list@{reshaped\_list}}
+\index{reshaped\_list@{reshaped\_list}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{reshaped\_list}{reshaped\_list}}
+{\footnotesize\ttfamily list visualize.\+reshaped\+\_\+list}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ [[x[0]]]\ +\ [[\textcolor{stringliteral}{'\ '}.join(map(str,\ x[i:i\ +\ 3]))]}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ i\ \textcolor{keywordflow}{in}\ range(1,\ len(x),\ 3)]}
+
+\end{DoxyCode}
+\Hypertarget{namespacevisualize_af8fa92281769ae4c6226d4baa6c8f364}\label{namespacevisualize_af8fa92281769ae4c6226d4baa6c8f364} 
+\index{visualize@{visualize}!shape@{shape}}
+\index{shape@{shape}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{shape}{shape}}
+{\footnotesize\ttfamily visualize.\+shape}
+
+\Hypertarget{namespacevisualize_a71ea88fb1c912ca1a2f5941cbbe0f26f}\label{namespacevisualize_a71ea88fb1c912ca1a2f5941cbbe0f26f} 
+\index{visualize@{visualize}!splines@{splines}}
+\index{splines@{splines}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{splines}{splines}}
+{\footnotesize\ttfamily visualize.\+splines}
+
+\Hypertarget{namespacevisualize_af067a547fc36f09ef38b736a4945d94c}\label{namespacevisualize_af067a547fc36f09ef38b736a4945d94c} 
+\index{visualize@{visualize}!tailings@{tailings}}
+\index{tailings@{tailings}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{tailings}{tailings}}
+{\footnotesize\ttfamily visualize.\+tailings = \textquotesingle{}Tailings\textquotesingle{}}
+
+\Hypertarget{namespacevisualize_a5a23e892831622b880e56db8ed030b70}\label{namespacevisualize_a5a23e892831622b880e56db8ed030b70} 
+\index{visualize@{visualize}!to\_node@{to\_node}}
+\index{to\_node@{to\_node}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{to\_node}{to\_node}}
+{\footnotesize\ttfamily visualize.\+to\+\_\+node = (\mbox{\hyperlink{namespacevisualize_a8e16d95ea80d456680b1141eaa625dd3}{num\+\_\+nodes}} + 1) else f\textquotesingle{}Unit \{\mbox{\hyperlink{namespacevisualize_ae018a24c6fccb114ee6882dfd1bb9d43}{x}}\mbox{[}i + 1\mbox{]}\}\textquotesingle{}}
+
+\Hypertarget{namespacevisualize_a88f56f161bad9d70553706df67f8e839}\label{namespacevisualize_a88f56f161bad9d70553706df67f8e839} 
+\index{visualize@{visualize}!transform@{transform}}
+\index{transform@{transform}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{transform}{transform}}
+{\footnotesize\ttfamily visualize.\+transform}
+
+\Hypertarget{namespacevisualize_a1c097668a7037baf096ec7f71e9b2494}\label{namespacevisualize_a1c097668a7037baf096ec7f71e9b2494} 
+\index{visualize@{visualize}!True@{True}}
+\index{True@{True}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{True}{True}}
+{\footnotesize\ttfamily visualize.\+True}
+
+\Hypertarget{namespacevisualize_a1c7e9fd975414c5d56b84d61ee2a3561}\label{namespacevisualize_a1c7e9fd975414c5d56b84d61ee2a3561} 
+\index{visualize@{visualize}!type@{type}}
+\index{type@{type}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily visualize.\+type}
+
+\Hypertarget{namespacevisualize_af764f1594b78a8dc26213d7c7bb31949}\label{namespacevisualize_af764f1594b78a8dc26213d7c7bb31949} 
+\index{visualize@{visualize}!va@{va}}
+\index{va@{va}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{va}{va}}
+{\footnotesize\ttfamily visualize.\+va}
+
+\Hypertarget{namespacevisualize_a802c37ba407c5cba7e9582621d22ae29}\label{namespacevisualize_a802c37ba407c5cba7e9582621d22ae29} 
+\index{visualize@{visualize}!values@{values}}
+\index{values@{values}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{values}{values}}
+{\footnotesize\ttfamily visualize.\+values}
+
+\Hypertarget{namespacevisualize_a8567e02ad8e3f9dd5bbdb909a46497ae}\label{namespacevisualize_a8567e02ad8e3f9dd5bbdb909a46497ae} 
+\index{visualize@{visualize}!view@{view}}
+\index{view@{view}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{view}{view}}
+{\footnotesize\ttfamily visualize.\+view}
+
+\Hypertarget{namespacevisualize_ae018a24c6fccb114ee6882dfd1bb9d43}\label{namespacevisualize_ae018a24c6fccb114ee6882dfd1bb9d43} 
+\index{visualize@{visualize}!x@{x}}
+\index{x@{x}!visualize@{visualize}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily visualize.\+x = args.\+vector}
+

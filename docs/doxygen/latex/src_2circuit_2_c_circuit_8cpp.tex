@@ -1,0 +1,102 @@
+\doxysection{src/circuit/\+CCircuit.cpp File Reference}
+\hypertarget{src_2circuit_2_c_circuit_8cpp}{}\label{src_2circuit_2_c_circuit_8cpp}\index{src/circuit/CCircuit.cpp@{src/circuit/CCircuit.cpp}}
+
+
+Defines the \doxylink{class_circuit}{Circuit} class for modeling and simulating a circuit system.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include "{}circuit/\+CCircuit.\+h"{}}\newline
+Include dependency graph for CCircuit.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{src_2circuit_2_c_circuit_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{src_2circuit_2_c_circuit_8cpp_a6c516c6c5b7c036c2586a817ea07a9e4}{k\+\_\+\+G\+\_\+C}} = 0.\+004
+\item 
+const double \mbox{\hyperlink{src_2circuit_2_c_circuit_8cpp_a59fa06ce895929d506704fbf8b8095d5}{k\+\_\+\+G\+\_\+I}} = 0.\+001
+\item 
+const double \mbox{\hyperlink{src_2circuit_2_c_circuit_8cpp_add8898e490af154b000be83ab3cb6d8f}{k\+\_\+w\+\_\+C}} = 0.\+0002
+\item 
+const double \mbox{\hyperlink{src_2circuit_2_c_circuit_8cpp_a85f6361f72e502dd8e2bd0b0e71459d8}{k\+\_\+w\+\_\+I}} = 0.\+0003
+\item 
+const double \mbox{\hyperlink{src_2circuit_2_c_circuit_8cpp_a817d2ae0eb8a651ffe337072f2372c14}{V}} = 10.\+0
+\item 
+const double \mbox{\hyperlink{src_2circuit_2_c_circuit_8cpp_afd45a0ee96a799aec6589e2eb8ce66cd}{phi}} = 0.\+1
+\item 
+const double \mbox{\hyperlink{src_2circuit_2_c_circuit_8cpp_aae14bb6d846f70291d5a016a6d19d11e}{rho}} = 3000.\+0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the \doxylink{class_circuit}{Circuit} class for modeling and simulating a circuit system. 
+
+The \doxylink{class_circuit}{Circuit} class provides methods to initialize, configure, and simulate a circuit with multiple units. It includes methods for checking validity, printing information, connecting units, initializing feed rates, checking convergence, and calculating flows. The \doxylink{class_circuit}{Circuit} class is designed to facilitate the modeling and simulation of circuits in various applications, including industrial processes and scientific research.
+
+\begin{DoxyDate}{Date}
+Created on May 20, 2024
+\end{DoxyDate}
+\begin{DoxyAuthor}{Authors}
+ACS Gerardium Rush -\/ Pentlandite\+:
+\begin{DoxyItemize}
+\item Alex N Njeumi
+\item Geyu Ji
+\item Melissa Y S Sim
+\item Mingsheng Cai
+\item Peifeng Tan
+\item Yongwen Chen
+\item Zihan Li 
+\end{DoxyItemize}
+\end{DoxyAuthor}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{src_2circuit_2_c_circuit_8cpp_a6c516c6c5b7c036c2586a817ea07a9e4}\label{src_2circuit_2_c_circuit_8cpp_a6c516c6c5b7c036c2586a817ea07a9e4} 
+\index{CCircuit.cpp@{CCircuit.cpp}!k\_G\_C@{k\_G\_C}}
+\index{k\_G\_C@{k\_G\_C}!CCircuit.cpp@{CCircuit.cpp}}
+\doxysubsubsection{\texorpdfstring{k\_G\_C}{k\_G\_C}}
+{\footnotesize\ttfamily const double k\+\_\+\+G\+\_\+C = 0.\+004}
+
+\Hypertarget{src_2circuit_2_c_circuit_8cpp_a59fa06ce895929d506704fbf8b8095d5}\label{src_2circuit_2_c_circuit_8cpp_a59fa06ce895929d506704fbf8b8095d5} 
+\index{CCircuit.cpp@{CCircuit.cpp}!k\_G\_I@{k\_G\_I}}
+\index{k\_G\_I@{k\_G\_I}!CCircuit.cpp@{CCircuit.cpp}}
+\doxysubsubsection{\texorpdfstring{k\_G\_I}{k\_G\_I}}
+{\footnotesize\ttfamily const double k\+\_\+\+G\+\_\+I = 0.\+001}
+
+Constants for Gerardium recovery \Hypertarget{src_2circuit_2_c_circuit_8cpp_add8898e490af154b000be83ab3cb6d8f}\label{src_2circuit_2_c_circuit_8cpp_add8898e490af154b000be83ab3cb6d8f} 
+\index{CCircuit.cpp@{CCircuit.cpp}!k\_w\_C@{k\_w\_C}}
+\index{k\_w\_C@{k\_w\_C}!CCircuit.cpp@{CCircuit.cpp}}
+\doxysubsubsection{\texorpdfstring{k\_w\_C}{k\_w\_C}}
+{\footnotesize\ttfamily const double k\+\_\+w\+\_\+C = 0.\+0002}
+
+\Hypertarget{src_2circuit_2_c_circuit_8cpp_a85f6361f72e502dd8e2bd0b0e71459d8}\label{src_2circuit_2_c_circuit_8cpp_a85f6361f72e502dd8e2bd0b0e71459d8} 
+\index{CCircuit.cpp@{CCircuit.cpp}!k\_w\_I@{k\_w\_I}}
+\index{k\_w\_I@{k\_w\_I}!CCircuit.cpp@{CCircuit.cpp}}
+\doxysubsubsection{\texorpdfstring{k\_w\_I}{k\_w\_I}}
+{\footnotesize\ttfamily const double k\+\_\+w\+\_\+I = 0.\+0003}
+
+Constants for waste recovery \Hypertarget{src_2circuit_2_c_circuit_8cpp_afd45a0ee96a799aec6589e2eb8ce66cd}\label{src_2circuit_2_c_circuit_8cpp_afd45a0ee96a799aec6589e2eb8ce66cd} 
+\index{CCircuit.cpp@{CCircuit.cpp}!phi@{phi}}
+\index{phi@{phi}!CCircuit.cpp@{CCircuit.cpp}}
+\doxysubsubsection{\texorpdfstring{phi}{phi}}
+{\footnotesize\ttfamily const double phi = 0.\+1}
+
+\Hypertarget{src_2circuit_2_c_circuit_8cpp_aae14bb6d846f70291d5a016a6d19d11e}\label{src_2circuit_2_c_circuit_8cpp_aae14bb6d846f70291d5a016a6d19d11e} 
+\index{CCircuit.cpp@{CCircuit.cpp}!rho@{rho}}
+\index{rho@{rho}!CCircuit.cpp@{CCircuit.cpp}}
+\doxysubsubsection{\texorpdfstring{rho}{rho}}
+{\footnotesize\ttfamily const double rho = 3000.\+0}
+
+Constants for the circuit \Hypertarget{src_2circuit_2_c_circuit_8cpp_a817d2ae0eb8a651ffe337072f2372c14}\label{src_2circuit_2_c_circuit_8cpp_a817d2ae0eb8a651ffe337072f2372c14} 
+\index{CCircuit.cpp@{CCircuit.cpp}!V@{V}}
+\index{V@{V}!CCircuit.cpp@{CCircuit.cpp}}
+\doxysubsubsection{\texorpdfstring{V}{V}}
+{\footnotesize\ttfamily const double V = 10.\+0}
+

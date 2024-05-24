@@ -1,0 +1,476 @@
+\doxysection{CUnit Class Reference}
+\hypertarget{class_c_unit}{}\label{class_c_unit}\index{CUnit@{CUnit}}
+
+
+{\ttfamily \#include $<$CUnit.\+h$>$}
+
+
+
+Collaboration diagram for CUnit\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{class_c_unit__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_unit_af94af33f7e89ad04a27e77479f78eb4a}{CUnit}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_c_unit}{CUnit}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_unit_a45d45e84dd055ac7f17bc01b23094516}{CUnit}} (int \mbox{\hyperlink{class_c_unit_a0d15c89f672a5439926f3f4fbdd9b667}{conc\+Num}}, int \mbox{\hyperlink{class_c_unit_affc32d9f74768b6d12b9ade6695606b5}{inter\+Num}}, int \mbox{\hyperlink{class_c_unit_a7ae655286cc9b29c2f231f3cfbd45c66}{tails\+Num}})
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for \doxylink{class_c_unit}{CUnit}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_unit_abb5e89ecf11ec82f0844d9d4724edbeb}{is\+Marked}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the unit is marked. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_unit_aa43ea6ef2a696f9f45b24c962f1308b2}{set\+Marked}} (bool \mbox{\hyperlink{class_c_unit_a18aec3c4d21ec8fbf30d4f5f81ff2412}{mark}})
+\begin{DoxyCompactList}\small\item\em Sets the mark status of the unit. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_c_unit_a1ccff4f43fe3fc78224721975328d9c6}{get\+Feed\+Gerardium}} () const
+\begin{DoxyCompactList}\small\item\em Gets the feed rate of gerardium. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_unit_a39e6c17277fbf7204ed1b3ecbd2d9ec1}{set\+Feed\+Gerardium}} (double \mbox{\hyperlink{class_c_unit_a0d55c78b6f09330ef4178466dd458197}{feed\+Gerardium}})
+\begin{DoxyCompactList}\small\item\em Sets the feed rate of gerardium. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_c_unit_a2a20074bace7da9c08a71a036effa5bc}{get\+Feed\+Waste}} () const
+\begin{DoxyCompactList}\small\item\em Gets the feed rate of waste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_unit_a8ae5924ab35a3a24863f036d6a75408b}{set\+Feed\+Waste}} (double \mbox{\hyperlink{class_c_unit_a0fd43fd1dd460d35cf33f1f7f6eb1e0a}{feed\+Waste}})
+\begin{DoxyCompactList}\small\item\em Sets the feed rate of waste. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_c_unit_aad52ef5744a559f568239a7f2bb60e20}{get\+New\+Feed\+Gerardium}} () const
+\begin{DoxyCompactList}\small\item\em Gets the new feed rate of gerardium. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_unit_af314367499ec303fef472a2506730599}{set\+New\+Feed\+Gerardium}} (double \mbox{\hyperlink{class_c_unit_a163b02051ec78a765ba2b175c08dbbd3}{new\+Feed\+Gerardium}})
+\begin{DoxyCompactList}\small\item\em Sets the new feed rate of gerardium. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_c_unit_a9484638968d92ec4bda999c53917e731}{get\+New\+Feed\+Waste}} () const
+\begin{DoxyCompactList}\small\item\em Gets the new feed rate of waste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_unit_a6645d2257825c025b0377299012c748d}{set\+New\+Feed\+Waste}} (double \mbox{\hyperlink{class_c_unit_aeb5986d44e5990d77bbe9abfc8b15b40}{new\+Feed\+Waste}})
+\begin{DoxyCompactList}\small\item\em Sets the new feed rate of waste. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_c_unit_a4adcb5e10a151a0b9912bd4edf370bb4}{get\+DifferenceG}} () const
+\begin{DoxyCompactList}\small\item\em Gets the difference in feed rate of gerardium. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_c_unit_a4426b9bb0f7da0cdc0376ea632e5fa50}{get\+DifferenceW}} () const
+\begin{DoxyCompactList}\small\item\em Gets the difference in feed rate of waste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_unit_ade8ebbf72c3edfa1b5cf5fc98cec0cc4}{set\+Difference}} ()
+\begin{DoxyCompactList}\small\item\em Sets the differences in feed rates for gerardium and waste. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_unit}{CUnit}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_unit_ae161c3543937d05c85b5a884c9ca07be}{get\+Conc\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets the pointer to the concentrate connection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_unit_a8e4d474b688cb153632b8f9bdfee2355}{set\+Conc\+Ptr}} (\mbox{\hyperlink{class_c_unit}{CUnit}} \texorpdfstring{$\ast$}{*}ptr)
+\begin{DoxyCompactList}\small\item\em Sets the pointer to the concentrate connection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_unit}{CUnit}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_unit_a0c48764815aac8f0da07bd63bffc7875}{get\+Inter\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets the pointer to the intermediate connection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_unit_a8f0dd3583e3665ac51576ae208fa9440}{set\+Inter\+Ptr}} (\mbox{\hyperlink{class_c_unit}{CUnit}} \texorpdfstring{$\ast$}{*}ptr)
+\begin{DoxyCompactList}\small\item\em Sets the pointer to the intermediate connection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_unit}{CUnit}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_unit_a6814b18b1c59485e0cea08fedbc3b6d7}{get\+Tails\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em Gets the pointer to the tailings connection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_unit_a6a27626f3f9e600c0285eaf308f733a0}{set\+Tails\+Ptr}} (\mbox{\hyperlink{class_c_unit}{CUnit}} \texorpdfstring{$\ast$}{*}ptr)
+\begin{DoxyCompactList}\small\item\em Sets the pointer to the tailings connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_c_unit_a0d15c89f672a5439926f3f4fbdd9b667}{conc\+Num}}
+\item 
+int \mbox{\hyperlink{class_c_unit_affc32d9f74768b6d12b9ade6695606b5}{inter\+Num}}
+\item 
+int \mbox{\hyperlink{class_c_unit_a7ae655286cc9b29c2f231f3cfbd45c66}{tails\+Num}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_c_unit_a18aec3c4d21ec8fbf30d4f5f81ff2412}{mark}}
+\item 
+double \mbox{\hyperlink{class_c_unit_a0d55c78b6f09330ef4178466dd458197}{feed\+Gerardium}}
+\item 
+double \mbox{\hyperlink{class_c_unit_a0fd43fd1dd460d35cf33f1f7f6eb1e0a}{feed\+Waste}}
+\item 
+double \mbox{\hyperlink{class_c_unit_a163b02051ec78a765ba2b175c08dbbd3}{new\+Feed\+Gerardium}}
+\item 
+double \mbox{\hyperlink{class_c_unit_aeb5986d44e5990d77bbe9abfc8b15b40}{new\+Feed\+Waste}}
+\item 
+double \mbox{\hyperlink{class_c_unit_a60b715d0a1a56e577b354f45d7f9ee9c}{differenceG}}
+\item 
+double \mbox{\hyperlink{class_c_unit_abde392171bbfe07077999c76f1f4733c}{differenceW}}
+\item 
+\mbox{\hyperlink{class_c_unit}{CUnit}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_unit_a32a53ee85da965cf30dc47df5a5f6142}{conc\+Ptr}}
+\item 
+\mbox{\hyperlink{class_c_unit}{CUnit}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_unit_a8ad0251e84fdff819bf53e2733ff1eaf}{inter\+Ptr}}
+\item 
+\mbox{\hyperlink{class_c_unit}{CUnit}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_unit_a4a3cc3e58a5b54a4b06c2f232f97e15f}{tails\+Ptr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_unit_af94af33f7e89ad04a27e77479f78eb4a}\label{class_c_unit_af94af33f7e89ad04a27e77479f78eb4a} 
+\index{CUnit@{CUnit}!CUnit@{CUnit}}
+\index{CUnit@{CUnit}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{CUnit()}{CUnit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily CUnit\+::\+CUnit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_c_unit}{CUnit}. 
+
+Constructs a \doxylink{class_c_unit}{CUnit} object with default values for concentrate, intermediate, and tailings numbers. \Hypertarget{class_c_unit_a45d45e84dd055ac7f17bc01b23094516}\label{class_c_unit_a45d45e84dd055ac7f17bc01b23094516} 
+\index{CUnit@{CUnit}!CUnit@{CUnit}}
+\index{CUnit@{CUnit}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{CUnit()}{CUnit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily CUnit\+::\+CUnit (\begin{DoxyParamCaption}\item[{int}]{conc\+Num,  }\item[{int}]{inter\+Num,  }\item[{int}]{tails\+Num }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor for \doxylink{class_c_unit}{CUnit}. 
+
+Constructs a \doxylink{class_c_unit}{CUnit} object with specified values for concentrate, intermediate, and tailings numbers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em conc\+Num} & The concentrate number. \\
+\hline
+{\em inter\+Num} & The intermediate number. \\
+\hline
+{\em tails\+Num} & The tailings number. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_unit_ae161c3543937d05c85b5a884c9ca07be}\label{class_c_unit_ae161c3543937d05c85b5a884c9ca07be} 
+\index{CUnit@{CUnit}!getConcPtr@{getConcPtr}}
+\index{getConcPtr@{getConcPtr}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{getConcPtr()}{getConcPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_unit}{CUnit}} \texorpdfstring{$\ast$}{*} CUnit\+::get\+Conc\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the pointer to the concentrate connection. 
+
+\begin{DoxyReturn}{Returns}
+The pointer to the concentrate connection. 
+\end{DoxyReturn}
+\Hypertarget{class_c_unit_a4adcb5e10a151a0b9912bd4edf370bb4}\label{class_c_unit_a4adcb5e10a151a0b9912bd4edf370bb4} 
+\index{CUnit@{CUnit}!getDifferenceG@{getDifferenceG}}
+\index{getDifferenceG@{getDifferenceG}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{getDifferenceG()}{getDifferenceG()}}
+{\footnotesize\ttfamily double CUnit\+::get\+DifferenceG (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the difference in feed rate of gerardium. 
+
+\begin{DoxyReturn}{Returns}
+The difference in feed rate of gerardium. 
+\end{DoxyReturn}
+\Hypertarget{class_c_unit_a4426b9bb0f7da0cdc0376ea632e5fa50}\label{class_c_unit_a4426b9bb0f7da0cdc0376ea632e5fa50} 
+\index{CUnit@{CUnit}!getDifferenceW@{getDifferenceW}}
+\index{getDifferenceW@{getDifferenceW}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{getDifferenceW()}{getDifferenceW()}}
+{\footnotesize\ttfamily double CUnit\+::get\+DifferenceW (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the difference in feed rate of waste. 
+
+\begin{DoxyReturn}{Returns}
+The difference in feed rate of waste. 
+\end{DoxyReturn}
+\Hypertarget{class_c_unit_a1ccff4f43fe3fc78224721975328d9c6}\label{class_c_unit_a1ccff4f43fe3fc78224721975328d9c6} 
+\index{CUnit@{CUnit}!getFeedGerardium@{getFeedGerardium}}
+\index{getFeedGerardium@{getFeedGerardium}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{getFeedGerardium()}{getFeedGerardium()}}
+{\footnotesize\ttfamily double CUnit\+::get\+Feed\+Gerardium (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the feed rate of gerardium. 
+
+\begin{DoxyReturn}{Returns}
+The feed rate of gerardium. 
+\end{DoxyReturn}
+\Hypertarget{class_c_unit_a2a20074bace7da9c08a71a036effa5bc}\label{class_c_unit_a2a20074bace7da9c08a71a036effa5bc} 
+\index{CUnit@{CUnit}!getFeedWaste@{getFeedWaste}}
+\index{getFeedWaste@{getFeedWaste}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{getFeedWaste()}{getFeedWaste()}}
+{\footnotesize\ttfamily double CUnit\+::get\+Feed\+Waste (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the feed rate of waste. 
+
+\begin{DoxyReturn}{Returns}
+The feed rate of waste. 
+\end{DoxyReturn}
+\Hypertarget{class_c_unit_a0c48764815aac8f0da07bd63bffc7875}\label{class_c_unit_a0c48764815aac8f0da07bd63bffc7875} 
+\index{CUnit@{CUnit}!getInterPtr@{getInterPtr}}
+\index{getInterPtr@{getInterPtr}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{getInterPtr()}{getInterPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_unit}{CUnit}} \texorpdfstring{$\ast$}{*} CUnit\+::get\+Inter\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the pointer to the intermediate connection. 
+
+\begin{DoxyReturn}{Returns}
+The pointer to the intermediate connection. 
+\end{DoxyReturn}
+\Hypertarget{class_c_unit_aad52ef5744a559f568239a7f2bb60e20}\label{class_c_unit_aad52ef5744a559f568239a7f2bb60e20} 
+\index{CUnit@{CUnit}!getNewFeedGerardium@{getNewFeedGerardium}}
+\index{getNewFeedGerardium@{getNewFeedGerardium}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{getNewFeedGerardium()}{getNewFeedGerardium()}}
+{\footnotesize\ttfamily double CUnit\+::get\+New\+Feed\+Gerardium (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the new feed rate of gerardium. 
+
+\begin{DoxyReturn}{Returns}
+The new feed rate of gerardium. 
+\end{DoxyReturn}
+\Hypertarget{class_c_unit_a9484638968d92ec4bda999c53917e731}\label{class_c_unit_a9484638968d92ec4bda999c53917e731} 
+\index{CUnit@{CUnit}!getNewFeedWaste@{getNewFeedWaste}}
+\index{getNewFeedWaste@{getNewFeedWaste}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{getNewFeedWaste()}{getNewFeedWaste()}}
+{\footnotesize\ttfamily double CUnit\+::get\+New\+Feed\+Waste (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the new feed rate of waste. 
+
+\begin{DoxyReturn}{Returns}
+The new feed rate of waste. 
+\end{DoxyReturn}
+\Hypertarget{class_c_unit_a6814b18b1c59485e0cea08fedbc3b6d7}\label{class_c_unit_a6814b18b1c59485e0cea08fedbc3b6d7} 
+\index{CUnit@{CUnit}!getTailsPtr@{getTailsPtr}}
+\index{getTailsPtr@{getTailsPtr}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{getTailsPtr()}{getTailsPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_unit}{CUnit}} \texorpdfstring{$\ast$}{*} CUnit\+::get\+Tails\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the pointer to the tailings connection. 
+
+\begin{DoxyReturn}{Returns}
+The pointer to the tailings connection. 
+\end{DoxyReturn}
+\Hypertarget{class_c_unit_abb5e89ecf11ec82f0844d9d4724edbeb}\label{class_c_unit_abb5e89ecf11ec82f0844d9d4724edbeb} 
+\index{CUnit@{CUnit}!isMarked@{isMarked}}
+\index{isMarked@{isMarked}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{isMarked()}{isMarked()}}
+{\footnotesize\ttfamily bool CUnit\+::is\+Marked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the unit is marked. 
+
+\begin{DoxyReturn}{Returns}
+True if the unit is marked, otherwise false. 
+\end{DoxyReturn}
+\Hypertarget{class_c_unit_a8e4d474b688cb153632b8f9bdfee2355}\label{class_c_unit_a8e4d474b688cb153632b8f9bdfee2355} 
+\index{CUnit@{CUnit}!setConcPtr@{setConcPtr}}
+\index{setConcPtr@{setConcPtr}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{setConcPtr()}{setConcPtr()}}
+{\footnotesize\ttfamily void CUnit\+::set\+Conc\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_unit}{CUnit}} \texorpdfstring{$\ast$}{*}}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Sets the pointer to the concentrate connection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & The pointer to the concentrate connection to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_unit_ade8ebbf72c3edfa1b5cf5fc98cec0cc4}\label{class_c_unit_ade8ebbf72c3edfa1b5cf5fc98cec0cc4} 
+\index{CUnit@{CUnit}!setDifference@{setDifference}}
+\index{setDifference@{setDifference}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{setDifference()}{setDifference()}}
+{\footnotesize\ttfamily void CUnit\+::set\+Difference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets the differences in feed rates for gerardium and waste. 
+
+\Hypertarget{class_c_unit_a39e6c17277fbf7204ed1b3ecbd2d9ec1}\label{class_c_unit_a39e6c17277fbf7204ed1b3ecbd2d9ec1} 
+\index{CUnit@{CUnit}!setFeedGerardium@{setFeedGerardium}}
+\index{setFeedGerardium@{setFeedGerardium}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{setFeedGerardium()}{setFeedGerardium()}}
+{\footnotesize\ttfamily void CUnit\+::set\+Feed\+Gerardium (\begin{DoxyParamCaption}\item[{double}]{feed\+Gerardium }\end{DoxyParamCaption})}
+
+
+
+Sets the feed rate of gerardium. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em feed\+Gerardium} & The feed rate of gerardium to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_unit_a8ae5924ab35a3a24863f036d6a75408b}\label{class_c_unit_a8ae5924ab35a3a24863f036d6a75408b} 
+\index{CUnit@{CUnit}!setFeedWaste@{setFeedWaste}}
+\index{setFeedWaste@{setFeedWaste}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{setFeedWaste()}{setFeedWaste()}}
+{\footnotesize\ttfamily void CUnit\+::set\+Feed\+Waste (\begin{DoxyParamCaption}\item[{double}]{feed\+Waste }\end{DoxyParamCaption})}
+
+
+
+Sets the feed rate of waste. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em feed\+Waste} & The feed rate of waste to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_unit_a8f0dd3583e3665ac51576ae208fa9440}\label{class_c_unit_a8f0dd3583e3665ac51576ae208fa9440} 
+\index{CUnit@{CUnit}!setInterPtr@{setInterPtr}}
+\index{setInterPtr@{setInterPtr}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{setInterPtr()}{setInterPtr()}}
+{\footnotesize\ttfamily void CUnit\+::set\+Inter\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_unit}{CUnit}} \texorpdfstring{$\ast$}{*}}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Sets the pointer to the intermediate connection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & The pointer to the intermediate connection to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_unit_aa43ea6ef2a696f9f45b24c962f1308b2}\label{class_c_unit_aa43ea6ef2a696f9f45b24c962f1308b2} 
+\index{CUnit@{CUnit}!setMarked@{setMarked}}
+\index{setMarked@{setMarked}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{setMarked()}{setMarked()}}
+{\footnotesize\ttfamily void CUnit\+::set\+Marked (\begin{DoxyParamCaption}\item[{bool}]{mark }\end{DoxyParamCaption})}
+
+
+
+Sets the mark status of the unit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mark} & The mark status to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_unit_af314367499ec303fef472a2506730599}\label{class_c_unit_af314367499ec303fef472a2506730599} 
+\index{CUnit@{CUnit}!setNewFeedGerardium@{setNewFeedGerardium}}
+\index{setNewFeedGerardium@{setNewFeedGerardium}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{setNewFeedGerardium()}{setNewFeedGerardium()}}
+{\footnotesize\ttfamily void CUnit\+::set\+New\+Feed\+Gerardium (\begin{DoxyParamCaption}\item[{double}]{new\+Feed\+Gerardium }\end{DoxyParamCaption})}
+
+
+
+Sets the new feed rate of gerardium. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Feed\+Gerardium} & The new feed rate of gerardium to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_unit_a6645d2257825c025b0377299012c748d}\label{class_c_unit_a6645d2257825c025b0377299012c748d} 
+\index{CUnit@{CUnit}!setNewFeedWaste@{setNewFeedWaste}}
+\index{setNewFeedWaste@{setNewFeedWaste}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{setNewFeedWaste()}{setNewFeedWaste()}}
+{\footnotesize\ttfamily void CUnit\+::set\+New\+Feed\+Waste (\begin{DoxyParamCaption}\item[{double}]{new\+Feed\+Waste }\end{DoxyParamCaption})}
+
+
+
+Sets the new feed rate of waste. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Feed\+Waste} & The new feed rate of waste to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_unit_a6a27626f3f9e600c0285eaf308f733a0}\label{class_c_unit_a6a27626f3f9e600c0285eaf308f733a0} 
+\index{CUnit@{CUnit}!setTailsPtr@{setTailsPtr}}
+\index{setTailsPtr@{setTailsPtr}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{setTailsPtr()}{setTailsPtr()}}
+{\footnotesize\ttfamily void CUnit\+::set\+Tails\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_unit}{CUnit}} \texorpdfstring{$\ast$}{*}}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Sets the pointer to the tailings connection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & The pointer to the tailings connection to set. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{class_c_unit_a0d15c89f672a5439926f3f4fbdd9b667}\label{class_c_unit_a0d15c89f672a5439926f3f4fbdd9b667} 
+\index{CUnit@{CUnit}!concNum@{concNum}}
+\index{concNum@{concNum}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{concNum}{concNum}}
+{\footnotesize\ttfamily int CUnit\+::conc\+Num}
+
+The concentrate number \Hypertarget{class_c_unit_a32a53ee85da965cf30dc47df5a5f6142}\label{class_c_unit_a32a53ee85da965cf30dc47df5a5f6142} 
+\index{CUnit@{CUnit}!concPtr@{concPtr}}
+\index{concPtr@{concPtr}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{concPtr}{concPtr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_unit}{CUnit}}\texorpdfstring{$\ast$}{*} CUnit\+::conc\+Ptr\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the concentrate connection \Hypertarget{class_c_unit_a60b715d0a1a56e577b354f45d7f9ee9c}\label{class_c_unit_a60b715d0a1a56e577b354f45d7f9ee9c} 
+\index{CUnit@{CUnit}!differenceG@{differenceG}}
+\index{differenceG@{differenceG}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{differenceG}{differenceG}}
+{\footnotesize\ttfamily double CUnit\+::differenceG\hspace{0.3cm}{\ttfamily [private]}}
+
+Difference in feed rate of gerardium \Hypertarget{class_c_unit_abde392171bbfe07077999c76f1f4733c}\label{class_c_unit_abde392171bbfe07077999c76f1f4733c} 
+\index{CUnit@{CUnit}!differenceW@{differenceW}}
+\index{differenceW@{differenceW}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{differenceW}{differenceW}}
+{\footnotesize\ttfamily double CUnit\+::differenceW\hspace{0.3cm}{\ttfamily [private]}}
+
+Difference in feed rate of waste \Hypertarget{class_c_unit_a0d55c78b6f09330ef4178466dd458197}\label{class_c_unit_a0d55c78b6f09330ef4178466dd458197} 
+\index{CUnit@{CUnit}!feedGerardium@{feedGerardium}}
+\index{feedGerardium@{feedGerardium}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{feedGerardium}{feedGerardium}}
+{\footnotesize\ttfamily double CUnit\+::feed\+Gerardium\hspace{0.3cm}{\ttfamily [private]}}
+
+Feed rate of gerardium \Hypertarget{class_c_unit_a0fd43fd1dd460d35cf33f1f7f6eb1e0a}\label{class_c_unit_a0fd43fd1dd460d35cf33f1f7f6eb1e0a} 
+\index{CUnit@{CUnit}!feedWaste@{feedWaste}}
+\index{feedWaste@{feedWaste}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{feedWaste}{feedWaste}}
+{\footnotesize\ttfamily double CUnit\+::feed\+Waste\hspace{0.3cm}{\ttfamily [private]}}
+
+Feed rate of waste \Hypertarget{class_c_unit_affc32d9f74768b6d12b9ade6695606b5}\label{class_c_unit_affc32d9f74768b6d12b9ade6695606b5} 
+\index{CUnit@{CUnit}!interNum@{interNum}}
+\index{interNum@{interNum}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{interNum}{interNum}}
+{\footnotesize\ttfamily int CUnit\+::inter\+Num}
+
+The intermediate number \Hypertarget{class_c_unit_a8ad0251e84fdff819bf53e2733ff1eaf}\label{class_c_unit_a8ad0251e84fdff819bf53e2733ff1eaf} 
+\index{CUnit@{CUnit}!interPtr@{interPtr}}
+\index{interPtr@{interPtr}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{interPtr}{interPtr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_unit}{CUnit}}\texorpdfstring{$\ast$}{*} CUnit\+::inter\+Ptr\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the intermediate connection \Hypertarget{class_c_unit_a18aec3c4d21ec8fbf30d4f5f81ff2412}\label{class_c_unit_a18aec3c4d21ec8fbf30d4f5f81ff2412} 
+\index{CUnit@{CUnit}!mark@{mark}}
+\index{mark@{mark}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{mark}{mark}}
+{\footnotesize\ttfamily bool CUnit\+::mark\hspace{0.3cm}{\ttfamily [private]}}
+
+Mark status of the unit \Hypertarget{class_c_unit_a163b02051ec78a765ba2b175c08dbbd3}\label{class_c_unit_a163b02051ec78a765ba2b175c08dbbd3} 
+\index{CUnit@{CUnit}!newFeedGerardium@{newFeedGerardium}}
+\index{newFeedGerardium@{newFeedGerardium}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{newFeedGerardium}{newFeedGerardium}}
+{\footnotesize\ttfamily double CUnit\+::new\+Feed\+Gerardium\hspace{0.3cm}{\ttfamily [private]}}
+
+New feed rate of gerardium \Hypertarget{class_c_unit_aeb5986d44e5990d77bbe9abfc8b15b40}\label{class_c_unit_aeb5986d44e5990d77bbe9abfc8b15b40} 
+\index{CUnit@{CUnit}!newFeedWaste@{newFeedWaste}}
+\index{newFeedWaste@{newFeedWaste}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{newFeedWaste}{newFeedWaste}}
+{\footnotesize\ttfamily double CUnit\+::new\+Feed\+Waste\hspace{0.3cm}{\ttfamily [private]}}
+
+New feed rate of waste \Hypertarget{class_c_unit_a7ae655286cc9b29c2f231f3cfbd45c66}\label{class_c_unit_a7ae655286cc9b29c2f231f3cfbd45c66} 
+\index{CUnit@{CUnit}!tailsNum@{tailsNum}}
+\index{tailsNum@{tailsNum}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{tailsNum}{tailsNum}}
+{\footnotesize\ttfamily int CUnit\+::tails\+Num}
+
+The tailings number \Hypertarget{class_c_unit_a4a3cc3e58a5b54a4b06c2f232f97e15f}\label{class_c_unit_a4a3cc3e58a5b54a4b06c2f232f97e15f} 
+\index{CUnit@{CUnit}!tailsPtr@{tailsPtr}}
+\index{tailsPtr@{tailsPtr}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{tailsPtr}{tailsPtr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_unit}{CUnit}}\texorpdfstring{$\ast$}{*} CUnit\+::tails\+Ptr\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the tailings connection 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/circuit/\mbox{\hyperlink{_c_unit_8h}{CUnit.\+h}}\item 
+src/circuit/\mbox{\hyperlink{_c_unit_8cpp}{CUnit.\+cpp}}\end{DoxyCompactItemize}

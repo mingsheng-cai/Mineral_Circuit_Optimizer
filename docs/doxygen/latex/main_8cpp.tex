@@ -1,0 +1,129 @@
+\doxysection{src/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+
+
+Main entry point for the circuit optimization program using genetic algorithms.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include "{}circuit/\+CCircuit.\+h"{}}\newline
+{\ttfamily \#include "{}CSimulator.\+h"{}}\newline
+{\ttfamily \#include "{}Genetic\+\_\+\+Algorithm.\+h"{}}\newline
+{\ttfamily \#include "{}utils/\+Helper.\+h"{}}\newline
+Include dependency graph for main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main entry point for the circuit optimization program using genetic algorithms. 
+
+Test file for evaluating the functionalities of the Genetic Algorithm module.
+
+Test file for evaluating execution times of the Evaluate\+\_\+\+Circuit function with different circuit vector sizes.
+
+Test file for evaluating circuit configurations using the Evaluate\+\_\+\+Circuit function.
+
+This program uses a genetic algorithm to optimize a circuit configuration. It sets up the initial circuit parameters and the genetic algorithm parameters, runs the optimization process, and then evaluates the optimized circuit. The results, including performance, recovery, and grade, are printed to the console.
+
+The main steps include\+:
+\begin{DoxyItemize}
+\item Setting up circuit parameters.
+\item Defining the initial circuit vector.
+\item Configuring the genetic algorithm parameters.
+\item Running the genetic algorithm optimization.
+\item Evaluating the optimized circuit and printing the results.
+\end{DoxyItemize}
+
+\begin{DoxyDate}{Date}
+Created on May 20, 2024
+\end{DoxyDate}
+\begin{DoxyAuthor}{Authors}
+ACS Gerardium Rush -\/ Pentlandite\+:
+\begin{DoxyItemize}
+\item Alex N Njeumi
+\item Geyu Ji
+\item Melissa Y S Sim
+\item Mingsheng Cai
+\item Peifeng Tan
+\item Yongwen Chen
+\item Zihan Li
+\end{DoxyItemize}
+\end{DoxyAuthor}
+This file contains a series of test cases to evaluate different circuit configurations using the Evaluate\+\_\+\+Circuit function. Each test case checks the performance, recovery, and grade of a given circuit vector against expected values. The results are printed to the console, and the test passes or fails based on the accuracy of the output.
+
+\begin{DoxyDate}{Date}
+Created on May 20, 2024
+\end{DoxyDate}
+\begin{DoxyAuthor}{Authors}
+ACS Gerardium Rush -\/ Pentlandite\+:
+\begin{DoxyItemize}
+\item Alex N Njeumi
+\item Geyu Ji
+\item Melissa Y S Sim
+\item Mingsheng Cai
+\item Peifeng Tan
+\item Yongwen Chen
+\item Zihan Li
+\end{DoxyItemize}
+\end{DoxyAuthor}
+This file generates circuit vectors of various sizes, evaluates them using the Evaluate\+\_\+\+Circuit function, and records the execution times. The results are printed to the console and also saved to an output file.
+
+\begin{DoxyDate}{Date}
+Created on May 20, 2024
+\end{DoxyDate}
+\begin{DoxyAuthor}{Authors}
+ACS Gerardium Rush -\/ Pentlandite\+:
+\begin{DoxyItemize}
+\item Alex N Njeumi
+\item Geyu Ji
+\item Melissa Y S Sim
+\item Mingsheng Cai
+\item Peifeng Tan
+\item Yongwen Chen
+\item Zihan Li
+\end{DoxyItemize}
+\end{DoxyAuthor}
+This file contains various test cases to evaluate the correctness and performance of the Genetic Algorithm implementation, including tests for the initializer, crossover, mutation, selection, and simulated annealing.
+
+\begin{DoxyDate}{Date}
+Created on May 20, 2024
+\end{DoxyDate}
+\begin{DoxyAuthor}{Authors}
+ACS Gerardium Rush -\/ Pentlandite\+:
+\begin{DoxyItemize}
+\item Alex N Njeumi
+\item Geyu Ji
+\item Melissa Y S Sim
+\item Mingsheng Cai
+\item Peifeng Tan
+\item Yongwen Chen
+\item Zihan Li 
+\end{DoxyItemize}
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}

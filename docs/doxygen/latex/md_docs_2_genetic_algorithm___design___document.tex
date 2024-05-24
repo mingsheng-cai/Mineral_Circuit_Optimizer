@@ -1,0 +1,431 @@
+\chapter{Genetic Algorithm Design}
+\hypertarget{md_docs_2_genetic_algorithm___design___document}{}\label{md_docs_2_genetic_algorithm___design___document}\index{Genetic Algorithm Design@{Genetic Algorithm Design}}
+\label{md_docs_2_genetic_algorithm___design___document_autotoc_md36}%
+\Hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md36}%
+ \hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md37}{}\doxysection{\texorpdfstring{Overview}{Overview}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md37}
+This project employs a genetic algorithm to optimize circuit configurations. Genetic algorithms are heuristic search algorithms inspired by the process of natural selection. They use operations such as selection, crossover, and mutation to find the optimal solution. This document provides a detailed explanation of the design structure and optimization strategies implemented in the genetic algorithm.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md38}{}\doxysection{\texorpdfstring{UML Graph}{UML Graph}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md38}
+The following documentation provides an in-\/depth look at the design and implementation of the genetic algorithm components within our project. The structure of the project is depicted in the accompanying diagram, which illustrates the relationships between various header and implementation files.
+
+
+
+{\bfseries{Relationships}}
+
+
+\begin{DoxyItemize}
+\item The central file {\ttfamily \doxylink{_operator_8h}{Operator.\+h}} is included by all specific operator header files ({\ttfamily Crossover}, {\ttfamily Mutation}, {\ttfamily Selection}), establishing a common base or interface for different types of genetic algorithm operators.
+\item Each operator header ({\ttfamily .h}) file is paired with its corresponding implementation ({\ttfamily .cpp}) file, where the declared methods and classes are defined.
+\item {\ttfamily \doxylink{_genetic___algorithm_8h}{Genetic\+\_\+\+Algorithm.\+h}} includes various operator headers to utilize the defined crossover, mutation, and selection strategies within the genetic algorithm.
+\item The main program ({\ttfamily \doxylink{main_8cpp}{main.\+cpp}}) and test file ({\ttfamily \doxylink{test__genetic__algorithm_8cpp}{test\+\_\+genetic\+\_\+algorithm.\+cpp}}) include {\ttfamily \doxylink{_genetic___algorithm_8h}{Genetic\+\_\+\+Algorithm.\+h}} to execute and test the genetic algorithm functionalities.
+\end{DoxyItemize}
+
+The diagram effectively illustrates the modular structure of the genetic algorithm, showing clear separations between declarations and implementations, and the hierarchical inclusion of various components. This modularity facilitates easy maintenance, testing, and extension of the genetic algorithm with new operators or strategies. The project is organized to ensure that each component can be developed and tested independently, making it easier to manage and extend the genetic algorithm framework.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md39}{}\doxysection{\texorpdfstring{Directory Structure}{Directory Structure}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md39}
+The following is the directory structure relevant to the genetic algorithm\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{├──\ include}
+\DoxyCodeLine{│\ \ \ ├──\ Genetic\_Algorithm.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Main\ genetic\ algorithm\ components\ and\ functions.}
+\DoxyCodeLine{│\ \ \ ├──\ operators}
+\DoxyCodeLine{│\ \ \ │\ \ \ ├──\ Crossover}
+\DoxyCodeLine{│\ \ \ │\ \ \ │\ \ \ ├──\ PureSinglePointCrossover.h\ \ \ \ \#\ Header\ for\ PureSinglePointCrossover\ class.}
+\DoxyCodeLine{│\ \ \ │\ \ \ │\ \ \ ├──\ TwoPointCrossover.h\ \ \ \ \ \ \ \ \ \ \ \#\ Header\ for\ TwoPointCrossover\ class.}
+\DoxyCodeLine{│\ \ \ │\ \ \ │\ \ \ └──\ UniformCrossover.h\ \ \ \ \ \ \ \ \ \ \ \ \#\ Header\ for\ UniformCrossover\ class.}
+\DoxyCodeLine{│\ \ \ │\ \ \ ├──\ Mutation}
+\DoxyCodeLine{│\ \ \ │\ \ \ │\ \ \ ├──\ GenProgMutation.h\ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Header\ for\ GenProgMutation\ class.}
+\DoxyCodeLine{│\ \ \ │\ \ \ │\ \ \ └──\ GuidedMutation.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Header\ for\ GuidedMutation\ class.}
+\DoxyCodeLine{│\ \ \ │\ \ \ ├──\ Selection}
+\DoxyCodeLine{│\ \ \ │\ \ \ \ \ \ \ ├──\ NaryTournamentSelection.h\ \ \ \ \ \#\ Header\ for\ NaryTournamentSelection\ class.}
+\DoxyCodeLine{│\ \ \ │\ \ \ \ \ \ \ ├──\ RankSelection.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Header\ for\ RankSelection\ class.}
+\DoxyCodeLine{│\ \ \ │\ \ \ \ \ \ \ └──\ RouletteWheelSelection.h\ \ \ \ \ \ \#\ Header\ for\ RouletteWheelSelection\ class.}
+\DoxyCodeLine{│\ \ \ └──\ utils}
+\DoxyCodeLine{│\ \ \ \ \ \ \ ├──\ Helper.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Utility\ functions\ for\ logging\ and\ current\ time.}
+\DoxyCodeLine{│\ \ \ \ \ \ \ ├──\ Individual.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Definition\ of\ the\ Individual\ class\ used\ in\ the\ genetic\ algorithm.}
+\DoxyCodeLine{│\ \ \ \ \ \ \ └──\ Parameter.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Definition\ of\ the\ parameter\ structures\ for\ the\ algorithm.}
+\DoxyCodeLine{└──\ src}
+\DoxyCodeLine{\ \ \ \ ├──\ Genetic\_Algorithm.cpp\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Implementation\ of\ the\ main\ genetic\ algorithm\ components\ and\ functions.}
+\DoxyCodeLine{\ \ \ \ ├──\ operators}
+\DoxyCodeLine{\ \ \ \ │\ \ \ ├──\ Crossover}
+\DoxyCodeLine{\ \ \ \ │\ \ \ │\ \ \ ├──\ PureSinglePointCrossover.cpp\ \ \#\ Implementation\ of\ PureSinglePointCrossover\ class.}
+\DoxyCodeLine{\ \ \ \ │\ \ \ │\ \ \ ├──\ TwoPointCrossover.cpp\ \ \ \ \ \ \ \ \ \#\ Implementation\ of\ TwoPointCrossover\ class.}
+\DoxyCodeLine{\ \ \ \ │\ \ \ │\ \ \ └──\ UniformCrossover.cpp\ \ \ \ \ \ \ \ \ \ \#\ Implementation\ of\ UniformCrossover\ class.}
+\DoxyCodeLine{\ \ \ \ │\ \ \ ├──\ Mutation}
+\DoxyCodeLine{\ \ \ \ │\ \ \ │\ \ \ ├──\ GenProgMutation.cpp\ \ \ \ \ \ \ \ \ \ \ \#\ Implementation\ of\ GenProgMutation\ class.}
+\DoxyCodeLine{\ \ \ \ │\ \ \ │\ \ \ └──\ GuidedMutation.cpp\ \ \ \ \ \ \ \ \ \ \ \ \#\ Implementation\ of\ GuidedMutation\ class.}
+\DoxyCodeLine{\ \ \ \ │\ \ \ └──\ Selection}
+\DoxyCodeLine{\ \ \ \ │\ \ \ \ \ \ \ ├──\ NaryTournamentSelection.cpp\ \ \ \#\ Implementation\ of\ NaryTournamentSelection\ class.}
+\DoxyCodeLine{\ \ \ \ │\ \ \ \ \ \ \ ├──\ RankSelection.cpp\ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Implementation\ of\ RankSelection\ class.}
+\DoxyCodeLine{\ \ \ \ │\ \ \ \ \ \ \ └──\ RouletteWheelSelection.cpp\ \ \ \ \#\ Implementation\ of\ RouletteWheelSelection\ class.}
+
+\end{DoxyCode}
+\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md40}{}\doxysection{\texorpdfstring{Major Components}{Major Components}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md40}
+\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md41}{}\doxysubsection{\texorpdfstring{1. Genetic\+\_\+\+Algorithm.\+h and Genetic\+\_\+\+Algorithm.\+cpp}{1. Genetic\+\_\+\+Algorithm.\+h and Genetic\+\_\+\+Algorithm.\+cpp}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md41}
+These files define the core module of the genetic algorithm, including the main flow and operations of the algorithm, such as population initialization, parent selection, crossover, mutation, and generation of new populations.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md42}{}\doxysubsubsection{\texorpdfstring{Key Functions}{Key Functions}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md42}
+
+\begin{DoxyItemize}
+\item {\ttfamily initialize\+Random\+Seed}\+: Initializes the random seed.
+\item {\ttfamily initialize\+Population}\+: Initializes the population.
+\item {\ttfamily elitism}\+: Implements the elitism strategy, preserving the best individuals.
+\item {\ttfamily optimize}\+: The main optimization function, executing the main loop of the genetic algorithm.
+\end{DoxyItemize}\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md43}{}\doxysubsection{\texorpdfstring{2. Selection Operators}{2. Selection Operators}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md43}
+Selection operators are responsible for selecting individuals from the current population to serve as parents for the next generation.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md44}{}\doxysubsubsection{\texorpdfstring{Files}{Files}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md44}
+
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{_nary_tournament_selection_8h}{Nary\+Tournament\+Selection.\+h}} / {\ttfamily \doxylink{_nary_tournament_selection_8cpp}{Nary\+Tournament\+Selection.\+cpp}}\+: n-\/ary tournament selection, randomly selects n individuals to compete, and selects the best one.
+\item {\ttfamily \doxylink{_rank_selection_8h}{Rank\+Selection.\+h}} / {\ttfamily \doxylink{_rank_selection_8cpp}{Rank\+Selection.\+cpp}}\+: Rank-\/based selection, individuals are sorted by fitness, and selection probability is based on rank.
+\item {\ttfamily \doxylink{_roulette_wheel_selection_8h}{Roulette\+Wheel\+Selection.\+h}} / {\ttfamily \doxylink{_roulette_wheel_selection_8cpp}{Roulette\+Wheel\+Selection.\+cpp}}\+: Roulette wheel selection, selection probability is proportional to fitness.
+\end{DoxyItemize}\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md45}{}\doxysubsection{\texorpdfstring{3. Crossover Operators}{3. Crossover Operators}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md45}
+Crossover operators combine the genes of parent individuals to create new offspring.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md46}{}\doxysubsubsection{\texorpdfstring{Files}{Files}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md46}
+
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{_pure_single_point_crossover_8h}{Pure\+Single\+Point\+Crossover.\+h}} / {\ttfamily \doxylink{_pure_single_point_crossover_8cpp}{Pure\+Single\+Point\+Crossover.\+cpp}}\+: Single-\/point crossover, swaps genes between two parents at a random point.
+\item {\ttfamily \doxylink{_two_point_crossover_8h}{Two\+Point\+Crossover.\+h}} / {\ttfamily \doxylink{_two_point_crossover_8cpp}{Two\+Point\+Crossover.\+cpp}}\+: Two-\/point crossover, swaps genes between two random points.
+\item {\ttfamily \doxylink{_uniform_crossover_8h}{Uniform\+Crossover.\+h}} / {\ttfamily \doxylink{_uniform_crossover_8cpp}{Uniform\+Crossover.\+cpp}}\+: Uniform crossover, randomly selects genes from each parent.
+\end{DoxyItemize}\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md47}{}\doxysubsection{\texorpdfstring{4. Mutation Operators}{4. Mutation Operators}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md47}
+Mutation operators introduce random changes to the genes of an individual, increasing the diversity of the population.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md48}{}\doxysubsubsection{\texorpdfstring{Files}{Files}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md48}
+
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{_gen_prog_mutation_8h}{Gen\+Prog\+Mutation.\+h}} / {\ttfamily \doxylink{_gen_prog_mutation_8cpp}{Gen\+Prog\+Mutation.\+cpp}}\+: General-\/purpose mutation, randomly modifies the genes of an individual.
+\item {\ttfamily \doxylink{_guided_mutation_8h}{Guided\+Mutation.\+h}} / {\ttfamily \doxylink{_guided_mutation_8cpp}{Guided\+Mutation.\+cpp}}\+: Guided mutation, modifies genes based on specific rules or heuristics.
+\end{DoxyItemize}\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md49}{}\doxysubsection{\texorpdfstring{5. Utilities}{5. Utilities}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md49}
+Auxiliary functions and structures definitions.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md50}{}\doxysubsubsection{\texorpdfstring{Files}{Files}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md50}
+
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{_helper_8h}{Helper.\+h}} / {\ttfamily \doxylink{_helper_8cpp}{Helper.\+cpp}}\+: Contains auxiliary functions like logging results and getting the current time.
+\item {\ttfamily \doxylink{_individual_8h}{Individual.\+h}}\+: Defines the individual structure, including the gene sequence and fitness.
+\item {\ttfamily \doxylink{_parameter_8h}{Parameter.\+h}}\+: Defines the structure for algorithm parameters, including population size, crossover rate, mutation rate, etc.
+\end{DoxyItemize}\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md51}{}\doxysection{\texorpdfstring{Optimization Strategies}{Optimization Strategies}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md51}
+\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md52}{}\doxysubsection{\texorpdfstring{1. Elitism Strategy}{1. Elitism Strategy}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md52}
+The elitism strategy in genetic algorithms ensures that the best-\/performing individuals from the current generation are preserved and carried over to the next generation. This helps in maintaining the quality of solutions over generations and prevents the loss of the best solutions found so far.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md53}{}\doxysubsubsection{\texorpdfstring{Implementation Details}{Implementation Details}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md53}
+The implementation of the elitism strategy is done in the {\ttfamily elitism} function in {\ttfamily \doxylink{_genetic___algorithm_8cpp}{Genetic\+\_\+\+Algorithm.\+cpp}}. This function sorts the population based on fitness and selects the top individuals to be directly transferred to the new population.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md54}{}\doxysubsubsection{\texorpdfstring{Code Explanation}{Code Explanation}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md54}
+\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}{\ttfamily elitism}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}
+
+The {\ttfamily elitism} function takes the current population and a reference to a new population vector where the elite individuals will be stored. It also takes the algorithm parameters which include the proportion of the population to be preserved as elites.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{_genetic___algorithm_8h_a67d1d9548b0f13a3e42eb769e4a3da02}{elitism}}(\textcolor{keyword}{const}\ std::vector<Individual>\ \&population,\ std::vector<Individual>\ \&newPopulation,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}\ \&params)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Create\ a\ copy\ of\ the\ population\ to\ sort}}
+\DoxyCodeLine{\ \ \ \ std::vector<Individual>\ sortedPopulation\ =\ population;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Sort\ the\ population\ based\ on\ fitness\ in\ descending\ order}}
+\DoxyCodeLine{\ \ \ \ std::sort(sortedPopulation.begin(),\ sortedPopulation.end(),\ [](\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&b)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ return\ a.fitness\ >\ b.fitness;}
+\DoxyCodeLine{\ \ \ \ \});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Calculate\ the\ number\ of\ elite\ individuals\ to\ be\ preserved}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ numElites\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(params.\mbox{\hyperlink{struct_algorithm___parameters_a6c1e71841f823da64251aeaa32765cdf}{populationSize}}\ *\ params.\mbox{\hyperlink{struct_algorithm___parameters_a07ef05a69505b5cb20087716294bd693}{elitePercentage}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Add\ the\ top\ elite\ individuals\ to\ the\ new\ population}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ numElites;\ i++)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ the\ fitness\ of\ the\ individual\ is\ invalid,\ stop\ adding\ more\ elites}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sortedPopulation[i].fitness\ ==\ \mbox{\hyperlink{_genetic___algorithm_8cpp_ae28bf2b9191de07c5bd587e0e8186405}{INVALID\_FITNESS}})\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ newPopulation.push\_back(sortedPopulation[i]);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md55}{}\doxysubsubsection{\texorpdfstring{Steps in the {\ttfamily elitism} Function}{Steps in the {\ttfamily elitism} Function}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md55}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Copy the Population}}\+: A copy of the current population is created to avoid modifying the original population directly.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::vector<Individual>\ sortedPopulation\ =\ population;}
+
+\end{DoxyCode}
+
+\item {\bfseries{Sort the Population}}\+: The copied population is sorted based on the fitness values of the individuals in descending order. This means the individuals with the highest fitness values come first.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::sort(sortedPopulation.begin(),\ sortedPopulation.end(),\ [](\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&b)\ \{}
+\DoxyCodeLine{\ \ \ \ return\ a.fitness\ >\ b.fitness;}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+
+\item {\bfseries{Calculate the Number of Elites}}\+: The number of elite individuals to be preserved is calculated based on the elite percentage parameter.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ numElites\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(params.\mbox{\hyperlink{struct_algorithm___parameters_a6c1e71841f823da64251aeaa32765cdf}{populationSize}}\ *\ params.\mbox{\hyperlink{struct_algorithm___parameters_a07ef05a69505b5cb20087716294bd693}{elitePercentage}});}
+
+\end{DoxyCode}
+
+\item {\bfseries{Add Elite Individuals to the New Population}}\+: The top elite individuals are added to the new population. If an individual\textquotesingle{}s fitness is invalid, the process stops to avoid adding unfit individuals.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ numElites;\ i++)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (sortedPopulation[i].fitness\ ==\ \mbox{\hyperlink{_genetic___algorithm_8cpp_ae28bf2b9191de07c5bd587e0e8186405}{INVALID\_FITNESS}})\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ newPopulation.push\_back(sortedPopulation[i]);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+\end{DoxyEnumerate}\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md56}{}\doxysubsubsection{\texorpdfstring{Integration with the Main Optimization Loop}{Integration with the Main Optimization Loop}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md56}
+In the main optimization function ({\ttfamily optimize}), the {\ttfamily elitism} function is called to add the best individuals from the current population to the new population before proceeding with the selection, crossover, and mutation operations.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::vector<Individual>\ newPopulation;}
+\DoxyCodeLine{\mbox{\hyperlink{_genetic___algorithm_8h_a67d1d9548b0f13a3e42eb769e4a3da02}{elitism}}(population,\ newPopulation,\ params);}
+
+\end{DoxyCode}
+
+
+By preserving the best individuals, the elitism strategy ensures that the genetic algorithm does not lose the highest quality solutions found in each generation, thereby maintaining or improving the overall quality of the population over time.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md57}{}\doxysubsection{\texorpdfstring{2. Selection Strategies}{2. Selection Strategies}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md57}
+Selection strategies are critical in genetic algorithms as they determine how individuals are chosen to create the next generation. The implemented selection strategies in this project include Nary Tournament Selection, Rank Selection, and Roulette Wheel Selection. Each strategy has its advantages in maintaining diversity and preventing premature convergence.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md58}{}\doxysubsubsection{\texorpdfstring{Nary Tournament Selection}{Nary Tournament Selection}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md58}
+{\bfseries{Nary Tournament Selection}} is a method where \textquotesingle{}n\textquotesingle{} individuals are randomly chosen from the population, and the one with the highest fitness among them is selected as a parent. This process helps in maintaining a healthy diversity in the population and prevents premature convergence to suboptimal solutions.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md59}{}\doxysubsubsection{\texorpdfstring{Rank Selection}{Rank Selection}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md59}
+{\bfseries{Rank Selection}} assigns selection probabilities to individuals based on their rank rather than their raw fitness values. This ensures that even individuals with lower fitness have a chance of being selected, thereby maintaining diversity in the population.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md60}{}\doxysubsubsection{\texorpdfstring{Roulette Wheel Selection}{Roulette Wheel Selection}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md60}
+{\bfseries{Roulette Wheel Selection}} (also known as fitness proportionate selection) assigns selection probabilities proportional to the individuals\textquotesingle{} fitness values. Individuals with higher fitness have a higher chance of being selected, but there is still a probability for lower fitness individuals to be chosen, thus maintaining diversity.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md61}{}\doxysubsection{\texorpdfstring{3. Crossover Strategies}{3. Crossover Strategies}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md61}
+Crossover strategies play a vital role in genetic algorithms by combining the genetic information of parent individuals to create offspring for the next generation. This process helps in exploring the search space and finding better solutions.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md62}{}\doxysubsubsection{\texorpdfstring{Pure\+Single\+Point\+Crossover}{Pure\+Single\+Point\+Crossover}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md62}
+{\bfseries{\doxylink{class_pure_single_point_crossover}{Pure\+Single\+Point\+Crossover}}} involves selecting a random crossover point and exchanging the subsequences after this point between two parent individuals. This strategy helps to combine different features from the parents, potentially leading to better offspring.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md63}{}\doxysubsubsection{\texorpdfstring{Two\+Point\+Crossover}{Two\+Point\+Crossover}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md63}
+{\bfseries{\doxylink{class_two_point_crossover}{Two\+Point\+Crossover}}} is similar to the single-\/point crossover but involves selecting two random points. The segments between these two points are exchanged between the parents, leading to potentially more diverse offspring.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md64}{}\doxysubsubsection{\texorpdfstring{Uniform\+Crossover}{Uniform\+Crossover}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md64}
+{\bfseries{\doxylink{class_uniform_crossover}{Uniform\+Crossover}}} randomly selects genes from each parent, independent of their positions, resulting in a higher level of genetic diversity in the offspring. This method can be particularly effective in preventing premature convergence.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md65}{}\doxysubsection{\texorpdfstring{4. Mutation Strategies}{4. Mutation Strategies}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md65}
+Mutation strategies introduce variability in the genetic algorithm population, helping to explore the search space more thoroughly and avoid local optima.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md66}{}\doxysubsubsection{\texorpdfstring{Gen\+Prog\+Mutation}{Gen\+Prog\+Mutation}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md66}
+{\bfseries{\doxylink{class_gen_prog_mutation}{Gen\+Prog\+Mutation}}} introduces random changes to the genes of an individual. This randomness helps the algorithm to avoid being trapped in local optima by exploring new areas of the search space.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md67}{}\doxysubsubsection{\texorpdfstring{Guided\+Mutation}{Guided\+Mutation}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md67}
+{\bfseries{\doxylink{class_guided_mutation}{Guided\+Mutation}}} uses heuristic information to guide the mutation process. This approach increases the effectiveness of the mutations by focusing on areas more likely to improve the individual\textquotesingle{}s fitness.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md68}{}\doxysubsection{\texorpdfstring{5. Simulated Annealing}{5. Simulated Annealing}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md68}
+Simulated Annealing (SA) is a probabilistic technique used for approximating the global optimum of a given function. In the context of genetic algorithms, SA is utilized to accept or reject new individuals (offspring) based on a temperature-\/controlled probability. This helps in balancing the exploration and exploitation of the search space.
+
+Simulated Annealing helps the genetic algorithm escape local optima by occasionally accepting worse solutions with a certain probability. This probability decreases as the algorithm progresses, controlled by a parameter called "{}temperature."{}\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md69}{}\doxysubsubsection{\texorpdfstring{Key Components of Simulated Annealing in Genetic Algorithms}{Key Components of Simulated Annealing in Genetic Algorithms}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md69}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Acceptance Probability}}\+: Determines whether to accept a new solution based on the difference in fitness and the current temperature.
+\item {\bfseries{Temperature Schedule}}\+: Controls how the temperature decreases over time.
+\item {\bfseries{Integration with Genetic Algorithm}}\+: Used in conjunction with crossover and mutation to guide the search process.
+\end{DoxyEnumerate}\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md70}{}\doxysubsubsection{\texorpdfstring{Code Explanation}{Code Explanation}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md70}
+\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md71}{}\doxyparagraph{\texorpdfstring{Acceptance Probability}{Acceptance Probability}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md71}
+The acceptance probability is calculated using the formula\+: \$\$ P = exp(\textbackslash{}frac\{\textbackslash{}\+Delta E\}\{T\}) \$\$ where\+:
+
+
+\begin{DoxyItemize}
+\item Δ𝐸 is the change in fitness (new fitness -\/ current fitness).
+\item 𝑇 is the current temperature.
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Genetic\_Algorithm.cpp}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Calculate\ acceptance\ probability\ of\ Simulated\ Annealing\ functions}}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ \mbox{\hyperlink{_genetic___algorithm_8h_ae1ecff79583da4244ddf97b989270a61}{acceptanceProbability}}(\textcolor{keywordtype}{double}\ currentEnergy,\ \textcolor{keywordtype}{double}\ newEnergy,\ \textcolor{keywordtype}{double}\ temperature)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (newEnergy\ >\ currentEnergy)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1.0;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ std::exp((newEnergy\ -\/\ currentEnergy)\ /\ temperature);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+If the new solution is better (Δ𝐸\texorpdfstring{$>$}{>}0), the probability is greater than 1, and the new solution is accepted. If the new solution is worse (Δ𝐸\texorpdfstring{$<$}{<}0), it might still be accepted based on the calculated probability, allowing the algorithm to escape local optima.
+
+The temperature is gradually decreased according to a cooling schedule. This reduces the likelihood of accepting worse solutions as the algorithm progresses, focusing more on exploitation of the best solutions found so far. The cooling schedule can be a simple linear decrement or a more complex function, but in our implementation, a straightforward decrement is used\+: \$\$ T = T -\/ \textbackslash{}\+Delta T \$\$ where Δ𝑇 is a small decrement value.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md72}{}\doxyparagraph{\texorpdfstring{Simulated Annealing Process}{Simulated Annealing Process}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md72}
+During each iteration of the genetic algorithm, after generating offspring through crossover and mutation, the {\ttfamily apply\+Simulated\+Annealing} function is applied to decide whether to accept the offspring. This mechanism ensures that even suboptimal solutions can occasionally be accepted, promoting diversity and preventing premature convergence to suboptimal solutions.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Genetic\_Algorithm.cpp}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_genetic___algorithm_8h_a51da111672cefadb49ebda7a804df121}{applySimulatedAnnealing}}(\mbox{\hyperlink{struct_individual}{Individual}}\ \&offspring,\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&parent1,\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&parent2,\ \textcolor{keywordtype}{int}\ vector\_size,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ (\&func)(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}\ *,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{struct_circuit_parameters}{CircuitParameters}}),\ \textcolor{keywordtype}{bool}\ (\&validity)(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}\ *),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \&Temp,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}\ \&params,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_circuit_parameters}{CircuitParameters}}\ c\_params,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::mt19937\ \&generator)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Calculate\ the\ fitness\ (energy)\ of\ the\ offspring}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (validity(vector\_size,\ offspring.\mbox{\hyperlink{struct_individual_a0098d7666c0f8159056bc01d0fd1a367}{genes}}.data()))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ offspring.\mbox{\hyperlink{struct_individual_aa836a17c3f643f8b5d9032161c8a07ae}{fitness}}\ =\ func(vector\_size,\ offspring.\mbox{\hyperlink{struct_individual_a0098d7666c0f8159056bc01d0fd1a367}{genes}}.data(),\ c\_params);}
+\DoxyCodeLine{\ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ offspring.\mbox{\hyperlink{struct_individual_aa836a17c3f643f8b5d9032161c8a07ae}{fitness}}\ =\ \mbox{\hyperlink{_genetic___algorithm_8cpp_ae28bf2b9191de07c5bd587e0e8186405}{INVALID\_FITNESS}};\ \textcolor{comment}{//\ Give\ a\ negative\ fitness\ for\ invalid\ individuals}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Reject\ invalid\ offspring}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{double}\ parents\_fitness\ =\ (parent1.\mbox{\hyperlink{struct_individual_aa836a17c3f643f8b5d9032161c8a07ae}{fitness}}\ +\ parent2.\mbox{\hyperlink{struct_individual_aa836a17c3f643f8b5d9032161c8a07ae}{fitness}})\ /\ 2;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Simulated\ annealing\ acceptance\ criterion}}
+\DoxyCodeLine{\ \ \ \ std::uniform\_real\_distribution<double>\ distribution(0.0,\ 1.0);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Check\ the\ threshold}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (Temp\ >\ 1)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_genetic___algorithm_8h_ae1ecff79583da4244ddf97b989270a61}{acceptanceProbability}}(parents\_fitness,\ offspring.\mbox{\hyperlink{struct_individual_aa836a17c3f643f8b5d9032161c8a07ae}{fitness}},\ Temp)\ >\ distribution(generator))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ Accept\ the\ offspring}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cool\ down\ the\ temperature}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Temp\ -\/=\ params.\mbox{\hyperlink{struct_algorithm___parameters_ae9d9072256c994f4d2967bd6f595f052}{deltT}};}
+\DoxyCodeLine{\ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Keep\ the\ original\ parents}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (parent1.\mbox{\hyperlink{struct_individual_aa836a17c3f643f8b5d9032161c8a07ae}{fitness}}\ >\ parent2.\mbox{\hyperlink{struct_individual_aa836a17c3f643f8b5d9032161c8a07ae}{fitness}})\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ offspring\ =\ parent1;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ offspring\ =\ parent2;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Reject\ the\ offspring}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Explanation of the Code}}
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Fitness Calculation}}\+: The fitness (energy) of the offspring is calculated using the provided fitness function {\ttfamily func}. If the offspring is valid, its fitness is evaluated; otherwise, it is assigned a negative fitness value, and the offspring is rejected.
+\item {\bfseries{Parents\textquotesingle{} Fitness}}\+: The average fitness of the two parents is computed. This serves as the baseline for comparing the fitness of the offspring.
+\item {\bfseries{Acceptance Criterion}}\+: A uniform random number generator determines whether the offspring is accepted based on the calculated acceptance probability.
+\item {\bfseries{Temperature Check and Cooling}}\+: The temperature is checked to see if it is above a certain threshold. If so, the acceptance probability is compared with a random number to decide if the offspring should be accepted. The temperature is then decreased according to the cooling schedule. If the temperature is too low, the offspring is not accepted unless it is better than the worse parent.
+\item {\bfseries{Updating Offspring}}\+: If the offspring is accepted, it becomes part of the population. If not, the better of the two parents is retained.
+\end{DoxyItemize}\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md73}{}\doxyparagraph{\texorpdfstring{Integration with the Genetic Algorithm}{Integration with the Genetic Algorithm}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md73}
+In the main loop of the genetic algorithm, simulated annealing is applied after the crossover and mutation steps. This ensures that the offspring are accepted based on the temperature-\/controlled probability.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Genetic\_Algorithm.cpp}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Main\ function\ to\ optimize\ the\ solution\ using\ a\ genetic\ algorithm}}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{_genetic___algorithm_8h_ae4b47db199826840b2c87e06e466dc12}{optimize}}(\textcolor{keywordtype}{int}\ vector\_size,\ \textcolor{keywordtype}{int}\ *vector,\ \textcolor{keywordtype}{double}\ (\&func)(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}\ *,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{struct_circuit_parameters}{CircuitParameters}}),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ (\&validity)(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}\ *),\ \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}\ params,\ \mbox{\hyperlink{struct_circuit_parameters}{CircuitParameters}}\ c\_params)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Parameters\ for\ Simulated\ Annealing}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ Temp\ =\ params.\mbox{\hyperlink{struct_algorithm___parameters_a7fd17e7c04be389d37263929555753a7}{initialTemp}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ offspring1\ with\ Simulated\ Annealing\ Acceptance}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (localNewPopulation.size()\ <\ params.\mbox{\hyperlink{struct_algorithm___parameters_a6c1e71841f823da64251aeaa32765cdf}{populationSize}})\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ crossover-\/>setParents(offspring2,\ selectedParents[parent1\_index],\ selectedParents[parent2\_index]);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ crossover-\/>apply(generators[omp\_get\_thread\_num()]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mutation-\/>setIndividual(offspring2);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mutation-\/>apply(generators[omp\_get\_thread\_num()]);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (!\mbox{\hyperlink{_genetic___algorithm_8h_a51da111672cefadb49ebda7a804df121}{applySimulatedAnnealing}}(offspring2,\ selectedParents[parent1\_index],\ selectedParents[parent2\_index],\ vector\_size,\ func,\ validity,\ Temp,\ params,\ c\_params,\ generators[omp\_get\_thread\_num()]));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ localNewPopulation.push\_back(offspring2);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+In summary, simulated annealing is an essential component of the genetic algorithm in this project, allowing the algorithm to balance between exploration and exploitation by accepting new individuals based on a temperature-\/controlled probability. This helps the algorithm to escape local optima and find better solutions over time.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md74}{}\doxysubsection{\texorpdfstring{6. Progress Tracking with tqdm}{6. Progress Tracking with tqdm}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md74}
+In our genetic algorithm implementation, we use the self-\/implemented {\ttfamily \doxylink{tqdm_8hpp}{tqdm.\+hpp}} to provide real-\/time progress tracking and visualization of the optimization process. This helps developers and users monitor the progress of the algorithm, gain insights into the computational workload, and estimate the time remaining for completion.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md75}{}\doxysubsubsection{\texorpdfstring{Integration of tqdm in Genetic Algorithm}{Integration of tqdm in Genetic Algorithm}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md75}
+Tqdm is integrated into the main loop of the genetic algorithm to track and display the progress of each generation. This provides a dynamic and user-\/friendly way to observe the algorithm\textquotesingle{}s performance.
+
+
+\begin{DoxyEnumerate}
+\item \#\#\#\#\# Initialization of tqdm
+\end{DoxyEnumerate}
+
+We initialize tqdm to set up the progress bar before entering the main loop of the genetic algorithm. The progress bar is configured to track the number of generations.
+
+
+\begin{DoxyEnumerate}
+\item \#\#\#\#\# Progress Update
+\end{DoxyEnumerate}
+
+Within the main loop, tqdm updates the progress bar at each iteration, showing the current generation number and other relevant metrics, such as the maximum fitness of the population.
+
+Here\textquotesingle{}s the code snippet demonstrating the integration of tqdm\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tqdm_8hpp}{tqdm.hpp}}"{}}\ \ \textcolor{comment}{//\ Include\ the\ tqdm\ library}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Main\ function\ to\ optimize\ the\ solution\ using\ a\ genetic\ algorithm}}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{_genetic___algorithm_8h_ae4b47db199826840b2c87e06e466dc12}{optimize}}(\textcolor{keywordtype}{int}\ vector\_size,\ \textcolor{keywordtype}{int}\ *vector,\ \textcolor{keywordtype}{double}\ (\&func)(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}\ *,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{struct_circuit_parameters}{CircuitParameters}}),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ (\&validity)(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}\ *),\ \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}\ params,\ \mbox{\hyperlink{struct_circuit_parameters}{CircuitParameters}}\ c\_params)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ ...\ \ \ \ }}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initialize\ tqdm\ for\ progress\ tracking}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{auto}\ iter\ =\ \mbox{\hyperlink{namespacetqdm_ae79090218343178f452acf2c771a03e2}{tqdm::trange}}(params.\mbox{\hyperlink{struct_algorithm___parameters_aad2e23bc029a6ef62f72d514a4587b4f}{maxGenerations}});}
+\DoxyCodeLine{\ \ \ \ iter.set\_prefix(\textcolor{stringliteral}{"{}Iterating\ "{}});\ \ \textcolor{comment}{//\ Set\ the\ prefix\ for\ the\ progress\ bar}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ generation:\ iter)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ...\ \ \ \ \ \ }}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ iter\ <<\ \textcolor{stringliteral}{"{}Max\ Fitness:\ "{}}\ <<\ maxFitness;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ...\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\ \ \ \ \}\ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{\ \}}
+
+\end{DoxyCode}
+\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md76}{}\doxysubsubsection{\texorpdfstring{Detailed Explanation}{Detailed Explanation}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md76}
+
+\begin{DoxyItemize}
+\item {\bfseries{Initialization}}\+: The {\ttfamily tqdm} progress bar is initialized using {\ttfamily \doxylink{namespacetqdm_ae79090218343178f452acf2c771a03e2}{tqdm\+::trange}} with the maximum number of generations as the parameter. The prefix "{}\+Iterating "{} is set to make it clear what the progress bar represents.
+\item {\bfseries{Progress Update}}\+: Inside the main loop of the genetic algorithm, the progress bar is updated at each generation. The current maximum fitness value is also displayed, providing a real-\/time metric for the algorithm\textquotesingle{}s performance.
+\item {\bfseries{Benefits}}\+: This integration provides the following benefits\+:
+\begin{DoxyItemize}
+\item {\bfseries{Real-\/time Monitoring}}\+: Users can monitor the progress and performance of the algorithm in real-\/time.
+\item {\bfseries{User-\/\+Friendly Visualization}}\+: The progress bar offers a user-\/friendly way to track the computational process.
+\item {\bfseries{Performance Insights}}\+: Displaying metrics like maximum fitness helps in understanding the algorithm\textquotesingle{}s behavior and performance trends.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+The use of {\ttfamily tqdm} significantly enhances the usability and transparency of the genetic algorithm, making it easier to track and understand the optimization process.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md77}{}\doxysubsection{\texorpdfstring{7. Optimization with Open\+MP}{7. Optimization with Open\+MP}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md77}
+In addition to tqdm, the genetic algorithm implementation leverages Open\+MP for parallel processing. Open\+MP is used to parallelize the evaluation of the population\textquotesingle{}s fitness and other computationally intensive tasks, significantly improving the algorithm\textquotesingle{}s performance on multi-\/core systems.\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md78}{}\doxysubsubsection{\texorpdfstring{Integration of Open\+MP in Genetic Algorithm}{Integration of Open\+MP in Genetic Algorithm}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md78}
+Open\+MP is integrated into the main loop of the genetic algorithm to parallelize the evaluation of fitness and other operations. This provides a substantial performance boost by utilizing multiple CPU cores.
+
+Here\textquotesingle{}s the code snippet demonstrating the integration of Open\+MP\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <omp.h>}\ \ \textcolor{comment}{//\ Include\ the\ OpenMP\ library}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Main\ function\ to\ optimize\ the\ solution\ using\ a\ genetic\ algorithm}}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{_genetic___algorithm_8h_ae4b47db199826840b2c87e06e466dc12}{optimize}}(\textcolor{keywordtype}{int}\ vector\_size,\ \textcolor{keywordtype}{int}\ *vector,\ \textcolor{keywordtype}{double}\ (\&func)(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}\ *,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{struct_circuit_parameters}{CircuitParameters}}),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ (\&validity)(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}\ *),\ \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}\ params,\ \mbox{\hyperlink{struct_circuit_parameters}{CircuitParameters}}\ c\_params)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Initialize\ population\ in\ parallel}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \#pragma\ omp\ parallel\ for}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ params.\mbox{\hyperlink{struct_algorithm___parameters_a6c1e71841f823da64251aeaa32765cdf}{populationSize}};\ i++)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ ...\ Population\ initialization\ code\ ...}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Main\ loop\ for\ generations}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{auto}\ iter\ =\ \mbox{\hyperlink{namespacetqdm_ae79090218343178f452acf2c771a03e2}{tqdm::trange}}(params.\mbox{\hyperlink{struct_algorithm___parameters_aad2e23bc029a6ef62f72d514a4587b4f}{maxGenerations}});}
+\DoxyCodeLine{\ \ \ \ iter.set\_prefix(\textcolor{stringliteral}{"{}Iterating\ "{}});\ \ \textcolor{comment}{//\ Set\ the\ prefix\ for\ the\ progress\ bar}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ generation:\ iter)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Evaluate\ fitness\ in\ parallel}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ omp\ parallel\ for}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ population.size();\ i++)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ population[i].fitness\ =\ func(vector\_size,\ population[i].genes.data(),\ c\_params);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Selection,\ crossover,\ and\ mutation\ operations}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ omp\ parallel\ for}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ params.\mbox{\hyperlink{struct_algorithm___parameters_a6c1e71841f823da64251aeaa32765cdf}{populationSize}};\ i++)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ...\ Genetic\ operations\ code\ ...}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Update\ progress\ bar}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ iter\ <<\ \textcolor{stringliteral}{"{}Max\ Fitness:\ "{}}\ <<\ maxFitness;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md79}{}\doxysubsubsection{\texorpdfstring{Detailed Explanation}{Detailed Explanation}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md79}
+
+\begin{DoxyItemize}
+\item {\bfseries{Parallel Initialization}}\+: The population initialization is parallelized using {\ttfamily \#pragma omp parallel for}, allowing multiple individuals to be initialized simultaneously.
+\item {\bfseries{Parallel Fitness Evaluation}}\+: The evaluation of the population\textquotesingle{}s fitness is parallelized, significantly speeding up the process, especially for large populations.
+\item {\bfseries{Parallel Genetic Operations}}\+: Selection, crossover, and mutation operations are also parallelized to maximize performance.
+\end{DoxyItemize}\hypertarget{md_docs_2_genetic_algorithm___design___document_autotoc_md80}{}\doxysubsubsection{\texorpdfstring{Benefits of Using Open\+MP}{Benefits of Using Open\+MP}}\label{md_docs_2_genetic_algorithm___design___document_autotoc_md80}
+
+\begin{DoxyItemize}
+\item {\bfseries{Improved Performance}}\+: Leveraging multiple CPU cores significantly reduces the time required for fitness evaluation and genetic operations.
+\item {\bfseries{Scalability}}\+: The algorithm can handle larger populations and more generations within a reasonable time frame.
+\item {\bfseries{Efficiency}}\+: Parallel processing makes the genetic algorithm more efficient, enabling faster convergence to optimal solutions.
+\end{DoxyItemize}
+
+The integration of Open\+MP with tqdm provides a powerful combination of performance and usability, making the genetic algorithm both fast and user-\/friendly. 

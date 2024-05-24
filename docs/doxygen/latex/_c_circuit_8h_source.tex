@@ -1,0 +1,54 @@
+\doxysection{CCircuit.\+h}
+\hypertarget{_c_circuit_8h_source}{}\label{_c_circuit_8h_source}\index{include/circuit/CCircuit.h@{include/circuit/CCircuit.h}}
+\mbox{\hyperlink{_c_circuit_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ CIRCUIT\_MODELLING\_CCIRCUIT\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ CIRCUIT\_MODELLING\_CCIRCUIT\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_c_unit_8h}{CUnit.h}}"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_circuit}{Circuit}}\ \{}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ Concentrates}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_circuit_a35689ec0d37b17089f313a23e42f1f16}{concentrateG}};\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_circuit_a4d468e4f2504ca2f3b41be569c081519}{concentrateW}};\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ Tailings}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_circuit_ae2cfb57fffc0cb4d067653127ed8225c}{tailingsG}};\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_circuit_ae5baaf8e7a9260787d1a6da847b47324}{tailingsW}};\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ Feed\ rates}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_circuit_a8975017bf8d76024c4982506b7a6a077}{wasteFeed}};\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_circuit_a8b715ed1f6e7e9c69ddeec71540915be}{gerardiumFeed}};\ }
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_circuit_ae9d62661b452c4d4ef5d6e75f0278cbf}{Circuit}}(\textcolor{keywordtype}{int}\ num\_units);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_circuit_a1134e16f26a878377f4d502bff111b9e}{\string~Circuit}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_circuit_a9272fae1173b964dc7441ab126500d61}{Check\_Validity}}(\textcolor{keywordtype}{int}\ vectorSize,\ \textcolor{keywordtype}{int}\ *circuitVector);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circuit_ab04889a7b650a65f6b075f6e394f16e2}{print\_info}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circuit_ab8552736bd7aa4ade158bf79014c2b18}{connected}}(\textcolor{keywordtype}{int}\ *circuitVector);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circuit_a608d78c297a7e9eb0f39f9c7a8be7169}{initialize\_feed\_rates}}(\textcolor{keywordtype}{double}\ gerardium\_\ =\ 10,\ \textcolor{keywordtype}{double}\ waste\_\ =\ 90);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circuit_af15811c915105eef1a50bdf0469cf9db}{mark\_units}}(\textcolor{keywordtype}{int}\ unitNum,\ std::vector<CUnit\ *>\ \&\mbox{\hyperlink{class_circuit_a75a7eb6017da83e557dcad7b80db370c}{units}},\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_circuit_a6ba910aa10c95c009491b25ff4435bb1}{check}}[3]);}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_circuit_abf23eff70d399e2866441bcb89c6c957}{check\_convergence}}(\textcolor{keywordtype}{double}\ threshold);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circuit_a0d347a4af7957954a800d356f8005458}{calculate\_flows}}();}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circuit_a7e8f59d3f565f6975550e53bc8ec756e}{reset\_new\_feeds}}();}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ std::vector<CUnit\ *>\ \mbox{\hyperlink{class_circuit_a75a7eb6017da83e557dcad7b80db370c}{units}};\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_circuit_a8dd5e7eb784056fe964b5a3a5a03c838}{numUnits}};\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_circuit_a6ba910aa10c95c009491b25ff4435bb1}{check}}[3];\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_circuit_a14c1dfb174010652eba103cdfea7f2bb}{feed}};\ }
+\DoxyCodeLine{00142\ \};}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CIRCUIT\_MODELLING\_CCIRCUIT\_H}}
+
+\end{DoxyCode}

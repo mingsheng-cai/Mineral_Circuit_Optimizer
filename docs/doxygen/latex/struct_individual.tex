@@ -1,0 +1,52 @@
+\doxysection{Individual Struct Reference}
+\hypertarget{struct_individual}{}\label{struct_individual}\index{Individual@{Individual}}
+
+
+Represents an individual in a genetic algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Individual.\+h$>$}
+
+
+
+Collaboration diagram for Individual\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{struct_individual__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{struct_individual_a0098d7666c0f8159056bc01d0fd1a367}{genes}}
+\item 
+double \mbox{\hyperlink{struct_individual_aa836a17c3f643f8b5d9032161c8a07ae}{fitness}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an individual in a genetic algorithm. 
+
+The \doxylink{struct_individual}{Individual} structure contains a vector of genes that represent the circuit configuration and a fitness value that indicates the quality or performance of the circuit configuration. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{struct_individual_aa836a17c3f643f8b5d9032161c8a07ae}\label{struct_individual_aa836a17c3f643f8b5d9032161c8a07ae} 
+\index{Individual@{Individual}!fitness@{fitness}}
+\index{fitness@{fitness}!Individual@{Individual}}
+\doxysubsubsection{\texorpdfstring{fitness}{fitness}}
+{\footnotesize\ttfamily double Individual\+::fitness}
+
+Stores the fitness of the circuit configuration as a double \Hypertarget{struct_individual_a0098d7666c0f8159056bc01d0fd1a367}\label{struct_individual_a0098d7666c0f8159056bc01d0fd1a367} 
+\index{Individual@{Individual}!genes@{genes}}
+\index{genes@{genes}!Individual@{Individual}}
+\doxysubsubsection{\texorpdfstring{genes}{genes}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Individual\+::genes}
+
+Stores the circuit configuration as a vector of integers 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/utils/\mbox{\hyperlink{_individual_8h}{Individual.\+h}}\end{DoxyCompactItemize}

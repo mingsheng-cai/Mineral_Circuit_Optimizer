@@ -1,0 +1,175 @@
+\doxysection{tqdm\+::int\+\_\+iterator\texorpdfstring{$<$}{<} Int\+Type \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classtqdm_1_1int__iterator}{}\label{classtqdm_1_1int__iterator}\index{tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}}
+
+
+A random access iterator for integers.  
+
+
+
+
+{\ttfamily \#include $<$tqdm.\+hpp$>$}
+
+
+
+Collaboration diagram for tqdm\+::int\+\_\+iterator\texorpdfstring{$<$}{<} Int\+Type \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{classtqdm_1_1int__iterator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtqdm_1_1int__iterator_ad36fed7ac310722b5a8c275777f8812c}{iterator\+\_\+category}} = std\+::random\+\_\+access\+\_\+iterator\+\_\+tag
+\item 
+using \mbox{\hyperlink{classtqdm_1_1int__iterator_a6720163791bd0eaf96e62028c33197cb}{value\+\_\+type}} = Int\+Type
+\item 
+using \mbox{\hyperlink{classtqdm_1_1int__iterator_a7a1618e89a65fac4b883ecb0a2402d6a}{difference\+\_\+type}} = Int\+Type
+\item 
+using \mbox{\hyperlink{classtqdm_1_1int__iterator_a6f4aa8cf7e6fc4bf46c93282ed83f512}{pointer}} = Int\+Type \texorpdfstring{$\ast$}{*}
+\item 
+using \mbox{\hyperlink{classtqdm_1_1int__iterator_a1454037ff748d094a338381433c8e70c}{reference}} = Int\+Type \&
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtqdm_1_1int__iterator_ad11b8001e44618342d56f1a6d60d9f5a}{int\+\_\+iterator}} (Int\+Type val)
+\item 
+Int\+Type \& \mbox{\hyperlink{classtqdm_1_1int__iterator_a39ff150c25d6df9c0324c2e0938104f2}{operator\texorpdfstring{$\ast$}{*}}} ()
+\item 
+\mbox{\hyperlink{classtqdm_1_1int__iterator}{int\+\_\+iterator}} \& \mbox{\hyperlink{classtqdm_1_1int__iterator_a9657a54045ce3947fd876e645e330c09}{operator++}} ()
+\item 
+\mbox{\hyperlink{classtqdm_1_1int__iterator}{int\+\_\+iterator}} \& \mbox{\hyperlink{classtqdm_1_1int__iterator_ab51fe210d9709397a7f72703d1db4bf8}{operator-\/-\/}} ()
+\item 
+\mbox{\hyperlink{classtqdm_1_1int__iterator}{int\+\_\+iterator}} \& \mbox{\hyperlink{classtqdm_1_1int__iterator_a841409063b4f944f471168c5c08baaf3}{operator+=}} (\mbox{\hyperlink{classtqdm_1_1int__iterator_a7a1618e89a65fac4b883ecb0a2402d6a}{difference\+\_\+type}} d)
+\item 
+\mbox{\hyperlink{classtqdm_1_1int__iterator_a7a1618e89a65fac4b883ecb0a2402d6a}{difference\+\_\+type}} \mbox{\hyperlink{classtqdm_1_1int__iterator_a3ec81edc696373805cc167cd3c808f24}{operator-\/}} (const \mbox{\hyperlink{classtqdm_1_1int__iterator}{int\+\_\+iterator}} \&other) const
+\item 
+bool \mbox{\hyperlink{classtqdm_1_1int__iterator_a31e213cca0868263bad563acb2d13593}{operator!=}} (const \mbox{\hyperlink{classtqdm_1_1int__iterator}{int\+\_\+iterator}} \&other) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Int\+Type \mbox{\hyperlink{classtqdm_1_1int__iterator_a93b03d20528d8da0924a3fdbc982c16f}{value\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Int\+Type$>$\newline
+class tqdm\+::int\+\_\+iterator$<$ Int\+Type $>$}
+A random access iterator for integers. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Int\+Type} & The type of the integer. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classtqdm_1_1int__iterator_a7a1618e89a65fac4b883ecb0a2402d6a}\label{classtqdm_1_1int__iterator_a7a1618e89a65fac4b883ecb0a2402d6a} 
+\index{tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}!difference\_type@{difference\_type}}
+\index{difference\_type@{difference\_type}!tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{difference\_type}{difference\_type}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+using \mbox{\hyperlink{classtqdm_1_1int__iterator}{tqdm\+::int\+\_\+iterator}}$<$ Int\+Type $>$\+::difference\+\_\+type = Int\+Type}
+
+\Hypertarget{classtqdm_1_1int__iterator_ad36fed7ac310722b5a8c275777f8812c}\label{classtqdm_1_1int__iterator_ad36fed7ac310722b5a8c275777f8812c} 
+\index{tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}!iterator\_category@{iterator\_category}}
+\index{iterator\_category@{iterator\_category}!tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{iterator\_category}{iterator\_category}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+using \mbox{\hyperlink{classtqdm_1_1int__iterator}{tqdm\+::int\+\_\+iterator}}$<$ Int\+Type $>$\+::iterator\+\_\+category = std\+::random\+\_\+access\+\_\+iterator\+\_\+tag}
+
+\Hypertarget{classtqdm_1_1int__iterator_a6f4aa8cf7e6fc4bf46c93282ed83f512}\label{classtqdm_1_1int__iterator_a6f4aa8cf7e6fc4bf46c93282ed83f512} 
+\index{tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}!pointer@{pointer}}
+\index{pointer@{pointer}!tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+using \mbox{\hyperlink{classtqdm_1_1int__iterator}{tqdm\+::int\+\_\+iterator}}$<$ Int\+Type $>$\+::pointer = Int\+Type \texorpdfstring{$\ast$}{*}}
+
+\Hypertarget{classtqdm_1_1int__iterator_a1454037ff748d094a338381433c8e70c}\label{classtqdm_1_1int__iterator_a1454037ff748d094a338381433c8e70c} 
+\index{tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}!reference@{reference}}
+\index{reference@{reference}!tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+using \mbox{\hyperlink{classtqdm_1_1int__iterator}{tqdm\+::int\+\_\+iterator}}$<$ Int\+Type $>$\+::reference = Int\+Type \&}
+
+\Hypertarget{classtqdm_1_1int__iterator_a6720163791bd0eaf96e62028c33197cb}\label{classtqdm_1_1int__iterator_a6720163791bd0eaf96e62028c33197cb} 
+\index{tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+using \mbox{\hyperlink{classtqdm_1_1int__iterator}{tqdm\+::int\+\_\+iterator}}$<$ Int\+Type $>$\+::value\+\_\+type = Int\+Type}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtqdm_1_1int__iterator_ad11b8001e44618342d56f1a6d60d9f5a}\label{classtqdm_1_1int__iterator_ad11b8001e44618342d56f1a6d60d9f5a} 
+\index{tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}!int\_iterator@{int\_iterator}}
+\index{int\_iterator@{int\_iterator}!tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{int\_iterator()}{int\_iterator()}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+\mbox{\hyperlink{classtqdm_1_1int__iterator}{tqdm\+::int\+\_\+iterator}}$<$ Int\+Type $>$\+::int\+\_\+iterator (\begin{DoxyParamCaption}\item[{Int\+Type}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtqdm_1_1int__iterator_a31e213cca0868263bad563acb2d13593}\label{classtqdm_1_1int__iterator_a31e213cca0868263bad563acb2d13593} 
+\index{tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+bool \mbox{\hyperlink{classtqdm_1_1int__iterator}{tqdm\+::int\+\_\+iterator}}$<$ Int\+Type $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtqdm_1_1int__iterator}{int\+\_\+iterator}}$<$ Int\+Type $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classtqdm_1_1int__iterator_a39ff150c25d6df9c0324c2e0938104f2}\label{classtqdm_1_1int__iterator_a39ff150c25d6df9c0324c2e0938104f2} 
+\index{tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+Int\+Type \& \mbox{\hyperlink{classtqdm_1_1int__iterator}{tqdm\+::int\+\_\+iterator}}$<$ Int\+Type $>$\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classtqdm_1_1int__iterator_a9657a54045ce3947fd876e645e330c09}\label{classtqdm_1_1int__iterator_a9657a54045ce3947fd876e645e330c09} 
+\index{tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+\mbox{\hyperlink{classtqdm_1_1int__iterator}{int\+\_\+iterator}} \& \mbox{\hyperlink{classtqdm_1_1int__iterator}{tqdm\+::int\+\_\+iterator}}$<$ Int\+Type $>$\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classtqdm_1_1int__iterator_a841409063b4f944f471168c5c08baaf3}\label{classtqdm_1_1int__iterator_a841409063b4f944f471168c5c08baaf3} 
+\index{tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+\mbox{\hyperlink{classtqdm_1_1int__iterator}{int\+\_\+iterator}} \& \mbox{\hyperlink{classtqdm_1_1int__iterator}{tqdm\+::int\+\_\+iterator}}$<$ Int\+Type $>$\+::operator+= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtqdm_1_1int__iterator_a7a1618e89a65fac4b883ecb0a2402d6a}{difference\+\_\+type}}}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classtqdm_1_1int__iterator_a3ec81edc696373805cc167cd3c808f24}\label{classtqdm_1_1int__iterator_a3ec81edc696373805cc167cd3c808f24} 
+\index{tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+\mbox{\hyperlink{classtqdm_1_1int__iterator_a7a1618e89a65fac4b883ecb0a2402d6a}{difference\+\_\+type}} \mbox{\hyperlink{classtqdm_1_1int__iterator}{tqdm\+::int\+\_\+iterator}}$<$ Int\+Type $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtqdm_1_1int__iterator}{int\+\_\+iterator}}$<$ Int\+Type $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classtqdm_1_1int__iterator_ab51fe210d9709397a7f72703d1db4bf8}\label{classtqdm_1_1int__iterator_ab51fe210d9709397a7f72703d1db4bf8} 
+\index{tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+\mbox{\hyperlink{classtqdm_1_1int__iterator}{int\+\_\+iterator}} \& \mbox{\hyperlink{classtqdm_1_1int__iterator}{tqdm\+::int\+\_\+iterator}}$<$ Int\+Type $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classtqdm_1_1int__iterator_a93b03d20528d8da0924a3fdbc982c16f}\label{classtqdm_1_1int__iterator_a93b03d20528d8da0924a3fdbc982c16f} 
+\index{tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}!value\_@{value\_}}
+\index{value\_@{value\_}!tqdm::int\_iterator$<$ IntType $>$@{tqdm::int\_iterator$<$ IntType $>$}}
+\doxysubsubsection{\texorpdfstring{value\_}{value\_}}
+{\footnotesize\ttfamily template$<$class Int\+Type $>$ \\
+Int\+Type \mbox{\hyperlink{classtqdm_1_1int__iterator}{tqdm\+::int\+\_\+iterator}}$<$ Int\+Type $>$\+::value\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/utils/\mbox{\hyperlink{tqdm_8hpp}{tqdm.\+hpp}}\end{DoxyCompactItemize}

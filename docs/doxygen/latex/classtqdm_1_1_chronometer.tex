@@ -1,0 +1,136 @@
+\doxysection{tqdm\+::Chronometer Class Reference}
+\hypertarget{classtqdm_1_1_chronometer}{}\label{classtqdm_1_1_chronometer}\index{tqdm::Chronometer@{tqdm::Chronometer}}
+
+
+A simple chronometer to measure elapsed time.  
+
+
+
+
+{\ttfamily \#include $<$tqdm.\+hpp$>$}
+
+
+
+Collaboration diagram for tqdm\+::Chronometer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classtqdm_1_1_chronometer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtqdm_1_1_chronometer_a17c4a49e410477e23d9fb2a5847f3760}{Chronometer}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classtqdm_1_1_chronometer}{Chronometer} object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtqdm_1_1_chronometer_a1f68eafb14871440564c4d014e9c90aa}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the chronometer and return the elapsed time since the last reset. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtqdm_1_1_chronometer_a3cd84955c8098f6f3f6cd72fb433c66d}{peek}} () const
+\begin{DoxyCompactList}\small\item\em Get the elapsed time without resetting the chronometer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetqdm_af3fe83efa1c7be0cf85d9e873686192d}{time\+\_\+point\+\_\+t}} \mbox{\hyperlink{classtqdm_1_1_chronometer_a747632a4397e6b5dd85816dc813cbb4a}{get\+\_\+start}} () const
+\begin{DoxyCompactList}\small\item\em Get the starting time point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacetqdm_af3fe83efa1c7be0cf85d9e873686192d}{time\+\_\+point\+\_\+t}} \mbox{\hyperlink{classtqdm_1_1_chronometer_a08238427bca7e4ed33894abb363674db}{start\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A simple chronometer to measure elapsed time. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtqdm_1_1_chronometer_a17c4a49e410477e23d9fb2a5847f3760}\label{classtqdm_1_1_chronometer_a17c4a49e410477e23d9fb2a5847f3760} 
+\index{tqdm::Chronometer@{tqdm::Chronometer}!Chronometer@{Chronometer}}
+\index{Chronometer@{Chronometer}!tqdm::Chronometer@{tqdm::Chronometer}}
+\doxysubsubsection{\texorpdfstring{Chronometer()}{Chronometer()}}
+{\footnotesize\ttfamily tqdm\+::\+Chronometer\+::\+Chronometer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \doxylink{classtqdm_1_1_chronometer}{Chronometer} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtqdm_1_1_chronometer_a747632a4397e6b5dd85816dc813cbb4a}\label{classtqdm_1_1_chronometer_a747632a4397e6b5dd85816dc813cbb4a} 
+\index{tqdm::Chronometer@{tqdm::Chronometer}!get\_start@{get\_start}}
+\index{get\_start@{get\_start}!tqdm::Chronometer@{tqdm::Chronometer}}
+\doxysubsubsection{\texorpdfstring{get\_start()}{get\_start()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetqdm_af3fe83efa1c7be0cf85d9e873686192d}{time\+\_\+point\+\_\+t}} tqdm\+::\+Chronometer\+::get\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the starting time point. 
+
+\begin{DoxyReturn}{Returns}
+The starting time point. 
+\end{DoxyReturn}
+\Hypertarget{classtqdm_1_1_chronometer_a3cd84955c8098f6f3f6cd72fb433c66d}\label{classtqdm_1_1_chronometer_a3cd84955c8098f6f3f6cd72fb433c66d} 
+\index{tqdm::Chronometer@{tqdm::Chronometer}!peek@{peek}}
+\index{peek@{peek}!tqdm::Chronometer@{tqdm::Chronometer}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily double tqdm\+::\+Chronometer\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the elapsed time without resetting the chronometer. 
+
+\begin{DoxyReturn}{Returns}
+The elapsed time in seconds. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1_chronometer_a3cd84955c8098f6f3f6cd72fb433c66d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1_chronometer_a3cd84955c8098f6f3f6cd72fb433c66d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1_chronometer_a1f68eafb14871440564c4d014e9c90aa}\label{classtqdm_1_1_chronometer_a1f68eafb14871440564c4d014e9c90aa} 
+\index{tqdm::Chronometer@{tqdm::Chronometer}!reset@{reset}}
+\index{reset@{reset}!tqdm::Chronometer@{tqdm::Chronometer}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily double tqdm\+::\+Chronometer\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reset the chronometer and return the elapsed time since the last reset. 
+
+\begin{DoxyReturn}{Returns}
+The elapsed time in seconds. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{classtqdm_1_1_chronometer_a1f68eafb14871440564c4d014e9c90aa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1_chronometer_a1f68eafb14871440564c4d014e9c90aa_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classtqdm_1_1_chronometer_a08238427bca7e4ed33894abb363674db}\label{classtqdm_1_1_chronometer_a08238427bca7e4ed33894abb363674db} 
+\index{tqdm::Chronometer@{tqdm::Chronometer}!start\_@{start\_}}
+\index{start\_@{start\_}!tqdm::Chronometer@{tqdm::Chronometer}}
+\doxysubsubsection{\texorpdfstring{start\_}{start\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetqdm_af3fe83efa1c7be0cf85d9e873686192d}{time\+\_\+point\+\_\+t}} tqdm\+::\+Chronometer\+::start\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/utils/\mbox{\hyperlink{tqdm_8hpp}{tqdm.\+hpp}}\end{DoxyCompactItemize}

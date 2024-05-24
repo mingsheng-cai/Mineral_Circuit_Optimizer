@@ -1,0 +1,132 @@
+\doxysection{tqdm\+::timing\+\_\+iterator Class Reference}
+\hypertarget{classtqdm_1_1timing__iterator}{}\label{classtqdm_1_1timing__iterator}\index{tqdm::timing\_iterator@{tqdm::timing\_iterator}}
+
+
+A forward iterator that returns the elapsed time.  
+
+
+
+
+{\ttfamily \#include $<$tqdm.\+hpp$>$}
+
+
+
+Collaboration diagram for tqdm\+::timing\+\_\+iterator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classtqdm_1_1timing__iterator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtqdm_1_1timing__iterator_a9778de78a1157710a29a479635f4ace5}{iterator\+\_\+category}} = std\+::forward\+\_\+iterator\+\_\+tag
+\item 
+using \mbox{\hyperlink{classtqdm_1_1timing__iterator_a56b21243d0ebe497432e245896b28782}{value\+\_\+type}} = double
+\item 
+using \mbox{\hyperlink{classtqdm_1_1timing__iterator_af55329819e0012232aecb7f76fb19e7a}{difference\+\_\+type}} = double
+\item 
+using \mbox{\hyperlink{classtqdm_1_1timing__iterator_abe988fb8637a0a407029494904bd0fde}{pointer}} = double \texorpdfstring{$\ast$}{*}
+\item 
+using \mbox{\hyperlink{classtqdm_1_1timing__iterator_ae089cc42349367ac50a95910b4040030}{reference}} = double \&
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classtqdm_1_1timing__iterator_a5488621ccda437ec204fc56c5ea722df}{operator\texorpdfstring{$\ast$}{*}}} () const
+\item 
+\mbox{\hyperlink{classtqdm_1_1timing__iterator}{timing\+\_\+iterator}} \& \mbox{\hyperlink{classtqdm_1_1timing__iterator_a46be9f70b3ab01c2d224e406f3409c20}{operator++}} ()
+\item 
+bool \mbox{\hyperlink{classtqdm_1_1timing__iterator_a1ffe57342898139117a4f36fba6a4617}{operator!=}} (const \mbox{\hyperlink{classtqdm_1_1timing__iterator__end__sentinel}{timing\+\_\+iterator\+\_\+end\+\_\+sentinel}} \&other) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtqdm_1_1_chronometer}{tqdm\+::\+Chronometer}} \mbox{\hyperlink{classtqdm_1_1timing__iterator_aebca20415ff022d462260b5b19a1fd1b}{chrono\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A forward iterator that returns the elapsed time. 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classtqdm_1_1timing__iterator_af55329819e0012232aecb7f76fb19e7a}\label{classtqdm_1_1timing__iterator_af55329819e0012232aecb7f76fb19e7a} 
+\index{tqdm::timing\_iterator@{tqdm::timing\_iterator}!difference\_type@{difference\_type}}
+\index{difference\_type@{difference\_type}!tqdm::timing\_iterator@{tqdm::timing\_iterator}}
+\doxysubsubsection{\texorpdfstring{difference\_type}{difference\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtqdm_1_1timing__iterator_af55329819e0012232aecb7f76fb19e7a}{tqdm\+::timing\+\_\+iterator\+::difference\+\_\+type}} = double}
+
+\Hypertarget{classtqdm_1_1timing__iterator_a9778de78a1157710a29a479635f4ace5}\label{classtqdm_1_1timing__iterator_a9778de78a1157710a29a479635f4ace5} 
+\index{tqdm::timing\_iterator@{tqdm::timing\_iterator}!iterator\_category@{iterator\_category}}
+\index{iterator\_category@{iterator\_category}!tqdm::timing\_iterator@{tqdm::timing\_iterator}}
+\doxysubsubsection{\texorpdfstring{iterator\_category}{iterator\_category}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtqdm_1_1timing__iterator_a9778de78a1157710a29a479635f4ace5}{tqdm\+::timing\+\_\+iterator\+::iterator\+\_\+category}} = std\+::forward\+\_\+iterator\+\_\+tag}
+
+\Hypertarget{classtqdm_1_1timing__iterator_abe988fb8637a0a407029494904bd0fde}\label{classtqdm_1_1timing__iterator_abe988fb8637a0a407029494904bd0fde} 
+\index{tqdm::timing\_iterator@{tqdm::timing\_iterator}!pointer@{pointer}}
+\index{pointer@{pointer}!tqdm::timing\_iterator@{tqdm::timing\_iterator}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtqdm_1_1timing__iterator_abe988fb8637a0a407029494904bd0fde}{tqdm\+::timing\+\_\+iterator\+::pointer}} = double \texorpdfstring{$\ast$}{*}}
+
+\Hypertarget{classtqdm_1_1timing__iterator_ae089cc42349367ac50a95910b4040030}\label{classtqdm_1_1timing__iterator_ae089cc42349367ac50a95910b4040030} 
+\index{tqdm::timing\_iterator@{tqdm::timing\_iterator}!reference@{reference}}
+\index{reference@{reference}!tqdm::timing\_iterator@{tqdm::timing\_iterator}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtqdm_1_1timing__iterator_ae089cc42349367ac50a95910b4040030}{tqdm\+::timing\+\_\+iterator\+::reference}} = double \&}
+
+\Hypertarget{classtqdm_1_1timing__iterator_a56b21243d0ebe497432e245896b28782}\label{classtqdm_1_1timing__iterator_a56b21243d0ebe497432e245896b28782} 
+\index{tqdm::timing\_iterator@{tqdm::timing\_iterator}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!tqdm::timing\_iterator@{tqdm::timing\_iterator}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtqdm_1_1timing__iterator_a56b21243d0ebe497432e245896b28782}{tqdm\+::timing\+\_\+iterator\+::value\+\_\+type}} = double}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtqdm_1_1timing__iterator_a1ffe57342898139117a4f36fba6a4617}\label{classtqdm_1_1timing__iterator_a1ffe57342898139117a4f36fba6a4617} 
+\index{tqdm::timing\_iterator@{tqdm::timing\_iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!tqdm::timing\_iterator@{tqdm::timing\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool tqdm\+::timing\+\_\+iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtqdm_1_1timing__iterator__end__sentinel}{timing\+\_\+iterator\+\_\+end\+\_\+sentinel}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1timing__iterator_a1ffe57342898139117a4f36fba6a4617_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1timing__iterator_a5488621ccda437ec204fc56c5ea722df}\label{classtqdm_1_1timing__iterator_a5488621ccda437ec204fc56c5ea722df} 
+\index{tqdm::timing\_iterator@{tqdm::timing\_iterator}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!tqdm::timing\_iterator@{tqdm::timing\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily double tqdm\+::timing\+\_\+iterator\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1timing__iterator_a5488621ccda437ec204fc56c5ea722df_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1timing__iterator_a46be9f70b3ab01c2d224e406f3409c20}\label{classtqdm_1_1timing__iterator_a46be9f70b3ab01c2d224e406f3409c20} 
+\index{tqdm::timing\_iterator@{tqdm::timing\_iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!tqdm::timing\_iterator@{tqdm::timing\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtqdm_1_1timing__iterator}{timing\+\_\+iterator}} \& tqdm\+::timing\+\_\+iterator\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classtqdm_1_1timing__iterator_aebca20415ff022d462260b5b19a1fd1b}\label{classtqdm_1_1timing__iterator_aebca20415ff022d462260b5b19a1fd1b} 
+\index{tqdm::timing\_iterator@{tqdm::timing\_iterator}!chrono\_@{chrono\_}}
+\index{chrono\_@{chrono\_}!tqdm::timing\_iterator@{tqdm::timing\_iterator}}
+\doxysubsubsection{\texorpdfstring{chrono\_}{chrono\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtqdm_1_1_chronometer}{tqdm\+::\+Chronometer}} tqdm\+::timing\+\_\+iterator\+::chrono\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/utils/\mbox{\hyperlink{tqdm_8hpp}{tqdm.\+hpp}}\end{DoxyCompactItemize}

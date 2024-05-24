@@ -1,0 +1,201 @@
+\doxysection{Rank\+Selection Class Reference}
+\hypertarget{class_rank_selection}{}\label{class_rank_selection}\index{RankSelection@{RankSelection}}
+
+
+{\ttfamily \#include $<$Rank\+Selection.\+h$>$}
+
+
+
+Inheritance diagram for Rank\+Selection\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_rank_selection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Rank\+Selection\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_rank_selection__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rank_selection_aafc78c73b57a0b5d0338be203d5ddfc3}{Rank\+Selection}} (const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&params)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_rank_selection}{Rank\+Selection} object with specified algorithm parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rank_selection_a2c3aa0a7bd7fa9c948faf0e4e02ca041}{set\+Population}} (const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&\mbox{\hyperlink{class_rank_selection_ae4409dc8e6f55af39ed812931dc5fce3}{population}}, std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&\mbox{\hyperlink{class_rank_selection_a8805c6df6962a67a6340714c58dc0eeb}{selected}}) override
+\begin{DoxyCompactList}\small\item\em Sets the population and selected vectors for the selection operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rank_selection_ae3d454ece1706b38daccf56ffa2aa78b}{set\+Individual}} (\mbox{\hyperlink{struct_individual}{Individual}} \&individual)
+\begin{DoxyCompactList}\small\item\em Sets the individual to be selected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rank_selection_af2b5bd337ae8f077731b2a302ad93186}{set\+Parents}} (\mbox{\hyperlink{struct_individual}{Individual}} \&offspring, const \mbox{\hyperlink{struct_individual}{Individual}} \&parent1, const \mbox{\hyperlink{struct_individual}{Individual}} \&parent2)
+\begin{DoxyCompactList}\small\item\em Sets the parents and offspring for the selection operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rank_selection_aa8033bf819af99dd43eb480bf8ec59f8}{apply}} (std\+::mt19937 \&generator) override
+\begin{DoxyCompactList}\small\item\em Performs the rank-\/based selection operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_operator}{Operator}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_operator_ac7cb92992e32c213091d3659ef596a46}{\texorpdfstring{$\sim$}{\string~}\+Operator}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_operator}{Operator} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_rank_selection_a8805c6df6962a67a6340714c58dc0eeb}{selected}}
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_rank_selection_ae4409dc8e6f55af39ed812931dc5fce3}{population}}
+\item 
+int \mbox{\hyperlink{class_rank_selection_a2978a43f9c662e1b26c3a00199e61ab3}{population\+Size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_rank_selection_aafc78c73b57a0b5d0338be203d5ddfc3}\label{class_rank_selection_aafc78c73b57a0b5d0338be203d5ddfc3} 
+\index{RankSelection@{RankSelection}!RankSelection@{RankSelection}}
+\index{RankSelection@{RankSelection}!RankSelection@{RankSelection}}
+\doxysubsubsection{\texorpdfstring{RankSelection()}{RankSelection()}}
+{\footnotesize\ttfamily Rank\+Selection\+::\+Rank\+Selection (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&}]{params }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_rank_selection}{Rank\+Selection} object with specified algorithm parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & The algorithm parameters including the population size. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_rank_selection_aa8033bf819af99dd43eb480bf8ec59f8}\label{class_rank_selection_aa8033bf819af99dd43eb480bf8ec59f8} 
+\index{RankSelection@{RankSelection}!apply@{apply}}
+\index{apply@{apply}!RankSelection@{RankSelection}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily void Rank\+Selection\+::apply (\begin{DoxyParamCaption}\item[{std\+::mt19937 \&}]{generator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Performs the rank-\/based selection operation. 
+
+This method selects individuals from the population based on their rank and stores the selected individuals in the provided vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em generator} & The random number generator used for selection. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_acbd2e97e189d862aa139b3c334a18619}{Operator}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rank_selection_aa8033bf819af99dd43eb480bf8ec59f8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_rank_selection_ae3d454ece1706b38daccf56ffa2aa78b}\label{class_rank_selection_ae3d454ece1706b38daccf56ffa2aa78b} 
+\index{RankSelection@{RankSelection}!setIndividual@{setIndividual}}
+\index{setIndividual@{setIndividual}!RankSelection@{RankSelection}}
+\doxysubsubsection{\texorpdfstring{setIndividual()}{setIndividual()}}
+{\footnotesize\ttfamily void Rank\+Selection\+::set\+Individual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{individual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the individual to be selected. 
+
+This method sets the individual to be selected from the population.
+
+
+\begin{DoxyParams}{Parameters}
+{\em individual} & The individual to be selected. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_abf3bad24158495949ca770dc8aec6542}{Operator}}.
+
+\Hypertarget{class_rank_selection_af2b5bd337ae8f077731b2a302ad93186}\label{class_rank_selection_af2b5bd337ae8f077731b2a302ad93186} 
+\index{RankSelection@{RankSelection}!setParents@{setParents}}
+\index{setParents@{setParents}!RankSelection@{RankSelection}}
+\doxysubsubsection{\texorpdfstring{setParents()}{setParents()}}
+{\footnotesize\ttfamily void Rank\+Selection\+::set\+Parents (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{offspring,  }\item[{const \mbox{\hyperlink{struct_individual}{Individual}} \&}]{parent1,  }\item[{const \mbox{\hyperlink{struct_individual}{Individual}} \&}]{parent2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the parents and offspring for the selection operation. 
+
+This method is not used by the \doxylink{class_rank_selection}{Rank\+Selection} operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em offspring} & The offspring individual to be generated. \\
+\hline
+{\em parent1} & The first parent individual. \\
+\hline
+{\em parent2} & The second parent individual. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_aa9e9e58811b56bf3a5c1ac9e0d034c64}{Operator}}.
+
+\Hypertarget{class_rank_selection_a2c3aa0a7bd7fa9c948faf0e4e02ca041}\label{class_rank_selection_a2c3aa0a7bd7fa9c948faf0e4e02ca041} 
+\index{RankSelection@{RankSelection}!setPopulation@{setPopulation}}
+\index{setPopulation@{setPopulation}!RankSelection@{RankSelection}}
+\doxysubsubsection{\texorpdfstring{setPopulation()}{setPopulation()}}
+{\footnotesize\ttfamily void Rank\+Selection\+::set\+Population (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&}]{population,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&}]{selected }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the population and selected vectors for the selection operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em population} & The vector of individuals in the population. \\
+\hline
+{\em selected} & The vector of selected individuals. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_a6e3837c249df579d41f9b9287195c6e5}{Operator}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rank_selection_a2c3aa0a7bd7fa9c948faf0e4e02ca041_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{class_rank_selection_ae4409dc8e6f55af39ed812931dc5fce3}\label{class_rank_selection_ae4409dc8e6f55af39ed812931dc5fce3} 
+\index{RankSelection@{RankSelection}!population@{population}}
+\index{population@{population}!RankSelection@{RankSelection}}
+\doxysubsubsection{\texorpdfstring{population}{population}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{struct_individual}{Individual}}$>$\texorpdfstring{$\ast$}{*} Rank\+Selection\+::population\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the vector of individuals in the population \Hypertarget{class_rank_selection_a2978a43f9c662e1b26c3a00199e61ab3}\label{class_rank_selection_a2978a43f9c662e1b26c3a00199e61ab3} 
+\index{RankSelection@{RankSelection}!populationSize@{populationSize}}
+\index{populationSize@{populationSize}!RankSelection@{RankSelection}}
+\doxysubsubsection{\texorpdfstring{populationSize}{populationSize}}
+{\footnotesize\ttfamily int Rank\+Selection\+::population\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+Size of the population \Hypertarget{class_rank_selection_a8805c6df6962a67a6340714c58dc0eeb}\label{class_rank_selection_a8805c6df6962a67a6340714c58dc0eeb} 
+\index{RankSelection@{RankSelection}!selected@{selected}}
+\index{selected@{selected}!RankSelection@{RankSelection}}
+\doxysubsubsection{\texorpdfstring{selected}{selected}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_individual}{Individual}}$>$\texorpdfstring{$\ast$}{*} Rank\+Selection\+::selected\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the vector of selected individuals 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/operators/\+Selection/\mbox{\hyperlink{_rank_selection_8h}{Rank\+Selection.\+h}}\item 
+src/operators/\+Selection/\mbox{\hyperlink{_rank_selection_8cpp}{Rank\+Selection.\+cpp}}\end{DoxyCompactItemize}

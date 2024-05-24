@@ -1,0 +1,75 @@
+\doxysection{tests/test\+\_\+circuit\+\_\+time.cpp File Reference}
+\hypertarget{test__circuit__time_8cpp}{}\label{test__circuit__time_8cpp}\index{tests/test\_circuit\_time.cpp@{tests/test\_circuit\_time.cpp}}
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include "{}CSimulator.\+h"{}}\newline
+Include dependency graph for test\+\_\+circuit\+\_\+time.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__circuit__time_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{test__circuit__time_8cpp_a3de9fce01f4f124c8c77484d3051179c}{generate\+\_\+circuit\+\_\+vector}} (int n)
+\begin{DoxyCompactList}\small\item\em Generates a circuit vector of a given size. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{test__circuit__time_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main function to evaluate execution times of the Evaluate\+\_\+\+Circuit function with different circuit vector sizes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{test__circuit__time_8cpp_a3de9fce01f4f124c8c77484d3051179c}\label{test__circuit__time_8cpp_a3de9fce01f4f124c8c77484d3051179c} 
+\index{test\_circuit\_time.cpp@{test\_circuit\_time.cpp}!generate\_circuit\_vector@{generate\_circuit\_vector}}
+\index{generate\_circuit\_vector@{generate\_circuit\_vector}!test\_circuit\_time.cpp@{test\_circuit\_time.cpp}}
+\doxysubsubsection{\texorpdfstring{generate\_circuit\_vector()}{generate\_circuit\_vector()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ generate\+\_\+circuit\+\_\+vector (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Generates a circuit vector of a given size. 
+
+This function generates a random circuit vector with the specified number of units. The first element is set to a valid feed unit, and the remaining elements are set to random unit indices.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The number of units in the circuit. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$int$>$ The generated circuit vector. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{test__circuit__time_8cpp_a3de9fce01f4f124c8c77484d3051179c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__circuit__time_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{test__circuit__time_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{test\_circuit\_time.cpp@{test\_circuit\_time.cpp}!main@{main}}
+\index{main@{main}!test\_circuit\_time.cpp@{test\_circuit\_time.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main function to evaluate execution times of the Evaluate\+\_\+\+Circuit function with different circuit vector sizes. 
+
+This function generates circuit vectors of various sizes, evaluates them using the Evaluate\+\_\+\+Circuit function, and records the execution times. The results are printed to the console and also saved to an output file.
+
+\begin{DoxyReturn}{Returns}
+int Returns 0 if the program runs successfully, otherwise returns 1. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__circuit__time_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,23 @@
+project(tests)
+
+list(APPEND Tests test_circuit_simulator
+        test_genetic_algorithm
+        test_validity_checker)
+
+foreach (TEST IN LISTS Tests)
+    add_executable(${TEST} ${TEST}.cpp)
+    target_link_libraries(${TEST} PUBLIC geneticAlgorithm circuitSimulator)
+
+    # Link OpenMP if available
+    if(OpenMP_CXX_FOUND)
+        target_link_libraries(${TEST} PUBLIC OpenMP::OpenMP_CXX)
+    endif()
+
+    target_include_directories(${TEST} PRIVATE ../include)
+    set_target_properties(${TEST} PROPERTIES
+            CXX_STANDARD 17
+            RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/tests/bin")
+    add_test(NAME ${TEST} COMMAND ${TEST})
+endforeach ()
+
+add_test(NAME executable COMMAND "${CMAKE_BINARY_DIR}/bin/Circuit_Optimizer")

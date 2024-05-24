@@ -1,0 +1,30 @@
+<map id="include/circuit/CUnit.h" name="include/circuit/CUnit.h">
+<area shape="rect" id="Node000001" title="Defines the CUnit class for representing a unit within a circuit system." alt="" coords="430,5,581,31"/>
+<area shape="rect" id="Node000002" href="$_c_circuit_8h.html" title="Defines the Circuit class for modeling and simulating a circuit system." alt="" coords="363,79,528,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="489,43,457,80,453,77,485,40"/>
+<area shape="rect" id="Node000004" href="$_c_simulator_8cpp.html" title="Defines the functions and structures for simulating and evaluating circuits in a circuit modeling fra..." alt="" coords="5,247,139,273"/>
+<area shape="poly" id="edge14_Node000001_Node000004" title=" " alt="" coords="436,36,373,54,300,78,225,112,156,154,131,177,109,203,80,248,76,246,105,200,127,173,153,150,223,107,298,73,371,48,435,31"/>
+<area shape="rect" id="Node000011" href="$test__validity__checker_8cpp.html" title=" " alt="" coords="851,152,976,192"/>
+<area shape="poly" id="edge16_Node000001_Node000011" title=" " alt="" coords="524,40,554,73,593,102,628,117,658,127,712,136,768,139,839,149,851,152,850,157,838,155,768,144,711,141,656,133,626,122,591,106,550,77,520,44"/>
+<area shape="rect" id="Node000012" href="$_c_unit_8cpp.html" title="Defines the CUnit class for representing a unit within a circuit system." alt="" coords="603,79,746,104"/>
+<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="546,34,648,76,646,81,544,38"/>
+<area shape="rect" id="Node000003" href="$_c_simulator_8h.html" title="Defines the functions and structures for simulating and evaluating circuits in a circuit modeling fra..." alt="" coords="265,159,407,185"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="419,114,354,161,351,157,416,110"/>
+<area shape="poly" id="edge9_Node000002_Node000004" title=" " alt="" coords="368,110,299,128,228,154,185,177,146,204,87,249,83,245,142,199,183,173,226,150,297,123,367,104"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html" title="Main entry point for the circuit optimization program using genetic algorithms." alt="" coords="599,247,697,273"/>
+<area shape="poly" id="edge11_Node000002_Node000005" title=" " alt="" coords="448,117,454,155,462,174,472,190,491,201,528,215,613,245,612,250,526,220,489,205,469,194,457,176,449,156,443,118"/>
+<area shape="rect" id="Node000008" href="$test__genetic__algorithm_8cpp.html" title=" " alt="" coords="163,240,290,280"/>
+<area shape="poly" id="edge12_Node000002_Node000008" title=" " alt="" coords="350,105,298,122,274,136,254,154,241,174,233,197,228,240,223,240,228,196,236,171,250,150,271,132,296,118,348,100"/>
+<area shape="rect" id="Node000009" href="$investigate_2_c_circuit_8cpp.html" title=" " alt="" coords="483,159,645,185"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="476,110,548,157,545,161,473,114"/>
+<area shape="rect" id="Node000010" href="$src_2circuit_2_c_circuit_8cpp.html" title="Defines the Circuit class for modeling and simulating a circuit system." alt="" coords="670,159,826,185"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="503,105,705,157,703,162,502,110"/>
+<area shape="poly" id="edge13_Node000002_Node000011" title=" " alt="" coords="542,102,683,122,839,149,851,152,850,157,838,155,682,127,541,107"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="288,192,108,250,107,245,287,186"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="395,185,589,237,613,245,611,250,587,243,394,191"/>
+<area shape="rect" id="Node000006" href="$test__circuit__simulator_8cpp.html" title=" " alt="" coords="314,240,433,280"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="349,196,367,238,363,241,344,198"/>
+<area shape="rect" id="Node000007" href="$test__circuit__time_8cpp.html" title=" " alt="" coords="457,240,575,280"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="373,188,477,237,475,242,371,193"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="312,195,252,242,249,238,309,191"/>
+</map>

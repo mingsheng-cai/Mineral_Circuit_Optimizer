@@ -1,0 +1,131 @@
+\doxysection{tqdm\+::timer Struct Reference}
+\hypertarget{structtqdm_1_1timer}{}\label{structtqdm_1_1timer}\index{tqdm::timer@{tqdm::timer}}
+
+
+A timer that can be used to create a timing iterator.  
+
+
+
+
+{\ttfamily \#include $<$tqdm.\+hpp$>$}
+
+
+
+Collaboration diagram for tqdm\+::timer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{structtqdm_1_1timer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structtqdm_1_1timer_a6c3528986e6b9192bfa58bc12255e3a2}{iterator}} = \mbox{\hyperlink{classtqdm_1_1timing__iterator}{timing\+\_\+iterator}}
+\item 
+using \mbox{\hyperlink{structtqdm_1_1timer_ac7c73addf0f24f975f9af0b8d62ea732}{end\+\_\+iterator}} = \mbox{\hyperlink{classtqdm_1_1timing__iterator__end__sentinel}{timing\+\_\+iterator\+\_\+end\+\_\+sentinel}}
+\item 
+using \mbox{\hyperlink{structtqdm_1_1timer_a3b3118f547fb9c26b187664990885da3}{const\+\_\+iterator}} = \mbox{\hyperlink{structtqdm_1_1timer_a6c3528986e6b9192bfa58bc12255e3a2}{iterator}}
+\item 
+using \mbox{\hyperlink{structtqdm_1_1timer_a1ccc154c056448b76237ddb0906e2fd8}{value\+\_\+type}} = double
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtqdm_1_1timer_a6f83e708d6532598840b82b6f18e5810}{timer}} (double \mbox{\hyperlink{structtqdm_1_1timer_a2e472f85c9bafa964622b5473379c7e5}{num\+\_\+seconds}})
+\item 
+\mbox{\hyperlink{structtqdm_1_1timer_ac7c73addf0f24f975f9af0b8d62ea732}{end\+\_\+iterator}} \mbox{\hyperlink{structtqdm_1_1timer_a3de9ed2698553f0211161171e548cb8b}{end}} () const
+\item 
+double \mbox{\hyperlink{structtqdm_1_1timer_a2e472f85c9bafa964622b5473379c7e5}{num\+\_\+seconds}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structtqdm_1_1timer_a6c3528986e6b9192bfa58bc12255e3a2}{iterator}} \mbox{\hyperlink{structtqdm_1_1timer_a84a9bc1488e299475c2c4dc68c6a4d1c}{begin}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{structtqdm_1_1timer_a9e2bbdd6da7d8636828bcd2edd8abaa7}{num\+\_\+seconds\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A timer that can be used to create a timing iterator. 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{structtqdm_1_1timer_a3b3118f547fb9c26b187664990885da3}\label{structtqdm_1_1timer_a3b3118f547fb9c26b187664990885da3} 
+\index{tqdm::timer@{tqdm::timer}!const\_iterator@{const\_iterator}}
+\index{const\_iterator@{const\_iterator}!tqdm::timer@{tqdm::timer}}
+\doxysubsubsection{\texorpdfstring{const\_iterator}{const\_iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtqdm_1_1timer_a3b3118f547fb9c26b187664990885da3}{tqdm\+::timer\+::const\+\_\+iterator}} = \mbox{\hyperlink{structtqdm_1_1timer_a6c3528986e6b9192bfa58bc12255e3a2}{iterator}}}
+
+\Hypertarget{structtqdm_1_1timer_ac7c73addf0f24f975f9af0b8d62ea732}\label{structtqdm_1_1timer_ac7c73addf0f24f975f9af0b8d62ea732} 
+\index{tqdm::timer@{tqdm::timer}!end\_iterator@{end\_iterator}}
+\index{end\_iterator@{end\_iterator}!tqdm::timer@{tqdm::timer}}
+\doxysubsubsection{\texorpdfstring{end\_iterator}{end\_iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtqdm_1_1timer_ac7c73addf0f24f975f9af0b8d62ea732}{tqdm\+::timer\+::end\+\_\+iterator}} = \mbox{\hyperlink{classtqdm_1_1timing__iterator__end__sentinel}{timing\+\_\+iterator\+\_\+end\+\_\+sentinel}}}
+
+\Hypertarget{structtqdm_1_1timer_a6c3528986e6b9192bfa58bc12255e3a2}\label{structtqdm_1_1timer_a6c3528986e6b9192bfa58bc12255e3a2} 
+\index{tqdm::timer@{tqdm::timer}!iterator@{iterator}}
+\index{iterator@{iterator}!tqdm::timer@{tqdm::timer}}
+\doxysubsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtqdm_1_1timer_a6c3528986e6b9192bfa58bc12255e3a2}{tqdm\+::timer\+::iterator}} = \mbox{\hyperlink{classtqdm_1_1timing__iterator}{timing\+\_\+iterator}}}
+
+\Hypertarget{structtqdm_1_1timer_a1ccc154c056448b76237ddb0906e2fd8}\label{structtqdm_1_1timer_a1ccc154c056448b76237ddb0906e2fd8} 
+\index{tqdm::timer@{tqdm::timer}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!tqdm::timer@{tqdm::timer}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtqdm_1_1timer_a1ccc154c056448b76237ddb0906e2fd8}{tqdm\+::timer\+::value\+\_\+type}} = double}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structtqdm_1_1timer_a6f83e708d6532598840b82b6f18e5810}\label{structtqdm_1_1timer_a6f83e708d6532598840b82b6f18e5810} 
+\index{tqdm::timer@{tqdm::timer}!timer@{timer}}
+\index{timer@{timer}!tqdm::timer@{tqdm::timer}}
+\doxysubsubsection{\texorpdfstring{timer()}{timer()}}
+{\footnotesize\ttfamily tqdm\+::timer\+::timer (\begin{DoxyParamCaption}\item[{double}]{num\+\_\+seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structtqdm_1_1timer_a84a9bc1488e299475c2c4dc68c6a4d1c}\label{structtqdm_1_1timer_a84a9bc1488e299475c2c4dc68c6a4d1c} 
+\index{tqdm::timer@{tqdm::timer}!begin@{begin}}
+\index{begin@{begin}!tqdm::timer@{tqdm::timer}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structtqdm_1_1timer_a6c3528986e6b9192bfa58bc12255e3a2}{iterator}} tqdm\+::timer\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{structtqdm_1_1timer_a3de9ed2698553f0211161171e548cb8b}\label{structtqdm_1_1timer_a3de9ed2698553f0211161171e548cb8b} 
+\index{tqdm::timer@{tqdm::timer}!end@{end}}
+\index{end@{end}!tqdm::timer@{tqdm::timer}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtqdm_1_1timer_ac7c73addf0f24f975f9af0b8d62ea732}{end\+\_\+iterator}} tqdm\+::timer\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structtqdm_1_1timer_a2e472f85c9bafa964622b5473379c7e5}\label{structtqdm_1_1timer_a2e472f85c9bafa964622b5473379c7e5} 
+\index{tqdm::timer@{tqdm::timer}!num\_seconds@{num\_seconds}}
+\index{num\_seconds@{num\_seconds}!tqdm::timer@{tqdm::timer}}
+\doxysubsubsection{\texorpdfstring{num\_seconds()}{num\_seconds()}}
+{\footnotesize\ttfamily double tqdm\+::timer\+::num\+\_\+seconds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{structtqdm_1_1timer_a2e472f85c9bafa964622b5473379c7e5_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structtqdm_1_1timer_a9e2bbdd6da7d8636828bcd2edd8abaa7}\label{structtqdm_1_1timer_a9e2bbdd6da7d8636828bcd2edd8abaa7} 
+\index{tqdm::timer@{tqdm::timer}!num\_seconds\_@{num\_seconds\_}}
+\index{num\_seconds\_@{num\_seconds\_}!tqdm::timer@{tqdm::timer}}
+\doxysubsubsection{\texorpdfstring{num\_seconds\_}{num\_seconds\_}}
+{\footnotesize\ttfamily double tqdm\+::timer\+::num\+\_\+seconds\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/utils/\mbox{\hyperlink{tqdm_8hpp}{tqdm.\+hpp}}\end{DoxyCompactItemize}

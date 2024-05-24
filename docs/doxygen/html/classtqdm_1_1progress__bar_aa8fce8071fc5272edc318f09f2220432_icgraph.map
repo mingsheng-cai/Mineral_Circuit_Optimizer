@@ -1,0 +1,9 @@
+<map id="tqdm::progress_bar::restart" name="tqdm::progress_bar::restart">
+<area shape="rect" id="Node000001" title="Restart the progress bar." alt="" coords="423,35,557,75"/>
+<area shape="rect" id="Node000002" href="$classtqdm_1_1tqdm__for__lvalues.html#ae0f49b9803e51489992c64bc31379b1e" title=" " alt="" coords="214,5,373,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="409,45,373,40,373,35,410,40"/>
+<area shape="rect" id="Node000004" href="$classtqdm_1_1tqdm__timer.html#a3c88ea5d0db28c692d8a8f3164b16155" title=" " alt="" coords="212,70,375,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="410,69,375,74,374,68,409,63"/>
+<area shape="rect" id="Node000003" href="$classtqdm_1_1tqdm__for__rvalues.html#aa9a4f7b95639a18fb00e77d82f3790b3" title=" " alt="" coords="5,5,164,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="200,28,164,28,164,23,200,23"/>
+</map>

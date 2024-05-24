@@ -1,0 +1,36 @@
+\doxysection{Nary\+Tournament\+Selection.\+h}
+\hypertarget{_nary_tournament_selection_8h_source}{}\label{_nary_tournament_selection_8h_source}\index{include/operators/Selection/NaryTournamentSelection.h@{include/operators/Selection/NaryTournamentSelection.h}}
+\mbox{\hyperlink{_nary_tournament_selection_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifndef\ GENETIC\_ALGORITHM\_NARYTOURNAMENTSELECTION\_H}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ GENETIC\_ALGORITHM\_NARYTOURNAMENTSELECTION\_H}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_operator_8h}{../Operator.h}}"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_individual_8h}{../../utils/Individual.h}}"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_parameter_8h}{../../utils/Parameter.h}}"{}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_nary_tournament_selection}{NaryTournamentSelection}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_operator}{Operator}}\ \{}
+\DoxyCodeLine{00035\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00036\ \ \ \ \ std::vector<Individual>\ *\mbox{\hyperlink{class_nary_tournament_selection_a977ff40cef9f53ec942c776dd87bee78}{selected}};\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Individual>\ *\mbox{\hyperlink{class_nary_tournament_selection_a8f27917d6b99fb5b1f485ee37c52563f}{population}};\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_nary_tournament_selection_a1d219da7e618af9aa949ceb04c6a9046}{tournamentSize}};\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_nary_tournament_selection_aed03aa181e2d0b98b17d2a0dfad393f4}{NaryTournamentSelection}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}\ \&params);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_nary_tournament_selection_a08883c4d9265806fd690b5bac3611281}{setPopulation}}(\textcolor{keyword}{const}\ std::vector<Individual>\ \&\mbox{\hyperlink{class_nary_tournament_selection_a8f27917d6b99fb5b1f485ee37c52563f}{population}},\ std::vector<Individual>\ \&\mbox{\hyperlink{class_nary_tournament_selection_a977ff40cef9f53ec942c776dd87bee78}{selected}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_nary_tournament_selection_acd33bea2f781445cc897a4419c74f700}{setIndividual}}(\mbox{\hyperlink{struct_individual}{Individual}}\ \&individual)\ \{\};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_nary_tournament_selection_a9b5694977e8adeffb9d698a5f3f75cbb}{setParents}}(\mbox{\hyperlink{struct_individual}{Individual}}\ \&offspring,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&parent1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&parent2)\ \{\};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_nary_tournament_selection_a7c588fa2ec3a54b37e334478c6b5e9f4}{apply}}(std::mt19937\ \&generator)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00085\ \};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//GENETIC\_ALGORITHM\_NARYTOURNAMENTSELECTION\_H}}
+
+\end{DoxyCode}

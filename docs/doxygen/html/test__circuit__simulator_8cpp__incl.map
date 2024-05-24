@@ -1,0 +1,21 @@
+<map id="tests/test_circuit_simulator.cpp" name="tests/test_circuit_simulator.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="43,5,162,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,313,64,339"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,47,77,100,57,167,45,239,39,300,34,299,40,238,52,166,72,99,92,45"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="67,167,139,192"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="105,46,105,153,100,153,100,46"/>
+<area shape="rect" id="Node000004" href="$_c_simulator_8h.html" title="Defines the functions and structures for simulating and evaluating circuits in a circuit modeling fra..." alt="" coords="157,93,254,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="129,43,181,83,178,87,126,48"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="190,121,132,161,129,156,187,116"/>
+<area shape="rect" id="Node000005" href="$_c_circuit_8h.html" title="Defines the Circuit class for modeling and simulating a circuit system." alt="" coords="163,167,283,192"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="211,118,219,153,214,154,206,120"/>
+<area shape="rect" id="Node000009" href="$_parameter_8h.html" title="Defines the Algorithm_Parameters structure for configuring the parameters of a genetic algorithm." alt="" coords="307,167,427,192"/>
+<area shape="poly" id="edge10_Node000004_Node000009" title=" " alt="" coords="232,116,329,159,327,163,230,121"/>
+<area shape="rect" id="Node000006" href="$_c_unit_8h.html" title="Defines the CUnit class for representing a unit within a circuit system." alt="" coords="93,240,160,265"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="209,194,155,234,152,229,206,190"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="193,240,252,265"/>
+<area shape="poly" id="edge9_Node000005_Node000008" title=" " alt="" coords="225,192,225,226,220,226,220,192"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="114,267,62,307,59,303,110,263"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="92,313,161,339"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="129,266,129,300,124,300,124,266"/>
+</map>

@@ -1,0 +1,201 @@
+\doxysection{Roulette\+Wheel\+Selection Class Reference}
+\hypertarget{class_roulette_wheel_selection}{}\label{class_roulette_wheel_selection}\index{RouletteWheelSelection@{RouletteWheelSelection}}
+
+
+{\ttfamily \#include $<$Roulette\+Wheel\+Selection.\+h$>$}
+
+
+
+Inheritance diagram for Roulette\+Wheel\+Selection\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{class_roulette_wheel_selection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Roulette\+Wheel\+Selection\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{class_roulette_wheel_selection__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_roulette_wheel_selection_aa5e1e640d8bcca73b65496e4401a8f2b}{Roulette\+Wheel\+Selection}} (const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&params)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_roulette_wheel_selection}{Roulette\+Wheel\+Selection} object with specified algorithm parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_roulette_wheel_selection_af3212772f535cf5f2b02019989858914}{set\+Population}} (const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&\mbox{\hyperlink{class_roulette_wheel_selection_a3577fdae4b27cc7e2581e4e265f22d9c}{population}}, std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&\mbox{\hyperlink{class_roulette_wheel_selection_a9803688f81e8aff9763acaa13e6cb023}{selected}})
+\begin{DoxyCompactList}\small\item\em Sets the population and selected vectors for the selection operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_roulette_wheel_selection_a489297b0c11be0b622868ec0776684f8}{set\+Individual}} (\mbox{\hyperlink{struct_individual}{Individual}} \&individual)
+\begin{DoxyCompactList}\small\item\em Sets the individual to be mutated. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_roulette_wheel_selection_abee04b12deed33954ab3917ccaeb0a1e}{set\+Parents}} (\mbox{\hyperlink{struct_individual}{Individual}} \&offspring, const \mbox{\hyperlink{struct_individual}{Individual}} \&parent1, const \mbox{\hyperlink{struct_individual}{Individual}} \&parent2)
+\begin{DoxyCompactList}\small\item\em Sets the parents and offspring for the crossover operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_roulette_wheel_selection_af66f0a7d6d42799af270f97b3dfc6097}{apply}} (std\+::mt19937 \&generator) override
+\begin{DoxyCompactList}\small\item\em Performs the roulette wheel selection operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_operator}{Operator}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_operator_ac7cb92992e32c213091d3659ef596a46}{\texorpdfstring{$\sim$}{\string~}\+Operator}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_operator}{Operator} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_roulette_wheel_selection_a9803688f81e8aff9763acaa13e6cb023}{selected}}
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_roulette_wheel_selection_a3577fdae4b27cc7e2581e4e265f22d9c}{population}}
+\item 
+int \mbox{\hyperlink{class_roulette_wheel_selection_a1c76aad6470e77031dc384d0fe44298b}{population\+Size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_roulette_wheel_selection_aa5e1e640d8bcca73b65496e4401a8f2b}\label{class_roulette_wheel_selection_aa5e1e640d8bcca73b65496e4401a8f2b} 
+\index{RouletteWheelSelection@{RouletteWheelSelection}!RouletteWheelSelection@{RouletteWheelSelection}}
+\index{RouletteWheelSelection@{RouletteWheelSelection}!RouletteWheelSelection@{RouletteWheelSelection}}
+\doxysubsubsection{\texorpdfstring{RouletteWheelSelection()}{RouletteWheelSelection()}}
+{\footnotesize\ttfamily Roulette\+Wheel\+Selection\+::\+Roulette\+Wheel\+Selection (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&}]{params }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_roulette_wheel_selection}{Roulette\+Wheel\+Selection} object with specified algorithm parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & The algorithm parameters. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_roulette_wheel_selection_af66f0a7d6d42799af270f97b3dfc6097}\label{class_roulette_wheel_selection_af66f0a7d6d42799af270f97b3dfc6097} 
+\index{RouletteWheelSelection@{RouletteWheelSelection}!apply@{apply}}
+\index{apply@{apply}!RouletteWheelSelection@{RouletteWheelSelection}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily void Roulette\+Wheel\+Selection\+::apply (\begin{DoxyParamCaption}\item[{std\+::mt19937 \&}]{generator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Performs the roulette wheel selection operation. 
+
+This method selects individuals from the population based on fitness-\/proportional selection and stores the selected individuals in the provided vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em generator} & The random number generator used for selection. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_acbd2e97e189d862aa139b3c334a18619}{Operator}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_roulette_wheel_selection_af66f0a7d6d42799af270f97b3dfc6097_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_roulette_wheel_selection_a489297b0c11be0b622868ec0776684f8}\label{class_roulette_wheel_selection_a489297b0c11be0b622868ec0776684f8} 
+\index{RouletteWheelSelection@{RouletteWheelSelection}!setIndividual@{setIndividual}}
+\index{setIndividual@{setIndividual}!RouletteWheelSelection@{RouletteWheelSelection}}
+\doxysubsubsection{\texorpdfstring{setIndividual()}{setIndividual()}}
+{\footnotesize\ttfamily void Roulette\+Wheel\+Selection\+::set\+Individual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{individual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the individual to be mutated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em individual} & The individual to be mutated.\\
+\hline
+{\em individual} & The individual to be mutated. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_abf3bad24158495949ca770dc8aec6542}{Operator}}.
+
+\Hypertarget{class_roulette_wheel_selection_abee04b12deed33954ab3917ccaeb0a1e}\label{class_roulette_wheel_selection_abee04b12deed33954ab3917ccaeb0a1e} 
+\index{RouletteWheelSelection@{RouletteWheelSelection}!setParents@{setParents}}
+\index{setParents@{setParents}!RouletteWheelSelection@{RouletteWheelSelection}}
+\doxysubsubsection{\texorpdfstring{setParents()}{setParents()}}
+{\footnotesize\ttfamily void Roulette\+Wheel\+Selection\+::set\+Parents (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{offspring,  }\item[{const \mbox{\hyperlink{struct_individual}{Individual}} \&}]{parent1,  }\item[{const \mbox{\hyperlink{struct_individual}{Individual}} \&}]{parent2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the parents and offspring for the crossover operation. 
+
+This method is not used by the \doxylink{class_roulette_wheel_selection}{Roulette\+Wheel\+Selection} operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em offspring} & The offspring individual to be generated. \\
+\hline
+{\em parent1} & The first parent individual. \\
+\hline
+{\em parent2} & The second parent individual. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_aa9e9e58811b56bf3a5c1ac9e0d034c64}{Operator}}.
+
+\Hypertarget{class_roulette_wheel_selection_af3212772f535cf5f2b02019989858914}\label{class_roulette_wheel_selection_af3212772f535cf5f2b02019989858914} 
+\index{RouletteWheelSelection@{RouletteWheelSelection}!setPopulation@{setPopulation}}
+\index{setPopulation@{setPopulation}!RouletteWheelSelection@{RouletteWheelSelection}}
+\doxysubsubsection{\texorpdfstring{setPopulation()}{setPopulation()}}
+{\footnotesize\ttfamily void Roulette\+Wheel\+Selection\+::set\+Population (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&}]{population,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&}]{selected }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the population and selected vectors for the selection operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em population} & The vector of individuals in the population. \\
+\hline
+{\em selected} & The vector of selected individuals. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_a6e3837c249df579d41f9b9287195c6e5}{Operator}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_roulette_wheel_selection_af3212772f535cf5f2b02019989858914_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{class_roulette_wheel_selection_a3577fdae4b27cc7e2581e4e265f22d9c}\label{class_roulette_wheel_selection_a3577fdae4b27cc7e2581e4e265f22d9c} 
+\index{RouletteWheelSelection@{RouletteWheelSelection}!population@{population}}
+\index{population@{population}!RouletteWheelSelection@{RouletteWheelSelection}}
+\doxysubsubsection{\texorpdfstring{population}{population}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{struct_individual}{Individual}}$>$\texorpdfstring{$\ast$}{*} Roulette\+Wheel\+Selection\+::population\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the vector of individuals in the population \Hypertarget{class_roulette_wheel_selection_a1c76aad6470e77031dc384d0fe44298b}\label{class_roulette_wheel_selection_a1c76aad6470e77031dc384d0fe44298b} 
+\index{RouletteWheelSelection@{RouletteWheelSelection}!populationSize@{populationSize}}
+\index{populationSize@{populationSize}!RouletteWheelSelection@{RouletteWheelSelection}}
+\doxysubsubsection{\texorpdfstring{populationSize}{populationSize}}
+{\footnotesize\ttfamily int Roulette\+Wheel\+Selection\+::population\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+Size of the population \Hypertarget{class_roulette_wheel_selection_a9803688f81e8aff9763acaa13e6cb023}\label{class_roulette_wheel_selection_a9803688f81e8aff9763acaa13e6cb023} 
+\index{RouletteWheelSelection@{RouletteWheelSelection}!selected@{selected}}
+\index{selected@{selected}!RouletteWheelSelection@{RouletteWheelSelection}}
+\doxysubsubsection{\texorpdfstring{selected}{selected}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_individual}{Individual}}$>$\texorpdfstring{$\ast$}{*} Roulette\+Wheel\+Selection\+::selected\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the vector of selected individuals 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/operators/\+Selection/\mbox{\hyperlink{_roulette_wheel_selection_8h}{Roulette\+Wheel\+Selection.\+h}}\item 
+src/operators/\+Selection/\mbox{\hyperlink{_roulette_wheel_selection_8cpp}{Roulette\+Wheel\+Selection.\+cpp}}\end{DoxyCompactItemize}

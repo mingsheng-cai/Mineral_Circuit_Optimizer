@@ -1,0 +1,410 @@
+\doxysection{tests/test\+\_\+genetic\+\_\+algorithm.cpp File Reference}
+\hypertarget{test__genetic__algorithm_8cpp}{}\label{test__genetic__algorithm_8cpp}\index{tests/test\_genetic\_algorithm.cpp@{tests/test\_genetic\_algorithm.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include "{}Genetic\+\_\+\+Algorithm.\+h"{}}\newline
+{\ttfamily \#include "{}circuit/\+CCircuit.\+h"{}}\newline
+{\ttfamily \#include "{}CSimulator.\+h"{}}\newline
+Include dependency graph for test\+\_\+genetic\+\_\+algorithm.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__genetic__algorithm_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{test__genetic__algorithm_8cpp_a859955e6439a661195d141ca90dd7fe6}{test\+\_\+function}} (int vector\+\_\+size, int \texorpdfstring{$\ast$}{*}vector, \mbox{\hyperlink{struct_circuit_parameters}{Circuit\+Parameters}} pams)
+\begin{DoxyCompactList}\small\item\em Test function for the genetic algorithm. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{test__genetic__algorithm_8cpp_af4f9e42ca909fa978f26061602cbb37a}{test\+\_\+function\+\_\+long}} (int vector\+\_\+size, int \texorpdfstring{$\ast$}{*}vector, \mbox{\hyperlink{struct_circuit_parameters}{Circuit\+Parameters}} pams)
+\begin{DoxyCompactList}\small\item\em Test function for the genetic algorithm with a long vector. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{test__genetic__algorithm_8cpp_ac39433efe4b9aa8c9d9e68d0071e5b37}{Check\+\_\+\+Validity}} (int vector\+\_\+size, int \texorpdfstring{$\ast$}{*}circuit\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Function to check the validity of a circuit vector. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{test__genetic__algorithm_8cpp_a49737531e93285c975b8d270ebff4f2a}{are\+Arrays\+Equal}} (const int \texorpdfstring{$\ast$}{*}a, const int \texorpdfstring{$\ast$}{*}b, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Function to check if two arrays are equal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test__genetic__algorithm_8cpp_af46ebdbd60f4751d345fda45173a5e35}{test\+\_\+genetic\+\_\+algorithm}} ()
+\begin{DoxyCompactList}\small\item\em Test the genetic algorithm for various cases. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test__genetic__algorithm_8cpp_a382524e57d4fa70caa694dfa24fe9ddb}{test\+\_\+initializer}} ()
+\begin{DoxyCompactList}\small\item\em Test the initialization of the population. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test__genetic__algorithm_8cpp_adc66cbdbfd05d01007caad16142eaea8}{test\+\_\+crossover}} ()
+\begin{DoxyCompactList}\small\item\em Test the crossover operators. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test__genetic__algorithm_8cpp_a02a5a1f3e4ecb614dfbffb1ab2e0f119}{test\+\_\+mutation}} ()
+\begin{DoxyCompactList}\small\item\em Test the mutation operators. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test__genetic__algorithm_8cpp_a7d083e7b24bc15218036d9c374fb68e7}{test\+\_\+selection}} ()
+\begin{DoxyCompactList}\small\item\em Test the selection operators. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test__genetic__algorithm_8cpp_aad32ea7f325c0e2e53e9dcb9e6063998}{test\+\_\+operators}} ()
+\begin{DoxyCompactList}\small\item\em Test the elitism operator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test__genetic__algorithm_8cpp_ac28cdfbad25ea03a35e43245fd5889af}{test\+\_\+elitism}} ()
+\begin{DoxyCompactList}\small\item\em Test the elitism operator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test__genetic__algorithm_8cpp_a5738502be5c47789308faafd36639a99}{test\+\_\+\+SA}} ()
+\begin{DoxyCompactList}\small\item\em Test the simulated annealing operator. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{test__genetic__algorithm_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main function to run all the tests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{test__genetic__algorithm_8cpp_a774a13d218933d455938960e9cda9a90}{test\+\_\+answer}} \mbox{[}10\mbox{]} = \{2, 1, 1, 2, 0, 2, 3, 0, 4, 4\}
+\item 
+int \mbox{\hyperlink{test__genetic__algorithm_8cpp_abaa63708dce213ef4dd2eb22c31abe61}{test\+\_\+answer1}} \mbox{[}31\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{test__genetic__algorithm_8cpp_a49737531e93285c975b8d270ebff4f2a}\label{test__genetic__algorithm_8cpp_a49737531e93285c975b8d270ebff4f2a} 
+\index{test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}!areArraysEqual@{areArraysEqual}}
+\index{areArraysEqual@{areArraysEqual}!test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{areArraysEqual()}{areArraysEqual()}}
+{\footnotesize\ttfamily bool are\+Arrays\+Equal (\begin{DoxyParamCaption}\item[{const int \texorpdfstring{$\ast$}{*}}]{a,  }\item[{const int \texorpdfstring{$\ast$}{*}}]{b,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Function to check if two arrays are equal. 
+
+This function checks if two arrays are equal by comparing each element in the arrays.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Check if this array is equal to b \\
+\hline
+{\em b} & Check if this array is equal to a \\
+\hline
+{\em size} & Size of the arrays\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__genetic__algorithm_8cpp_a49737531e93285c975b8d270ebff4f2a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__genetic__algorithm_8cpp_ac39433efe4b9aa8c9d9e68d0071e5b37}\label{test__genetic__algorithm_8cpp_ac39433efe4b9aa8c9d9e68d0071e5b37} 
+\index{test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}!Check\_Validity@{Check\_Validity}}
+\index{Check\_Validity@{Check\_Validity}!test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{Check\_Validity()}{Check\_Validity()}}
+{\footnotesize\ttfamily bool Check\+\_\+\+Validity (\begin{DoxyParamCaption}\item[{int}]{vector\+\_\+size,  }\item[{int \texorpdfstring{$\ast$}{*}}]{circuit\+\_\+vector }\end{DoxyParamCaption})}
+
+
+
+Function to check the validity of a circuit vector. 
+
+This function checks the validity of a circuit vector by ensuring that the feed ID and destination ID are within the range of the number of units in the circuit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector\+\_\+size} & Size of the vector \\
+\hline
+{\em circuit\+\_\+vector} & The circuit vector to be checked\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__genetic__algorithm_8cpp_ac39433efe4b9aa8c9d9e68d0071e5b37_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__genetic__algorithm_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{test__genetic__algorithm_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}!main@{main}}
+\index{main@{main}!test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main function to run all the tests. 
+
+This function runs all the tests for the Genetic Algorithm module.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__genetic__algorithm_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__genetic__algorithm_8cpp_adc66cbdbfd05d01007caad16142eaea8}\label{test__genetic__algorithm_8cpp_adc66cbdbfd05d01007caad16142eaea8} 
+\index{test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}!test\_crossover@{test\_crossover}}
+\index{test\_crossover@{test\_crossover}!test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_crossover()}{test\_crossover()}}
+{\footnotesize\ttfamily void test\+\_\+crossover (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Test the crossover operators. 
+
+This function tests various crossover operators including two-\/point, pure single-\/point, and uniform crossover. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{test__genetic__algorithm_8cpp_adc66cbdbfd05d01007caad16142eaea8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{test__genetic__algorithm_8cpp_adc66cbdbfd05d01007caad16142eaea8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__genetic__algorithm_8cpp_ac28cdfbad25ea03a35e43245fd5889af}\label{test__genetic__algorithm_8cpp_ac28cdfbad25ea03a35e43245fd5889af} 
+\index{test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}!test\_elitism@{test\_elitism}}
+\index{test\_elitism@{test\_elitism}!test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_elitism()}{test\_elitism()}}
+{\footnotesize\ttfamily void test\+\_\+elitism (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Test the elitism operator. 
+
+This function tests the elitism operator by checking if the performance of the population is improved after elitism. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__genetic__algorithm_8cpp_ac28cdfbad25ea03a35e43245fd5889af_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{test__genetic__algorithm_8cpp_ac28cdfbad25ea03a35e43245fd5889af_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__genetic__algorithm_8cpp_a859955e6439a661195d141ca90dd7fe6}\label{test__genetic__algorithm_8cpp_a859955e6439a661195d141ca90dd7fe6} 
+\index{test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}!test\_function@{test\_function}}
+\index{test\_function@{test\_function}!test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_function()}{test\_function()}}
+{\footnotesize\ttfamily double test\+\_\+function (\begin{DoxyParamCaption}\item[{int}]{vector\+\_\+size,  }\item[{int \texorpdfstring{$\ast$}{*}}]{vector,  }\item[{\mbox{\hyperlink{struct_circuit_parameters}{Circuit\+Parameters}}}]{pams }\end{DoxyParamCaption})}
+
+
+
+Test function for the genetic algorithm. 
+
+This function is used as the performance function for the genetic algorithm. It calculates the difference between the given vector and the test answer vector, and returns the negative of the sum of the squared differences.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector\+\_\+size} & Size of the vector \\
+\hline
+{\em vector} & The vector to be evaluated \\
+\hline
+{\em pams} & \doxylink{class_circuit}{Circuit} parameters\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__genetic__algorithm_8cpp_a859955e6439a661195d141ca90dd7fe6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__genetic__algorithm_8cpp_af4f9e42ca909fa978f26061602cbb37a}\label{test__genetic__algorithm_8cpp_af4f9e42ca909fa978f26061602cbb37a} 
+\index{test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}!test\_function\_long@{test\_function\_long}}
+\index{test\_function\_long@{test\_function\_long}!test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_function\_long()}{test\_function\_long()}}
+{\footnotesize\ttfamily double test\+\_\+function\+\_\+long (\begin{DoxyParamCaption}\item[{int}]{vector\+\_\+size,  }\item[{int \texorpdfstring{$\ast$}{*}}]{vector,  }\item[{\mbox{\hyperlink{struct_circuit_parameters}{Circuit\+Parameters}}}]{pams }\end{DoxyParamCaption})}
+
+
+
+Test function for the genetic algorithm with a long vector. 
+
+This function is used as the performance function for the genetic algorithm. It calculates the difference between the given vector and the test answer vector, and returns the negative of the sum of the squared differences.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector\+\_\+size} & Size of the vector \\
+\hline
+{\em vector} & The vector to be evaluated \\
+\hline
+{\em pams} & \doxylink{class_circuit}{Circuit} parameters\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__genetic__algorithm_8cpp_af4f9e42ca909fa978f26061602cbb37a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__genetic__algorithm_8cpp_af46ebdbd60f4751d345fda45173a5e35}\label{test__genetic__algorithm_8cpp_af46ebdbd60f4751d345fda45173a5e35} 
+\index{test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}!test\_genetic\_algorithm@{test\_genetic\_algorithm}}
+\index{test\_genetic\_algorithm@{test\_genetic\_algorithm}!test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_genetic\_algorithm()}{test\_genetic\_algorithm()}}
+{\footnotesize\ttfamily void test\+\_\+genetic\+\_\+algorithm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Test the genetic algorithm for various cases. 
+
+This function sets up the parameters and runs the genetic algorithm on different test cases. It checks the optimized results against expected values. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__genetic__algorithm_8cpp_af46ebdbd60f4751d345fda45173a5e35_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{test__genetic__algorithm_8cpp_af46ebdbd60f4751d345fda45173a5e35_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__genetic__algorithm_8cpp_a382524e57d4fa70caa694dfa24fe9ddb}\label{test__genetic__algorithm_8cpp_a382524e57d4fa70caa694dfa24fe9ddb} 
+\index{test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}!test\_initializer@{test\_initializer}}
+\index{test\_initializer@{test\_initializer}!test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_initializer()}{test\_initializer()}}
+{\footnotesize\ttfamily void test\+\_\+initializer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Test the initialization of the population. 
+
+This function tests if the population is correctly initialized with valid individuals and the correct size. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__genetic__algorithm_8cpp_a382524e57d4fa70caa694dfa24fe9ddb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{test__genetic__algorithm_8cpp_a382524e57d4fa70caa694dfa24fe9ddb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__genetic__algorithm_8cpp_a02a5a1f3e4ecb614dfbffb1ab2e0f119}\label{test__genetic__algorithm_8cpp_a02a5a1f3e4ecb614dfbffb1ab2e0f119} 
+\index{test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}!test\_mutation@{test\_mutation}}
+\index{test\_mutation@{test\_mutation}!test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_mutation()}{test\_mutation()}}
+{\footnotesize\ttfamily void test\+\_\+mutation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Test the mutation operators. 
+
+This function tests various mutation operators including guided mutation and genprog mutation. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{test__genetic__algorithm_8cpp_a02a5a1f3e4ecb614dfbffb1ab2e0f119_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{test__genetic__algorithm_8cpp_a02a5a1f3e4ecb614dfbffb1ab2e0f119_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__genetic__algorithm_8cpp_aad32ea7f325c0e2e53e9dcb9e6063998}\label{test__genetic__algorithm_8cpp_aad32ea7f325c0e2e53e9dcb9e6063998} 
+\index{test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}!test\_operators@{test\_operators}}
+\index{test\_operators@{test\_operators}!test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_operators()}{test\_operators()}}
+{\footnotesize\ttfamily void test\+\_\+operators (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Test the elitism operator. 
+
+This function tests the elitism operator by checking if the performance of the population is improved after elitism. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__genetic__algorithm_8cpp_aad32ea7f325c0e2e53e9dcb9e6063998_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{test__genetic__algorithm_8cpp_aad32ea7f325c0e2e53e9dcb9e6063998_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__genetic__algorithm_8cpp_a5738502be5c47789308faafd36639a99}\label{test__genetic__algorithm_8cpp_a5738502be5c47789308faafd36639a99} 
+\index{test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}!test\_SA@{test\_SA}}
+\index{test\_SA@{test\_SA}!test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_SA()}{test\_SA()}}
+{\footnotesize\ttfamily void test\+\_\+\+SA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Test the simulated annealing operator. 
+
+This function tests the simulated annealing operator by checking if the offspring is accepted when it is better, and if the temperature decreases correctly. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__genetic__algorithm_8cpp_a5738502be5c47789308faafd36639a99_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{test__genetic__algorithm_8cpp_a5738502be5c47789308faafd36639a99_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__genetic__algorithm_8cpp_a7d083e7b24bc15218036d9c374fb68e7}\label{test__genetic__algorithm_8cpp_a7d083e7b24bc15218036d9c374fb68e7} 
+\index{test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}!test\_selection@{test\_selection}}
+\index{test\_selection@{test\_selection}!test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_selection()}{test\_selection()}}
+{\footnotesize\ttfamily void test\+\_\+selection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Test the selection operators. 
+
+This function tests various selection operators including n-\/ary tournament, rank, and roulette wheel selection. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__genetic__algorithm_8cpp_a7d083e7b24bc15218036d9c374fb68e7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{test__genetic__algorithm_8cpp_a7d083e7b24bc15218036d9c374fb68e7_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{test__genetic__algorithm_8cpp_a774a13d218933d455938960e9cda9a90}\label{test__genetic__algorithm_8cpp_a774a13d218933d455938960e9cda9a90} 
+\index{test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}!test\_answer@{test\_answer}}
+\index{test\_answer@{test\_answer}!test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_answer}{test\_answer}}
+{\footnotesize\ttfamily int test\+\_\+answer\mbox{[}10\mbox{]} = \{2, 1, 1, 2, 0, 2, 3, 0, 4, 4\}}
+
+\Hypertarget{test__genetic__algorithm_8cpp_abaa63708dce213ef4dd2eb22c31abe61}\label{test__genetic__algorithm_8cpp_abaa63708dce213ef4dd2eb22c31abe61} 
+\index{test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}!test\_answer1@{test\_answer1}}
+\index{test\_answer1@{test\_answer1}!test\_genetic\_algorithm.cpp@{test\_genetic\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_answer1}{test\_answer1}}
+{\footnotesize\ttfamily int test\+\_\+answer1\mbox{[}31\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{0,\ 10,\ 1,\ 11,\ 10,\ 2,\ 11,\ 10,\ 3,\ 11,\ 10,\ 4,\ 11,\ 10,\ 5,\ 11,\ 10,\ 6,\ 11,\ 10,\ 7,\ 11,\ 10,\ 8,\ 11,\ 10,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 9,\ 11,\ 10,\ 0,\ 11\}}
+
+\end{DoxyCode}

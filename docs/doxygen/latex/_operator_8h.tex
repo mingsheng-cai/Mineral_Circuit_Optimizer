@@ -1,0 +1,66 @@
+\doxysection{include/operators/\+Operator.h File Reference}
+\hypertarget{_operator_8h}{}\label{_operator_8h}\index{include/operators/Operator.h@{include/operators/Operator.h}}
+
+
+Defines the abstract base class for genetic algorithm operators.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include "{}../utils/\+Individual.\+h"{}}\newline
+{\ttfamily \#include "{}../utils/\+Parameter.\+h"{}}\newline
+Include dependency graph for Operator.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_operator_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_operator_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_operator}{Operator}}
+\begin{DoxyCompactList}\small\item\em Abstract base class for genetic algorithm operators. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_operator_8h_a56c6a7d1fb1a60259c845fef0d6bb597}{GENETIC\+\_\+\+ALGORITHM\+\_\+\+OPERATOR\+\_\+H}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the abstract base class for genetic algorithm operators. 
+
+The \doxylink{class_operator}{Operator} class serves as an abstract base class for various genetic algorithm operators, such as selection, crossover, and mutation. Each specific operator must inherit from this class and implement the pure virtual function {\ttfamily apply()}. This design allows for a consistent interface and enables polymorphism, making it easier to manage and apply different operators within a genetic algorithm framework.
+
+\begin{DoxyDate}{Date}
+Created on May 20, 2024
+\end{DoxyDate}
+\begin{DoxyAuthor}{Authors}
+ACS Gerardium Rush -\/ Pentlandite\+:
+\begin{DoxyItemize}
+\item Alex N Njeumi
+\item Geyu Ji
+\item Melissa Y S Sim
+\item Mingsheng Cai
+\item Peifeng Tan
+\item Yongwen Chen
+\item Zihan Li 
+\end{DoxyItemize}
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_operator_8h_a56c6a7d1fb1a60259c845fef0d6bb597}\label{_operator_8h_a56c6a7d1fb1a60259c845fef0d6bb597} 
+\index{Operator.h@{Operator.h}!GENETIC\_ALGORITHM\_OPERATOR\_H@{GENETIC\_ALGORITHM\_OPERATOR\_H}}
+\index{GENETIC\_ALGORITHM\_OPERATOR\_H@{GENETIC\_ALGORITHM\_OPERATOR\_H}!Operator.h@{Operator.h}}
+\doxysubsubsection{\texorpdfstring{GENETIC\_ALGORITHM\_OPERATOR\_H}{GENETIC\_ALGORITHM\_OPERATOR\_H}}
+{\footnotesize\ttfamily \#define GENETIC\+\_\+\+ALGORITHM\+\_\+\+OPERATOR\+\_\+H}
+

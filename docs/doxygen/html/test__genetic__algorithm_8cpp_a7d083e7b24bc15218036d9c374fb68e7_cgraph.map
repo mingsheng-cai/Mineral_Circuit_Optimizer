@@ -1,0 +1,26 @@
+<map id="test_selection" name="test_selection">
+<area shape="rect" id="Node000001" title="Test the selection operators." alt="" coords="5,260,108,285"/>
+<area shape="rect" id="Node000002" href="$class_nary_tournament_selection.html#a7c588fa2ec3a54b37e334478c6b5e9f4" title="Performs the n&#45;ary tournament selection operation." alt="" coords="167,5,338,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,258,66,219,84,165,113,107,132,80,154,56,157,53,161,57,158,60,136,83,117,109,89,167,72,221,63,260"/>
+<area shape="rect" id="Node000003" href="$class_rank_selection.html#aa8033bf819af99dd43eb480bf8ec59f8" title="Performs the rank&#45;based selection operation." alt="" coords="180,70,325,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="59,258,71,227,90,186,118,143,154,106,164,100,167,104,157,110,122,146,95,188,76,229,64,260"/>
+<area shape="rect" id="Node000004" href="$class_roulette_wheel_selection.html#af66f0a7d6d42799af270f97b3dfc6097" title="Performs the roulette wheel selection operation." alt="" coords="172,120,333,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="65,257,101,215,126,191,154,170,162,166,165,170,157,175,130,195,105,218,69,261"/>
+<area shape="rect" id="Node000005" href="$class_circuit.html#a9272fae1173b964dc7441ab126500d61" title="Checks the validity of the circuit vector." alt="" coords="175,185,330,211"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="79,257,114,238,155,219,173,213,175,218,157,224,116,242,81,261"/>
+<area shape="rect" id="Node000007" href="$_genetic___algorithm_8cpp.html#aed0dc0d7a485d04965c9810ca2217222" title="Initializes the population for the genetic algorithm." alt="" coords="188,234,317,260"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="108,263,172,255,173,260,108,268"/>
+<area shape="rect" id="Node000008" href="$_genetic___algorithm_8cpp.html#a5758e13cc14bb5f332da692d118ca98a" title="Initializes the random seed based on algorithm parameters." alt="" coords="179,284,326,309"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="108,276,163,283,163,288,108,281"/>
+<area shape="rect" id="Node000009" href="$class_roulette_wheel_selection.html#af3212772f535cf5f2b02019989858914" title="Sets the population and selected vectors for the selection operation." alt="" coords="172,333,333,374"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="83,283,157,319,171,325,169,330,155,324,81,288"/>
+<area shape="rect" id="Node000010" href="$class_nary_tournament_selection.html#a08883c4d9265806fd690b5bac3611281" title="Sets the population and selected vectors for the selection operation." alt="" coords="167,399,338,439"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="68,284,103,332,128,360,157,383,166,389,163,394,154,388,125,364,99,336,64,287"/>
+<area shape="rect" id="Node000011" href="$class_rank_selection.html#a2c3aa0a7bd7fa9c948faf0e4e02ca041" title="Sets the population and selected vectors for the selection operation." alt="" coords="156,464,349,489"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="64,285,74,318,93,363,120,409,138,431,157,449,164,454,161,458,154,453,134,434,116,412,88,365,69,320,59,286"/>
+<area shape="rect" id="Node000012" href="$test__genetic__algorithm_8cpp.html#a859955e6439a661195d141ca90dd7fe6" title="Test function for the genetic algorithm." alt="" coords="204,513,301,539"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="62,285,70,327,86,385,114,447,134,475,157,500,173,510,190,516,188,521,170,514,154,504,130,479,110,450,81,387,64,328,57,286"/>
+<area shape="rect" id="Node000006" href="$class_circuit.html#af15811c915105eef1a50bdf0469cf9db" title="Marks a unit in the circuit and recursively marks its connected units." alt="" coords="397,185,528,211"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="330,195,381,195,381,200,330,200"/>
+<area shape="poly" id="edge6_Node000006_Node000006" title=" " alt="" coords="428,186,421,176,425,166,439,160,463,158,488,161,502,168,499,172,487,166,463,163,440,165,429,170,426,176,432,183"/>
+</map>

@@ -1,0 +1,22 @@
+<map id="src/CSimulator.cpp" name="src/CSimulator.cpp">
+<area shape="rect" id="Node000001" title="Defines the functions and structures for simulating and evaluating circuits in a circuit modeling fra..." alt="" coords="63,5,196,31"/>
+<area shape="rect" id="Node000002" href="$_c_unit_8h.html" title="Defines the CUnit class for representing a unit within a circuit system." alt="" coords="71,225,177,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,31,127,211,122,211,126,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,299,64,324"/>
+<area shape="poly" id="edge11_Node000001_Node000004" title=" " alt="" coords="128,32,61,226,44,286,39,285,56,225,123,30"/>
+<area shape="rect" id="Node000005" href="$_c_circuit_8h.html" title="Defines the Circuit class for modeling and simulating a circuit system." alt="" coords="141,152,261,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="138,30,192,138,187,141,133,32"/>
+<area shape="rect" id="Node000007" href="$_c_simulator_8h.html" title="Defines the functions and structures for simulating and evaluating circuits in a circuit modeling fra..." alt="" coords="255,79,353,104"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="158,28,264,71,262,76,156,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="89,299,159,324"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="127,251,127,285,121,285,121,251"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="111,253,62,292,58,288,108,249"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="191,179,149,218,145,214,187,175"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="201,225,260,251"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="209,177,223,212,218,214,204,179"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="289,106,231,146,228,142,286,102"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="429,152,501,177"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="331,102,428,144,425,149,329,106"/>
+<area shape="rect" id="Node000009" href="$_parameter_8h.html" title="Defines the Algorithm_Parameters structure for configuring the parameters of a genetic algorithm." alt="" coords="285,152,405,177"/>
+<area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="313,103,334,139,329,141,309,106"/>
+</map>

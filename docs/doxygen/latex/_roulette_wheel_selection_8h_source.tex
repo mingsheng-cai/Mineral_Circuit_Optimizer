@@ -1,0 +1,35 @@
+\doxysection{Roulette\+Wheel\+Selection.\+h}
+\hypertarget{_roulette_wheel_selection_8h_source}{}\label{_roulette_wheel_selection_8h_source}\index{include/operators/Selection/RouletteWheelSelection.h@{include/operators/Selection/RouletteWheelSelection.h}}
+\mbox{\hyperlink{_roulette_wheel_selection_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifndef\ GENETIC\_ALGORITHM\_ROULETTEWHEELSELECTION\_H}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ GENETIC\_ALGORITHM\_ROULETTEWHEELSELECTION\_H}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_operator_8h}{../Operator.h}}"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_individual_8h}{../../utils/Individual.h}}"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_parameter_8h}{../../utils/Parameter.h}}"{}}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_roulette_wheel_selection}{RouletteWheelSelection}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_operator}{Operator}}\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ std::vector<Individual>\ *\mbox{\hyperlink{class_roulette_wheel_selection_a9803688f81e8aff9763acaa13e6cb023}{selected}};\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Individual>\ *\mbox{\hyperlink{class_roulette_wheel_selection_a3577fdae4b27cc7e2581e4e265f22d9c}{population}};\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_roulette_wheel_selection_a1c76aad6470e77031dc384d0fe44298b}{populationSize}};\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_roulette_wheel_selection_aa5e1e640d8bcca73b65496e4401a8f2b}{RouletteWheelSelection}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}\ \&params);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_roulette_wheel_selection_af3212772f535cf5f2b02019989858914}{setPopulation}}(\textcolor{keyword}{const}\ std::vector<Individual>\ \&\mbox{\hyperlink{class_roulette_wheel_selection_a3577fdae4b27cc7e2581e4e265f22d9c}{population}},\ std::vector<Individual>\ \&\mbox{\hyperlink{class_roulette_wheel_selection_a9803688f81e8aff9763acaa13e6cb023}{selected}});}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_roulette_wheel_selection_a489297b0c11be0b622868ec0776684f8}{setIndividual}}(\mbox{\hyperlink{struct_individual}{Individual}}\ \&individual)\ \{\};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_roulette_wheel_selection_abee04b12deed33954ab3917ccaeb0a1e}{setParents}}(\mbox{\hyperlink{struct_individual}{Individual}}\ \&offspring,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&parent1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&parent2)\ \{\};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_roulette_wheel_selection_af66f0a7d6d42799af270f97b3dfc6097}{apply}}(std::mt19937\ \&generator)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//GENETIC\_ALGORITHM\_ROULETTEWHEELSELECTION\_H}}
+
+\end{DoxyCode}

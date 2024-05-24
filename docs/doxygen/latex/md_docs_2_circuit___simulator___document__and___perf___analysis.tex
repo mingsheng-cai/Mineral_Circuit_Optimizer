@@ -1,0 +1,250 @@
+\chapter{Document \& Analysis for Circuit Simulator}
+\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis}{}\label{md_docs_2_circuit___simulator___document__and___perf___analysis}\index{Document \& Analysis for Circuit Simulator@{Document \& Analysis for Circuit Simulator}}
+\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md0}%
+\Hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md0}%
+ \hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md1}{}\doxysection{\texorpdfstring{Introduction}{Introduction}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md1}
+This document provides a comprehensive design framework for the {\ttfamily CSimulator} class and its associated components. The {\ttfamily CSimulator} class is designed to simulate the mass balance of a separation circuit composed of multiple units, evaluate the performance of the circuit, and ensure that the circuit operates correctly under specified constraints.\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md2}{}\doxysection{\texorpdfstring{1. Overview of {\ttfamily CSimulator}}{1. Overview of {\ttfamily CSimulator}}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md2}
+\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md3}{}\doxysubsection{\texorpdfstring{1.\+1 Purpose}{1.\+1 Purpose}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md3}
+The purpose of the {\ttfamily CSimulator} class is to simulate the mass balance of a circuit that separates valuable material (gerardium) from waste. It calculates the mass flows through each unit in the circuit and determines the overall performance of the circuit.\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md4}{}\doxysubsection{\texorpdfstring{1.\+2 Scope}{1.\+2 Scope}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md4}
+The scope of the {\ttfamily CSimulator} includes\+:
+\begin{DoxyItemize}
+\item Parsing the circuit vector into a structured representation.
+\item Simulating the mass balance for the entire circuit.
+\item Evaluating the performance of the circuit based on the mass balance.
+\item Ensuring the circuit reaches a steady-\/state solution.
+\end{DoxyItemize}\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md5}{}\doxysection{\texorpdfstring{2. Class Design}{2. Class Design}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md5}
+\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md6}{}\doxysubsection{\texorpdfstring{2.\+1 UML Class Diagram}{2.\+1 UML Class Diagram}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md6}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+\ \ \ \ \ \ \ \ +-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+}
+\DoxyCodeLine{|\ \ \ CSimulator\ \ \ \ |\ \ \ \ \ \ \ \ |\ \ \ \ \ CUnit\ \ \ \ \ \ |}
+\DoxyCodeLine{+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+\ \ \ \ \ \ \ \ +-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+}
+\DoxyCodeLine{|\ -\/\ circuit\_vector:\ std::vector<int>\ \ \ \ \ \ \ |}
+\DoxyCodeLine{|\ -\/\ units:\ std::vector<CUnit>\ \ \ \ \ \ \ \ \ \ \ \ \ \ |}
+\DoxyCodeLine{|\ -\/\ feed\_rate:\ double\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |}
+\DoxyCodeLine{|\ -\/\ tolerance:\ double\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |}
+\DoxyCodeLine{|\ -\/\ max\_iterations:\ int\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |}
+\DoxyCodeLine{+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+\ \ \ \ \ \ \ \ +-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+}
+\DoxyCodeLine{|\ +\ CSimulator(circuit\_vector,\ feed\_rate,\ \ |}
+\DoxyCodeLine{|\ \ \ tolerance,\ max\_iterations)\ \ \ \ \ \ \ \ \ \ \ \ \ |}
+\DoxyCodeLine{|\ +\ EvaluateCircuit():\ double\ \ \ \ \ \ \ \ \ \ \ \ \ \ |}
+\DoxyCodeLine{|\ +\ SimulateUnit(unit:\ CUnit):\ bool\ \ \ \ \ \ \ \ |}
+\DoxyCodeLine{|\ +\ SolveSteadyState():\ bool\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |}
+\DoxyCodeLine{|\ +\ ParseCircuitVector():\ void\ \ \ \ \ \ \ \ \ \ \ \ \ |}
+\DoxyCodeLine{+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+\ \ \ \ \ \ \ \ +-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ +\ CUnit(conc\_num:\ int,\ \ \ \ \ \ \ \ |}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ \ \ inter\_num:\ int,\ tails\_num:\ int)|}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ +\ CalculateFlows(feed\_rate:\ double,\ |}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ \ \ kC:\ double,\ kI:\ double):\ void|}
+\DoxyCodeLine{+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+\ \ \ \ \ \ \ \ +-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+}
+\DoxyCodeLine{|\ \ \ \ \ Attributes\ \ \ |\ \ \ \ \ \ \ \ |\ \ Attributes\ \ \ |}
+\DoxyCodeLine{|\ \ +\ concNum:\ int\ \ \ \ \ \ \ \ \ \ \ |\ \ +\ concNum:\ int\ \ \ \ \ \ \ \ \ \ \ |}
+\DoxyCodeLine{|\ \ +\ interNum:\ int\ \ \ \ \ \ \ \ \ \ |\ \ +\ interNum:\ int\ \ \ \ \ \ \ \ \ \ |}
+\DoxyCodeLine{|\ \ +\ tailsNum:\ int\ \ \ \ \ \ \ \ \ \ |\ \ +\ tailsNum:\ int\ \ \ \ \ \ \ \ \ \ |}
+\DoxyCodeLine{|\ \ +\ feedGerardium:\ double\ \ |\ \ +\ feedGerardium:\ double\ \ |}
+\DoxyCodeLine{|\ \ +\ feedWaste:\ double\ \ \ \ \ \ |\ \ +\ feedWaste:\ double\ \ \ \ \ \ |}
+\DoxyCodeLine{|\ \ +\ newFeedGerardium:\ double\ |\ \ +\ newFeedGerardium:\ double\ |}
+\DoxyCodeLine{|\ \ +\ newFeedWaste:\ double\ \ \ |\ \ +\ newFeedWaste:\ double\ \ \ |}
+\DoxyCodeLine{|\ \ +\ differenceG:\ double\ \ \ \ |\ \ +\ differenceG:\ double\ \ \ \ |}
+\DoxyCodeLine{|\ \ +\ differenceW:\ double\ \ \ \ |\ \ +\ differenceW:\ double\ \ \ \ |}
+\DoxyCodeLine{|\ \ +\ concPtr:\ CUnit*\ \ \ \ \ \ \ \ |\ \ +\ concPtr:\ CUnit*\ \ \ \ \ \ \ \ |}
+\DoxyCodeLine{|\ \ +\ interPtr:\ CUnit*\ \ \ \ \ \ \ |\ \ +\ interPtr:\ CUnit*\ \ \ \ \ \ \ |}
+\DoxyCodeLine{|\ \ +\ tailsPtr:\ CUnit*\ \ \ \ \ \ \ |\ \ +\ tailsPtr:\ CUnit*\ \ \ \ \ \ \ |}
+\DoxyCodeLine{|\ \ +\ mark:\ bool\ \ \ \ \ \ \ \ \ \ \ \ \ |\ \ +\ mark:\ bool\ \ \ \ \ \ \ \ \ \ \ \ \ |}
+\DoxyCodeLine{+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+\ \ \ \ \ \ \ \ \ \ +-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+}
+
+\end{DoxyCode}
+\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md7}{}\doxysubsection{\texorpdfstring{2.\+2 {\ttfamily CSimulator} Class}{2.\+2 {\ttfamily CSimulator} Class}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md7}
+\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md8}{}\doxysubsubsection{\texorpdfstring{2.\+2.\+1 Attributes}{2.\+2.\+1 Attributes}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md8}
+
+\begin{DoxyItemize}
+\item {\bfseries{circuit\+\_\+vector\+:}} A vector of integers representing the configuration of the circuit.
+\item {\bfseries{units\+:}} A vector of {\ttfamily \doxylink{class_c_unit}{CUnit}} objects, each representing a unit in the circuit.
+\item {\bfseries{feed\+\_\+rate\+:}} A double representing the feed rate of the input stream.
+\item {\bfseries{tolerance\+:}} A double specifying the tolerance for convergence in the simulation.
+\item {\bfseries{max\+\_\+iterations\+:}} An integer representing the maximum number of iterations allowed for achieving convergence.
+\end{DoxyItemize}\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md9}{}\doxysubsubsection{\texorpdfstring{2.\+2.\+2 Methods}{2.\+2.\+2 Methods}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md9}
+{\bfseries{Constructor\+:}} The constructor initializes the {\ttfamily CSimulator} with a given circuit vector, feed rate, tolerance, and maximum number of iterations. It also calls a method to parse the circuit vector into a structured format.
+
+{\bfseries{Evaluate\+Circuit\+:}} This method evaluates the entire circuit and returns a performance score. It checks if the circuit reaches a steady-\/state solution within the specified maximum iterations. If convergence is not achieved, it returns a very negative value to indicate failure.
+
+{\bfseries{Simulate\+Unit\+:}} This method calculates the mass balance for a single unit in the circuit. It uses the feed rate and rate constants to compute the flow rates of the high-\/grade concentrate, intermediate stream, and tailings stream.
+
+{\bfseries{Solve\+Steady\+State\+:}} This method iteratively solves for the steady-\/state mass balance of the entire circuit. It repeatedly updates the feed rates of all units and checks for convergence within the specified tolerance. If all units\textquotesingle{} feed rates stabilize within the tolerance, it returns true; otherwise, it continues until the maximum iterations are reached.
+
+{\bfseries{Parse\+Circuit\+Vector\+:}} This method parses the circuit vector into a structured representation by creating {\ttfamily \doxylink{class_c_unit}{CUnit}} objects for each unit in the circuit. It sets the connections between units based on the vector.\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md10}{}\doxysubsection{\texorpdfstring{2.\+3 {\ttfamily CUnit} Class}{2.\+3 {\ttfamily CUnit} Class}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md10}
+\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md11}{}\doxysubsection{\texorpdfstring{2.\+3.\+1 Attributes}{2.\+3.\+1 Attributes}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md11}
+
+\begin{DoxyItemize}
+\item {\bfseries{conc\+Num\+:}} An integer representing the index of the unit for the high-\/grade concentrate stream.
+\item {\bfseries{inter\+Num\+:}} An integer representing the index of the unit for the intermediate stream.
+\item {\bfseries{tails\+Num\+:}} An integer representing the index of the unit for the tailings stream.
+\item {\bfseries{feed\+Gerardium\+:}} A double representing the feed rate of gerardium to the unit.
+\item {\bfseries{feed\+Waste\+:}} A double representing the feed rate of waste to the unit.
+\item {\bfseries{new\+Feed\+Gerardium\+:}} A double representing the new feed rate of gerardium after processing.
+\item {\bfseries{new\+Feed\+Waste\+:}} A double representing the new feed rate of waste after processing.
+\item {\bfseries{differenceG\+:}} A double representing the relative change in feed rate of gerardium.
+\item {\bfseries{differenceW\+:}} A double representing the relative change in feed rate of waste.
+\item {\bfseries{conc\+Ptr\+:}} A pointer to the {\ttfamily \doxylink{class_c_unit}{CUnit}} receiving the concentrate stream.
+\item {\bfseries{inter\+Ptr\+:}} A pointer to the {\ttfamily \doxylink{class_c_unit}{CUnit}} receiving the intermediate stream.
+\item {\bfseries{tails\+Ptr\+:}} A pointer to the {\ttfamily \doxylink{class_c_unit}{CUnit}} receiving the tailings stream.
+\item {\bfseries{mark\+:}} A boolean indicating whether the unit has been marked for traversal.
+\end{DoxyItemize}\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md12}{}\doxysubsection{\texorpdfstring{2.\+3.\+2 Methods}{2.\+3.\+2 Methods}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md12}
+{\bfseries{Constructor\+:}} The constructor initializes a {\ttfamily \doxylink{class_c_unit}{CUnit}} with the indices for its concentrate, intermediate, and tailings streams. It also initializes the feed rates and other attributes.
+
+{\bfseries{Calculate\+Flows\+:}} This method calculates the mass flows for the unit based on the feed rate and given rate constants for the high-\/grade and intermediate streams. It computes the residence time and uses it to determine the flow rates for the concentrate, intermediate, and tailings streams.\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md13}{}\doxysection{\texorpdfstring{3. Function Definitions}{3. Function Definitions}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md13}
+\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md14}{}\doxysubsection{\texorpdfstring{3.\+1 {\ttfamily CSimulator} Methods}{3.\+1 {\ttfamily CSimulator} Methods}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md14}
+{\bfseries{Constructor\+:}}
+\begin{DoxyItemize}
+\item The constructor initializes the {\ttfamily CSimulator} with the provided circuit vector, feed rate, tolerance, and maximum iterations.
+\item It calls the {\ttfamily Parse\+Circuit\+Vector} method to convert the circuit vector into a structured format, creating a collection of {\ttfamily \doxylink{class_c_unit}{CUnit}} objects representing the units in the circuit.
+\end{DoxyItemize}
+
+{\bfseries{Evaluate\+Circuit\+:}}
+\begin{DoxyItemize}
+\item This method first calls {\ttfamily Solve\+Steady\+State} to iteratively solve for the steady-\/state mass balance.
+\item If the steady-\/state solution is not achieved, it returns a very negative value to indicate failure.
+\item If convergence is achieved, it calculates the overall performance score by summing the contributions from all units based on their concentrate and tailings rates.
+\end{DoxyItemize}
+
+{\bfseries{Simulate\+Unit\+:}}
+\begin{DoxyItemize}
+\item This method calculates the mass flows for a single unit.
+\item It uses the feed rate and rate constants to compute the recovery rates for the high-\/grade concentrate and intermediate streams.
+\item It then determines the flow rates for the concentrate, intermediate, and tailings streams based on these recovery rates.
+\end{DoxyItemize}
+
+{\bfseries{Solve\+Steady\+State\+:}}
+\begin{DoxyItemize}
+\item This method iteratively updates the feed rates of all units and checks for convergence within the specified tolerance.
+\item It stores the old feed rates and compares them with the new feed rates to check for convergence.
+\item If all units\textquotesingle{} feed rates stabilize within the tolerance, it returns true; otherwise, it continues until the maximum number of iterations is reached.
+\end{DoxyItemize}
+
+{\bfseries{Parse\+Circuit\+Vector\+:}}
+\begin{DoxyItemize}
+\item This method converts the circuit vector into a structured representation by creating {\ttfamily \doxylink{class_c_unit}{CUnit}} objects for each unit.
+\item It sets the connections between units based on the vector, ensuring each unit is correctly linked to its concentrate, intermediate, and tailings streams.
+\end{DoxyItemize}\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md15}{}\doxysubsection{\texorpdfstring{3.\+2 {\ttfamily CUnit} Methods}{3.\+2 {\ttfamily CUnit} Methods}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md15}
+{\bfseries{Constructor\+:}}
+\begin{DoxyItemize}
+\item The constructor initializes a {\ttfamily \doxylink{class_c_unit}{CUnit}} with the indices for its concentrate, intermediate, and tailings streams.
+\item It sets the initial feed rates and other attributes.
+\end{DoxyItemize}
+
+{\bfseries{Calculate\+Flows\+:}}
+\begin{DoxyItemize}
+\item This method calculates the mass flows for the unit based on the feed rate and given rate constants.
+\item It computes the residence time and uses it to determine the flow rates for the concentrate, intermediate, and tailings streams.
+\item The calculated flow rates are then assigned to the respective attributes of the {\ttfamily \doxylink{class_c_unit}{CUnit}}.
+\end{DoxyItemize}\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md16}{}\doxysection{\texorpdfstring{4. Validation and Testing}{4. Validation and Testing}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md16}
+\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md17}{}\doxysubsection{\texorpdfstring{4.\+1 Unit Tests}{4.\+1 Unit Tests}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md17}
+
+\begin{DoxyItemize}
+\item {\bfseries{CSimulator Constructor\+:}}
+\begin{DoxyItemize}
+\item Test initialization with valid and invalid circuit vectors to ensure proper setup and error handling.
+\end{DoxyItemize}
+\item {\bfseries{Evaluate\+Circuit\+:}}
+\begin{DoxyItemize}
+\item Validate performance evaluation by comparing the calculated performance score with expected values for known valid circuits.
+\end{DoxyItemize}
+\item {\bfseries{Simulate\+Unit\+:}}
+\begin{DoxyItemize}
+\item Verify mass flow calculations by checking the output flow rates for various input feed rates and rate constants.
+\end{DoxyItemize}
+\item {\bfseries{Solve\+Steady\+State\+:}}
+\begin{DoxyItemize}
+\item Check convergence behavior for different circuit configurations and feed rates, ensuring the method stops iterating once convergence is achieved.
+\end{DoxyItemize}
+\item {\bfseries{Parse\+Circuit\+Vector\+:}}
+\begin{DoxyItemize}
+\item Test the parsing of circuit vectors to ensure that the resulting unit configurations match the expected structure.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md18}{}\doxysubsection{\texorpdfstring{4.\+2 Integration Tests}{4.\+2 Integration Tests}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md18}
+
+\begin{DoxyItemize}
+\item {\bfseries{Complete \doxylink{class_circuit}{Circuit} Simulation\+:}}
+\begin{DoxyItemize}
+\item Validate end-\/to-\/end simulation for sample circuits, ensuring correct performance score and convergence for the entire circuit.
+\end{DoxyItemize}
+\item {\bfseries{Boundary Conditions\+:}}
+\begin{DoxyItemize}
+\item Test simulator behavior with edge cases such as zero feed rate, maximum allowable iterations, and extreme values for tolerance.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md19}{}\doxysection{\texorpdfstring{5. Performance Considerations}{5. Performance Considerations}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md19}
+
+\begin{DoxyItemize}
+\item {\bfseries{Efficiency\+:}}
+\begin{DoxyItemize}
+\item Optimize the iterative solver to achieve faster convergence by improving the algorithm and reducing computational overhead.
+\end{DoxyItemize}
+\item {\bfseries{Scalability\+:}}
+\begin{DoxyItemize}
+\item Ensure the simulator can handle larger circuits with more units without significant performance degradation, potentially through parallel processing.
+\end{DoxyItemize}
+\item {\bfseries{Parallelization\+:}}
+\begin{DoxyItemize}
+\item Consider parallelizing unit simulations to leverage multi-\/core processors, which can improve performance and reduce simulation time.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md20}{}\doxysection{\texorpdfstring{6. Usage}{6. Usage}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md20}
+
+\begin{DoxyItemize}
+\item {\bfseries{User Guide\+:}}
+\begin{DoxyItemize}
+\item Provide detailed instructions for setting up the environment, running the simulator, and interpreting the output. Include examples and usage scenarios to help users understand how to use the tool effectively.
+\item Ensure that the user guide includes steps to compile and run the simulator, required dependencies, and configuration options.
+\item Example\+:
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md21}{}\doxysubsubsection{\texorpdfstring{Setup}{Setup}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md21}
+
+\begin{DoxyEnumerate}
+\item Clone the repository.
+\item Navigate to the project directory.
+\item Install required dependencies\+:
+\end{DoxyEnumerate}
+
+{\ttfamily shell sudo apt-\/get install g++ sudo apt-\/get install cmake } \hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md22}{}\doxysubsubsection{\texorpdfstring{Build the project}{Build the project}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md22}
+{\ttfamily shell mkdir build cd build cmake .. make }\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md23}{}\doxysubsubsection{\texorpdfstring{Running the Simulator}{Running the Simulator}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md23}
+To run the simulator, use the following command\+: {\ttfamily shell ./simulator \texorpdfstring{$<$}{<}input\+\_\+file\texorpdfstring{$>$}{>} } Replace {\ttfamily \texorpdfstring{$<$}{<}input\+\_\+file\texorpdfstring{$>$}{>}} with the path to your input configuration file.\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md24}{}\doxysubsubsection{\texorpdfstring{Example}{Example}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md24}
+{\ttfamily shell ./simulator config.\+txt }\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md25}{}\doxysubsubsection{\texorpdfstring{Interpreting the Output}{Interpreting the Output}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md25}
+The simulator will output the performance score and the detailed mass flow rates for each unit in the circuit.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Code Comments\+:}}
+\begin{DoxyItemize}
+\item Ensure all methods and key sections of the code are well-\/documented with comments explaining their functionality, parameters, and return values.
+\item Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Constructor\ for\ CSimulator}}
+\DoxyCodeLine{\textcolor{comment}{//\ Initializes\ the\ simulator\ with\ the\ given\ circuit\ vector,\ feed\ rate,\ tolerance,\ and\ max\ iterations.}}
+\DoxyCodeLine{CSimulator::CSimulator(std::vector<int>\&\ circuit\_vector,\ \textcolor{keywordtype}{double}\ feed\_rate,\ \textcolor{keywordtype}{double}\ tolerance,\ \textcolor{keywordtype}{int}\ max\_iterations)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Initialization\ code}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+\end{DoxyItemize}
+\item {\bfseries{Examples\+:}}
+\begin{DoxyItemize}
+\item Include example circuit vectors and expected outputs to help users understand the simulator\textquotesingle{}s behavior and validate its performance.
+\item Example\+:
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md26}{}\doxysubsection{\texorpdfstring{Example Circuit Vector}{Example Circuit Vector}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md26}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{0,\ 1,\ 3,\ 3,\ 2,\ 2,\ 0,\ 4,\ 1,\ 1,\ 1,\ 0,\ 5}
+
+\end{DoxyCode}
+\hypertarget{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md27}{}\doxysubsection{\texorpdfstring{Expected Output}{Expected Output}}\label{md_docs_2_circuit___simulator___document__and___perf___analysis_autotoc_md27}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Performance\ Score:\ 110.25}
+\DoxyCodeLine{Unit\ 0:\ Concentrate\ Rate:\ 1.5,\ Intermediate\ Rate:\ 0.3,\ Tailings\ Rate:\ 8.2}
+\DoxyCodeLine{...}
+
+\end{DoxyCode}
+
+
+By following this detailed design framework, the {\ttfamily CSimulator} class can be developed to provide robust and efficient simulation of circuit configurations, meeting the requirements of the project and delivering accurate and reliable performance evaluations. 

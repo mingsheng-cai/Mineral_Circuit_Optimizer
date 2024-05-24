@@ -1,0 +1,7 @@
+<map id="tqdm::progress_bar::reset_refresh_timer" name="tqdm::progress_bar::reset_refresh_timer">
+<area shape="rect" id="Node000001" title="Reset the refresh timer." alt="" coords="5,5,148,45"/>
+<area shape="rect" id="Node000002" href="$classtqdm_1_1_chronometer.html#a1f68eafb14871440564c4d014e9c90aa" title="Reset the chronometer and return the elapsed time since the last reset." alt="" coords="196,5,339,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,23,183,23,183,28,148,28"/>
+<area shape="rect" id="Node000003" href="$namespacetqdm.html#acb71ab3d3baf5c7814a297ee0829160c" title="Calculate the elapsed seconds between two time points." alt="" coords="387,13,547,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="339,23,373,23,373,28,339,28"/>
+</map>

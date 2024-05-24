@@ -1,0 +1,311 @@
+\doxysection{include/\+Genetic\+\_\+\+Algorithm.h File Reference}
+\hypertarget{_genetic___algorithm_8h}{}\label{_genetic___algorithm_8h}\index{include/Genetic\_Algorithm.h@{include/Genetic\_Algorithm.h}}
+
+
+Defines the functions and structures for implementing a genetic algorithm.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include "{}utils/\+Individual.\+h"{}}\newline
+{\ttfamily \#include "{}utils/\+Parameter.\+h"{}}\newline
+{\ttfamily \#include "{}utils/tqdm.\+hpp"{}}\newline
+{\ttfamily \#include "{}operators/\+Selection/\+Nary\+Tournament\+Selection.\+h"{}}\newline
+{\ttfamily \#include "{}operators/\+Selection/\+Rank\+Selection.\+h"{}}\newline
+{\ttfamily \#include "{}operators/\+Selection/\+Roulette\+Wheel\+Selection.\+h"{}}\newline
+{\ttfamily \#include "{}operators/\+Mutation/\+Guided\+Mutation.\+h"{}}\newline
+{\ttfamily \#include "{}operators/\+Mutation/\+Gen\+Prog\+Mutation.\+h"{}}\newline
+{\ttfamily \#include "{}operators/\+Crossover/\+Pure\+Single\+Point\+Crossover.\+h"{}}\newline
+{\ttfamily \#include "{}operators/\+Crossover/\+Two\+Point\+Crossover.\+h"{}}\newline
+{\ttfamily \#include "{}operators/\+Crossover/\+Uniform\+Crossover.\+h"{}}\newline
+Include dependency graph for Genetic\+\_\+\+Algorithm.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_genetic___algorithm_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_genetic___algorithm_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_genetic___algorithm_8h_a4d16a3c7ff10c776d2a5788423305b7e}{GENETIC\+\_\+\+ALGORITHM\+\_\+H}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_genetic___algorithm_8h_a5758e13cc14bb5f332da692d118ca98a}{initialize\+Random\+Seed}} (const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&params, std\+::vector$<$ std\+::mt19937 $>$ \&generators)
+\begin{DoxyCompactList}\small\item\em Initializes the random seed based on algorithm parameters. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \mbox{\hyperlink{_genetic___algorithm_8h_aed0dc0d7a485d04965c9810ca2217222}{initialize\+Population}} (const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&params, int vector\+Size, bool(\&validity)(int, int \texorpdfstring{$\ast$}{*}), std\+::vector$<$ std\+::mt19937 $>$ \&generators)
+\begin{DoxyCompactList}\small\item\em Initializes the population for the genetic algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_genetic___algorithm_8h_a67d1d9548b0f13a3e42eb769e4a3da02}{elitism}} (const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&population, std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&new\+Population, const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&params)
+\begin{DoxyCompactList}\small\item\em Apply elitism to preserve the best individuals in a new population. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_genetic___algorithm_8h_ae1ecff79583da4244ddf97b989270a61}{acceptance\+Probability}} (double current\+Energy, double new\+Energy, double temperature)
+\begin{DoxyCompactList}\small\item\em Calculate the acceptance probability for a new state in Simulated Annealing. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_genetic___algorithm_8h_a51da111672cefadb49ebda7a804df121}{apply\+Simulated\+Annealing}} (\mbox{\hyperlink{struct_individual}{Individual}} \&offspring, \mbox{\hyperlink{struct_individual}{Individual}} \&parent1, \mbox{\hyperlink{struct_individual}{Individual}} \&parent2, int vector\+\_\+size, double(\&func)(int, int \texorpdfstring{$\ast$}{*}, struct \mbox{\hyperlink{struct_circuit_parameters}{Circuit\+Parameters}}), bool(\&validity)(int, int \texorpdfstring{$\ast$}{*}), double \&Temp, const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&params, const \mbox{\hyperlink{struct_circuit_parameters}{Circuit\+Parameters}} c\+\_\+params, std\+::mt19937 \&generator)
+\begin{DoxyCompactList}\small\item\em Applies simulated annealing technique to decide whether to accept an offspring in a genetic algorithm. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_genetic___algorithm_8h_ae4b47db199826840b2c87e06e466dc12}{optimize}} (int vector\+\_\+size, int \texorpdfstring{$\ast$}{*}vector, double(\&func)(int, int \texorpdfstring{$\ast$}{*}, struct \mbox{\hyperlink{struct_circuit_parameters}{Circuit\+Parameters}}), bool(\&validity)(int, int \texorpdfstring{$\ast$}{*}), struct \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} params, struct \mbox{\hyperlink{struct_circuit_parameters}{Circuit\+Parameters}} c\+\_\+params)
+\begin{DoxyCompactList}\small\item\em Optimizes a solution using the genetic algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the functions and structures for implementing a genetic algorithm. 
+
+The Genetic\+\_\+\+Algorithm module provides functions for initializing populations, setting random seeds, and optimizing solutions using a genetic algorithm framework. This includes selection, crossover, and mutation operators.
+
+\begin{DoxyDate}{Date}
+Created on May 20, 2024
+\end{DoxyDate}
+\begin{DoxyAuthor}{Authors}
+ACS Gerardium Rush -\/ Pentlandite\+:
+\begin{DoxyItemize}
+\item Alex N Njeumi
+\item Geyu Ji
+\item Melissa Y S Sim
+\item Mingsheng Cai
+\item Peifeng Tan
+\item Yongwen Chen
+\item Zihan Li 
+\end{DoxyItemize}
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_genetic___algorithm_8h_a4d16a3c7ff10c776d2a5788423305b7e}\label{_genetic___algorithm_8h_a4d16a3c7ff10c776d2a5788423305b7e} 
+\index{Genetic\_Algorithm.h@{Genetic\_Algorithm.h}!GENETIC\_ALGORITHM\_H@{GENETIC\_ALGORITHM\_H}}
+\index{GENETIC\_ALGORITHM\_H@{GENETIC\_ALGORITHM\_H}!Genetic\_Algorithm.h@{Genetic\_Algorithm.h}}
+\doxysubsubsection{\texorpdfstring{GENETIC\_ALGORITHM\_H}{GENETIC\_ALGORITHM\_H}}
+{\footnotesize\ttfamily \#define GENETIC\+\_\+\+ALGORITHM\+\_\+H}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_genetic___algorithm_8h_ae1ecff79583da4244ddf97b989270a61}\label{_genetic___algorithm_8h_ae1ecff79583da4244ddf97b989270a61} 
+\index{Genetic\_Algorithm.h@{Genetic\_Algorithm.h}!acceptanceProbability@{acceptanceProbability}}
+\index{acceptanceProbability@{acceptanceProbability}!Genetic\_Algorithm.h@{Genetic\_Algorithm.h}}
+\doxysubsubsection{\texorpdfstring{acceptanceProbability()}{acceptanceProbability()}}
+{\footnotesize\ttfamily double acceptance\+Probability (\begin{DoxyParamCaption}\item[{double}]{current\+Energy,  }\item[{double}]{new\+Energy,  }\item[{double}]{temperature }\end{DoxyParamCaption})}
+
+
+
+Calculate the acceptance probability for a new state in Simulated Annealing. 
+
+This function calculates the probability with which a new state should be accepted over the current state, based on their respective energies and the current temperature of the system. If the new energy is better (higher value), the function returns 1.\+0, meaning the new state is always accepted. Otherwise, it returns a value calculated using the Boltzmann probability distribution which considers both the difference in energy and the current temperature.
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Energy} & The energy of the current state. \\
+\hline
+{\em new\+Energy} & The energy of the new state being considered. \\
+\hline
+{\em temperature} & The current temperature of the system (controls the probability threshold). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double The probability of accepting the new state. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_genetic___algorithm_8h_ae1ecff79583da4244ddf97b989270a61_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_genetic___algorithm_8h_a51da111672cefadb49ebda7a804df121}\label{_genetic___algorithm_8h_a51da111672cefadb49ebda7a804df121} 
+\index{Genetic\_Algorithm.h@{Genetic\_Algorithm.h}!applySimulatedAnnealing@{applySimulatedAnnealing}}
+\index{applySimulatedAnnealing@{applySimulatedAnnealing}!Genetic\_Algorithm.h@{Genetic\_Algorithm.h}}
+\doxysubsubsection{\texorpdfstring{applySimulatedAnnealing()}{applySimulatedAnnealing()}}
+{\footnotesize\ttfamily bool apply\+Simulated\+Annealing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{offspring,  }\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{parent1,  }\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{parent2,  }\item[{int}]{vector\+\_\+size,  }\item[{double(\&)(int, int \texorpdfstring{$\ast$}{*}, struct \mbox{\hyperlink{struct_circuit_parameters}{Circuit\+Parameters}})}]{func,  }\item[{bool(\&)(int, int \texorpdfstring{$\ast$}{*})}]{validity,  }\item[{double \&}]{Temp,  }\item[{const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&}]{params,  }\item[{const \mbox{\hyperlink{struct_circuit_parameters}{Circuit\+Parameters}}}]{c\+\_\+params,  }\item[{std\+::mt19937 \&}]{generator }\end{DoxyParamCaption})}
+
+
+
+Applies simulated annealing technique to decide whether to accept an offspring in a genetic algorithm. 
+
+This function performs the simulated annealing decision process on a newly generated offspring. It compares the offspring\textquotesingle{}s fitness to the average fitness of its parents using the simulated annealing acceptance probability, which depends on the current temperature of the system. The function also handles the cooling of the system temperature and validates the offspring using a provided validity function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em offspring} & A reference to the offspring individual whose acceptance is being determined. \\
+\hline
+{\em parent1} & A reference to the first parent of the offspring. \\
+\hline
+{\em parent2} & A reference to the second parent of the offspring. \\
+\hline
+{\em vector\+\_\+size} & The size of the individual\textquotesingle{}s gene vector. \\
+\hline
+{\em func} & A function that calculates the fitness of an individual based on its genes. \\
+\hline
+{\em validity} & A function that checks the validity of an individual\textquotesingle{}s gene configuration. \\
+\hline
+{\em Temp} & A reference to the current temperature used for the simulated annealing process. \\
+\hline
+{\em params} & A structure containing parameters relevant to the annealing process, such as the temperature decrement. \\
+\hline
+{\em c\+\_\+params} & The circuit parameters used in the fitness evaluation function. \\
+\hline
+{\em generator} & A random number generator used for probabilistic decisions.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Returns true if the offspring is accepted, false otherwise. The function can also modify the offspring directly, setting it to one of the parents if the temperature is low and the acceptance criteria are not met.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The function directly modifies the temperature, decrementing it according to {\ttfamily deltT} from {\ttfamily params}. If the offspring is invalid (as determined by the {\ttfamily validity} function), it is immediately rejected and assigned a fitness value of INVALID\+\_\+\+FITNESS. 
+\end{DoxyNote}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_genetic___algorithm_8h_a51da111672cefadb49ebda7a804df121_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_genetic___algorithm_8h_a51da111672cefadb49ebda7a804df121_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_genetic___algorithm_8h_a67d1d9548b0f13a3e42eb769e4a3da02}\label{_genetic___algorithm_8h_a67d1d9548b0f13a3e42eb769e4a3da02} 
+\index{Genetic\_Algorithm.h@{Genetic\_Algorithm.h}!elitism@{elitism}}
+\index{elitism@{elitism}!Genetic\_Algorithm.h@{Genetic\_Algorithm.h}}
+\doxysubsubsection{\texorpdfstring{elitism()}{elitism()}}
+{\footnotesize\ttfamily void elitism (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&}]{population,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&}]{new\+Population,  }\item[{const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&}]{params }\end{DoxyParamCaption})}
+
+
+
+Apply elitism to preserve the best individuals in a new population. 
+
+This function sorts the given population in descending order based on their fitness, then selectively copies the top percentage of individuals as specified by the elite\+Percentage in the \doxylink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}. This is used to ensure that the best individuals are preserved for the next generation, promoting genetic diversity and preventing loss of the best found solutions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em population} & The current generation of individuals (const reference). \\
+\hline
+{\em new\+Population} & The next generation of individuals where elites will be added (reference). \\
+\hline
+{\em params} & The parameters of the algorithm including population size and elite percentage. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_genetic___algorithm_8h_a67d1d9548b0f13a3e42eb769e4a3da02_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_genetic___algorithm_8h_aed0dc0d7a485d04965c9810ca2217222}\label{_genetic___algorithm_8h_aed0dc0d7a485d04965c9810ca2217222} 
+\index{Genetic\_Algorithm.h@{Genetic\_Algorithm.h}!initializePopulation@{initializePopulation}}
+\index{initializePopulation@{initializePopulation}!Genetic\_Algorithm.h@{Genetic\_Algorithm.h}}
+\doxysubsubsection{\texorpdfstring{initializePopulation()}{initializePopulation()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ initialize\+Population (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&}]{params,  }\item[{int}]{vector\+Size,  }\item[{bool(\&)(int, int \texorpdfstring{$\ast$}{*})}]{validity,  }\item[{std\+::vector$<$ std\+::mt19937 $>$ \&}]{generators }\end{DoxyParamCaption})}
+
+
+
+Initializes the population for the genetic algorithm. 
+
+This function initializes the population for the genetic algorithm, ensuring each individual meets the validity criteria specified by the user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & The algorithm parameters containing population size and other configurations. \\
+\hline
+{\em vector\+Size} & The size of the gene vector for each individual. \\
+\hline
+{\em validity} & A function pointer to the validity checking function. \\
+\hline
+{\em generators} & A vector of random number generators for each thread. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of individuals representing the initial population. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_genetic___algorithm_8h_aed0dc0d7a485d04965c9810ca2217222_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_genetic___algorithm_8h_a5758e13cc14bb5f332da692d118ca98a}\label{_genetic___algorithm_8h_a5758e13cc14bb5f332da692d118ca98a} 
+\index{Genetic\_Algorithm.h@{Genetic\_Algorithm.h}!initializeRandomSeed@{initializeRandomSeed}}
+\index{initializeRandomSeed@{initializeRandomSeed}!Genetic\_Algorithm.h@{Genetic\_Algorithm.h}}
+\doxysubsubsection{\texorpdfstring{initializeRandomSeed()}{initializeRandomSeed()}}
+{\footnotesize\ttfamily void initialize\+Random\+Seed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&}]{params,  }\item[{std\+::vector$<$ std\+::mt19937 $>$ \&}]{generators }\end{DoxyParamCaption})}
+
+
+
+Initializes the random seed based on algorithm parameters. 
+
+This function initializes the random seed using the specified seed in the algorithm parameters. If the seed is zero, it uses the current time as the seed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & The algorithm parameters containing the random seed. \\
+\hline
+{\em generators} & A vector of random number generators for each thread. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_genetic___algorithm_8h_a5758e13cc14bb5f332da692d118ca98a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_genetic___algorithm_8h_ae4b47db199826840b2c87e06e466dc12}\label{_genetic___algorithm_8h_ae4b47db199826840b2c87e06e466dc12} 
+\index{Genetic\_Algorithm.h@{Genetic\_Algorithm.h}!optimize@{optimize}}
+\index{optimize@{optimize}!Genetic\_Algorithm.h@{Genetic\_Algorithm.h}}
+\doxysubsubsection{\texorpdfstring{optimize()}{optimize()}}
+{\footnotesize\ttfamily int optimize (\begin{DoxyParamCaption}\item[{int}]{vector\+\_\+size,  }\item[{int \texorpdfstring{$\ast$}{*}}]{vector,  }\item[{double(\&)(int, int \texorpdfstring{$\ast$}{*}, struct \mbox{\hyperlink{struct_circuit_parameters}{Circuit\+Parameters}})}]{func,  }\item[{bool(\&)(int, int \texorpdfstring{$\ast$}{*})}]{validity,  }\item[{struct \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}}}]{params,  }\item[{struct \mbox{\hyperlink{struct_circuit_parameters}{Circuit\+Parameters}}}]{c\+\_\+params }\end{DoxyParamCaption})}
+
+
+
+Optimizes a solution using the genetic algorithm. 
+
+This function performs optimization using a genetic algorithm. It initializes the population, assesses the fitness of each individual, and iterates through generations applying selection, crossover, and mutation operators.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector\+\_\+size} & The size of the gene vector. \\
+\hline
+{\em vector} & Pointer to the array representing the solution vector. \\
+\hline
+{\em func} & A function pointer to the fitness evaluation function. \\
+\hline
+{\em validity} & A function pointer to the validity checking function. \\
+\hline
+{\em parameters} & The algorithm parameters containing various configurations. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer indicating the success (0) or failure (-\/1) of the optimization. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_genetic___algorithm_8h_ae4b47db199826840b2c87e06e466dc12_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_genetic___algorithm_8h_ae4b47db199826840b2c87e06e466dc12_icgraph}
+\end{center}
+\end{figure}

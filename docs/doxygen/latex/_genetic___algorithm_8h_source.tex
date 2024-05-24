@@ -1,0 +1,58 @@
+\doxysection{Genetic\+\_\+\+Algorithm.\+h}
+\hypertarget{_genetic___algorithm_8h_source}{}\label{_genetic___algorithm_8h_source}\index{include/Genetic\_Algorithm.h@{include/Genetic\_Algorithm.h}}
+\mbox{\hyperlink{_genetic___algorithm_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifndef\ GENETIC\_ALGORITHM\_H}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ GENETIC\_ALGORITHM\_H}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_individual_8h}{utils/Individual.h}}"{}}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_parameter_8h}{utils/Parameter.h}}"{}}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tqdm_8hpp}{utils/tqdm.hpp}}"{}}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_nary_tournament_selection_8h}{operators/Selection/NaryTournamentSelection.h}}"{}}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_rank_selection_8h}{operators/Selection/RankSelection.h}}"{}}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_roulette_wheel_selection_8h}{operators/Selection/RouletteWheelSelection.h}}"{}}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_guided_mutation_8h}{operators/Mutation/GuidedMutation.h}}"{}}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_gen_prog_mutation_8h}{operators/Mutation/GenProgMutation.h}}"{}}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_pure_single_point_crossover_8h}{operators/Crossover/PureSinglePointCrossover.h}}"{}}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_two_point_crossover_8h}{operators/Crossover/TwoPointCrossover.h}}"{}}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_uniform_crossover_8h}{operators/Crossover/UniformCrossover.h}}"{}}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_genetic___algorithm_8h_a5758e13cc14bb5f332da692d118ca98a}{initializeRandomSeed}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}\ \&params,\ std::vector<std::mt19937>\ \&generators);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00074\ std::vector<Individual>}
+\DoxyCodeLine{00075\ \mbox{\hyperlink{_genetic___algorithm_8h_aed0dc0d7a485d04965c9810ca2217222}{initializePopulation}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}\ \&params,\ \textcolor{keywordtype}{int}\ vectorSize,\ \textcolor{keywordtype}{bool}\ (\&validity)(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}\ *),\ std::vector<std::mt19937>\ \&generators);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00089\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_genetic___algorithm_8h_a67d1d9548b0f13a3e42eb769e4a3da02}{elitism}}(\textcolor{keyword}{const}\ std::vector<Individual>\ \&population,\ std::vector<Individual>\ \&newPopulation,}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}\ \&params);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00108\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{_genetic___algorithm_8h_ae1ecff79583da4244ddf97b989270a61}{acceptanceProbability}}(\textcolor{keywordtype}{double}\ currentEnergy,\ \textcolor{keywordtype}{double}\ newEnergy,\ \textcolor{keywordtype}{double}\ temperature);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00137\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_genetic___algorithm_8h_a51da111672cefadb49ebda7a804df121}{applySimulatedAnnealing}}(\mbox{\hyperlink{struct_individual}{Individual}}\ \&offspring,\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&parent1,\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&parent2,\ \textcolor{keywordtype}{int}\ vector\_size,}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ (\&func)(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}\ *,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{struct_circuit_parameters}{CircuitParameters}}),\ \textcolor{keywordtype}{bool}\ (\&validity)(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}\ *),}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \&Temp,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}\ \&params,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_circuit_parameters}{CircuitParameters}}\ c\_params,}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::mt19937\ \&generator);}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00156\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_genetic___algorithm_8h_ae4b47db199826840b2c87e06e466dc12}{optimize}}(\textcolor{keywordtype}{int}\ vector\_size,\ \textcolor{keywordtype}{int}\ *vector,}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ (\&func)(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}\ *,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{struct_circuit_parameters}{CircuitParameters}}),}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ (\&validity)(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}\ *),}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\ \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}\ params,}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\ \mbox{\hyperlink{struct_circuit_parameters}{CircuitParameters}}\ c\_params);}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//GENETIC\_ALGORITHM\_H}}
+
+\end{DoxyCode}

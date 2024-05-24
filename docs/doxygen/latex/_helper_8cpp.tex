@@ -1,0 +1,88 @@
+\doxysection{src/utils/\+Helper.cpp File Reference}
+\hypertarget{_helper_8cpp}{}\label{_helper_8cpp}\index{src/utils/Helper.cpp@{src/utils/Helper.cpp}}
+{\ttfamily \#include "{}utils/\+Helper.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+Include dependency graph for Helper.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_helper_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{_helper_8cpp_aecc3cfd60dd63a042dcb4e4120810980}{get\+\_\+current\+\_\+time\+\_\+str}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current time as a formatted string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_helper_8cpp_a382070e78334a1fc51308a1fed19407b}{log\+\_\+results}} (const std\+::vector$<$ int $>$ \&vector, double elapsed\+\_\+time, double \mbox{\hyperlink{_c_simulator_8h_af2b6068090c9710bd7914cfdbf2cdbd1}{performance}}, double \mbox{\hyperlink{_c_simulator_8h_ad821279bb28c56cb9612eedd11e7013f}{recovery}}, double \mbox{\hyperlink{_c_simulator_8h_acbc4bfb123e20b7ef36ed74b7fee6fa3}{grade}})
+\begin{DoxyCompactList}\small\item\em Logs the results of the genetic algorithm optimization to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_helper_8cpp_aecc3cfd60dd63a042dcb4e4120810980}\label{_helper_8cpp_aecc3cfd60dd63a042dcb4e4120810980} 
+\index{Helper.cpp@{Helper.cpp}!get\_current\_time\_str@{get\_current\_time\_str}}
+\index{get\_current\_time\_str@{get\_current\_time\_str}!Helper.cpp@{Helper.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_current\_time\_str()}{get\_current\_time\_str()}}
+{\footnotesize\ttfamily std\+::string get\+\_\+current\+\_\+time\+\_\+str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the current time as a formatted string. 
+
+This function returns the current time formatted as "{}\+YYYY-\/\+MM-\/\+DD\+\_\+\+HH-\/\+MM-\/\+SS"{}.
+
+\begin{DoxyReturn}{Returns}
+A string representing the current time. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_helper_8cpp_aecc3cfd60dd63a042dcb4e4120810980_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_helper_8cpp_a382070e78334a1fc51308a1fed19407b}\label{_helper_8cpp_a382070e78334a1fc51308a1fed19407b} 
+\index{Helper.cpp@{Helper.cpp}!log\_results@{log\_results}}
+\index{log\_results@{log\_results}!Helper.cpp@{Helper.cpp}}
+\doxysubsubsection{\texorpdfstring{log\_results()}{log\_results()}}
+{\footnotesize\ttfamily void log\+\_\+results (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{vector,  }\item[{double}]{elapsed\+\_\+time,  }\item[{double}]{performance,  }\item[{double}]{recovery,  }\item[{double}]{grade }\end{DoxyParamCaption})}
+
+
+
+Logs the results of the genetic algorithm optimization to a file. 
+
+This function creates a new log folder with the current timestamp, and saves the performance metrics, recovery, grade, and the final configuration of the optimized circuit to a log file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector} & The final configuration vector of the optimized circuit. \\
+\hline
+{\em elapsed\+\_\+time} & The time taken to complete the optimization process, in seconds. \\
+\hline
+{\em performance} & The performance metric of the optimized circuit. \\
+\hline
+{\em recovery} & The recovery metric of the optimized circuit. \\
+\hline
+{\em grade} & The grade metric of the optimized circuit. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{_helper_8cpp_a382070e78334a1fc51308a1fed19407b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{_helper_8cpp_a382070e78334a1fc51308a1fed19407b_icgraph}
+\end{center}
+\end{figure}

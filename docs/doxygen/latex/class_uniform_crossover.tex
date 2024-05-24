@@ -1,0 +1,195 @@
+\doxysection{Uniform\+Crossover Class Reference}
+\hypertarget{class_uniform_crossover}{}\label{class_uniform_crossover}\index{UniformCrossover@{UniformCrossover}}
+
+
+{\ttfamily \#include $<$Uniform\+Crossover.\+h$>$}
+
+
+
+Inheritance diagram for Uniform\+Crossover\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{class_uniform_crossover__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Uniform\+Crossover\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{class_uniform_crossover__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_uniform_crossover_a578f0a31f27f5e61b38b319d39eba023}{Uniform\+Crossover}} (const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&params)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_uniform_crossover}{Uniform\+Crossover} object with specified algorithm parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_uniform_crossover_a0cbf8ed306d32ef6434c86798dde52d8}{set\+Parents}} (\mbox{\hyperlink{struct_individual}{Individual}} \&\mbox{\hyperlink{class_uniform_crossover_ac4d94f44e8fcdb69475de0c2f10da372}{offspring}}, const \mbox{\hyperlink{struct_individual}{Individual}} \&\mbox{\hyperlink{class_uniform_crossover_aebc71ae2562a6f9c396da9650f17ca58}{parent1}}, const \mbox{\hyperlink{struct_individual}{Individual}} \&\mbox{\hyperlink{class_uniform_crossover_ab1f1c26025cefbecf0d67df45df5bff7}{parent2}}) override
+\begin{DoxyCompactList}\small\item\em Sets the parents and offspring for the crossover operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_uniform_crossover_af3103101b8cc0560c898cff8d63bdb0b}{set\+Population}} (const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&population, std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&selected)
+\begin{DoxyCompactList}\small\item\em Sets the population and selected vectors for the selection operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_uniform_crossover_acf0be196297597e658ee8c3b0173acb4}{set\+Individual}} (\mbox{\hyperlink{struct_individual}{Individual}} \&individual)
+\begin{DoxyCompactList}\small\item\em Sets the individual for the selection operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_uniform_crossover_ae82c9124d1896980e1cbdb1c8aa17130}{apply}} (std\+::mt19937 \&generator) override
+\begin{DoxyCompactList}\small\item\em Performs the uniform crossover operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_operator}{Operator}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_operator_ac7cb92992e32c213091d3659ef596a46}{\texorpdfstring{$\sim$}{\string~}\+Operator}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_operator}{Operator} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_individual}{Individual}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_uniform_crossover_ac4d94f44e8fcdb69475de0c2f10da372}{offspring}}
+\item 
+const \mbox{\hyperlink{struct_individual}{Individual}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_uniform_crossover_aebc71ae2562a6f9c396da9650f17ca58}{parent1}}
+\item 
+const \mbox{\hyperlink{struct_individual}{Individual}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_uniform_crossover_ab1f1c26025cefbecf0d67df45df5bff7}{parent2}}
+\item 
+double \mbox{\hyperlink{class_uniform_crossover_a94d85e8b8d9524b523a714df886ffa7c}{crossover\+Rate}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_uniform_crossover_a578f0a31f27f5e61b38b319d39eba023}\label{class_uniform_crossover_a578f0a31f27f5e61b38b319d39eba023} 
+\index{UniformCrossover@{UniformCrossover}!UniformCrossover@{UniformCrossover}}
+\index{UniformCrossover@{UniformCrossover}!UniformCrossover@{UniformCrossover}}
+\doxysubsubsection{\texorpdfstring{UniformCrossover()}{UniformCrossover()}}
+{\footnotesize\ttfamily Uniform\+Crossover\+::\+Uniform\+Crossover (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&}]{params }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_uniform_crossover}{Uniform\+Crossover} object with specified algorithm parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & The algorithm parameters including the crossover rate. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_uniform_crossover_ae82c9124d1896980e1cbdb1c8aa17130}\label{class_uniform_crossover_ae82c9124d1896980e1cbdb1c8aa17130} 
+\index{UniformCrossover@{UniformCrossover}!apply@{apply}}
+\index{apply@{apply}!UniformCrossover@{UniformCrossover}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily void Uniform\+Crossover\+::apply (\begin{DoxyParamCaption}\item[{std\+::mt19937 \&}]{generator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Performs the uniform crossover operation. 
+
+This method performs a uniform crossover on the two parent individuals to generate an offspring individual. Each gene in the offspring is chosen randomly from one of the two parents.
+
+
+\begin{DoxyParams}{Parameters}
+{\em generator} & The random number generator used to determine gene selection. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_acbd2e97e189d862aa139b3c334a18619}{Operator}}.
+
+\Hypertarget{class_uniform_crossover_acf0be196297597e658ee8c3b0173acb4}\label{class_uniform_crossover_acf0be196297597e658ee8c3b0173acb4} 
+\index{UniformCrossover@{UniformCrossover}!setIndividual@{setIndividual}}
+\index{setIndividual@{setIndividual}!UniformCrossover@{UniformCrossover}}
+\doxysubsubsection{\texorpdfstring{setIndividual()}{setIndividual()}}
+{\footnotesize\ttfamily void Uniform\+Crossover\+::set\+Individual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{individual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the individual for the selection operation. 
+
+This method is not used in the \doxylink{class_uniform_crossover}{Uniform\+Crossover} class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em individual} & The individual to be set. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_abf3bad24158495949ca770dc8aec6542}{Operator}}.
+
+\Hypertarget{class_uniform_crossover_a0cbf8ed306d32ef6434c86798dde52d8}\label{class_uniform_crossover_a0cbf8ed306d32ef6434c86798dde52d8} 
+\index{UniformCrossover@{UniformCrossover}!setParents@{setParents}}
+\index{setParents@{setParents}!UniformCrossover@{UniformCrossover}}
+\doxysubsubsection{\texorpdfstring{setParents()}{setParents()}}
+{\footnotesize\ttfamily void Uniform\+Crossover\+::set\+Parents (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{offspring,  }\item[{const \mbox{\hyperlink{struct_individual}{Individual}} \&}]{parent1,  }\item[{const \mbox{\hyperlink{struct_individual}{Individual}} \&}]{parent2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the parents and offspring for the crossover operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offspring} & The offspring individual to be generated. \\
+\hline
+{\em parent1} & The first parent individual. \\
+\hline
+{\em parent2} & The second parent individual. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_aa9e9e58811b56bf3a5c1ac9e0d034c64}{Operator}}.
+
+\Hypertarget{class_uniform_crossover_af3103101b8cc0560c898cff8d63bdb0b}\label{class_uniform_crossover_af3103101b8cc0560c898cff8d63bdb0b} 
+\index{UniformCrossover@{UniformCrossover}!setPopulation@{setPopulation}}
+\index{setPopulation@{setPopulation}!UniformCrossover@{UniformCrossover}}
+\doxysubsubsection{\texorpdfstring{setPopulation()}{setPopulation()}}
+{\footnotesize\ttfamily void Uniform\+Crossover\+::set\+Population (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&}]{population,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&}]{selected }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the population and selected vectors for the selection operation. 
+
+This method is not used in the \doxylink{class_uniform_crossover}{Uniform\+Crossover} class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em population} & The vector of individuals in the population. \\
+\hline
+{\em selected} & The vector of selected individuals. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_a6e3837c249df579d41f9b9287195c6e5}{Operator}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{class_uniform_crossover_a94d85e8b8d9524b523a714df886ffa7c}\label{class_uniform_crossover_a94d85e8b8d9524b523a714df886ffa7c} 
+\index{UniformCrossover@{UniformCrossover}!crossoverRate@{crossoverRate}}
+\index{crossoverRate@{crossoverRate}!UniformCrossover@{UniformCrossover}}
+\doxysubsubsection{\texorpdfstring{crossoverRate}{crossoverRate}}
+{\footnotesize\ttfamily double Uniform\+Crossover\+::crossover\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+The crossover rate used to determine if crossover should occur \Hypertarget{class_uniform_crossover_ac4d94f44e8fcdb69475de0c2f10da372}\label{class_uniform_crossover_ac4d94f44e8fcdb69475de0c2f10da372} 
+\index{UniformCrossover@{UniformCrossover}!offspring@{offspring}}
+\index{offspring@{offspring}!UniformCrossover@{UniformCrossover}}
+\doxysubsubsection{\texorpdfstring{offspring}{offspring}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_individual}{Individual}}\texorpdfstring{$\ast$}{*} Uniform\+Crossover\+::offspring\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the offspring individual \Hypertarget{class_uniform_crossover_aebc71ae2562a6f9c396da9650f17ca58}\label{class_uniform_crossover_aebc71ae2562a6f9c396da9650f17ca58} 
+\index{UniformCrossover@{UniformCrossover}!parent1@{parent1}}
+\index{parent1@{parent1}!UniformCrossover@{UniformCrossover}}
+\doxysubsubsection{\texorpdfstring{parent1}{parent1}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_individual}{Individual}}\texorpdfstring{$\ast$}{*} Uniform\+Crossover\+::parent1\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the first parent individual \Hypertarget{class_uniform_crossover_ab1f1c26025cefbecf0d67df45df5bff7}\label{class_uniform_crossover_ab1f1c26025cefbecf0d67df45df5bff7} 
+\index{UniformCrossover@{UniformCrossover}!parent2@{parent2}}
+\index{parent2@{parent2}!UniformCrossover@{UniformCrossover}}
+\doxysubsubsection{\texorpdfstring{parent2}{parent2}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_individual}{Individual}}\texorpdfstring{$\ast$}{*} Uniform\+Crossover\+::parent2\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the second parent individual 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/operators/\+Crossover/\mbox{\hyperlink{_uniform_crossover_8h}{Uniform\+Crossover.\+h}}\item 
+src/operators/\+Crossover/\mbox{\hyperlink{_uniform_crossover_8cpp}{Uniform\+Crossover.\+cpp}}\end{DoxyCompactItemize}

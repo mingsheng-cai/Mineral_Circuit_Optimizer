@@ -1,0 +1,9 @@
+<map id="tqdm::progress_bar::set_min_update_time" name="tqdm::progress_bar::set_min_update_time">
+<area shape="rect" id="Node000001" title="Set the minimum time between updates." alt="" coords="419,37,573,77"/>
+<area shape="rect" id="Node000002" href="$classtqdm_1_1tqdm__for__lvalues.html#af80d5489611049aaf8887d9cec7e251a" title=" " alt="" coords="212,5,371,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="405,46,370,40,371,35,405,41"/>
+<area shape="rect" id="Node000004" href="$classtqdm_1_1tqdm__timer.html#ab7c03d16b4c10b59722459db345f7ba4" title=" " alt="" coords="216,69,367,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="406,74,367,80,366,75,405,69"/>
+<area shape="rect" id="Node000003" href="$classtqdm_1_1tqdm__for__rvalues.html#a9576d2781b50382afb1fc5381761ba38" title=" " alt="" coords="5,5,164,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="198,28,164,28,164,23,198,23"/>
+</map>

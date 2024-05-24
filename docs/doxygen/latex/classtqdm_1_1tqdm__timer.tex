@@ -1,0 +1,269 @@
+\doxysection{tqdm\+::tqdm\+\_\+timer Class Reference}
+\hypertarget{classtqdm_1_1tqdm__timer}{}\label{classtqdm_1_1tqdm__timer}\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+
+
+A progress bar for a timer.  
+
+
+
+
+{\ttfamily \#include $<$tqdm.\+hpp$>$}
+
+
+
+Collaboration diagram for tqdm\+::tqdm\+\_\+timer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classtqdm_1_1tqdm__timer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtqdm_1_1tqdm__timer_a37f0e70eb83507807d7fc69ef9cfc808}{iterator}} = \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{iter\+\_\+wrapper}}$<$\mbox{\hyperlink{classtqdm_1_1timing__iterator}{timing\+\_\+iterator}}, \mbox{\hyperlink{classtqdm_1_1tqdm__timer}{tqdm\+\_\+timer}}$>$
+\item 
+using \mbox{\hyperlink{classtqdm_1_1tqdm__timer_ab56277e7ff03a538415db5be2842a857}{end\+\_\+iterator}} = \mbox{\hyperlink{structtqdm_1_1timer_ac7c73addf0f24f975f9af0b8d62ea732}{timer\+::end\+\_\+iterator}}
+\item 
+using \mbox{\hyperlink{classtqdm_1_1tqdm__timer_a1f45ce26a0a94fbe7bdbb12600c2679c}{value\+\_\+type}} = typename \mbox{\hyperlink{classtqdm_1_1timing__iterator_a56b21243d0ebe497432e245896b28782}{timing\+\_\+iterator\+::value\+\_\+type}}
+\item 
+using \mbox{\hyperlink{classtqdm_1_1tqdm__timer_a95fb2e4079e7cc7db7c13413cce15e6e}{size\+\_\+type}} = \mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}}
+\item 
+using \mbox{\hyperlink{classtqdm_1_1tqdm__timer_a6e7301b7ba1d75ca8e55c8ddc7789cfa}{difference\+\_\+type}} = \mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtqdm_1_1tqdm__timer_a3e4f30f83aa9a016ac5e7a44f9500e8c}{tqdm\+\_\+timer}} (double num\+\_\+seconds)
+\item 
+\mbox{\hyperlink{classtqdm_1_1tqdm__timer_a8c958c86d0828ea03ba935081a0e005b}{tqdm\+\_\+timer}} (const \mbox{\hyperlink{classtqdm_1_1tqdm__timer}{tqdm\+\_\+timer}} \&)=delete
+\item 
+\mbox{\hyperlink{classtqdm_1_1tqdm__timer_adca976b644117867f9b326367769eb56}{tqdm\+\_\+timer}} (\mbox{\hyperlink{classtqdm_1_1tqdm__timer}{tqdm\+\_\+timer}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classtqdm_1_1tqdm__timer}{tqdm\+\_\+timer}} \& \mbox{\hyperlink{classtqdm_1_1tqdm__timer_a8ac6bebff14b84d9da08150399e4ff4a}{operator=}} (\mbox{\hyperlink{classtqdm_1_1tqdm__timer}{tqdm\+\_\+timer}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classtqdm_1_1tqdm__timer}{tqdm\+\_\+timer}} \& \mbox{\hyperlink{classtqdm_1_1tqdm__timer_a2a896ec145ee5e42745c4f3b2663b645}{operator=}} (const \mbox{\hyperlink{classtqdm_1_1tqdm__timer}{tqdm\+\_\+timer}} \&)=delete
+\item 
+\mbox{\hyperlink{classtqdm_1_1tqdm__timer_acf1c09abdf893509431d34f18ca08a11}{\texorpdfstring{$\sim$}{\string~}tqdm\+\_\+timer}} ()=default
+\item 
+{\footnotesize template$<$class Container $>$ }\\\mbox{\hyperlink{classtqdm_1_1tqdm__timer_af49178a60ab92e0107ba015313dcb689}{tqdm\+\_\+timer}} (Container \&\&)=delete
+\item 
+\mbox{\hyperlink{classtqdm_1_1tqdm__timer_a37f0e70eb83507807d7fc69ef9cfc808}{iterator}} \mbox{\hyperlink{classtqdm_1_1tqdm__timer_a3c88ea5d0db28c692d8a8f3164b16155}{begin}} ()
+\item 
+\mbox{\hyperlink{classtqdm_1_1tqdm__timer_ab56277e7ff03a538415db5be2842a857}{end\+\_\+iterator}} \mbox{\hyperlink{classtqdm_1_1tqdm__timer_ae2abc4ac932de8a9948d1e6680551257}{end}} () const
+\item 
+void \mbox{\hyperlink{classtqdm_1_1tqdm__timer_a281536e3ab236203645d6325008ed585}{update}} ()
+\item 
+void \mbox{\hyperlink{classtqdm_1_1tqdm__timer_a88b486cf4c258200c7de996e754ab5fc}{set\+\_\+ostream}} (std\+::ostream \&os)
+\item 
+void \mbox{\hyperlink{classtqdm_1_1tqdm__timer_a807c92f0b2921b1ee92987c1079d9a7d}{set\+\_\+prefix}} (std\+::string s)
+\item 
+void \mbox{\hyperlink{classtqdm_1_1tqdm__timer_aded967d6ed5c0452fd9ef5054f090914}{set\+\_\+bar\+\_\+size}} (int size)
+\item 
+void \mbox{\hyperlink{classtqdm_1_1tqdm__timer_ab7c03d16b4c10b59722459db345f7ba4}{set\+\_\+min\+\_\+update\+\_\+time}} (double time)
+\item 
+{\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{classtqdm_1_1tqdm__timer}{tqdm\+\_\+timer}} \& \mbox{\hyperlink{classtqdm_1_1tqdm__timer_a94c272489777f84e1e9afb21a633aa4c}{operator$<$$<$}} (const T \&t)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classtqdm_1_1tqdm__timer_a7eed915f070422c986e74db51f0bf10e}{num\+\_\+seconds\+\_\+}}
+\item 
+\mbox{\hyperlink{classtqdm_1_1progress__bar}{progress\+\_\+bar}} \mbox{\hyperlink{classtqdm_1_1tqdm__timer_a212c89b9ed9e6afbb618fcbd4c7e9f4f}{bar\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A progress bar for a timer. 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classtqdm_1_1tqdm__timer_a6e7301b7ba1d75ca8e55c8ddc7789cfa}\label{classtqdm_1_1tqdm__timer_a6e7301b7ba1d75ca8e55c8ddc7789cfa} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!difference\_type@{difference\_type}}
+\index{difference\_type@{difference\_type}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{difference\_type}{difference\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtqdm_1_1tqdm__timer_a6e7301b7ba1d75ca8e55c8ddc7789cfa}{tqdm\+::tqdm\+\_\+timer\+::difference\+\_\+type}} = \mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}}}
+
+\Hypertarget{classtqdm_1_1tqdm__timer_ab56277e7ff03a538415db5be2842a857}\label{classtqdm_1_1tqdm__timer_ab56277e7ff03a538415db5be2842a857} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!end\_iterator@{end\_iterator}}
+\index{end\_iterator@{end\_iterator}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{end\_iterator}{end\_iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtqdm_1_1tqdm__timer_ab56277e7ff03a538415db5be2842a857}{tqdm\+::tqdm\+\_\+timer\+::end\+\_\+iterator}} = \mbox{\hyperlink{structtqdm_1_1timer_ac7c73addf0f24f975f9af0b8d62ea732}{timer\+::end\+\_\+iterator}}}
+
+\Hypertarget{classtqdm_1_1tqdm__timer_a37f0e70eb83507807d7fc69ef9cfc808}\label{classtqdm_1_1tqdm__timer_a37f0e70eb83507807d7fc69ef9cfc808} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!iterator@{iterator}}
+\index{iterator@{iterator}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtqdm_1_1tqdm__timer_a37f0e70eb83507807d7fc69ef9cfc808}{tqdm\+::tqdm\+\_\+timer\+::iterator}} = \mbox{\hyperlink{classtqdm_1_1iter__wrapper}{iter\+\_\+wrapper}}$<$\mbox{\hyperlink{classtqdm_1_1timing__iterator}{timing\+\_\+iterator}}, \mbox{\hyperlink{classtqdm_1_1tqdm__timer}{tqdm\+\_\+timer}}$>$}
+
+\Hypertarget{classtqdm_1_1tqdm__timer_a95fb2e4079e7cc7db7c13413cce15e6e}\label{classtqdm_1_1tqdm__timer_a95fb2e4079e7cc7db7c13413cce15e6e} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!size\_type@{size\_type}}
+\index{size\_type@{size\_type}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{size\_type}{size\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtqdm_1_1tqdm__timer_a95fb2e4079e7cc7db7c13413cce15e6e}{tqdm\+::tqdm\+\_\+timer\+::size\+\_\+type}} = \mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}}}
+
+\Hypertarget{classtqdm_1_1tqdm__timer_a1f45ce26a0a94fbe7bdbb12600c2679c}\label{classtqdm_1_1tqdm__timer_a1f45ce26a0a94fbe7bdbb12600c2679c} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtqdm_1_1tqdm__timer_a1f45ce26a0a94fbe7bdbb12600c2679c}{tqdm\+::tqdm\+\_\+timer\+::value\+\_\+type}} = typename \mbox{\hyperlink{classtqdm_1_1timing__iterator_a56b21243d0ebe497432e245896b28782}{timing\+\_\+iterator\+::value\+\_\+type}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtqdm_1_1tqdm__timer_a3e4f30f83aa9a016ac5e7a44f9500e8c}\label{classtqdm_1_1tqdm__timer_a3e4f30f83aa9a016ac5e7a44f9500e8c} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!tqdm\_timer@{tqdm\_timer}}
+\index{tqdm\_timer@{tqdm\_timer}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{tqdm\_timer()}{tqdm\_timer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily tqdm\+::tqdm\+\_\+timer\+::tqdm\+\_\+timer (\begin{DoxyParamCaption}\item[{double}]{num\+\_\+seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\Hypertarget{classtqdm_1_1tqdm__timer_a8c958c86d0828ea03ba935081a0e005b}\label{classtqdm_1_1tqdm__timer_a8c958c86d0828ea03ba935081a0e005b} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!tqdm\_timer@{tqdm\_timer}}
+\index{tqdm\_timer@{tqdm\_timer}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{tqdm\_timer()}{tqdm\_timer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily tqdm\+::tqdm\+\_\+timer\+::tqdm\+\_\+timer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtqdm_1_1tqdm__timer}{tqdm\+\_\+timer}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classtqdm_1_1tqdm__timer_adca976b644117867f9b326367769eb56}\label{classtqdm_1_1tqdm__timer_adca976b644117867f9b326367769eb56} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!tqdm\_timer@{tqdm\_timer}}
+\index{tqdm\_timer@{tqdm\_timer}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{tqdm\_timer()}{tqdm\_timer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily tqdm\+::tqdm\+\_\+timer\+::tqdm\+\_\+timer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtqdm_1_1tqdm__timer}{tqdm\+\_\+timer}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classtqdm_1_1tqdm__timer_acf1c09abdf893509431d34f18ca08a11}\label{classtqdm_1_1tqdm__timer_acf1c09abdf893509431d34f18ca08a11} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!````~tqdm\_timer@{\texorpdfstring{$\sim$}{\string~}tqdm\_timer}}
+\index{````~tqdm\_timer@{\texorpdfstring{$\sim$}{\string~}tqdm\_timer}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}tqdm\_timer()}{\string~tqdm\_timer()}}
+{\footnotesize\ttfamily tqdm\+::tqdm\+\_\+timer\+::\texorpdfstring{$\sim$}{\string~}tqdm\+\_\+timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classtqdm_1_1tqdm__timer_af49178a60ab92e0107ba015313dcb689}\label{classtqdm_1_1tqdm__timer_af49178a60ab92e0107ba015313dcb689} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!tqdm\_timer@{tqdm\_timer}}
+\index{tqdm\_timer@{tqdm\_timer}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{tqdm\_timer()}{tqdm\_timer()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class Container $>$ \\
+tqdm\+::tqdm\+\_\+timer\+::tqdm\+\_\+timer (\begin{DoxyParamCaption}\item[{Container \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtqdm_1_1tqdm__timer_a3c88ea5d0db28c692d8a8f3164b16155}\label{classtqdm_1_1tqdm__timer_a3c88ea5d0db28c692d8a8f3164b16155} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!begin@{begin}}
+\index{begin@{begin}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtqdm_1_1tqdm__timer_a37f0e70eb83507807d7fc69ef9cfc808}{iterator}} tqdm\+::tqdm\+\_\+timer\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1tqdm__timer_a3c88ea5d0db28c692d8a8f3164b16155_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1tqdm__timer_ae2abc4ac932de8a9948d1e6680551257}\label{classtqdm_1_1tqdm__timer_ae2abc4ac932de8a9948d1e6680551257} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!end@{end}}
+\index{end@{end}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtqdm_1_1tqdm__timer_ab56277e7ff03a538415db5be2842a857}{end\+\_\+iterator}} tqdm\+::tqdm\+\_\+timer\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classtqdm_1_1tqdm__timer_a94c272489777f84e1e9afb21a633aa4c}\label{classtqdm_1_1tqdm__timer_a94c272489777f84e1e9afb21a633aa4c} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classtqdm_1_1tqdm__timer}{tqdm\+\_\+timer}} \& tqdm\+::tqdm\+\_\+timer\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{const T \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classtqdm_1_1tqdm__timer_a2a896ec145ee5e42745c4f3b2663b645}\label{classtqdm_1_1tqdm__timer_a2a896ec145ee5e42745c4f3b2663b645} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!operator=@{operator=}}
+\index{operator=@{operator=}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtqdm_1_1tqdm__timer}{tqdm\+\_\+timer}} \& tqdm\+::tqdm\+\_\+timer\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtqdm_1_1tqdm__timer}{tqdm\+\_\+timer}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classtqdm_1_1tqdm__timer_a8ac6bebff14b84d9da08150399e4ff4a}\label{classtqdm_1_1tqdm__timer_a8ac6bebff14b84d9da08150399e4ff4a} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!operator=@{operator=}}
+\index{operator=@{operator=}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtqdm_1_1tqdm__timer}{tqdm\+\_\+timer}} \& tqdm\+::tqdm\+\_\+timer\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtqdm_1_1tqdm__timer}{tqdm\+\_\+timer}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classtqdm_1_1tqdm__timer_aded967d6ed5c0452fd9ef5054f090914}\label{classtqdm_1_1tqdm__timer_aded967d6ed5c0452fd9ef5054f090914} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!set\_bar\_size@{set\_bar\_size}}
+\index{set\_bar\_size@{set\_bar\_size}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{set\_bar\_size()}{set\_bar\_size()}}
+{\footnotesize\ttfamily void tqdm\+::tqdm\+\_\+timer\+::set\+\_\+bar\+\_\+size (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classtqdm_1_1tqdm__timer_aded967d6ed5c0452fd9ef5054f090914_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1tqdm__timer_ab7c03d16b4c10b59722459db345f7ba4}\label{classtqdm_1_1tqdm__timer_ab7c03d16b4c10b59722459db345f7ba4} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!set\_min\_update\_time@{set\_min\_update\_time}}
+\index{set\_min\_update\_time@{set\_min\_update\_time}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{set\_min\_update\_time()}{set\_min\_update\_time()}}
+{\footnotesize\ttfamily void tqdm\+::tqdm\+\_\+timer\+::set\+\_\+min\+\_\+update\+\_\+time (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classtqdm_1_1tqdm__timer_ab7c03d16b4c10b59722459db345f7ba4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1tqdm__timer_a88b486cf4c258200c7de996e754ab5fc}\label{classtqdm_1_1tqdm__timer_a88b486cf4c258200c7de996e754ab5fc} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!set\_ostream@{set\_ostream}}
+\index{set\_ostream@{set\_ostream}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{set\_ostream()}{set\_ostream()}}
+{\footnotesize\ttfamily void tqdm\+::tqdm\+\_\+timer\+::set\+\_\+ostream (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classtqdm_1_1tqdm__timer_a88b486cf4c258200c7de996e754ab5fc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1tqdm__timer_a807c92f0b2921b1ee92987c1079d9a7d}\label{classtqdm_1_1tqdm__timer_a807c92f0b2921b1ee92987c1079d9a7d} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!set\_prefix@{set\_prefix}}
+\index{set\_prefix@{set\_prefix}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{set\_prefix()}{set\_prefix()}}
+{\footnotesize\ttfamily void tqdm\+::tqdm\+\_\+timer\+::set\+\_\+prefix (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classtqdm_1_1tqdm__timer_a807c92f0b2921b1ee92987c1079d9a7d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1tqdm__timer_a281536e3ab236203645d6325008ed585}\label{classtqdm_1_1tqdm__timer_a281536e3ab236203645d6325008ed585} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!update@{update}}
+\index{update@{update}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void tqdm\+::tqdm\+\_\+timer\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1tqdm__timer_a281536e3ab236203645d6325008ed585_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classtqdm_1_1tqdm__timer_a212c89b9ed9e6afbb618fcbd4c7e9f4f}\label{classtqdm_1_1tqdm__timer_a212c89b9ed9e6afbb618fcbd4c7e9f4f} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!bar\_@{bar\_}}
+\index{bar\_@{bar\_}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{bar\_}{bar\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtqdm_1_1progress__bar}{progress\+\_\+bar}} tqdm\+::tqdm\+\_\+timer\+::bar\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtqdm_1_1tqdm__timer_a7eed915f070422c986e74db51f0bf10e}\label{classtqdm_1_1tqdm__timer_a7eed915f070422c986e74db51f0bf10e} 
+\index{tqdm::tqdm\_timer@{tqdm::tqdm\_timer}!num\_seconds\_@{num\_seconds\_}}
+\index{num\_seconds\_@{num\_seconds\_}!tqdm::tqdm\_timer@{tqdm::tqdm\_timer}}
+\doxysubsubsection{\texorpdfstring{num\_seconds\_}{num\_seconds\_}}
+{\footnotesize\ttfamily double tqdm\+::tqdm\+\_\+timer\+::num\+\_\+seconds\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/utils/\mbox{\hyperlink{tqdm_8hpp}{tqdm.\+hpp}}\end{DoxyCompactItemize}

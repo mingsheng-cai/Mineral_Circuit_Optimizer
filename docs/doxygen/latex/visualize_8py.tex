@@ -1,0 +1,107 @@
+\doxysection{post\+\_\+process/visualize.py File Reference}
+\hypertarget{visualize_8py}{}\label{visualize_8py}\index{post\_process/visualize.py@{post\_process/visualize.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacevisualize}{visualize}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacevisualize_af862d3a2b31910d885a011c389701bb0}{visualize.\+parse\+\_\+list}} (string)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacevisualize_a12a65ff75204c5d75ad74bfa7c4c5e65}{visualize.\+parser}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a1c7e9fd975414c5d56b84d61ee2a3561}{visualize.\+type}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a20571a175ebd934626b747aa1594f2fd}{visualize.\+args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespacevisualize_ae018a24c6fccb114ee6882dfd1bb9d43}{visualize.\+x}} = args.\+vector
+\item 
+\mbox{\hyperlink{namespacevisualize_aa86df8672fe9177a0b0600ee7ed3de22}{visualize.\+p}} = args.\+perf
+\item 
+\mbox{\hyperlink{namespacevisualize_a2d7f8bf7b0ae27d950b404c5133cb167}{visualize.\+r}} = args.\+recovery
+\item 
+\mbox{\hyperlink{namespacevisualize_a425e67b74747f84a92ab77909dc642f3}{visualize.\+g}} = args.\+grade
+\item 
+\mbox{\hyperlink{namespacevisualize_a0115fdde427114526dcb4e17f570d093}{visualize.\+graph}} = graphviz.\+Digraph()
+\item 
+\mbox{\hyperlink{namespacevisualize_a7d982cddfa087596fe6b4f46f91759d8}{visualize.\+rankdir}}
+\item 
+\mbox{\hyperlink{namespacevisualize_ad3efec2598d5e48cc931ffb67796a253}{visualize.\+nodesep}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a1d1b799caba6593d9f7417dfc7619b19}{visualize.\+ranksep}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a71ea88fb1c912ca1a2f5941cbbe0f26f}{visualize.\+splines}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a67602da1d1239b81b29b72bbb69a2675}{visualize.\+overlap}}
+\item 
+\mbox{\hyperlink{namespacevisualize_aa02c740a731cff7ac27ada560cf897c5}{visualize.\+dpi}}
+\item 
+str \mbox{\hyperlink{namespacevisualize_aee1e39388580885c1b0e0b6af0698f2a}{visualize.\+feed\+\_\+node}} = \textquotesingle{}Feed\textquotesingle{}
+\item 
+str \mbox{\hyperlink{namespacevisualize_ab2e849eb9b92f824b4ab78a36771a889}{visualize.\+concentrate}} = \textquotesingle{}Concentrate\textquotesingle{}
+\item 
+str \mbox{\hyperlink{namespacevisualize_af067a547fc36f09ef38b736a4945d94c}{visualize.\+tailings}} = \textquotesingle{}Tailings\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespacevisualize_af8fa92281769ae4c6226d4baa6c8f364}{visualize.\+shape}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a20019a076db497f8bd44527aae75a85c}{visualize.\+color}} = 1 else \textquotesingle{}red\textquotesingle{}
+\item 
+tuple \mbox{\hyperlink{namespacevisualize_a8e16d95ea80d456680b1141eaa625dd3}{visualize.\+num\+\_\+nodes}} = (len(\mbox{\hyperlink{namespacevisualize_ae018a24c6fccb114ee6882dfd1bb9d43}{x}}) -\/ 1) // 3
+\item 
+str \mbox{\hyperlink{namespacevisualize_a69a53e5dbaa266a7aa00f697fcd22e31}{visualize.\+from\+\_\+node}} = f\textquotesingle{}Unit \{i // 3\}\textquotesingle{}
+\item 
+tuple \mbox{\hyperlink{namespacevisualize_a5a23e892831622b880e56db8ed030b70}{visualize.\+to\+\_\+node}} = (\mbox{\hyperlink{namespacevisualize_a8e16d95ea80d456680b1141eaa625dd3}{num\+\_\+nodes}} + 1) else f\textquotesingle{}Unit \{\mbox{\hyperlink{namespacevisualize_ae018a24c6fccb114ee6882dfd1bb9d43}{x}}\mbox{[}i + 1\mbox{]}\}\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespacevisualize_a0bec885bfce2665bc3310ff2c5cf24be}{visualize.\+cleanup}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a1c097668a7037baf096ec7f71e9b2494}{visualize.\+True}}
+\item 
+\mbox{\hyperlink{namespacevisualize_ab7264641fcf6af3d5feb9863ea780f59}{visualize.\+format}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a8567e02ad8e3f9dd5bbdb909a46497ae}{visualize.\+view}}
+\item 
+dict \mbox{\hyperlink{namespacevisualize_a808114a62ee0aec805f987c2a4e3f5ba}{visualize.\+legend\+\_\+labels}}
+\item 
+list \mbox{\hyperlink{namespacevisualize_a4d4ab89ee78587953c6a95e985da1022}{visualize.\+legend\+\_\+handles}}
+\item 
+list \mbox{\hyperlink{namespacevisualize_a276cab5d3c1cabe1209542df4bfeb941}{visualize.\+columns}} = \mbox{[}\textquotesingle{}Feed\textquotesingle{}\mbox{]} + \mbox{[}f\textquotesingle{}Unit \{i\}\textquotesingle{} for i in range(0, \mbox{\hyperlink{namespacevisualize_a8e16d95ea80d456680b1141eaa625dd3}{num\+\_\+nodes}})\mbox{]}
+\item 
+list \mbox{\hyperlink{namespacevisualize_a3f1d8fb9647deea269bcb3501d26315f}{visualize.\+reshaped\+\_\+list}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a9636a33861fbd5fd3d9f752dbc0ab962}{visualize.\+df}} = pd.\+Data\+Frame(\mbox{\hyperlink{namespacevisualize_a3f1d8fb9647deea269bcb3501d26315f}{reshaped\+\_\+list}}).transpose()
+\item 
+\mbox{\hyperlink{namespacevisualize_a0f62596fb5d3577bc08d8fc7ca1e04b1}{visualize.\+figsize}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a29048b756c78417446da7b9efc27953e}{visualize.\+handles}}
+\item 
+\mbox{\hyperlink{namespacevisualize_abed74af476e19b5657e24d04c1a538b4}{visualize.\+labels}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a3ab22acf61d45290cc5d3adf7b451841}{visualize.\+loc}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a5901a3219421e6d7e54de00f6246a830}{visualize.\+bbox\+\_\+to\+\_\+anchor}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a16caaba66b8d97b8628cedaa2d603d17}{visualize.\+fontsize}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a224c0d9e49b65967b4d7025c1bb0e4f5}{visualize.\+cell\+Text}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a802c37ba407c5cba7e9582621d22ae29}{visualize.\+values}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a7b6e9463c4c50e313aeefd4bde22736e}{visualize.\+col\+Labels}}
+\item 
+\mbox{\hyperlink{namespacevisualize_ae8f4d7e48b250047d68bc10c0e17608b}{visualize.\+cell\+Loc}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a241a8bba8c6c652b78973b7f85605992}{visualize.\+bbox}}
+\item 
+\mbox{\hyperlink{namespacevisualize_aa1f26f6e07b3028b392bd688e8238548}{visualize.\+ha}}
+\item 
+\mbox{\hyperlink{namespacevisualize_af764f1594b78a8dc26213d7c7bb31949}{visualize.\+va}}
+\item 
+\mbox{\hyperlink{namespacevisualize_a88f56f161bad9d70553706df67f8e839}{visualize.\+transform}}
+\item 
+\mbox{\hyperlink{namespacevisualize_ac5f6b6d0a956586aec0564da8e2746c2}{visualize.\+bbox\+\_\+inches}}
+\end{DoxyCompactItemize}

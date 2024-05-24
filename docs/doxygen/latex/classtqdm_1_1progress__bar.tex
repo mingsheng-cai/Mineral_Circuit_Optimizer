@@ -1,0 +1,430 @@
+\doxysection{tqdm\+::progress\+\_\+bar Class Reference}
+\hypertarget{classtqdm_1_1progress__bar}{}\label{classtqdm_1_1progress__bar}\index{tqdm::progress\_bar@{tqdm::progress\_bar}}
+
+
+A class representing a progress bar.  
+
+
+
+
+{\ttfamily \#include $<$tqdm.\+hpp$>$}
+
+
+
+Collaboration diagram for tqdm\+::progress\+\_\+bar\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classtqdm_1_1progress__bar__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtqdm_1_1progress__bar_aa8fce8071fc5272edc318f09f2220432}{restart}} ()
+\begin{DoxyCompactList}\small\item\em Restart the progress bar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtqdm_1_1progress__bar_af8b3092725145e504a10fbf842745a9f}{update}} (double progress)
+\begin{DoxyCompactList}\small\item\em Update the progress bar with the current progress. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtqdm_1_1progress__bar_aa66412ca953dd98c80e974ae462706b7}{set\+\_\+ostream}} (std\+::ostream \&os)
+\begin{DoxyCompactList}\small\item\em Set the output stream for the progress bar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtqdm_1_1progress__bar_a382cbe0143d18ef10bd5bbad22e76d68}{set\+\_\+prefix}} (std\+::string s)
+\begin{DoxyCompactList}\small\item\em Set the prefix string for the progress bar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtqdm_1_1progress__bar_a17f32cbb36e00431b2076de088f7f84b}{set\+\_\+bar\+\_\+size}} (int size)
+\begin{DoxyCompactList}\small\item\em Set the size of the progress bar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtqdm_1_1progress__bar_a7424896af2d6c20f6c4defa946b25527}{set\+\_\+min\+\_\+update\+\_\+time}} (double time)
+\begin{DoxyCompactList}\small\item\em Set the minimum time between updates. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{classtqdm_1_1progress__bar}{progress\+\_\+bar}} \& \mbox{\hyperlink{classtqdm_1_1progress__bar_a229a11ef45d9516f3467b2d9528fd4c6}{operator$<$$<$}} (const T \&t)
+\begin{DoxyCompactList}\small\item\em Append a value to the progress bar suffix. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtqdm_1_1progress__bar_a0bde629d01d431dffb91bdf2cbd8213d}{elapsed\+\_\+time}} () const
+\begin{DoxyCompactList}\small\item\em Get the elapsed time since the progress bar started. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtqdm_1_1progress__bar_aafe648e44846685b6f7ddaf7f7ec52b9}{display}} (double progress)
+\begin{DoxyCompactList}\small\item\em Display the progress bar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtqdm_1_1progress__bar_ae2c7073d3bc00b12dc4437f3b90624ad}{print\+\_\+bar}} (std\+::stringstream \&ss, double filled) const
+\begin{DoxyCompactList}\small\item\em Print the progress bar with symbols. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtqdm_1_1progress__bar_a54bda48bb8615a17c35eecf33bc89469}{time\+\_\+since\+\_\+refresh}} () const
+\begin{DoxyCompactList}\small\item\em Get the time since the last refresh. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtqdm_1_1progress__bar_ad82b0101c903aec45beb4181d42b7cdb}{reset\+\_\+refresh\+\_\+timer}} ()
+\begin{DoxyCompactList}\small\item\em Reset the refresh timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtqdm_1_1_chronometer}{Chronometer}} \mbox{\hyperlink{classtqdm_1_1progress__bar_aaf39b5e35347e6bf7e8127e1601ad68f}{chronometer\+\_\+}} \{\}
+\item 
+\mbox{\hyperlink{classtqdm_1_1_chronometer}{Chronometer}} \mbox{\hyperlink{classtqdm_1_1progress__bar_abf125c334f1e17ca64a5ecee9fa6938d}{refresh\+\_\+}} \{\}
+\item 
+double \mbox{\hyperlink{classtqdm_1_1progress__bar_ac56cbdc060d326296ad772269af71557}{min\+\_\+time\+\_\+per\+\_\+update\+\_\+}} \{0.\+15\}
+\item 
+std\+::ostream \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classtqdm_1_1progress__bar_a8987a09b64768a603b5e55d50f1facc5}{os\+\_\+}} \{\&std\+::cerr\}
+\item 
+\mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}} \mbox{\hyperlink{classtqdm_1_1progress__bar_aee77f2c70aacfbe4b433c8be5cc8c448}{bar\+\_\+size\+\_\+}} \{40\}
+\item 
+\mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}} \mbox{\hyperlink{classtqdm_1_1progress__bar_aae11dc1160fdc67b2bae7a444ef1330a}{term\+\_\+cols\+\_\+}} \{1\}
+\item 
+\mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}} \mbox{\hyperlink{classtqdm_1_1progress__bar_a4a5cab6c1b6708b85ed40f9573ecde6a}{symbol\+\_\+index\+\_\+}} \{0\}
+\item 
+std\+::string \mbox{\hyperlink{classtqdm_1_1progress__bar_afc14a84e38ecad01baefd8c45d6395f6}{prefix\+\_\+}} \{\}
+\item 
+std\+::stringstream \mbox{\hyperlink{classtqdm_1_1progress__bar_a6d54bc9767844db6e1d2e06a48391799}{suffix\+\_\+}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class representing a progress bar. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtqdm_1_1progress__bar_aafe648e44846685b6f7ddaf7f7ec52b9}\label{classtqdm_1_1progress__bar_aafe648e44846685b6f7ddaf7f7ec52b9} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!display@{display}}
+\index{display@{display}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void tqdm\+::progress\+\_\+bar\+::display (\begin{DoxyParamCaption}\item[{double}]{progress }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Display the progress bar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em progress} & The current progress (a value between 0 and 1). \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1progress__bar_aafe648e44846685b6f7ddaf7f7ec52b9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1progress__bar_aafe648e44846685b6f7ddaf7f7ec52b9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1progress__bar_a0bde629d01d431dffb91bdf2cbd8213d}\label{classtqdm_1_1progress__bar_a0bde629d01d431dffb91bdf2cbd8213d} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!elapsed\_time@{elapsed\_time}}
+\index{elapsed\_time@{elapsed\_time}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{elapsed\_time()}{elapsed\_time()}}
+{\footnotesize\ttfamily double tqdm\+::progress\+\_\+bar\+::elapsed\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the elapsed time since the progress bar started. 
+
+\begin{DoxyReturn}{Returns}
+The elapsed time in seconds. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1progress__bar_a0bde629d01d431dffb91bdf2cbd8213d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classtqdm_1_1progress__bar_a0bde629d01d431dffb91bdf2cbd8213d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1progress__bar_a229a11ef45d9516f3467b2d9528fd4c6}\label{classtqdm_1_1progress__bar_a229a11ef45d9516f3467b2d9528fd4c6} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classtqdm_1_1progress__bar}{progress\+\_\+bar}} \& tqdm\+::progress\+\_\+bar\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{const T \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Append a value to the progress bar suffix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The value to append. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the progress bar. 
+\end{DoxyReturn}
+\Hypertarget{classtqdm_1_1progress__bar_ae2c7073d3bc00b12dc4437f3b90624ad}\label{classtqdm_1_1progress__bar_ae2c7073d3bc00b12dc4437f3b90624ad} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!print\_bar@{print\_bar}}
+\index{print\_bar@{print\_bar}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{print\_bar()}{print\_bar()}}
+{\footnotesize\ttfamily void tqdm\+::progress\+\_\+bar\+::print\+\_\+bar (\begin{DoxyParamCaption}\item[{std\+::stringstream \&}]{ss,  }\item[{double}]{filled }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Print the progress bar with symbols. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ss} & The stringstream to print the bar into. \\
+\hline
+{\em filled} & The fraction of the bar that is filled. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1progress__bar_ae2c7073d3bc00b12dc4437f3b90624ad_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1progress__bar_ad82b0101c903aec45beb4181d42b7cdb}\label{classtqdm_1_1progress__bar_ad82b0101c903aec45beb4181d42b7cdb} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!reset\_refresh\_timer@{reset\_refresh\_timer}}
+\index{reset\_refresh\_timer@{reset\_refresh\_timer}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{reset\_refresh\_timer()}{reset\_refresh\_timer()}}
+{\footnotesize\ttfamily void tqdm\+::progress\+\_\+bar\+::reset\+\_\+refresh\+\_\+timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Reset the refresh timer. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1progress__bar_ad82b0101c903aec45beb4181d42b7cdb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1progress__bar_ad82b0101c903aec45beb4181d42b7cdb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1progress__bar_aa8fce8071fc5272edc318f09f2220432}\label{classtqdm_1_1progress__bar_aa8fce8071fc5272edc318f09f2220432} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!restart@{restart}}
+\index{restart@{restart}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{restart()}{restart()}}
+{\footnotesize\ttfamily void tqdm\+::progress\+\_\+bar\+::restart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Restart the progress bar. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1progress__bar_aa8fce8071fc5272edc318f09f2220432_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1progress__bar_aa8fce8071fc5272edc318f09f2220432_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1progress__bar_a17f32cbb36e00431b2076de088f7f84b}\label{classtqdm_1_1progress__bar_a17f32cbb36e00431b2076de088f7f84b} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!set\_bar\_size@{set\_bar\_size}}
+\index{set\_bar\_size@{set\_bar\_size}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{set\_bar\_size()}{set\_bar\_size()}}
+{\footnotesize\ttfamily void tqdm\+::progress\+\_\+bar\+::set\+\_\+bar\+\_\+size (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the size of the progress bar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The size of the progress bar in characters. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1progress__bar_a17f32cbb36e00431b2076de088f7f84b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1progress__bar_a7424896af2d6c20f6c4defa946b25527}\label{classtqdm_1_1progress__bar_a7424896af2d6c20f6c4defa946b25527} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!set\_min\_update\_time@{set\_min\_update\_time}}
+\index{set\_min\_update\_time@{set\_min\_update\_time}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{set\_min\_update\_time()}{set\_min\_update\_time()}}
+{\footnotesize\ttfamily void tqdm\+::progress\+\_\+bar\+::set\+\_\+min\+\_\+update\+\_\+time (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the minimum time between updates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & The minimum time between updates in seconds. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1progress__bar_a7424896af2d6c20f6c4defa946b25527_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1progress__bar_aa66412ca953dd98c80e974ae462706b7}\label{classtqdm_1_1progress__bar_aa66412ca953dd98c80e974ae462706b7} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!set\_ostream@{set\_ostream}}
+\index{set\_ostream@{set\_ostream}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{set\_ostream()}{set\_ostream()}}
+{\footnotesize\ttfamily void tqdm\+::progress\+\_\+bar\+::set\+\_\+ostream (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the output stream for the progress bar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1progress__bar_aa66412ca953dd98c80e974ae462706b7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1progress__bar_a382cbe0143d18ef10bd5bbad22e76d68}\label{classtqdm_1_1progress__bar_a382cbe0143d18ef10bd5bbad22e76d68} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!set\_prefix@{set\_prefix}}
+\index{set\_prefix@{set\_prefix}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{set\_prefix()}{set\_prefix()}}
+{\footnotesize\ttfamily void tqdm\+::progress\+\_\+bar\+::set\+\_\+prefix (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the prefix string for the progress bar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The prefix string. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1progress__bar_a382cbe0143d18ef10bd5bbad22e76d68_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1progress__bar_a54bda48bb8615a17c35eecf33bc89469}\label{classtqdm_1_1progress__bar_a54bda48bb8615a17c35eecf33bc89469} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!time\_since\_refresh@{time\_since\_refresh}}
+\index{time\_since\_refresh@{time\_since\_refresh}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{time\_since\_refresh()}{time\_since\_refresh()}}
+{\footnotesize\ttfamily double tqdm\+::progress\+\_\+bar\+::time\+\_\+since\+\_\+refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Get the time since the last refresh. 
+
+\begin{DoxyReturn}{Returns}
+The time since the last refresh in seconds. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1progress__bar_a54bda48bb8615a17c35eecf33bc89469_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1progress__bar_a54bda48bb8615a17c35eecf33bc89469_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtqdm_1_1progress__bar_af8b3092725145e504a10fbf842745a9f}\label{classtqdm_1_1progress__bar_af8b3092725145e504a10fbf842745a9f} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!update@{update}}
+\index{update@{update}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void tqdm\+::progress\+\_\+bar\+::update (\begin{DoxyParamCaption}\item[{double}]{progress }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update the progress bar with the current progress. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em progress} & The current progress (a value between 0 and 1). \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1progress__bar_af8b3092725145e504a10fbf842745a9f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtqdm_1_1progress__bar_af8b3092725145e504a10fbf842745a9f_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classtqdm_1_1progress__bar_aee77f2c70aacfbe4b433c8be5cc8c448}\label{classtqdm_1_1progress__bar_aee77f2c70aacfbe4b433c8be5cc8c448} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!bar\_size\_@{bar\_size\_}}
+\index{bar\_size\_@{bar\_size\_}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{bar\_size\_}{bar\_size\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}} tqdm\+::progress\+\_\+bar\+::bar\+\_\+size\+\_\+ \{40\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtqdm_1_1progress__bar_aaf39b5e35347e6bf7e8127e1601ad68f}\label{classtqdm_1_1progress__bar_aaf39b5e35347e6bf7e8127e1601ad68f} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!chronometer\_@{chronometer\_}}
+\index{chronometer\_@{chronometer\_}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{chronometer\_}{chronometer\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtqdm_1_1_chronometer}{Chronometer}} tqdm\+::progress\+\_\+bar\+::chronometer\+\_\+ \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtqdm_1_1progress__bar_ac56cbdc060d326296ad772269af71557}\label{classtqdm_1_1progress__bar_ac56cbdc060d326296ad772269af71557} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!min\_time\_per\_update\_@{min\_time\_per\_update\_}}
+\index{min\_time\_per\_update\_@{min\_time\_per\_update\_}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{min\_time\_per\_update\_}{min\_time\_per\_update\_}}
+{\footnotesize\ttfamily double tqdm\+::progress\+\_\+bar\+::min\+\_\+time\+\_\+per\+\_\+update\+\_\+ \{0.\+15\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtqdm_1_1progress__bar_a8987a09b64768a603b5e55d50f1facc5}\label{classtqdm_1_1progress__bar_a8987a09b64768a603b5e55d50f1facc5} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!os\_@{os\_}}
+\index{os\_@{os\_}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{os\_}{os\_}}
+{\footnotesize\ttfamily std\+::ostream\texorpdfstring{$\ast$}{*} tqdm\+::progress\+\_\+bar\+::os\+\_\+ \{\&std\+::cerr\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtqdm_1_1progress__bar_afc14a84e38ecad01baefd8c45d6395f6}\label{classtqdm_1_1progress__bar_afc14a84e38ecad01baefd8c45d6395f6} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!prefix\_@{prefix\_}}
+\index{prefix\_@{prefix\_}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{prefix\_}{prefix\_}}
+{\footnotesize\ttfamily std\+::string tqdm\+::progress\+\_\+bar\+::prefix\+\_\+ \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtqdm_1_1progress__bar_abf125c334f1e17ca64a5ecee9fa6938d}\label{classtqdm_1_1progress__bar_abf125c334f1e17ca64a5ecee9fa6938d} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!refresh\_@{refresh\_}}
+\index{refresh\_@{refresh\_}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{refresh\_}{refresh\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtqdm_1_1_chronometer}{Chronometer}} tqdm\+::progress\+\_\+bar\+::refresh\+\_\+ \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtqdm_1_1progress__bar_a6d54bc9767844db6e1d2e06a48391799}\label{classtqdm_1_1progress__bar_a6d54bc9767844db6e1d2e06a48391799} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!suffix\_@{suffix\_}}
+\index{suffix\_@{suffix\_}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{suffix\_}{suffix\_}}
+{\footnotesize\ttfamily std\+::stringstream tqdm\+::progress\+\_\+bar\+::suffix\+\_\+ \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtqdm_1_1progress__bar_a4a5cab6c1b6708b85ed40f9573ecde6a}\label{classtqdm_1_1progress__bar_a4a5cab6c1b6708b85ed40f9573ecde6a} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!symbol\_index\_@{symbol\_index\_}}
+\index{symbol\_index\_@{symbol\_index\_}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{symbol\_index\_}{symbol\_index\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}} tqdm\+::progress\+\_\+bar\+::symbol\+\_\+index\+\_\+ \{0\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classtqdm_1_1progress__bar_aae11dc1160fdc67b2bae7a444ef1330a}\label{classtqdm_1_1progress__bar_aae11dc1160fdc67b2bae7a444ef1330a} 
+\index{tqdm::progress\_bar@{tqdm::progress\_bar}!term\_cols\_@{term\_cols\_}}
+\index{term\_cols\_@{term\_cols\_}!tqdm::progress\_bar@{tqdm::progress\_bar}}
+\doxysubsubsection{\texorpdfstring{term\_cols\_}{term\_cols\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetqdm_a4ca64e7736c554906c0902dc5dcb12d7}{index}} tqdm\+::progress\+\_\+bar\+::term\+\_\+cols\+\_\+ \{1\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/utils/\mbox{\hyperlink{tqdm_8hpp}{tqdm.\+hpp}}\end{DoxyCompactItemize}

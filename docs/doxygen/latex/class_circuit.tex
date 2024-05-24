@@ -1,0 +1,373 @@
+\doxysection{Circuit Class Reference}
+\hypertarget{class_circuit}{}\label{class_circuit}\index{Circuit@{Circuit}}
+
+
+{\ttfamily \#include $<$CCircuit.\+h$>$}
+
+
+
+Collaboration diagram for Circuit\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{class_circuit__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_circuit_ae9d62661b452c4d4ef5d6e75f0278cbf}{Circuit}} (int num\+\_\+units)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_circuit}{Circuit} object with a specified number of units. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_circuit_a1134e16f26a878377f4d502bff111b9e}{\texorpdfstring{$\sim$}{\string~}\+Circuit}} ()
+\begin{DoxyCompactList}\small\item\em Destructs the \doxylink{class_circuit}{Circuit} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_circuit_ab04889a7b650a65f6b075f6e394f16e2}{print\+\_\+info}} () const
+\begin{DoxyCompactList}\small\item\em Prints information about the circuit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_circuit_ab8552736bd7aa4ade158bf79014c2b18}{connected}} (int \texorpdfstring{$\ast$}{*}circuit\+Vector)
+\begin{DoxyCompactList}\small\item\em Connects the units in the circuit based on the circuit vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_circuit_a608d78c297a7e9eb0f39f9c7a8be7169}{initialize\+\_\+feed\+\_\+rates}} (double gerardium\+\_\+=10, double waste\+\_\+=90)
+\begin{DoxyCompactList}\small\item\em Initializes the feed rates for gerardium and waste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_circuit_af15811c915105eef1a50bdf0469cf9db}{mark\+\_\+units}} (int unit\+Num, std\+::vector$<$ \mbox{\hyperlink{class_c_unit}{CUnit}} \texorpdfstring{$\ast$}{*} $>$ \&\mbox{\hyperlink{class_circuit_a75a7eb6017da83e557dcad7b80db370c}{units}}, bool \mbox{\hyperlink{class_circuit_a6ba910aa10c95c009491b25ff4435bb1}{check}}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Marks a unit in the circuit and recursively marks its connected units. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_circuit_abf23eff70d399e2866441bcb89c6c957}{check\+\_\+convergence}} (double threshold)
+\begin{DoxyCompactList}\small\item\em Checks if the circuit has converged based on a threshold value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_circuit_a0d347a4af7957954a800d356f8005458}{calculate\+\_\+flows}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the flows within the circuit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_circuit_a9272fae1173b964dc7441ab126500d61}{Check\+\_\+\+Validity}} (int vector\+Size, int \texorpdfstring{$\ast$}{*}circuit\+Vector)
+\begin{DoxyCompactList}\small\item\em Checks the validity of the circuit vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_circuit_a35689ec0d37b17089f313a23e42f1f16}{concentrateG}}
+\item 
+double \mbox{\hyperlink{class_circuit_a4d468e4f2504ca2f3b41be569c081519}{concentrateW}}
+\item 
+double \mbox{\hyperlink{class_circuit_ae2cfb57fffc0cb4d067653127ed8225c}{tailingsG}}
+\item 
+double \mbox{\hyperlink{class_circuit_ae5baaf8e7a9260787d1a6da847b47324}{tailingsW}}
+\item 
+double \mbox{\hyperlink{class_circuit_a8975017bf8d76024c4982506b7a6a077}{waste\+Feed}}
+\item 
+double \mbox{\hyperlink{class_circuit_a8b715ed1f6e7e9c69ddeec71540915be}{gerardium\+Feed}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_circuit_a7e8f59d3f565f6975550e53bc8ec756e}{reset\+\_\+new\+\_\+feeds}} ()
+\begin{DoxyCompactList}\small\item\em Resets the new feeds in the circuit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_c_unit}{CUnit}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_circuit_a75a7eb6017da83e557dcad7b80db370c}{units}}
+\item 
+int \mbox{\hyperlink{class_circuit_a8dd5e7eb784056fe964b5a3a5a03c838}{num\+Units}}
+\item 
+int \mbox{\hyperlink{class_circuit_a14c1dfb174010652eba103cdfea7f2bb}{feed}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_circuit_a6ba910aa10c95c009491b25ff4435bb1}{check}} \mbox{[}3\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_circuit_ae9d62661b452c4d4ef5d6e75f0278cbf}\label{class_circuit_ae9d62661b452c4d4ef5d6e75f0278cbf} 
+\index{Circuit@{Circuit}!Circuit@{Circuit}}
+\index{Circuit@{Circuit}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{Circuit()}{Circuit()}}
+{\footnotesize\ttfamily Circuit\+::\+Circuit (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+units }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_circuit}{Circuit} object with a specified number of units. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+units} & The number of units in the circuit. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_circuit_a1134e16f26a878377f4d502bff111b9e}\label{class_circuit_a1134e16f26a878377f4d502bff111b9e} 
+\index{Circuit@{Circuit}!````~Circuit@{\texorpdfstring{$\sim$}{\string~}Circuit}}
+\index{````~Circuit@{\texorpdfstring{$\sim$}{\string~}Circuit}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Circuit()}{\string~Circuit()}}
+{\footnotesize\ttfamily Circuit\+::\texorpdfstring{$\sim$}{\string~}\+Circuit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructs the \doxylink{class_circuit}{Circuit} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_circuit_a0d347a4af7957954a800d356f8005458}\label{class_circuit_a0d347a4af7957954a800d356f8005458} 
+\index{Circuit@{Circuit}!calculate\_flows@{calculate\_flows}}
+\index{calculate\_flows@{calculate\_flows}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{calculate\_flows()}{calculate\_flows()}}
+{\footnotesize\ttfamily void Circuit\+::calculate\+\_\+flows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the flows within the circuit. 
+
+This member function calculates the flow rates of gerardium and waste through the circuit\textquotesingle{}s units. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{class_circuit_a0d347a4af7957954a800d356f8005458_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_circuit_a0d347a4af7957954a800d356f8005458_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_circuit_abf23eff70d399e2866441bcb89c6c957}\label{class_circuit_abf23eff70d399e2866441bcb89c6c957} 
+\index{Circuit@{Circuit}!check\_convergence@{check\_convergence}}
+\index{check\_convergence@{check\_convergence}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{check\_convergence()}{check\_convergence()}}
+{\footnotesize\ttfamily bool Circuit\+::check\+\_\+convergence (\begin{DoxyParamCaption}\item[{double}]{threshold = {\ttfamily 1e-\/6} }\end{DoxyParamCaption})}
+
+
+
+Checks if the circuit has converged based on a threshold value. 
+
+This member function checks whether the circuit\textquotesingle{}s calculations have converged by comparing the changes in feed rates to a specified threshold.
+
+
+\begin{DoxyParams}{Parameters}
+{\em threshold} & The convergence threshold. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the circuit has converged, otherwise false. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_circuit_abf23eff70d399e2866441bcb89c6c957_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_circuit_a9272fae1173b964dc7441ab126500d61}\label{class_circuit_a9272fae1173b964dc7441ab126500d61} 
+\index{Circuit@{Circuit}!Check\_Validity@{Check\_Validity}}
+\index{Check\_Validity@{Check\_Validity}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{Check\_Validity()}{Check\_Validity()}}
+{\footnotesize\ttfamily bool Circuit\+::\+Check\+\_\+\+Validity (\begin{DoxyParamCaption}\item[{int}]{vector\+Size,  }\item[{int \texorpdfstring{$\ast$}{*}}]{circuit\+Vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks the validity of the circuit vector. 
+
+This static member function checks whether a given circuit vector is valid. It verifies the connections and configurations of the units in the circuit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector\+Size} & The size of the circuit vector. \\
+\hline
+{\em circuit\+Vector} & A pointer to the circuit vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the circuit vector is valid, otherwise false. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{class_circuit_a9272fae1173b964dc7441ab126500d61_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_circuit_a9272fae1173b964dc7441ab126500d61_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_circuit_ab8552736bd7aa4ade158bf79014c2b18}\label{class_circuit_ab8552736bd7aa4ade158bf79014c2b18} 
+\index{Circuit@{Circuit}!connected@{connected}}
+\index{connected@{connected}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{connected()}{connected()}}
+{\footnotesize\ttfamily void Circuit\+::connected (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{circuit\+Vector }\end{DoxyParamCaption})}
+
+
+
+Connects the units in the circuit based on the circuit vector. 
+
+This member function establishes connections between the units in the circuit according to the specified circuit vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em circuit\+Vector} & A pointer to the circuit vector. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_circuit_ab8552736bd7aa4ade158bf79014c2b18_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_circuit_a608d78c297a7e9eb0f39f9c7a8be7169}\label{class_circuit_a608d78c297a7e9eb0f39f9c7a8be7169} 
+\index{Circuit@{Circuit}!initialize\_feed\_rates@{initialize\_feed\_rates}}
+\index{initialize\_feed\_rates@{initialize\_feed\_rates}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{initialize\_feed\_rates()}{initialize\_feed\_rates()}}
+{\footnotesize\ttfamily void Circuit\+::initialize\+\_\+feed\+\_\+rates (\begin{DoxyParamCaption}\item[{double}]{gerardium\+\_\+ = {\ttfamily 10},  }\item[{double}]{waste\+\_\+ = {\ttfamily 90} }\end{DoxyParamCaption})}
+
+
+
+Initializes the feed rates for gerardium and waste. 
+
+This member function initializes the feed rates for gerardium and waste to the specified values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gerardium\+\_\+} & The feed rate of gerardium (default is 10). \\
+\hline
+{\em waste\+\_\+} & The feed rate of waste (default is 90). \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_circuit_a608d78c297a7e9eb0f39f9c7a8be7169_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_circuit_af15811c915105eef1a50bdf0469cf9db}\label{class_circuit_af15811c915105eef1a50bdf0469cf9db} 
+\index{Circuit@{Circuit}!mark\_units@{mark\_units}}
+\index{mark\_units@{mark\_units}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{mark\_units()}{mark\_units()}}
+{\footnotesize\ttfamily void Circuit\+::mark\+\_\+units (\begin{DoxyParamCaption}\item[{int}]{unit\+Num,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_c_unit}{CUnit}} \texorpdfstring{$\ast$}{*} $>$ \&}]{units,  }\item[{bool}]{check\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Marks a unit in the circuit and recursively marks its connected units. 
+
+This function marks a specified unit in the circuit as visited. It then recursively marks all units connected to this unit through its conc\+Num, inter\+Num, and tails\+Num connections. If a connection points to an outlet, it updates the corresponding check flag to indicate an exit has been seen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em unit\+\_\+num} & The index of the unit to be marked. \\
+\hline
+{\em units} & A vector of pointers to \doxylink{class_c_unit}{CUnit} objects representing the units in the circuit. \\
+\hline
+{\em check} & An array of three booleans that track if the conc\+Num, inter\+Num, or tails\+Num connections lead to a circuit outlet. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{class_circuit_af15811c915105eef1a50bdf0469cf9db_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_circuit_af15811c915105eef1a50bdf0469cf9db_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_circuit_ab04889a7b650a65f6b075f6e394f16e2}\label{class_circuit_ab04889a7b650a65f6b075f6e394f16e2} 
+\index{Circuit@{Circuit}!print\_info@{print\_info}}
+\index{print\_info@{print\_info}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{print\_info()}{print\_info()}}
+{\footnotesize\ttfamily void Circuit\+::print\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Prints information about the circuit. 
+
+This member function prints detailed information about the circuit, including the number of units, feed rates, and concentrations. \Hypertarget{class_circuit_a7e8f59d3f565f6975550e53bc8ec756e}\label{class_circuit_a7e8f59d3f565f6975550e53bc8ec756e} 
+\index{Circuit@{Circuit}!reset\_new\_feeds@{reset\_new\_feeds}}
+\index{reset\_new\_feeds@{reset\_new\_feeds}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{reset\_new\_feeds()}{reset\_new\_feeds()}}
+{\footnotesize\ttfamily void Circuit\+::reset\+\_\+new\+\_\+feeds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Resets the new feeds in the circuit. 
+
+This helper function resets the new feed rates in the circuit to their initial values. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_circuit_a7e8f59d3f565f6975550e53bc8ec756e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{class_circuit_a6ba910aa10c95c009491b25ff4435bb1}\label{class_circuit_a6ba910aa10c95c009491b25ff4435bb1} 
+\index{Circuit@{Circuit}!check@{check}}
+\index{check@{check}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{check}{check}}
+{\footnotesize\ttfamily bool Circuit\+::check\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Static array to check the units \Hypertarget{class_circuit_a35689ec0d37b17089f313a23e42f1f16}\label{class_circuit_a35689ec0d37b17089f313a23e42f1f16} 
+\index{Circuit@{Circuit}!concentrateG@{concentrateG}}
+\index{concentrateG@{concentrateG}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{concentrateG}{concentrateG}}
+{\footnotesize\ttfamily double Circuit\+::concentrateG}
+
+Concentration of gerardium in the circuit \Hypertarget{class_circuit_a4d468e4f2504ca2f3b41be569c081519}\label{class_circuit_a4d468e4f2504ca2f3b41be569c081519} 
+\index{Circuit@{Circuit}!concentrateW@{concentrateW}}
+\index{concentrateW@{concentrateW}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{concentrateW}{concentrateW}}
+{\footnotesize\ttfamily double Circuit\+::concentrateW}
+
+Concentration of waste in the circuit \Hypertarget{class_circuit_a14c1dfb174010652eba103cdfea7f2bb}\label{class_circuit_a14c1dfb174010652eba103cdfea7f2bb} 
+\index{Circuit@{Circuit}!feed@{feed}}
+\index{feed@{feed}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{feed}{feed}}
+{\footnotesize\ttfamily int Circuit\+::feed\hspace{0.3cm}{\ttfamily [private]}}
+
+The feed rate for the circuit \Hypertarget{class_circuit_a8b715ed1f6e7e9c69ddeec71540915be}\label{class_circuit_a8b715ed1f6e7e9c69ddeec71540915be} 
+\index{Circuit@{Circuit}!gerardiumFeed@{gerardiumFeed}}
+\index{gerardiumFeed@{gerardiumFeed}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{gerardiumFeed}{gerardiumFeed}}
+{\footnotesize\ttfamily double Circuit\+::gerardium\+Feed}
+
+Feed rate of gerardium in the circuit \Hypertarget{class_circuit_a8dd5e7eb784056fe964b5a3a5a03c838}\label{class_circuit_a8dd5e7eb784056fe964b5a3a5a03c838} 
+\index{Circuit@{Circuit}!numUnits@{numUnits}}
+\index{numUnits@{numUnits}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{numUnits}{numUnits}}
+{\footnotesize\ttfamily int Circuit\+::num\+Units\hspace{0.3cm}{\ttfamily [private]}}
+
+The number of units in the circuit \Hypertarget{class_circuit_ae2cfb57fffc0cb4d067653127ed8225c}\label{class_circuit_ae2cfb57fffc0cb4d067653127ed8225c} 
+\index{Circuit@{Circuit}!tailingsG@{tailingsG}}
+\index{tailingsG@{tailingsG}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{tailingsG}{tailingsG}}
+{\footnotesize\ttfamily double Circuit\+::tailingsG}
+
+Tailings of gerardium in the circuit \Hypertarget{class_circuit_ae5baaf8e7a9260787d1a6da847b47324}\label{class_circuit_ae5baaf8e7a9260787d1a6da847b47324} 
+\index{Circuit@{Circuit}!tailingsW@{tailingsW}}
+\index{tailingsW@{tailingsW}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{tailingsW}{tailingsW}}
+{\footnotesize\ttfamily double Circuit\+::tailingsW}
+
+Tailings of waste in the circuit \Hypertarget{class_circuit_a75a7eb6017da83e557dcad7b80db370c}\label{class_circuit_a75a7eb6017da83e557dcad7b80db370c} 
+\index{Circuit@{Circuit}!units@{units}}
+\index{units@{units}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{units}{units}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_c_unit}{CUnit}} \texorpdfstring{$\ast$}{*}$>$ Circuit\+::units\hspace{0.3cm}{\ttfamily [private]}}
+
+Vector of pointers to the units in the circuit \Hypertarget{class_circuit_a8975017bf8d76024c4982506b7a6a077}\label{class_circuit_a8975017bf8d76024c4982506b7a6a077} 
+\index{Circuit@{Circuit}!wasteFeed@{wasteFeed}}
+\index{wasteFeed@{wasteFeed}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{wasteFeed}{wasteFeed}}
+{\footnotesize\ttfamily double Circuit\+::waste\+Feed}
+
+Feed rate of waste in the circuit 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/circuit/\mbox{\hyperlink{_c_circuit_8h}{CCircuit.\+h}}\item 
+investigate/\mbox{\hyperlink{investigate_2_c_circuit_8cpp}{CCircuit.\+cpp}}\item 
+src/circuit/\mbox{\hyperlink{src_2circuit_2_c_circuit_8cpp}{CCircuit.\+cpp}}\end{DoxyCompactItemize}

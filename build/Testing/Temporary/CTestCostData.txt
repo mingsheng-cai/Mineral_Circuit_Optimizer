@@ -1,0 +1,5 @@
+test_circuit_simulator 1 0.162834
+test_genetic_algorithm 1 5.15209
+test_validity_checker 1 0.127419
+executable 1 9.30943
+---

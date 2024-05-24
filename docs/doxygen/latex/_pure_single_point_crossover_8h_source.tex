@@ -1,0 +1,36 @@
+\doxysection{Pure\+Single\+Point\+Crossover.\+h}
+\hypertarget{_pure_single_point_crossover_8h_source}{}\label{_pure_single_point_crossover_8h_source}\index{include/operators/Crossover/PureSinglePointCrossover.h@{include/operators/Crossover/PureSinglePointCrossover.h}}
+\mbox{\hyperlink{_pure_single_point_crossover_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifndef\ GENETIC\_ALGORITHM\_PURESINGLEPOINTCROSSOVER\_H}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ GENETIC\_ALGORITHM\_PURESINGLEPOINTCROSSOVER\_H}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_operator_8h}{../Operator.h}}"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_individual_8h}{../../utils/Individual.h}}"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_parameter_8h}{../../utils/Parameter.h}}"{}}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pure_single_point_crossover}{PureSinglePointCrossover}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_operator}{Operator}}\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{struct_individual}{Individual}}\ *\mbox{\hyperlink{class_pure_single_point_crossover_a643292727286bad89d3eccca08973d76}{offspring}};\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ *\mbox{\hyperlink{class_pure_single_point_crossover_ae31015a2b6f164fa9c39f9857fed52ad}{parent1}};\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ *\mbox{\hyperlink{class_pure_single_point_crossover_a833f4889d065b577e5f86c7fd4cb6965}{parent2}};\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_pure_single_point_crossover_a6f2a20e31c57f2f86907898dab0ad409}{crossoverRate}};\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_pure_single_point_crossover_af3934f5ad08824e2490826e963a987b5}{PureSinglePointCrossover}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}\ \&params);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pure_single_point_crossover_a21e908fdf945d8d5f1822edcd3b869d5}{setParents}}(\mbox{\hyperlink{struct_individual}{Individual}}\ \&\mbox{\hyperlink{class_pure_single_point_crossover_a643292727286bad89d3eccca08973d76}{offspring}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&\mbox{\hyperlink{class_pure_single_point_crossover_ae31015a2b6f164fa9c39f9857fed52ad}{parent1}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_individual}{Individual}}\ \&\mbox{\hyperlink{class_pure_single_point_crossover_a833f4889d065b577e5f86c7fd4cb6965}{parent2}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pure_single_point_crossover_a2a7f26c00219f4d39fce5007dbfbe70d}{setPopulation}}(\textcolor{keyword}{const}\ std::vector<Individual>\ \&population,\ std::vector<Individual>\ \&selected)\ \{\};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pure_single_point_crossover_aad9fd81891c551c18c6b4b12fe9e5442}{setIndividual}}(\mbox{\hyperlink{struct_individual}{Individual}}\ \&individual)\ \{\};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pure_single_point_crossover_acbec767cd00efc3d33e1a9dbb5c25b73}{apply}}(std::mt19937\ \&generator)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00085\ \};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//GENETIC\_ALGORITHM\_PURESINGLEPOINTCROSSOVER\_H}}
+
+\end{DoxyCode}

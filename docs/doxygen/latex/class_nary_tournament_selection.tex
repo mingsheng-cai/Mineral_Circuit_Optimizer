@@ -1,0 +1,201 @@
+\doxysection{Nary\+Tournament\+Selection Class Reference}
+\hypertarget{class_nary_tournament_selection}{}\label{class_nary_tournament_selection}\index{NaryTournamentSelection@{NaryTournamentSelection}}
+
+
+{\ttfamily \#include $<$Nary\+Tournament\+Selection.\+h$>$}
+
+
+
+Inheritance diagram for Nary\+Tournament\+Selection\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{class_nary_tournament_selection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Nary\+Tournament\+Selection\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{class_nary_tournament_selection__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_nary_tournament_selection_aed03aa181e2d0b98b17d2a0dfad393f4}{Nary\+Tournament\+Selection}} (const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&params)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_nary_tournament_selection}{Nary\+Tournament\+Selection} object with specified algorithm parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nary_tournament_selection_a08883c4d9265806fd690b5bac3611281}{set\+Population}} (const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&\mbox{\hyperlink{class_nary_tournament_selection_a8f27917d6b99fb5b1f485ee37c52563f}{population}}, std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&\mbox{\hyperlink{class_nary_tournament_selection_a977ff40cef9f53ec942c776dd87bee78}{selected}}) override
+\begin{DoxyCompactList}\small\item\em Sets the population and selected vectors for the selection operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nary_tournament_selection_acd33bea2f781445cc897a4419c74f700}{set\+Individual}} (\mbox{\hyperlink{struct_individual}{Individual}} \&individual)
+\begin{DoxyCompactList}\small\item\em Sets the individual to be mutated. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nary_tournament_selection_a9b5694977e8adeffb9d698a5f3f75cbb}{set\+Parents}} (\mbox{\hyperlink{struct_individual}{Individual}} \&offspring, const \mbox{\hyperlink{struct_individual}{Individual}} \&parent1, const \mbox{\hyperlink{struct_individual}{Individual}} \&parent2)
+\begin{DoxyCompactList}\small\item\em Sets the parents and offspring for the crossover operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nary_tournament_selection_a7c588fa2ec3a54b37e334478c6b5e9f4}{apply}} (std\+::mt19937 \&generator) override
+\begin{DoxyCompactList}\small\item\em Performs the n-\/ary tournament selection operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_operator}{Operator}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_operator_ac7cb92992e32c213091d3659ef596a46}{\texorpdfstring{$\sim$}{\string~}\+Operator}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_operator}{Operator} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_nary_tournament_selection_a977ff40cef9f53ec942c776dd87bee78}{selected}}
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_nary_tournament_selection_a8f27917d6b99fb5b1f485ee37c52563f}{population}}
+\item 
+int \mbox{\hyperlink{class_nary_tournament_selection_a1d219da7e618af9aa949ceb04c6a9046}{tournament\+Size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_nary_tournament_selection_aed03aa181e2d0b98b17d2a0dfad393f4}\label{class_nary_tournament_selection_aed03aa181e2d0b98b17d2a0dfad393f4} 
+\index{NaryTournamentSelection@{NaryTournamentSelection}!NaryTournamentSelection@{NaryTournamentSelection}}
+\index{NaryTournamentSelection@{NaryTournamentSelection}!NaryTournamentSelection@{NaryTournamentSelection}}
+\doxysubsubsection{\texorpdfstring{NaryTournamentSelection()}{NaryTournamentSelection()}}
+{\footnotesize\ttfamily Nary\+Tournament\+Selection\+::\+Nary\+Tournament\+Selection (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\+\_\+\+Parameters}} \&}]{params }\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_nary_tournament_selection}{Nary\+Tournament\+Selection} object with specified algorithm parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & The algorithm parameters including the tournament size. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_nary_tournament_selection_a7c588fa2ec3a54b37e334478c6b5e9f4}\label{class_nary_tournament_selection_a7c588fa2ec3a54b37e334478c6b5e9f4} 
+\index{NaryTournamentSelection@{NaryTournamentSelection}!apply@{apply}}
+\index{apply@{apply}!NaryTournamentSelection@{NaryTournamentSelection}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily void Nary\+Tournament\+Selection\+::apply (\begin{DoxyParamCaption}\item[{std\+::mt19937 \&}]{generator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Performs the n-\/ary tournament selection operation. 
+
+This method selects individuals from the population based on n-\/ary tournament competition and stores the selected individuals in the provided vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em generator} & The random number generator used for selecting individuals. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_acbd2e97e189d862aa139b3c334a18619}{Operator}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_nary_tournament_selection_a7c588fa2ec3a54b37e334478c6b5e9f4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_nary_tournament_selection_acd33bea2f781445cc897a4419c74f700}\label{class_nary_tournament_selection_acd33bea2f781445cc897a4419c74f700} 
+\index{NaryTournamentSelection@{NaryTournamentSelection}!setIndividual@{setIndividual}}
+\index{setIndividual@{setIndividual}!NaryTournamentSelection@{NaryTournamentSelection}}
+\doxysubsubsection{\texorpdfstring{setIndividual()}{setIndividual()}}
+{\footnotesize\ttfamily void Nary\+Tournament\+Selection\+::set\+Individual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{individual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the individual to be mutated. 
+
+This method sets the individual to be mutated by the operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em individual} & The individual to be mutated. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_abf3bad24158495949ca770dc8aec6542}{Operator}}.
+
+\Hypertarget{class_nary_tournament_selection_a9b5694977e8adeffb9d698a5f3f75cbb}\label{class_nary_tournament_selection_a9b5694977e8adeffb9d698a5f3f75cbb} 
+\index{NaryTournamentSelection@{NaryTournamentSelection}!setParents@{setParents}}
+\index{setParents@{setParents}!NaryTournamentSelection@{NaryTournamentSelection}}
+\doxysubsubsection{\texorpdfstring{setParents()}{setParents()}}
+{\footnotesize\ttfamily void Nary\+Tournament\+Selection\+::set\+Parents (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_individual}{Individual}} \&}]{offspring,  }\item[{const \mbox{\hyperlink{struct_individual}{Individual}} \&}]{parent1,  }\item[{const \mbox{\hyperlink{struct_individual}{Individual}} \&}]{parent2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the parents and offspring for the crossover operation. 
+
+This method is not used by the \doxylink{class_nary_tournament_selection}{Nary\+Tournament\+Selection} operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em offspring} & The offspring individual to be generated. \\
+\hline
+{\em parent1} & The first parent individual. \\
+\hline
+{\em parent2} & The second parent individual. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_aa9e9e58811b56bf3a5c1ac9e0d034c64}{Operator}}.
+
+\Hypertarget{class_nary_tournament_selection_a08883c4d9265806fd690b5bac3611281}\label{class_nary_tournament_selection_a08883c4d9265806fd690b5bac3611281} 
+\index{NaryTournamentSelection@{NaryTournamentSelection}!setPopulation@{setPopulation}}
+\index{setPopulation@{setPopulation}!NaryTournamentSelection@{NaryTournamentSelection}}
+\doxysubsubsection{\texorpdfstring{setPopulation()}{setPopulation()}}
+{\footnotesize\ttfamily void Nary\+Tournament\+Selection\+::set\+Population (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&}]{population,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_individual}{Individual}} $>$ \&}]{selected }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the population and selected vectors for the selection operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em population} & The vector of individuals in the population. \\
+\hline
+{\em selected} & The vector of selected individuals. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_operator_a6e3837c249df579d41f9b9287195c6e5}{Operator}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_nary_tournament_selection_a08883c4d9265806fd690b5bac3611281_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{class_nary_tournament_selection_a8f27917d6b99fb5b1f485ee37c52563f}\label{class_nary_tournament_selection_a8f27917d6b99fb5b1f485ee37c52563f} 
+\index{NaryTournamentSelection@{NaryTournamentSelection}!population@{population}}
+\index{population@{population}!NaryTournamentSelection@{NaryTournamentSelection}}
+\doxysubsubsection{\texorpdfstring{population}{population}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{struct_individual}{Individual}}$>$\texorpdfstring{$\ast$}{*} Nary\+Tournament\+Selection\+::population\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the vector of individuals in the population \Hypertarget{class_nary_tournament_selection_a977ff40cef9f53ec942c776dd87bee78}\label{class_nary_tournament_selection_a977ff40cef9f53ec942c776dd87bee78} 
+\index{NaryTournamentSelection@{NaryTournamentSelection}!selected@{selected}}
+\index{selected@{selected}!NaryTournamentSelection@{NaryTournamentSelection}}
+\doxysubsubsection{\texorpdfstring{selected}{selected}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_individual}{Individual}}$>$\texorpdfstring{$\ast$}{*} Nary\+Tournament\+Selection\+::selected\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the vector of selected individuals \Hypertarget{class_nary_tournament_selection_a1d219da7e618af9aa949ceb04c6a9046}\label{class_nary_tournament_selection_a1d219da7e618af9aa949ceb04c6a9046} 
+\index{NaryTournamentSelection@{NaryTournamentSelection}!tournamentSize@{tournamentSize}}
+\index{tournamentSize@{tournamentSize}!NaryTournamentSelection@{NaryTournamentSelection}}
+\doxysubsubsection{\texorpdfstring{tournamentSize}{tournamentSize}}
+{\footnotesize\ttfamily int Nary\+Tournament\+Selection\+::tournament\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+Size of the tournament (number of individuals competing) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/operators/\+Selection/\mbox{\hyperlink{_nary_tournament_selection_8h}{Nary\+Tournament\+Selection.\+h}}\item 
+src/operators/\+Selection/\mbox{\hyperlink{_nary_tournament_selection_8cpp}{Nary\+Tournament\+Selection.\+cpp}}\end{DoxyCompactItemize}
